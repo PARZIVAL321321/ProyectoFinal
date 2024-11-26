@@ -21,4 +21,10 @@ Partes del proyecto:
 	16-19
 - PDF tras compra (Uriel y Oscar)
 
-En cuestion de las aportaciones que debemos hacer (3) podemos hacer una lluvia de ideas para estar de acuerdo en que agregar
+Puntos importantes:
+- En cuestion de las aportaciones que debemos hacer (3) podemos hacer una lluvia de ideas para estar de acuerdo en que agregar
+- Todo el codigo dado debe de estar perfectamente comentado, de esta manera haremos mas sencillo el entendimiendo del codigo leido para
+los demas integrantes del equipo
+- Mantener un formato "fijo" durante todo el proyecto, en cuestion de codigo (hay una opcion en VS donde se puede formatear el codigo para mantener un mismo formato) y pantallas form (por ejemplo colores, fonts, tamaño de pantalla, etc)
+- Cualquier duda o problema con el proyecto se debe de comentar de inmediato si es que este no se ha podido resolver, de esta manera los demas integrantes lo apoyaran para poder resolver este problema de manera rapida y seguir con el proyecto
+- Mantener un orden en GitHub, en cuestion de carpetas para las versiones de los proyectos (V1, V2, V3...) y agregar un "README" en cada version para saber que cambios se han agregado/modificado en esa version y por quien han sido hechos
