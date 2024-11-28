@@ -1,13 +1,13 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Alegria\\Desktop\\ProyectoFinal - Copy\\V1\\ProyectoFinalV1\\",
+  "WorkspaceRootPath": "C:\\Users\\alegr\\Desktop\\ProyectoFinal\\V1\\ProyectoFinalV1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FB66F1B0-E526-4F56-8D53-094F3AB041D9}|ProyectoFinalV1.csproj|c:\\users\\alegria\\desktop\\proyectofinal - copy\\v1\\proyectofinalv1\\formlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FB66F1B0-E526-4F56-8D53-094F3AB041D9}|ProyectoFinalV1.csproj|solutionrelative:formlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FB66F1B0-E526-4F56-8D53-094F3AB041D9}|ProyectoFinalV1.csproj|c:\\users\\alegr\\desktop\\proyectofinal\\v1\\proyectofinalv1\\formportada.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{FB66F1B0-E526-4F56-8D53-094F3AB041D9}|ProyectoFinalV1.csproj|solutionrelative:formportada.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FB66F1B0-E526-4F56-8D53-094F3AB041D9}|ProyectoFinalV1.csproj|C:\\Users\\Alegria\\Desktop\\ProyectoFinal - Copy\\V1\\ProyectoFinalV1\\formlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{FB66F1B0-E526-4F56-8D53-094F3AB041D9}|ProyectoFinalV1.csproj|C:\\Users\\alegr\\Desktop\\ProyectoFinal\\V1\\ProyectoFinalV1\\formlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{FB66F1B0-E526-4F56-8D53-094F3AB041D9}|ProyectoFinalV1.csproj|solutionrelative:formlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -27,26 +27,26 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "FormLogIn.cs",
-              "DocumentMoniker": "C:\\Users\\Alegria\\Desktop\\ProyectoFinal - Copy\\V1\\ProyectoFinalV1\\FormLogIn.cs",
-              "RelativeDocumentMoniker": "FormLogIn.cs",
-              "ToolTip": "C:\\Users\\Alegria\\Desktop\\ProyectoFinal - Copy\\V1\\ProyectoFinalV1\\FormLogIn.cs",
-              "RelativeToolTip": "FormLogIn.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABAAAAAaAAAAAAAAAA==",
+              "Title": "FormPortada.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\alegr\\Desktop\\ProyectoFinal\\V1\\ProyectoFinalV1\\FormPortada.cs",
+              "RelativeDocumentMoniker": "FormPortada.cs",
+              "ToolTip": "C:\\Users\\alegr\\Desktop\\ProyectoFinal\\V1\\ProyectoFinalV1\\FormPortada.cs [Design]",
+              "RelativeToolTip": "FormPortada.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-28T04:15:17.867Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-28T14:43:02.548Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "FormLogIn.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Alegria\\Desktop\\ProyectoFinal - Copy\\V1\\ProyectoFinalV1\\FormLogIn.cs",
+              "DocumentMoniker": "C:\\Users\\alegr\\Desktop\\ProyectoFinal\\V1\\ProyectoFinalV1\\FormLogIn.cs",
               "RelativeDocumentMoniker": "FormLogIn.cs",
-              "ToolTip": "C:\\Users\\Alegria\\Desktop\\ProyectoFinal\\V1\\ProyectoFinalV1\\FormLogIn.cs [Design]",
-              "RelativeToolTip": "..\\..\\..\\ProyectoFinal\\V1\\ProyectoFinalV1\\FormLogIn.cs [Design]",
+              "ToolTip": "C:\\Users\\alegr\\Desktop\\ProyectoFinal\\V1\\ProyectoFinalV1\\FormLogIn.cs [Design]*",
+              "RelativeToolTip": "FormLogIn.cs [Design]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-28T04:15:16.313Z"
+              "WhenOpened": "2024-11-28T14:25:16.582Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }

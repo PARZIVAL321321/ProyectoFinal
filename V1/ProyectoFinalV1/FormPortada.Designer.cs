@@ -36,7 +36,8 @@
             // pictureBox_LogoUAA
             // 
             pictureBox_LogoUAA.Image = Properties.Resources.Logo_UAA;
-            pictureBox_LogoUAA.Location = new Point(852, 12);
+            pictureBox_LogoUAA.Location = new Point(850, 13);
+            pictureBox_LogoUAA.Margin = new Padding(3, 4, 3, 4);
             pictureBox_LogoUAA.Name = "pictureBox_LogoUAA";
             pictureBox_LogoUAA.Size = new Size(400, 194);
             pictureBox_LogoUAA.SizeMode = PictureBoxSizeMode.AutoSize;
@@ -47,9 +48,10 @@
             // 
             button_LogIn.Cursor = Cursors.Hand;
             button_LogIn.Font = new Font("Dubai", 17.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button_LogIn.Location = new Point(563, 570);
+            button_LogIn.Location = new Point(551, 569);
+            button_LogIn.Margin = new Padding(3, 4, 3, 4);
             button_LogIn.Name = "button_LogIn";
-            button_LogIn.Size = new Size(160, 54);
+            button_LogIn.Size = new Size(183, 72);
             button_LogIn.TabIndex = 1;
             button_LogIn.Text = "Log-In";
             button_LogIn.UseVisualStyleBackColor = true;
@@ -57,12 +59,13 @@
             // 
             // FormPortada
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Info;
-            ClientSize = new Size(1264, 681);
+            ClientSize = new Size(1262, 673);
             Controls.Add(button_LogIn);
             Controls.Add(pictureBox_LogoUAA);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "FormPortada";
             StartPosition = FormStartPosition.CenterScreen;
             ((System.ComponentModel.ISupportInitialize)pictureBox_LogoUAA).EndInit();
