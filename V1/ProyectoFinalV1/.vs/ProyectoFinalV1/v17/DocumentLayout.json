@@ -32,7 +32,11 @@
               "RelativeDocumentMoniker": "FormLogIn.cs",
               "ToolTip": "C:\\Users\\Alegria\\Desktop\\ProyectoFinal - Copy\\V1\\ProyectoFinalV1\\FormLogIn.cs",
               "RelativeToolTip": "FormLogIn.cs",
+<<<<<<< HEAD
               "ViewState": "AgIAAAkAAAAAAAAAAAAAABsAAAAMAAAAAAAAAA==",
+=======
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABAAAAAaAAAAAAAAAA==",
+>>>>>>> 410d5b0e2fc141acbcd9add08cf9c563f10b0ebd
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-28T04:15:17.867Z",
               "EditorCaption": ""
