@@ -40,11 +40,6 @@ namespace ProyectoFinalV1
                 MessageBox.Show("¡Bienvenido!");
 
                 /*En este punto se abrira el nuevo form donde se mostraran los productos*/
-                //Se manda a llamar al FormProductos
-                this.Hide();
-                FormProductos formProductos = new FormProductos();
-                formProductos.ShowDialog();
-                this.Show();
             }
             else
             {
