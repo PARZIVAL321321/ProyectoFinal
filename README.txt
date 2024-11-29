@@ -1,0 +1,2 @@
+En este punto el proyecto tiene el form de la portada, la cual esta vacia ya que me parecia mas importante hacer funcionar el log in que perder mi tiempo intentando hacer una portada "bonita", lo mismo pense con el form del log in, tiene un poco mas de "diseño" pero aun asi podria mejorar. En dado caso de que quieran modificar el diseño de la portada o del log in lo pueden hacer si problema
+El siguiente paso seria crear el nuevo form para presentar los productos
