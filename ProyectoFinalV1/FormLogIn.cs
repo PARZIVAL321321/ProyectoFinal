@@ -1,4 +1,4 @@
-﻿using MySql.Data.MySqlClient;
+﻿using MySql.Data.MySqlClient; // Para poder usar nuestra base de datos
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,6 +22,12 @@ namespace ProyectoFinalV1
         // Boton para verificar si el usuario puede entrar al punto de venta o no
         private void button_Acceder_Click(object sender, EventArgs e)
         {
+            // Llamamos a nuestra funcion
+            Validar_persona();
+        }
+
+        private void Validar_persona()
+        {
             // Creamos nuestra variable para la base de datos, y pasamos nuestra informacion
             MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=proyecto; User=root; Password=; Sslmode=none;");
             // Abrimos nuestra base de datos
@@ -37,14 +43,31 @@ namespace ProyectoFinalV1
             MySqlDataReader lector = comando.ExecuteReader();
             if (lector.HasRows == true)
             {
+
+                // Mostramos mensaje de bienvenida si la persona pudo acceder al sistema
                 MessageBox.Show("¡Bienvenido!");
 
-                /*En este punto se abrira el nuevo form donde se mostraran los productos*/
-                //Se manda a llamar al FormProductos
-                this.Hide();
-                FormProductos formProductos = new FormProductos();
-                formProductos.ShowDialog();
-                this.Show();
+                // Verificamos que tipo de cuenta ingreso
+                switch (Obtener_Tipo_Cuenta())
+                {
+                    // En caso de que haya entrado el Admin
+                    case 0: 
+                        /* Aqui se va a mostrar el form solamente para el admin */
+                        break;
+                    // En caso de que haya entrado un cliente/invitado
+                    case 1: 
+                        // Creamos nuestro form
+                        FormProductos formProductos = new FormProductos();
+                        // Ocultamos este form
+                        this.Hide();
+                        // Usamos el ShowDialog para cuando el usuario haga Logout
+                        formProductos.ShowDialog();
+                        // Volvemos a mostrar este form
+                        this.Show();
+                        break;
+                }
+
+
             }
             else
             {
@@ -53,7 +76,44 @@ namespace ProyectoFinalV1
 
             // Cerramos la conexion con nuestro servidor
             conexion.Close();
+        }
 
+        private int Obtener_Tipo_Cuenta()
+        {
+            // Creamos nuestra variable para la base de datos, y pasamos nuestra informacion
+            MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=proyecto; User=root; Password=; Sslmode=none;");
+            // Abrimos nuestra base de datos
+            conexion.Open();
+
+            // Variable a retornar
+            int regresar = 0;
+
+            try
+            {
+                string consulta = "SELECT Tipo FROM personas WHERE Cuenta='" + textBox_Cuenta.Text + "' AND Contra='" + textBox_Contra.Text + "'";
+                MySqlCommand comando = new MySqlCommand(consulta, conexion);
+
+                // Ejecutamos la consulta y leer los resultados
+                MySqlDataReader reader = comando.ExecuteReader();
+
+                while (reader.Read()) // Solo va a encontrar un registro (gracias a la consulta)
+                {
+                    // Guardamos el valor
+                    regresar = Convert.ToInt32(reader["Tipo"]);
+                }
+
+                reader.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al leer la base de datos: " + ex.Message);
+            }
+
+            // Cerramos la conexion
+            conexion.Close();
+
+
+            return regresar;
         }
     }
 }
