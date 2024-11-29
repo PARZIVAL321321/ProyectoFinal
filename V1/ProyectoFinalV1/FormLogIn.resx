@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!--
-    Microsoft ResX Schema
+    Microsoft ResX Schema 
 
     Version 2.0
 
@@ -48,7 +48,7 @@
     value   : The object must be serialized with
             : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
             : and then encoded with base64 encoding.
-
+    
     mimetype: application/x-microsoft.net.object.soap.base64
     value   : The object must be serialized with
             : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
@@ -117,4 +117,22 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnminimizar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAjQAAACPCAYAAADtGUGcAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        vAAADrwBlbxySQAAAn5JREFUeF7t1kENADAIALH5wL+KiQMdl/RRD31/ZgEAyoQGAMgTGgAgT2gAgDyh
+        AQDyhAYAyBMaACBPaACAPKEBAPKEBgDIExoAIE9oAIA8oQEA8oQGAMgTGgAgT2gAgDyhAQDyhAYAyBMa
+        ACBPaACAPKEBAPKEBgDIExoAIE9oAIA8oQEA8oQGAMgTGgAgT2gAgDyhAQDyhAYAyBMaACBPaACAPKEB
+        APKEBgDIExoAIE9oAIA8oQEA8oQGAMgTGgAgT2gAgDyhAQDyhAYAyBMaACBPaACAPKEBAPKEBgDIExoA
+        IE9oAIA8oQEA8oQGAMgTGgAgT2gAgDyhAQDyhAYAyBMaACBPaACAPKEBAPKEBgDIExoAIE9oAIA8oQEA
+        8oQGAMgTGgAgT2gAgDyhAQDyhAYAyBMaACBPaACAPKEBAPKEBgDIExoAIE9oAIA8oQEA8oQGAMgTGgAg
+        T2gAgDyhAQDyhAYAyBMaACBPaACAPKEBAPKEBgDIExoAIE9oAIA8oQEA8oQGAMgTGgAgT2gAgDyhAQDy
+        hAYAyBMaACBPaACAPKEBAPKEBgDIExoAIE9oAIA8oQEA8oQGAMgTGgAgT2gAgDyhAQDyhAYAyBMaACBP
+        aACAPKEBAPKEBgDIExoAIE9oAIA8oQEA8oQGAMgTGgAgT2gAgDyhAQDyhAYAyBMaACBPaACAPKEBAPKE
+        BgDIExoAIE9oAIA8oQEA8oQGAMgTGgAgT2gAgDyhAQDyhAYAyBMaACBPaACAPKEBAPKEBgDIExoAIE9o
+        AIA8oQEA8oQGAMgTGgAgT2gAgDyhAQDyhAYAyBMaACBPaACAPKEBAPKEBgDIExoAIG72AFuciv8+jdFx
+        AAAAAElFTkSuQmCC
+</value>
+  </data>
 </root>

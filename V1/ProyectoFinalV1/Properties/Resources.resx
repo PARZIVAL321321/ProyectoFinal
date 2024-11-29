@@ -118,13 +118,28 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Logo_punto-de-venta" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagenes\Logo_punto-de-venta.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LINEA" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LINEA.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Steam-Logo-PNG8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Steam-Logo-PNG8.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Fondo_form" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Imagenes\Fondo_form.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Logo_UAA" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Imagenes\Logo_UAA.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Logo_punto-de-venta" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Imagenes\Logo_punto-de-venta.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="cierre" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cierre.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FondoLineadoAzul" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FondoLineadoAzul.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cierrepagina" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagenes\cierrepagina.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

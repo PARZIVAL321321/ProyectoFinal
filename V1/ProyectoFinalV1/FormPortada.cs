@@ -1,3 +1,4 @@
+using System.Runtime.InteropServices;
 namespace ProyectoFinalV1
 {
     public partial class FormPortada : Form
@@ -19,6 +20,36 @@ namespace ProyectoFinalV1
 
             // Mostramos ahora el siguiente form (FormLogIn)
             form.Show();
+        }
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
+
+        private void textBox_Cuenta_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FormPortada_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FormPortada_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void btncerrar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void Integrante1(object sender, EventArgs e)
+        {
+
         }
     }
 }

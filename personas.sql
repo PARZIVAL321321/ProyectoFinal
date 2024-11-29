@@ -41,7 +41,8 @@ CREATE TABLE `personas` (
 --
 
 INSERT INTO `personas` (`ID`, `Nombre`, `Cuenta`, `Contra`, `Monto`, `Tipo`) VALUES
-(1, 'Eduardo Arturo Alegria Vela', 'Alegria2812', 'Proyecto2024', 0, 1);
+(1, 'Eduardo Arturo Alegria Vela', 'Alegria2812', 'Proyecto2024', 0, 1),
+(2, 'Uriel Ezequiel Ortiz Rosales', 'Uriel1913', 'Proyecto2024', 0, 1);
 
 --
 -- Indexes for dumped tables

@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
 
 namespace ProyectoFinalV1
 {
@@ -49,6 +50,90 @@ namespace ProyectoFinalV1
             // Cerramos la conexion con nuestro servidor
             conexion.Close();
 
+        }
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
+
+        private void FormLogIn_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_Cuenta_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label_Puntodeventa_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_Cuenta_Enter(object sender, EventArgs e)
+        {
+            if (textBox_Cuenta.Text == "USUARIO")
+            {
+                textBox_Cuenta.Text = "";
+                textBox_Cuenta.ForeColor = Color.LightGray;
+            }
+        }
+
+        private void textBox_Cuenta_Leave(object sender, EventArgs e)
+        {
+            if (textBox_Cuenta.Text == "")
+            {
+                textBox_Cuenta.Text = "USUARIO";
+                textBox_Cuenta.ForeColor = Color.DimGray;
+            }
+        }
+
+        private void textBox_Contra_Enter(object sender, EventArgs e)
+        {
+            if (textBox_Contra.Text == "CONTRASEÑA")
+            {
+                textBox_Contra.Text = "";
+                textBox_Contra.ForeColor = Color.LightGray;
+                textBox_Contra.UseSystemPasswordChar = true;
+            }
+        }
+
+        private void textBox_Contra_Leave(object sender, EventArgs e)
+        {
+            if (textBox_Contra.Text == "")
+            {
+                textBox_Contra.Text = "CONTRASEÑA";
+                textBox_Contra.ForeColor = Color.DimGray;
+                textBox_Contra.UseSystemPasswordChar = false;
+            }
+
+        }
+
+        private void btncerrar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void FormLogIn_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 }
