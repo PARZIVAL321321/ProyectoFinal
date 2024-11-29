@@ -1,0 +1,102 @@
+C:\Users\Alegria\Desktop\ProyectoFinal\V1\ProyectoFinalV1\bin\Debug\net8.0-windows\ProyectoFinalV1.exe
+C:\Users\Alegria\Desktop\ProyectoFinal\V1\ProyectoFinalV1\bin\Debug\net8.0-windows\ProyectoFinalV1.deps.json
+C:\Users\Alegria\Desktop\ProyectoFinal\V1\ProyectoFinalV1\bin\Debug\net8.0-windows\ProyectoFinalV1.runtimeconfig.json
+C:\Users\Alegria\Desktop\ProyectoFinal\V1\ProyectoFinalV1\bin\Debug\net8.0-windows\ProyectoFinalV1.dll
+C:\Users\Alegria\Desktop\ProyectoFinal\V1\ProyectoFinalV1\bin\Debug\net8.0-windows\ProyectoFinalV1.pdb
+C:\Users\Alegria\Desktop\ProyectoFinal\V1\ProyectoFinalV1\obj\Debug\net8.0-windows\ProyectoFinalV1.FormPortada.resources
+C:\Users\Alegria\Desktop\ProyectoFinal\V1\ProyectoFinalV1\obj\Debug\net8.0-windows\ProyectoFinalV1.Properties.Resources.resources
+C:\Users\Alegria\Desktop\ProyectoFinal\V1\ProyectoFinalV1\obj\Debug\net8.0-windows\ProyectoFinalV1.csproj.GenerateResource.cache
+C:\Users\Alegria\Desktop\ProyectoFinal\V1\ProyectoFinalV1\obj\Debug\net8.0-windows\ProyectoFinalV1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Alegria\Desktop\ProyectoFinal\V1\ProyectoFinalV1\obj\Debug\net8.0-windows\ProyectoFinalV1.AssemblyInfoInputs.cache
+C:\Users\Alegria\Desktop\ProyectoFinal\V1\ProyectoFinalV1\obj\Debug\net8.0-windows\ProyectoFinalV1.AssemblyInfo.cs
+C:\Users\Alegria\Desktop\ProyectoFinal\V1\ProyectoFinalV1\obj\Debug\net8.0-windows\ProyectoFinalV1.csproj.CoreCompileInputs.cache
+C:\Users\Alegria\Desktop\ProyectoFinal\V1\ProyectoFinalV1\obj\Debug\net8.0-windows\ProyectoFinalV1.sourcelink.json
+C:\Users\Alegria\Desktop\ProyectoFinal\V1\ProyectoFinalV1\obj\Debug\net8.0-windows\ProyectoFinalV1.dll
+C:\Users\Alegria\Desktop\ProyectoFinal\V1\ProyectoFinalV1\obj\Debug\net8.0-windows\refint\ProyectoFinalV1.dll
+C:\Users\Alegria\Desktop\ProyectoFinal\V1\ProyectoFinalV1\obj\Debug\net8.0-windows\ProyectoFinalV1.pdb
+C:\Users\Alegria\Desktop\ProyectoFinal\V1\ProyectoFinalV1\obj\Debug\net8.0-windows\ProyectoFinalV1.genruntimeconfig.cache
+C:\Users\Alegria\Desktop\ProyectoFinal\V1\ProyectoFinalV1\obj\Debug\net8.0-windows\ref\ProyectoFinalV1.dll
+C:\Users\Alegria\Desktop\ProyectoFinal\V1\ProyectoFinalV1\obj\Debug\net8.0-windows\ProyectoFinalV1.FormLogIn.resources
+C:\Users\Alegria\Desktop\ProyectoFinal\V1\ProyectoFinalV1\obj\Debug\net8.0-windows\ProyectoFinalV1.csproj.AssemblyReference.cache
+C:\Users\Alegria\Desktop\ProyectoFinal\V1\ProyectoFinalV1\bin\Debug\net8.0-windows\BouncyCastle.Cryptography.dll
+C:\Users\Alegria\Desktop\ProyectoFinal\V1\ProyectoFinalV1\bin\Debug\net8.0-windows\Google.Protobuf.dll
+C:\Users\Alegria\Desktop\ProyectoFinal\V1\ProyectoFinalV1\bin\Debug\net8.0-windows\K4os.Compression.LZ4.dll
+C:\Users\Alegria\Desktop\ProyectoFinal\V1\ProyectoFinalV1\bin\Debug\net8.0-windows\K4os.Compression.LZ4.Streams.dll
+C:\Users\Alegria\Desktop\ProyectoFinal\V1\ProyectoFinalV1\bin\Debug\net8.0-windows\K4os.Hash.xxHash.dll
+C:\Users\Alegria\Desktop\ProyectoFinal\V1\ProyectoFinalV1\bin\Debug\net8.0-windows\MySql.Data.dll
+C:\Users\Alegria\Desktop\ProyectoFinal\V1\ProyectoFinalV1\bin\Debug\net8.0-windows\System.IO.Pipelines.dll
+C:\Users\Alegria\Desktop\ProyectoFinal\V1\ProyectoFinalV1\bin\Debug\net8.0-windows\ZstdSharp.dll
+C:\Users\Alegria\Desktop\ProyectoFinal\V1\ProyectoFinalV1\bin\Debug\net8.0-windows\runtimes\win-x64\native\comerr64.dll
+C:\Users\Alegria\Desktop\ProyectoFinal\V1\ProyectoFinalV1\bin\Debug\net8.0-windows\runtimes\win-x64\native\gssapi64.dll
+C:\Users\Alegria\Desktop\ProyectoFinal\V1\ProyectoFinalV1\bin\Debug\net8.0-windows\runtimes\win-x64\native\k5sprt64.dll
+C:\Users\Alegria\Desktop\ProyectoFinal\V1\ProyectoFinalV1\bin\Debug\net8.0-windows\runtimes\win-x64\native\krb5_64.dll
+C:\Users\Alegria\Desktop\ProyectoFinal\V1\ProyectoFinalV1\bin\Debug\net8.0-windows\runtimes\win-x64\native\krbcc64.dll
+C:\Users\Alegria\Desktop\ProyectoFinal\V1\ProyectoFinalV1\obj\Debug\net8.0-windows\Proyecto.9D4A2AD6.Up2Date
+C:\Users\Alegria\Desktop\ProyectoFinal - Copy\V1\ProyectoFinalV1\bin\Debug\net8.0-windows\ProyectoFinalV1.exe
+C:\Users\Alegria\Desktop\ProyectoFinal - Copy\V1\ProyectoFinalV1\bin\Debug\net8.0-windows\ProyectoFinalV1.deps.json
+C:\Users\Alegria\Desktop\ProyectoFinal - Copy\V1\ProyectoFinalV1\bin\Debug\net8.0-windows\ProyectoFinalV1.runtimeconfig.json
+C:\Users\Alegria\Desktop\ProyectoFinal - Copy\V1\ProyectoFinalV1\bin\Debug\net8.0-windows\ProyectoFinalV1.dll
+C:\Users\Alegria\Desktop\ProyectoFinal - Copy\V1\ProyectoFinalV1\bin\Debug\net8.0-windows\ProyectoFinalV1.pdb
+C:\Users\Alegria\Desktop\ProyectoFinal - Copy\V1\ProyectoFinalV1\bin\Debug\net8.0-windows\BouncyCastle.Cryptography.dll
+C:\Users\Alegria\Desktop\ProyectoFinal - Copy\V1\ProyectoFinalV1\bin\Debug\net8.0-windows\Google.Protobuf.dll
+C:\Users\Alegria\Desktop\ProyectoFinal - Copy\V1\ProyectoFinalV1\bin\Debug\net8.0-windows\K4os.Compression.LZ4.dll
+C:\Users\Alegria\Desktop\ProyectoFinal - Copy\V1\ProyectoFinalV1\bin\Debug\net8.0-windows\K4os.Compression.LZ4.Streams.dll
+C:\Users\Alegria\Desktop\ProyectoFinal - Copy\V1\ProyectoFinalV1\bin\Debug\net8.0-windows\K4os.Hash.xxHash.dll
+C:\Users\Alegria\Desktop\ProyectoFinal - Copy\V1\ProyectoFinalV1\bin\Debug\net8.0-windows\MySql.Data.dll
+C:\Users\Alegria\Desktop\ProyectoFinal - Copy\V1\ProyectoFinalV1\bin\Debug\net8.0-windows\System.IO.Pipelines.dll
+C:\Users\Alegria\Desktop\ProyectoFinal - Copy\V1\ProyectoFinalV1\bin\Debug\net8.0-windows\ZstdSharp.dll
+C:\Users\Alegria\Desktop\ProyectoFinal - Copy\V1\ProyectoFinalV1\bin\Debug\net8.0-windows\runtimes\win-x64\native\comerr64.dll
+C:\Users\Alegria\Desktop\ProyectoFinal - Copy\V1\ProyectoFinalV1\bin\Debug\net8.0-windows\runtimes\win-x64\native\gssapi64.dll
+C:\Users\Alegria\Desktop\ProyectoFinal - Copy\V1\ProyectoFinalV1\bin\Debug\net8.0-windows\runtimes\win-x64\native\k5sprt64.dll
+C:\Users\Alegria\Desktop\ProyectoFinal - Copy\V1\ProyectoFinalV1\bin\Debug\net8.0-windows\runtimes\win-x64\native\krb5_64.dll
+C:\Users\Alegria\Desktop\ProyectoFinal - Copy\V1\ProyectoFinalV1\bin\Debug\net8.0-windows\runtimes\win-x64\native\krbcc64.dll
+C:\Users\Alegria\Desktop\ProyectoFinal - Copy\V1\ProyectoFinalV1\obj\Debug\net8.0-windows\ProyectoFinalV1.csproj.AssemblyReference.cache
+C:\Users\Alegria\Desktop\ProyectoFinal - Copy\V1\ProyectoFinalV1\obj\Debug\net8.0-windows\ProyectoFinalV1.FormLogIn.resources
+C:\Users\Alegria\Desktop\ProyectoFinal - Copy\V1\ProyectoFinalV1\obj\Debug\net8.0-windows\ProyectoFinalV1.FormPortada.resources
+C:\Users\Alegria\Desktop\ProyectoFinal - Copy\V1\ProyectoFinalV1\obj\Debug\net8.0-windows\ProyectoFinalV1.Properties.Resources.resources
+C:\Users\Alegria\Desktop\ProyectoFinal - Copy\V1\ProyectoFinalV1\obj\Debug\net8.0-windows\ProyectoFinalV1.csproj.GenerateResource.cache
+C:\Users\Alegria\Desktop\ProyectoFinal - Copy\V1\ProyectoFinalV1\obj\Debug\net8.0-windows\ProyectoFinalV1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Alegria\Desktop\ProyectoFinal - Copy\V1\ProyectoFinalV1\obj\Debug\net8.0-windows\ProyectoFinalV1.AssemblyInfoInputs.cache
+C:\Users\Alegria\Desktop\ProyectoFinal - Copy\V1\ProyectoFinalV1\obj\Debug\net8.0-windows\ProyectoFinalV1.AssemblyInfo.cs
+C:\Users\Alegria\Desktop\ProyectoFinal - Copy\V1\ProyectoFinalV1\obj\Debug\net8.0-windows\ProyectoFinalV1.csproj.CoreCompileInputs.cache
+C:\Users\Alegria\Desktop\ProyectoFinal - Copy\V1\ProyectoFinalV1\obj\Debug\net8.0-windows\ProyectoFinalV1.sourcelink.json
+C:\Users\Alegria\Desktop\ProyectoFinal - Copy\V1\ProyectoFinalV1\obj\Debug\net8.0-windows\Proyecto.9D4A2AD6.Up2Date
+C:\Users\Alegria\Desktop\ProyectoFinal - Copy\V1\ProyectoFinalV1\obj\Debug\net8.0-windows\ProyectoFinalV1.dll
+C:\Users\Alegria\Desktop\ProyectoFinal - Copy\V1\ProyectoFinalV1\obj\Debug\net8.0-windows\refint\ProyectoFinalV1.dll
+C:\Users\Alegria\Desktop\ProyectoFinal - Copy\V1\ProyectoFinalV1\obj\Debug\net8.0-windows\ProyectoFinalV1.pdb
+C:\Users\Alegria\Desktop\ProyectoFinal - Copy\V1\ProyectoFinalV1\obj\Debug\net8.0-windows\ProyectoFinalV1.genruntimeconfig.cache
+C:\Users\Alegria\Desktop\ProyectoFinal - Copy\V1\ProyectoFinalV1\obj\Debug\net8.0-windows\ref\ProyectoFinalV1.dll
+C:\Users\alegr\Desktop\ProyectoFinal\V1\ProyectoFinalV1\bin\Debug\net8.0-windows\ProyectoFinalV1.exe
+C:\Users\alegr\Desktop\ProyectoFinal\V1\ProyectoFinalV1\bin\Debug\net8.0-windows\ProyectoFinalV1.deps.json
+C:\Users\alegr\Desktop\ProyectoFinal\V1\ProyectoFinalV1\bin\Debug\net8.0-windows\ProyectoFinalV1.runtimeconfig.json
+C:\Users\alegr\Desktop\ProyectoFinal\V1\ProyectoFinalV1\bin\Debug\net8.0-windows\ProyectoFinalV1.dll
+C:\Users\alegr\Desktop\ProyectoFinal\V1\ProyectoFinalV1\bin\Debug\net8.0-windows\ProyectoFinalV1.pdb
+C:\Users\alegr\Desktop\ProyectoFinal\V1\ProyectoFinalV1\bin\Debug\net8.0-windows\BouncyCastle.Cryptography.dll
+C:\Users\alegr\Desktop\ProyectoFinal\V1\ProyectoFinalV1\bin\Debug\net8.0-windows\Google.Protobuf.dll
+C:\Users\alegr\Desktop\ProyectoFinal\V1\ProyectoFinalV1\bin\Debug\net8.0-windows\K4os.Compression.LZ4.dll
+C:\Users\alegr\Desktop\ProyectoFinal\V1\ProyectoFinalV1\bin\Debug\net8.0-windows\K4os.Compression.LZ4.Streams.dll
+C:\Users\alegr\Desktop\ProyectoFinal\V1\ProyectoFinalV1\bin\Debug\net8.0-windows\K4os.Hash.xxHash.dll
+C:\Users\alegr\Desktop\ProyectoFinal\V1\ProyectoFinalV1\bin\Debug\net8.0-windows\MySql.Data.dll
+C:\Users\alegr\Desktop\ProyectoFinal\V1\ProyectoFinalV1\bin\Debug\net8.0-windows\System.IO.Pipelines.dll
+C:\Users\alegr\Desktop\ProyectoFinal\V1\ProyectoFinalV1\bin\Debug\net8.0-windows\ZstdSharp.dll
+C:\Users\alegr\Desktop\ProyectoFinal\V1\ProyectoFinalV1\bin\Debug\net8.0-windows\runtimes\win-x64\native\comerr64.dll
+C:\Users\alegr\Desktop\ProyectoFinal\V1\ProyectoFinalV1\bin\Debug\net8.0-windows\runtimes\win-x64\native\gssapi64.dll
+C:\Users\alegr\Desktop\ProyectoFinal\V1\ProyectoFinalV1\bin\Debug\net8.0-windows\runtimes\win-x64\native\k5sprt64.dll
+C:\Users\alegr\Desktop\ProyectoFinal\V1\ProyectoFinalV1\bin\Debug\net8.0-windows\runtimes\win-x64\native\krb5_64.dll
+C:\Users\alegr\Desktop\ProyectoFinal\V1\ProyectoFinalV1\bin\Debug\net8.0-windows\runtimes\win-x64\native\krbcc64.dll
+C:\Users\alegr\Desktop\ProyectoFinal\V1\ProyectoFinalV1\obj\Debug\net8.0-windows\ProyectoFinalV1.csproj.AssemblyReference.cache
+C:\Users\alegr\Desktop\ProyectoFinal\V1\ProyectoFinalV1\obj\Debug\net8.0-windows\ProyectoFinalV1.FormLogIn.resources
+C:\Users\alegr\Desktop\ProyectoFinal\V1\ProyectoFinalV1\obj\Debug\net8.0-windows\ProyectoFinalV1.FormPortada.resources
+C:\Users\alegr\Desktop\ProyectoFinal\V1\ProyectoFinalV1\obj\Debug\net8.0-windows\ProyectoFinalV1.Properties.Resources.resources
+C:\Users\alegr\Desktop\ProyectoFinal\V1\ProyectoFinalV1\obj\Debug\net8.0-windows\ProyectoFinalV1.csproj.GenerateResource.cache
+C:\Users\alegr\Desktop\ProyectoFinal\V1\ProyectoFinalV1\obj\Debug\net8.0-windows\ProyectoFinalV1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\alegr\Desktop\ProyectoFinal\V1\ProyectoFinalV1\obj\Debug\net8.0-windows\ProyectoFinalV1.AssemblyInfoInputs.cache
+C:\Users\alegr\Desktop\ProyectoFinal\V1\ProyectoFinalV1\obj\Debug\net8.0-windows\ProyectoFinalV1.AssemblyInfo.cs
+C:\Users\alegr\Desktop\ProyectoFinal\V1\ProyectoFinalV1\obj\Debug\net8.0-windows\ProyectoFinalV1.csproj.CoreCompileInputs.cache
+C:\Users\alegr\Desktop\ProyectoFinal\V1\ProyectoFinalV1\obj\Debug\net8.0-windows\ProyectoFinalV1.sourcelink.json
+C:\Users\alegr\Desktop\ProyectoFinal\V1\ProyectoFinalV1\obj\Debug\net8.0-windows\Proyecto.9D4A2AD6.Up2Date
+C:\Users\alegr\Desktop\ProyectoFinal\V1\ProyectoFinalV1\obj\Debug\net8.0-windows\ProyectoFinalV1.dll
+C:\Users\alegr\Desktop\ProyectoFinal\V1\ProyectoFinalV1\obj\Debug\net8.0-windows\refint\ProyectoFinalV1.dll
+C:\Users\alegr\Desktop\ProyectoFinal\V1\ProyectoFinalV1\obj\Debug\net8.0-windows\ProyectoFinalV1.pdb
+C:\Users\alegr\Desktop\ProyectoFinal\V1\ProyectoFinalV1\obj\Debug\net8.0-windows\ProyectoFinalV1.genruntimeconfig.cache
+C:\Users\alegr\Desktop\ProyectoFinal\V1\ProyectoFinalV1\obj\Debug\net8.0-windows\ref\ProyectoFinalV1.dll
