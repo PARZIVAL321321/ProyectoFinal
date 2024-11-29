@@ -36,10 +36,12 @@ namespace ProyectoFinalV1
             // Linea de comando en SQL para buscar nuestra cuenta, haciendo uso de la informacion que tenemos en nuestros textBox
             string consulta = "SELECT Cuenta FROM personas WHERE Cuenta='" + textBox_Cuenta.Text + "' AND Contra='" + textBox_Contra.Text + "'";
 
-            // Realizamos nuestro comando
+            // Cargamos nuestro comando
             MySqlCommand comando = new MySqlCommand(consulta, conexion);
 
-            // Pasos para el mensaje de exito
+            // Realizamos el comando
+
+            // Validamos segun el tipo de cuenta
             MySqlDataReader lector = comando.ExecuteReader();
             if (lector.HasRows == true)
             {
@@ -52,7 +54,18 @@ namespace ProyectoFinalV1
                 {
                     // En caso de que haya entrado el Admin
                     case 0: 
-                        /* Aqui se va a mostrar el form solamente para el admin */
+                        // Creamos nuestro form
+                        FormAdmin formAdmin = new FormAdmin();
+                        // Ocultamos este form
+                        this.Hide();
+                        // Usamos el ShowDialog para cuando el usuario haga Logout
+                        formAdmin.ShowDialog();
+                        // Volvemos a mostrar este form
+                        this.Show();
+
+                        // Despues de regresar al Log-In, limpiamos los campos
+                        textBox_Cuenta.Text = "";
+                        textBox_Contra.Text = "";
                         break;
                     // En caso de que haya entrado un cliente/invitado
                     case 1: 
@@ -64,10 +77,12 @@ namespace ProyectoFinalV1
                         formProductos.ShowDialog();
                         // Volvemos a mostrar este form
                         this.Show();
+
+                        // Despues de regresar al Log-In, limpiamos los campos
+                        textBox_Cuenta.Text = "";
+                        textBox_Contra.Text = "";
                         break;
                 }
-
-
             }
             else
             {

@@ -16,5 +16,11 @@ namespace ProyectoFinalV1
         {
             InitializeComponent();
         }
+
+
+        private void button_LogOut_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
     }
 }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\alegr\\Desktop\\ProyectoFinal\\ProyectoFinalV1\\ProyectoFinalV1.csproj": {}
+    "C:\\Users\\alegr\\Desktop\\ProyectoFinal-Alegria\\ProyectoFinalV1\\ProyectoFinalV1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\alegr\\Desktop\\ProyectoFinal\\ProyectoFinalV1\\ProyectoFinalV1.csproj": {
+    "C:\\Users\\alegr\\Desktop\\ProyectoFinal-Alegria\\ProyectoFinalV1\\ProyectoFinalV1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\alegr\\Desktop\\ProyectoFinal\\ProyectoFinalV1\\ProyectoFinalV1.csproj",
+        "projectUniqueName": "C:\\Users\\alegr\\Desktop\\ProyectoFinal-Alegria\\ProyectoFinalV1\\ProyectoFinalV1.csproj",
         "projectName": "ProyectoFinalV1",
-        "projectPath": "C:\\Users\\alegr\\Desktop\\ProyectoFinal\\ProyectoFinalV1\\ProyectoFinalV1.csproj",
+        "projectPath": "C:\\Users\\alegr\\Desktop\\ProyectoFinal-Alegria\\ProyectoFinalV1\\ProyectoFinalV1.csproj",
         "packagesPath": "C:\\Users\\alegr\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\alegr\\Desktop\\ProyectoFinal\\ProyectoFinalV1\\obj\\",
+        "outputPath": "C:\\Users\\alegr\\Desktop\\ProyectoFinal-Alegria\\ProyectoFinalV1\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

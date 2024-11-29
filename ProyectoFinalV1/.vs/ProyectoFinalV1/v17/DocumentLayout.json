@@ -1,18 +1,10 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\alegr\\Desktop\\ProyectoFinal\\ProyectoFinalV1\\",
+  "WorkspaceRootPath": "C:\\Users\\alegr\\Desktop\\ProyectoFinal-Alegria\\ProyectoFinalV1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FB66F1B0-E526-4F56-8D53-094F3AB041D9}|ProyectoFinalV1.csproj|c:\\users\\alegr\\desktop\\proyectofinal\\proyectofinalv1\\formlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FB66F1B0-E526-4F56-8D53-094F3AB041D9}|ProyectoFinalV1.csproj|c:\\users\\alegr\\desktop\\proyectofinal-alegria\\proyectofinalv1\\formlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FB66F1B0-E526-4F56-8D53-094F3AB041D9}|ProyectoFinalV1.csproj|solutionrelative:formlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FB66F1B0-E526-4F56-8D53-094F3AB041D9}|ProyectoFinalV1.csproj|c:\\users\\alegr\\desktop\\proyectofinal\\proyectofinalv1\\personas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FB66F1B0-E526-4F56-8D53-094F3AB041D9}|ProyectoFinalV1.csproj|solutionrelative:personas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FB66F1B0-E526-4F56-8D53-094F3AB041D9}|ProyectoFinalV1.csproj|C:\\Users\\alegr\\Desktop\\ProyectoFinal\\ProyectoFinalV1\\formlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FB66F1B0-E526-4F56-8D53-094F3AB041D9}|ProyectoFinalV1.csproj|solutionrelative:formlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -25,49 +17,21 @@
           "SelectedChildIndex": 1,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Personas.cs",
-              "DocumentMoniker": "C:\\Users\\alegr\\Desktop\\ProyectoFinal\\ProyectoFinalV1\\Personas.cs",
-              "RelativeDocumentMoniker": "Personas.cs",
-              "ToolTip": "C:\\Users\\alegr\\Desktop\\ProyectoFinal\\ProyectoFinalV1\\Personas.cs",
-              "RelativeToolTip": "Personas.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-29T15:49:22.298Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "FormLogIn.cs",
-              "DocumentMoniker": "C:\\Users\\alegr\\Desktop\\ProyectoFinal\\ProyectoFinalV1\\FormLogIn.cs",
-              "RelativeDocumentMoniker": "FormLogIn.cs",
-              "ToolTip": "C:\\Users\\alegr\\Desktop\\ProyectoFinal\\ProyectoFinalV1\\FormLogIn.cs",
-              "RelativeToolTip": "FormLogIn.cs",
-              "ViewState": "AgIAAHgAAAAAAAAAAAAAAEEAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "OverriddenGroupName": "",
-              "WhenOpened": "2024-11-29T15:05:35.522Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
               "$type": "Bookmark",
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "FormLogIn.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\alegr\\Desktop\\ProyectoFinal\\ProyectoFinalV1\\FormLogIn.cs",
+              "DocumentIndex": 0,
+              "Title": "FormLogIn.cs",
+              "DocumentMoniker": "C:\\Users\\alegr\\Desktop\\ProyectoFinal-Alegria\\ProyectoFinalV1\\FormLogIn.cs",
               "RelativeDocumentMoniker": "FormLogIn.cs",
-              "ToolTip": "C:\\Users\\alegr\\Desktop\\ProyectoFinal\\ProyectoFinalV1\\FormLogIn.cs [Design]",
-              "RelativeToolTip": "FormLogIn.cs [Design]",
+              "ToolTip": "C:\\Users\\alegr\\Desktop\\ProyectoFinal-Alegria\\ProyectoFinalV1\\FormLogIn.cs",
+              "RelativeToolTip": "FormLogIn.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAgwFIAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-28T14:25:16.582Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-11-29T18:22:09.61Z",
+              "EditorCaption": ""
             }
           ]
         }

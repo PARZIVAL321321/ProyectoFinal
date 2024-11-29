@@ -131,6 +131,7 @@
             panel2 = new Panel();
             pictureBox12 = new PictureBox();
             pictureBox1 = new PictureBox();
+            button_LogOut = new Button();
             panel1.SuspendLayout();
             flowLayoutPanel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1Juego9).BeginInit();
@@ -1068,6 +1069,7 @@
             // 
             // panel2
             // 
+            panel2.Controls.Add(button_LogOut);
             panel2.Controls.Add(pictureBox12);
             panel2.Controls.Add(pictureBox1);
             panel2.Location = new Point(0, -3);
@@ -1095,6 +1097,16 @@
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
+            // button_LogOut
+            // 
+            button_LogOut.Location = new Point(927, 25);
+            button_LogOut.Name = "button_LogOut";
+            button_LogOut.Size = new Size(130, 50);
+            button_LogOut.TabIndex = 2;
+            button_LogOut.Text = "Log-Out";
+            button_LogOut.UseVisualStyleBackColor = true;
+            button_LogOut.Click += button_LogOut_Click;
+            // 
             // FormProductos
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -1104,6 +1116,7 @@
             Controls.Add(panel2);
             Controls.Add(panel1);
             Name = "FormProductos";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "FormProductos";
             panel1.ResumeLayout(false);
             flowLayoutPanel9.ResumeLayout(false);
@@ -1245,5 +1258,6 @@
         private TextBox textBox5Juego9;
         private TextBox textBox6Juego9;
         private TextBox textBox7Juego9;
+        private Button button_LogOut;
     }
 }

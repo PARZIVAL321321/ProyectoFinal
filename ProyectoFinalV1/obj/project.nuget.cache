@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "RmSRPl51Pr0=",
+  "dgSpecHash": "hOJEkziSsOY=",
   "success": true,
-  "projectFilePath": "C:\\Users\\alegr\\Desktop\\ProyectoFinal\\ProyectoFinalV1\\ProyectoFinalV1.csproj",
+  "projectFilePath": "C:\\Users\\alegr\\Desktop\\ProyectoFinal-Alegria\\ProyectoFinalV1\\ProyectoFinalV1.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\alegr\\.nuget\\packages\\bouncycastle.cryptography\\2.3.1\\bouncycastle.cryptography.2.3.1.nupkg.sha512",
     "C:\\Users\\alegr\\.nuget\\packages\\google.protobuf\\3.26.1\\google.protobuf.3.26.1.nupkg.sha512",
