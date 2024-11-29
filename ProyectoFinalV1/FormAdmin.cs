@@ -73,5 +73,10 @@ namespace ProyectoFinalV1
         {
             this.Dispose();
         }
+
+        private void FormAdmin_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
