@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -17,6 +18,11 @@ namespace ProyectoFinalV1
         {
             InitializeComponent();
         }
+
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
 
         // Boton para "refrescar" la base de datos y mostrarla en el 
         private void button_MostrarInventario_Click(object sender, EventArgs e)
@@ -75,6 +81,112 @@ namespace ProyectoFinalV1
         }
 
         private void FormAdmin_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FormAdmin_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void textBoxTITULOJUEGO_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonGUARDARPRODUCTO_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btncerrar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void txtSUBIRPRODUCTOS_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxID_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxTITULOJUEGO_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxMODALIDAD_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxPLATAFORMA_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxGENERO_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxPRECIO_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxSTOCK_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonCARGARIMAGEN_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_IDBorrar_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtIDENTIFYID_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtGAMETITLE_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtMODEMODIFY_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPLATFORMMODIFY_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtGENREMODIFY_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPRICEMODIFY_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtSTOCKMODIFY_TextChanged(object sender, EventArgs e)
         {
 
         }
