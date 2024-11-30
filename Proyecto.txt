@@ -4,14 +4,14 @@ Punto de venta (Videojuegos)
 
 Partes del proyecto:
 	1-4
-- Portada (Alegria)
-- Pantalla log in (Alegria) 
-- Tabla usuarios (Alegria)
+- Portada (Alegria) ❗
+- Pantalla log in (Alegria) ✅
+- Tabla usuarios (Alegria) ✅
 	5-6
-- Tabla productos (Oscar)
-- Pantalla productos (Oscar)
+- Tabla productos (Oscar) ✅
+- Pantalla productos (Oscar) ✅
 	7-9
-- Permisos/alta/baja productos (Uriel)
+- Permisos/alta/baja productos (Uriel) ❗
 - Grafica (Uriel)
 	10-15
 - Permisos comprar (Alegria)
