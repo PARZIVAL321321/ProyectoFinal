@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 28, 2024 at 03:32 PM
+-- Generation Time: Nov 29, 2024 at 07:34 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -32,7 +32,7 @@ CREATE TABLE `personas` (
   `Nombre` varchar(100) DEFAULT NULL,
   `Cuenta` varchar(100) DEFAULT NULL,
   `Contra` varchar(100) DEFAULT NULL,
-  `Monto` float(11,0) DEFAULT NULL,
+  `Monto` int(11) DEFAULT NULL,
   `Tipo` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -41,7 +41,9 @@ CREATE TABLE `personas` (
 --
 
 INSERT INTO `personas` (`ID`, `Nombre`, `Cuenta`, `Contra`, `Monto`, `Tipo`) VALUES
-(1, 'Eduardo Arturo Alegria Vela', 'Alegria2812', 'Proyecto2024', 0, 1);
+(1, 'Patron', 'admin', 'admin', 0, 0),
+(2, 'Amigo', 'invitado', 'invitado', 0, 1),
+(3, 'Eduardo Arturo Alegria Vela', 'Alegria2812', 'Proyecto2024', 0, 1);
 
 --
 -- Indexes for dumped tables
