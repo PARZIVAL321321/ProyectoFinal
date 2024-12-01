@@ -27,21 +27,6 @@ namespace ProyectoFinalV1
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btncerrar_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -50,11 +35,6 @@ namespace ProyectoFinalV1
         private void btnminimizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
-        }
-
-        private void FormPortada_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void FormPortada_MouseDown(object sender, MouseEventArgs e)

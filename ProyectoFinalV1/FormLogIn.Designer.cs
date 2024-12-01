@@ -59,7 +59,6 @@
             label_Puntodeventa.Size = new Size(376, 56);
             label_Puntodeventa.TabIndex = 0;
             label_Puntodeventa.Text = "Punto de venta";
-            label_Puntodeventa.Click += label_Puntodeventa_Click;
             // 
             // label1
             // 
@@ -84,7 +83,6 @@
             textBox_Cuenta.PlaceholderText = "Cuenta";
             textBox_Cuenta.Size = new Size(700, 26);
             textBox_Cuenta.TabIndex = 4;
-            textBox_Cuenta.TextChanged += textBox_Cuenta_TextChanged;
             textBox_Cuenta.Enter += textBox_Cuenta_Enter;
             textBox_Cuenta.Leave += textBox_Cuenta_Leave;
             // 
@@ -99,7 +97,6 @@
             textBox_Contra.PlaceholderText = "Contraseña";
             textBox_Contra.Size = new Size(700, 26);
             textBox_Contra.TabIndex = 5;
-            textBox_Contra.TextChanged += textBox_Contra_TextChanged;
             textBox_Contra.Enter += textBox_Contra_Enter;
             textBox_Contra.Leave += textBox_Contra_Leave;
             // 
@@ -156,7 +153,6 @@
             pictureBox2.SizeMode = PictureBoxSizeMode.AutoSize;
             pictureBox2.TabIndex = 4;
             pictureBox2.TabStop = false;
-            pictureBox2.Click += pictureBox2_Click;
             // 
             // pictureBox1
             // 
@@ -211,7 +207,6 @@
             Name = "FormLogIn";
             Opacity = 0.95D;
             StartPosition = FormStartPosition.CenterScreen;
-            Load += FormLogIn_Load;
             MouseDown += FormLogIn_MouseDown;
             panel2.ResumeLayout(false);
             panel2.PerformLayout();

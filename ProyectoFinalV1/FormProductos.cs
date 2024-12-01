@@ -27,21 +27,6 @@ namespace ProyectoFinalV1
             this.Dispose();
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void FormProductos_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void FormProductos_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
@@ -58,26 +43,6 @@ namespace ProyectoFinalV1
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void pictureBox1Juego1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2Juego1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox3Juego3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1Juego1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void panel3_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
@@ -85,14 +50,5 @@ namespace ProyectoFinalV1
             ReleaseCapture();
         }
 
-        private void textBox13_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ImagenJuego3_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

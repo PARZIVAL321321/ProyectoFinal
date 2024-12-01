@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
+using System.Runtime.Intrinsics.Arm;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -23,6 +24,22 @@ namespace ProyectoFinalV1
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
+
+        private void button_LogOut_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
+
+        private void FormAdmin_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void btncerrar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
 
         // Boton para "refrescar" la base de datos y mostrarla en el 
         private void button_MostrarInventario_Click(object sender, EventArgs e)
@@ -75,120 +92,95 @@ namespace ProyectoFinalV1
 
         }
 
-        private void button_LogOut_Click(object sender, EventArgs e)
+        // Boton para guardar el nuevo producto
+        private void button_Subir_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+            try
+            {
+
+                // Creamos nuestra variable para la base de datos, y pasamos nuestra informacion
+                MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=proyecto; User=root; Password=; Sslmode=none;");
+                // Abrimos nuestra base de datos
+                conexion.Open();
+
+                string x = "imagen.jpg";
+
+                // Linea de comando de SQL
+                string consulta = "INSERT INTO juegos (ID, Nombre, Imagen, Genero, Plataforma, Modalidad, Precio, Stock) VALUES ("
+                    + "'" + textBox_IDSubir.Text + "',"
+                    + "'" + textBox_NombreSubir.Text + "',"
+                    + "'" + x + "',"
+                    + "'" + textBox_GeneroSubir.Text + "',"
+                    + "'" + textBox_PlataformaSubir.Text + "',"
+                    + "'" + textBox_ModalidadSubir.Text + "',"
+                    + "'" + textBox_PrecioSubir.Text + "',"
+                    + "'" + textBox_StockSubir.Text + "')";
+
+                // Cargamos neestra linea de comandos
+                MySqlCommand comando = new MySqlCommand(consulta, conexion);
+
+                // Ejecutamos el comando
+                comando.ExecuteNonQuery();
+
+                MessageBox.Show("Producto agregado correctamente");
+
+                // Cerramos nuestra conexion
+                conexion.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al eliminar producto: " + ex.Message);
+            }
+
+            // Volvemos a vaciar nuestros TextBox
+            textBox_IDSubir.Text = "";
+            textBox_NombreSubir.Text = "";
+            textBox_GeneroSubir.Text = "";
+            textBox_PlataformaSubir.Text = "";
+            textBox_ModalidadSubir.Text = "";
+            textBox_PrecioSubir.Text = "";
+            textBox_StockSubir.Text = "";
         }
 
-        private void FormAdmin_Load(object sender, EventArgs e)
+        // Boton para modificar los datos
+        private void button_Modificar_Click(object sender, EventArgs e)
         {
+            try
+            {
+                // Creamos nuestra variable para la base de datos, y pasamos nuestra informacion
+                MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=proyecto; User=root; Password=; Sslmode=none;");
+                // Abrimos nuestra base de datos
+                conexion.Open();
 
-        }
+                string x = "imagen.jpg";
 
-        private void FormAdmin_MouseDown(object sender, MouseEventArgs e)
-        {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }
+                string consulta = "UPDATE juegos SET ID=" + "'" + textBox_IDModificar.Text + "'" +
+                    ",Nombre=" + "'" + textBox_NombreModificar.Text + "'" +
+                    ",Imagen=" + "'" + x + "'" +
+                    ",Genero=" + "'" + textBox_PrecioModificar.Text + "'" +
+                    ",Plataforma=" + "'" + textBox_PlataformaModificar.Text + "'" +
+                    ",Modalidad=" + "'" + textBox_ModalidadModificar.Text + "'" +
+                    ",Precio=" + "'" + textBox_PrecioModificar.Text + "'" +
+                    ",Stock=" + "'" + textBox_StockModificar.Text + "'" +
+                    "WHERE ID =" + textBox_IDModificar.Text;
 
-        private void textBoxTITULOJUEGO_TextChanged(object sender, EventArgs e)
-        {
+                // Cargamos neestra linea de comandos
+                MySqlCommand comando = new MySqlCommand(consulta, conexion);
 
-        }
+                // Ejecutamos el comando
+                comando.ExecuteNonQuery();
 
-        private void buttonGUARDARPRODUCTO_Click(object sender, EventArgs e)
-        {
+                MessageBox.Show("Producto actualizado correctamente");
 
-        }
+                // Cerramos nuestra conexion
+                conexion.Close();
 
-        private void btncerrar_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
 
-        private void txtSUBIRPRODUCTOS_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBoxID_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBoxTITULOJUEGO_TextChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBoxMODALIDAD_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBoxPLATAFORMA_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBoxGENERO_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBoxPRECIO_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBoxSTOCK_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void buttonCARGARIMAGEN_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox_IDBorrar_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtIDENTIFYID_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtGAMETITLE_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtMODEMODIFY_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtPLATFORMMODIFY_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtGENREMODIFY_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtPRICEMODIFY_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtSTOCKMODIFY_TextChanged(object sender, EventArgs e)
-        {
-
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error en la actualizacion: " + ex.Message);
+            }
         }
     }
 }

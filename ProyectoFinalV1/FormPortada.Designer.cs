@@ -90,7 +90,6 @@
             label2.Size = new Size(90, 25);
             label2.TabIndex = 18;
             label2.Text = "Alegria";
-            label2.Click += label2_Click;
             // 
             // label1
             // 
@@ -102,7 +101,6 @@
             label1.Size = new Size(381, 25);
             label1.TabIndex = 17;
             label1.Text = "Uriel Ezequiel Ortiz Rosales - 349695";
-            label1.Click += label1_Click;
             // 
             // btncerrar
             // 
@@ -142,7 +140,6 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "FormPortada";
             StartPosition = FormStartPosition.CenterScreen;
-            Load += FormPortada_Load;
             MouseDown += FormPortada_MouseDown;
             ((System.ComponentModel.ISupportInitialize)pictureBox_LogoUAA).EndInit();
             ((System.ComponentModel.ISupportInitialize)btncerrar).EndInit();

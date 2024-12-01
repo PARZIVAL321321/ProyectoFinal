@@ -247,7 +247,6 @@
             TituloJuego1.Name = "TituloJuego1";
             TituloJuego1.Size = new Size(178, 20);
             TituloJuego1.TabIndex = 1;
-            TituloJuego1.TextChanged += textBox1Juego1_TextChanged;
             // 
             // ImagenJuego1
             // 
@@ -258,7 +257,6 @@
             ImagenJuego1.Size = new Size(294, 314);
             ImagenJuego1.TabIndex = 2;
             ImagenJuego1.TabStop = false;
-            ImagenJuego1.Click += pictureBox1Juego1_Click;
             // 
             // GeneroJuego1
             // 
@@ -405,7 +403,6 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(1500, 601);
             panel1.TabIndex = 4;
-            panel1.Paint += panel1_Paint;
             // 
             // button7
             // 
@@ -889,7 +886,6 @@
             ModalidadJuego6.Name = "ModalidadJuego6";
             ModalidadJuego6.Size = new Size(110, 20);
             ModalidadJuego6.TabIndex = 16;
-            ModalidadJuego6.TextChanged += textBox13_TextChanged;
             // 
             // panel8
             // 
@@ -1276,7 +1272,6 @@
             ImagenJuego3.Size = new Size(294, 314);
             ImagenJuego3.TabIndex = 15;
             ImagenJuego3.TabStop = false;
-            ImagenJuego3.Click += ImagenJuego3_Click;
             // 
             // TituloJuego3
             // 
@@ -1404,7 +1399,6 @@
             Opacity = 0.95D;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FormProductos";
-            Load += FormProductos_Load;
             MouseDown += FormProductos_MouseDown;
             ((System.ComponentModel.ISupportInitialize)btnminimizar).EndInit();
             ((System.ComponentModel.ISupportInitialize)btncerrar).EndInit();

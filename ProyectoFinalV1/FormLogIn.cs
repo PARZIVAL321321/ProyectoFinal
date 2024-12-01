@@ -137,21 +137,6 @@ namespace ProyectoFinalV1
             return regresar;
         }
 
-        private void label_Puntodeventa_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void FormLogIn_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btncerrar_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -184,16 +169,6 @@ namespace ProyectoFinalV1
                 textBox_Cuenta.Text = "USUARIO";
                 textBox_Cuenta.ForeColor = Color.DimGray;
             }
-        }
-
-        private void textBox_Contra_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox_Cuenta_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void textBox_Contra_Enter(object sender, EventArgs e)
