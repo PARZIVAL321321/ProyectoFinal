@@ -70,8 +70,9 @@ namespace ProyectoFinalV1
                         break;
                     // En caso de que haya entrado un cliente/invitado
                     case 1:
-                        // Creamos nuestro form
-                        FormProductos formProductos = new FormProductos();
+
+                        // Creamos nuestro form (obtenemos el nombre de la persona que ingreso)
+                        FormProductos formProductos = new FormProductos(Obtener_Nombre_Cuenta());
                         // Ocultamos este form
                         this.Hide();
                         // Usamos el ShowDialog para cuando el usuario haga Logout
@@ -133,6 +134,43 @@ namespace ProyectoFinalV1
             // Cerramos la conexion
             conexion.Close();
 
+
+            return regresar;
+        }
+
+        private string Obtener_Nombre_Cuenta()
+        {
+            // Creamos nuestra variable para la base de datos, y pasamos nuestra informacion
+            MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=proyecto; User=root; Password=; Sslmode=none;");
+            // Abrimos nuestra base de datos
+            conexion.Open();
+
+            // Variable a retornar
+            string regresar = "";
+
+            try
+            {
+                string consulta = "SELECT Nombre FROM personas WHERE Cuenta='" + textBox_Cuenta.Text + "' AND Contra='" + textBox_Contra.Text + "'";
+                MySqlCommand comando = new MySqlCommand(consulta, conexion);
+
+                // Ejecutamos la consulta y leer los resultados
+                MySqlDataReader reader = comando.ExecuteReader();
+
+                while (reader.Read()) // Solo va a encontrar un registro (gracias a la consulta)
+                {
+                    // Guardamos el valor
+                    regresar = Convert.ToString(reader["Nombre"]);
+                }
+
+                reader.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al leer la base de datos: " + ex.Message);
+            }
+
+            // Cerramos la conexion
+            conexion.Close();
 
             return regresar;
         }

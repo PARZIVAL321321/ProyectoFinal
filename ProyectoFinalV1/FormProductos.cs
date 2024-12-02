@@ -12,9 +12,19 @@ namespace ProyectoFinalV1
 {
     public partial class FormProductos : Form
     {
+        // Constructor vacio
         public FormProductos()
         {
             InitializeComponent();
+        }
+
+        // Constructor por parametros (recibe el nombre de la persona que ingreso)
+        public FormProductos(string nombre)
+        {
+            // Llamamos la funcion importante
+            InitializeComponent();
+            // Ponemos le nombre recibido en nuestro textBox
+            textBox_Nombre.Text = nombre;
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]

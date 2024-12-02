@@ -44,7 +44,8 @@
             // pictureBox_LogoUAA
             // 
             pictureBox_LogoUAA.Image = Properties.Resources.Logo_UAA;
-            pictureBox_LogoUAA.Location = new Point(363, 12);
+            pictureBox_LogoUAA.Location = new Point(415, 16);
+            pictureBox_LogoUAA.Margin = new Padding(3, 4, 3, 4);
             pictureBox_LogoUAA.Name = "pictureBox_LogoUAA";
             pictureBox_LogoUAA.Size = new Size(400, 194);
             pictureBox_LogoUAA.SizeMode = PictureBoxSizeMode.AutoSize;
@@ -61,9 +62,10 @@
             button_LogIn.FlatStyle = FlatStyle.Flat;
             button_LogIn.Font = new Font("Century Gothic", 15.75F);
             button_LogIn.ForeColor = Color.LightGray;
-            button_LogIn.Location = new Point(482, 427);
+            button_LogIn.Location = new Point(551, 569);
+            button_LogIn.Margin = new Padding(3, 4, 3, 4);
             button_LogIn.Name = "button_LogIn";
-            button_LogIn.Size = new Size(160, 54);
+            button_LogIn.Size = new Size(183, 72);
             button_LogIn.TabIndex = 1;
             button_LogIn.Text = "Log-In";
             button_LogIn.UseVisualStyleBackColor = false;
@@ -74,9 +76,9 @@
             label3.AutoSize = true;
             label3.Font = new Font("Century Gothic", 16F);
             label3.ForeColor = Color.DarkGray;
-            label3.Location = new Point(370, 289);
+            label3.Location = new Point(415, 385);
             label3.Name = "label3";
-            label3.Size = new Size(254, 25);
+            label3.Size = new Size(308, 33);
             label3.TabIndex = 19;
             label3.Text = "Oscar de Jesus Guillen";
             // 
@@ -85,29 +87,30 @@
             label2.AutoSize = true;
             label2.Font = new Font("Century Gothic", 16F);
             label2.ForeColor = Color.DarkGray;
-            label2.Location = new Point(363, 330);
+            label2.Location = new Point(415, 440);
             label2.Name = "label2";
-            label2.Size = new Size(90, 25);
+            label2.Size = new Size(514, 33);
             label2.TabIndex = 18;
-            label2.Text = "Alegria";
+            label2.Text = "Eduardo Arturo Alegria Vela - (280146)";
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Century Gothic", 16F);
             label1.ForeColor = Color.DarkGray;
-            label1.Location = new Point(363, 369);
+            label1.Location = new Point(415, 492);
             label1.Name = "label1";
-            label1.Size = new Size(381, 25);
+            label1.Size = new Size(465, 33);
             label1.TabIndex = 17;
             label1.Text = "Uriel Ezequiel Ortiz Rosales - 349695";
             // 
             // btncerrar
             // 
             btncerrar.Image = (Image)resources.GetObject("btncerrar.Image");
-            btncerrar.Location = new Point(1067, 12);
+            btncerrar.Location = new Point(1219, 16);
+            btncerrar.Margin = new Padding(3, 4, 3, 4);
             btncerrar.Name = "btncerrar";
-            btncerrar.Size = new Size(25, 25);
+            btncerrar.Size = new Size(29, 33);
             btncerrar.SizeMode = PictureBoxSizeMode.StretchImage;
             btncerrar.TabIndex = 20;
             btncerrar.TabStop = false;
@@ -116,9 +119,10 @@
             // btnminimizar
             // 
             btnminimizar.Image = (Image)resources.GetObject("btnminimizar.Image");
-            btnminimizar.Location = new Point(1036, 20);
+            btnminimizar.Location = new Point(1184, 27);
+            btnminimizar.Margin = new Padding(3, 4, 3, 4);
             btnminimizar.Name = "btnminimizar";
-            btnminimizar.Size = new Size(25, 8);
+            btnminimizar.Size = new Size(29, 11);
             btnminimizar.SizeMode = PictureBoxSizeMode.StretchImage;
             btnminimizar.TabIndex = 21;
             btnminimizar.TabStop = false;
@@ -126,10 +130,10 @@
             // 
             // FormPortada
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(20, 20, 20);
-            ClientSize = new Size(1104, 505);
+            ClientSize = new Size(1262, 673);
             Controls.Add(btnminimizar);
             Controls.Add(btncerrar);
             Controls.Add(label3);
@@ -138,6 +142,7 @@
             Controls.Add(button_LogIn);
             Controls.Add(pictureBox_LogoUAA);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 4, 3, 4);
             Name = "FormPortada";
             StartPosition = FormStartPosition.CenterScreen;
             MouseDown += FormPortada_MouseDown;
