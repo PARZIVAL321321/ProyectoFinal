@@ -228,6 +228,11 @@ namespace ProyectoFinalV1
                 textBox_Contra.UseSystemPasswordChar = false;
             }
         }
+
+        private void FormLogIn_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

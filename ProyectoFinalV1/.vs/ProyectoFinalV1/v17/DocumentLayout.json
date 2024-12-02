@@ -1,9 +1,17 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\alegr\\Desktop\\ProyectoFinal\\ProyectoFinalV1\\",
+  "WorkspaceRootPath": "C:\\Users\\uriel\\OneDrive\\Desktop\\REPOSITORIO\\ProyectoFinal\\ProyectoFinalV1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FB66F1B0-E526-4F56-8D53-094F3AB041D9}|ProyectoFinalV1.csproj|c:\\users\\alegr\\desktop\\proyectofinal\\proyectofinalv1\\formadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FB66F1B0-E526-4F56-8D53-094F3AB041D9}|ProyectoFinalV1.csproj|c:\\users\\uriel\\onedrive\\desktop\\repositorio\\proyectofinal\\proyectofinalv1\\formadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{FB66F1B0-E526-4F56-8D53-094F3AB041D9}|ProyectoFinalV1.csproj|solutionrelative:formadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB66F1B0-E526-4F56-8D53-094F3AB041D9}|ProyectoFinalV1.csproj|c:\\users\\uriel\\onedrive\\desktop\\repositorio\\proyectofinal\\proyectofinalv1\\formlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{FB66F1B0-E526-4F56-8D53-094F3AB041D9}|ProyectoFinalV1.csproj|solutionrelative:formlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB66F1B0-E526-4F56-8D53-094F3AB041D9}|ProyectoFinalV1.csproj|c:\\users\\uriel\\onedrive\\desktop\\repositorio\\proyectofinal\\proyectofinalv1\\formadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FB66F1B0-E526-4F56-8D53-094F3AB041D9}|ProyectoFinalV1.csproj|solutionrelative:formadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -17,18 +25,38 @@
           "SelectedChildIndex": 1,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FormLogIn.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\uriel\\OneDrive\\Desktop\\REPOSITORIO\\ProyectoFinal\\ProyectoFinalV1\\FormLogIn.cs",
+              "RelativeDocumentMoniker": "FormLogIn.cs",
+              "ToolTip": "C:\\Users\\uriel\\OneDrive\\Desktop\\REPOSITORIO\\ProyectoFinal\\ProyectoFinalV1\\FormLogIn.cs [Dise\u00F1o]",
+              "RelativeToolTip": "FormLogIn.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T21:29:46.13Z",
+              "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "FormAdmin.cs",
-              "DocumentMoniker": "C:\\Users\\alegr\\Desktop\\ProyectoFinal\\ProyectoFinalV1\\FormAdmin.cs",
+              "Title": "FormAdmin.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\uriel\\OneDrive\\Desktop\\REPOSITORIO\\ProyectoFinal\\ProyectoFinalV1\\FormAdmin.cs",
               "RelativeDocumentMoniker": "FormAdmin.cs",
-              "ToolTip": "C:\\Users\\alegr\\Desktop\\ProyectoFinal\\ProyectoFinalV1\\FormAdmin.cs",
+              "ToolTip": "C:\\Users\\uriel\\OneDrive\\Desktop\\REPOSITORIO\\ProyectoFinal\\ProyectoFinalV1\\FormAdmin.cs [Dise\u00F1o]",
+              "RelativeToolTip": "FormAdmin.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T21:29:45.554Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FormAdmin.cs",
+              "DocumentMoniker": "C:\\Users\\uriel\\OneDrive\\Desktop\\REPOSITORIO\\ProyectoFinal\\ProyectoFinalV1\\FormAdmin.cs",
+              "RelativeDocumentMoniker": "FormAdmin.cs",
+              "ToolTip": "C:\\Users\\uriel\\OneDrive\\Desktop\\REPOSITORIO\\ProyectoFinal\\ProyectoFinalV1\\FormAdmin.cs",
               "RelativeToolTip": "FormAdmin.cs",
-              "ViewState": "AgIAAMkAAAAAAAAAAAAnwN0AAABFAAAAAAAAAA==",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-02T17:38:32.518Z",
               "EditorCaption": ""

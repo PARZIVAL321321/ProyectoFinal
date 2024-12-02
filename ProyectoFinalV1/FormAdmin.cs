@@ -245,5 +245,14 @@ namespace ProyectoFinalV1
 
         }
 
+        private void FormAdmin_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtTITULO_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
