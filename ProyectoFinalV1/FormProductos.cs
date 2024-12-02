@@ -12,6 +12,8 @@ namespace ProyectoFinalV1
 {
     public partial class FormProductos : Form
     {
+        private int folio;//Declaramos un folio para la compra
+        public int Folio { get; set; }//Propiedad para el folio
         // Constructor vacio
         public FormProductos()
         {
@@ -60,5 +62,11 @@ namespace ProyectoFinalV1
             ReleaseCapture();
         }
 
+        private void btGenerarTicket_Click(object sender, EventArgs e)
+        {
+            GeneradorPdf generador = new GeneradorPdf(folio);
+            generador.GenerarPDF();
+
+        }
     }
 }
