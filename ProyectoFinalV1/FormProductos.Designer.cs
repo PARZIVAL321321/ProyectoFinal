@@ -249,10 +249,10 @@
             textBox_Nombre.Enabled = false;
             textBox_Nombre.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             textBox_Nombre.ForeColor = Color.Transparent;
-            textBox_Nombre.Location = new Point(350, 54);
+            textBox_Nombre.Location = new Point(354, 54);
             textBox_Nombre.Name = "textBox_Nombre";
             textBox_Nombre.ReadOnly = true;
-            textBox_Nombre.Size = new Size(286, 25);
+            textBox_Nombre.Size = new Size(441, 25);
             textBox_Nombre.TabIndex = 8;
             // 
             // pictureBox2

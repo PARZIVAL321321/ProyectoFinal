@@ -11,10 +11,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace ProyectoFinalV1
 {
+
     public partial class FormAdmin : Form
     {
+
+        // Variable global para cargar el nombre de las imagenes a cargar
+        string NombreModificar;
+        string NombreSubir;
+
         public FormAdmin()
         {
             InitializeComponent();
@@ -39,6 +46,46 @@ namespace ProyectoFinalV1
         private void btncerrar_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        // Boton para cargar la imagen
+        private void button_CargarImagenModificar_Click(object sender, EventArgs e)
+        {
+            // Abrimos el explorador de archivos
+            OpenFileDialog abrirImagen = new OpenFileDialog();
+
+            // Filtro para el tipo de archivo aceptado
+            abrirImagen.Filter = "Archivos de imagenes (*.png; *.jpg) | *.png; *.jpg";
+
+            // Si el archivo esta bien
+            if (abrirImagen.ShowDialog() == DialogResult.OK)
+            {
+                // Cargamos la imagen a nuestro PictureBox
+                pictureBox_Modificar.Image = Image.FromFile(abrirImagen.FileName);
+
+                // Guardamos el nombre del archivo
+                NombreModificar = Path.GetFileName(abrirImagen.FileName);
+            }
+        }
+
+        // Boton para cargar la imagen
+        private void button_CargarImagenSubir_Click(object sender, EventArgs e)
+        {
+            // Abrimos el explorador de archivos
+            OpenFileDialog abrirImagen = new OpenFileDialog();
+
+            // Filtro para el tipo de archivo aceptado
+            abrirImagen.Filter = "Archivos de imagenes (*.png; *.jpg) | *.png; *.jpg";
+
+            // Si el archivo esta bien
+            if (abrirImagen.ShowDialog() == DialogResult.OK)
+            {
+                // Cargamos la imagen a nuestro PictureBox
+                pictureBox_Subir.Image = Image.FromFile(abrirImagen.FileName);
+
+                // Guardamos el nombre del archivo
+                NombreSubir = Path.GetFileName(abrirImagen.FileName);
+            }
         }
 
         // Boton para "refrescar" la base de datos y mostrarla en el 
@@ -90,6 +137,9 @@ namespace ProyectoFinalV1
                 MessageBox.Show("Error al eliminar producto: " + ex.Message);
             }
 
+            // Vaciamos el textBox
+            textBox_IDBorrar.Text = "";
+
         }
 
         // Boton para guardar el nuevo producto
@@ -103,13 +153,11 @@ namespace ProyectoFinalV1
                 // Abrimos nuestra base de datos
                 conexion.Open();
 
-                string x = "imagen.jpg";
-
                 // Linea de comando de SQL
                 string consulta = "INSERT INTO juegos (ID, Nombre, Imagen, Genero, Plataforma, Modalidad, Precio, Stock) VALUES ("
                     + "'" + textBox_IDSubir.Text + "',"
                     + "'" + textBox_NombreSubir.Text + "',"
-                    + "'" + x + "',"
+                    + "'" + NombreSubir + "',"
                     + "'" + textBox_GeneroSubir.Text + "',"
                     + "'" + textBox_PlataformaSubir.Text + "',"
                     + "'" + textBox_ModalidadSubir.Text + "',"
@@ -140,6 +188,9 @@ namespace ProyectoFinalV1
             textBox_ModalidadSubir.Text = "";
             textBox_PrecioSubir.Text = "";
             textBox_StockSubir.Text = "";
+
+            // Quitamos la imagen de nuestro pictureBox
+            pictureBox_Subir.Image = null;
         }
 
         // Boton para modificar los datos
@@ -152,11 +203,9 @@ namespace ProyectoFinalV1
                 // Abrimos nuestra base de datos
                 conexion.Open();
 
-                string x = "imagen.jpg";
-
                 string consulta = "UPDATE juegos SET ID=" + "'" + textBox_IDModificar.Text + "'" +
                     ",Nombre=" + "'" + textBox_NombreModificar.Text + "'" +
-                    ",Imagen=" + "'" + x + "'" +
+                    ",Imagen=" + "'" + NombreModificar + "'" +
                     ",Genero=" + "'" + textBox_PrecioModificar.Text + "'" +
                     ",Plataforma=" + "'" + textBox_PlataformaModificar.Text + "'" +
                     ",Modalidad=" + "'" + textBox_ModalidadModificar.Text + "'" +
@@ -181,6 +230,20 @@ namespace ProyectoFinalV1
             {
                 MessageBox.Show("Error en la actualizacion: " + ex.Message);
             }
+
+            // Volvemos a vaciar nuestros TextBox
+            textBox_IDModificar.Text = "";
+            textBox_NombreModificar.Text = "";
+            textBox_GeneroModificar.Text = "";
+            textBox_PlataformaModificar.Text = "";
+            textBox_ModalidadModificar.Text = "";
+            textBox_PrecioModificar.Text = "";
+            textBox_StockModificar.Text = "";
+
+            // Quitamos la imagen de nuestro pictureBox
+            pictureBox_Modificar.Image = null;
+
         }
+
     }
 }

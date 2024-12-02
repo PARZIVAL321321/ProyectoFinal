@@ -3,16 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\alegr\\Desktop\\ProyectoFinal\\ProyectoFinalV1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FB66F1B0-E526-4F56-8D53-094F3AB041D9}|ProyectoFinalV1.csproj|c:\\users\\alegr\\desktop\\proyectofinal\\proyectofinalv1\\formproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FB66F1B0-E526-4F56-8D53-094F3AB041D9}|ProyectoFinalV1.csproj|solutionrelative:formproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{FB66F1B0-E526-4F56-8D53-094F3AB041D9}|ProyectoFinalV1.csproj|c:\\users\\alegr\\desktop\\proyectofinal\\proyectofinalv1\\formadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{FB66F1B0-E526-4F56-8D53-094F3AB041D9}|ProyectoFinalV1.csproj|solutionrelative:formadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FB66F1B0-E526-4F56-8D53-094F3AB041D9}|ProyectoFinalV1.csproj|c:\\users\\alegr\\desktop\\proyectofinal\\proyectofinalv1\\formproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FB66F1B0-E526-4F56-8D53-094F3AB041D9}|ProyectoFinalV1.csproj|solutionrelative:formproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FB66F1B0-E526-4F56-8D53-094F3AB041D9}|ProyectoFinalV1.csproj|c:\\users\\alegr\\desktop\\proyectofinal\\proyectofinalv1\\formportada.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FB66F1B0-E526-4F56-8D53-094F3AB041D9}|ProyectoFinalV1.csproj|solutionrelative:formportada.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{FB66F1B0-E526-4F56-8D53-094F3AB041D9}|ProyectoFinalV1.csproj|c:\\users\\alegr\\desktop\\proyectofinal\\proyectofinalv1\\formadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB66F1B0-E526-4F56-8D53-094F3AB041D9}|ProyectoFinalV1.csproj|solutionrelative:formadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 2,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,40 +26,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "FormPortada.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\alegr\\Desktop\\ProyectoFinal\\ProyectoFinalV1\\FormPortada.cs",
-              "RelativeDocumentMoniker": "FormPortada.cs",
-              "ToolTip": "C:\\Users\\alegr\\Desktop\\ProyectoFinal\\ProyectoFinalV1\\FormPortada.cs [Design]",
-              "RelativeToolTip": "FormPortada.cs [Design]",
+              "DocumentIndex": 0,
+              "Title": "FormAdmin.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\alegr\\Desktop\\ProyectoFinal\\ProyectoFinalV1\\FormAdmin.cs",
+              "RelativeDocumentMoniker": "FormAdmin.cs",
+              "ToolTip": "C:\\Users\\alegr\\Desktop\\ProyectoFinal\\ProyectoFinalV1\\FormAdmin.cs [Design]*",
+              "RelativeToolTip": "FormAdmin.cs [Design]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-02T14:54:24.678Z",
+              "WhenOpened": "2024-12-02T18:59:50.585Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "FormProductos.cs",
-              "DocumentMoniker": "C:\\Users\\alegr\\Desktop\\ProyectoFinal\\ProyectoFinalV1\\FormProductos.cs",
-              "RelativeDocumentMoniker": "FormProductos.cs",
-              "ToolTip": "C:\\Users\\alegr\\Desktop\\ProyectoFinal\\ProyectoFinalV1\\FormProductos.cs*",
-              "RelativeToolTip": "FormProductos.cs*",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABoAAAApAAAAAAAAAA==",
+              "Title": "FormAdmin.cs",
+              "DocumentMoniker": "C:\\Users\\alegr\\Desktop\\ProyectoFinal\\ProyectoFinalV1\\FormAdmin.cs",
+              "RelativeDocumentMoniker": "FormAdmin.cs",
+              "ToolTip": "C:\\Users\\alegr\\Desktop\\ProyectoFinal\\ProyectoFinalV1\\FormAdmin.cs*",
+              "RelativeToolTip": "FormAdmin.cs*",
+              "ViewState": "AgIAAMkAAAAAAAAAAAAnwPMAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-02T14:41:40.498Z",
+              "WhenOpened": "2024-12-02T17:38:32.518Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "FormProductos.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\alegr\\Desktop\\ProyectoFinal\\ProyectoFinalV1\\FormProductos.cs",
-              "RelativeDocumentMoniker": "FormProductos.cs",
-              "ToolTip": "C:\\Users\\alegr\\Desktop\\ProyectoFinal\\ProyectoFinalV1\\FormProductos.cs [Design]*",
-              "RelativeToolTip": "FormProductos.cs [Design]*",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-02T14:46:03.848Z",
-              "EditorCaption": " [Design]"
             }
           ]
         }

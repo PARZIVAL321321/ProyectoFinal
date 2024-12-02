@@ -80,7 +80,7 @@
             label3.Name = "label3";
             label3.Size = new Size(308, 33);
             label3.TabIndex = 19;
-            label3.Text = "Oscar de Jesus Guillen";
+            label3.Text = "Oscar de Jesus Guillen - ";
             // 
             // label2
             // 
@@ -91,7 +91,7 @@
             label2.Name = "label2";
             label2.Size = new Size(514, 33);
             label2.TabIndex = 18;
-            label2.Text = "Eduardo Arturo Alegria Vela - (280146)";
+            label2.Text = "Eduardo Arturo Alegria Vela - 280146";
             // 
             // label1
             // 
