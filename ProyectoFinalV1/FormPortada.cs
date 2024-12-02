@@ -42,5 +42,26 @@ namespace ProyectoFinalV1
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label_Puntodeventa_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FormPortada_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
     }
 }

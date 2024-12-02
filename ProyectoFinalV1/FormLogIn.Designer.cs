@@ -147,7 +147,7 @@
             // 
             pictureBox2.BackColor = Color.Transparent;
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(34, 68);
+            pictureBox2.Location = new Point(32, 98);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(1500, 465);
             pictureBox2.SizeMode = PictureBoxSizeMode.AutoSize;
