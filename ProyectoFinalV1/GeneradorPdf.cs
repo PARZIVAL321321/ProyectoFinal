@@ -9,12 +9,14 @@ using System.IO;
 
 namespace ProyectoFinalV1
 {
-    public class GeneradorPdf{
+    public class GeneradorPdf
+    {
 
         private int folio;//Declaramos un folio para la compra
         public int Folio { get; set; }//Propiedad para el folio
 
-        public GeneradorPdf(){
+        public GeneradorPdf()
+        {
         }
 
         // Constructor por parametros (recibe el folio de la compra)
@@ -24,7 +26,7 @@ namespace ProyectoFinalV1
         }
         public void GenerarPDF()
         {
-            
+
             FileStream fs = new FileStream(Ruta(Folio), FileMode.Create);//Creamos un archivo PDF en la ruta especificada
             Document doc = new Document(PageSize.LETTER, 2, 2, 2, 2);//Creamos un documento PDF
             PdfWriter pdfWriter = PdfWriter.GetInstance(doc, fs);//Creamos un escritor de PDF

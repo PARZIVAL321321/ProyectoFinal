@@ -111,6 +111,7 @@
             pictureBox2 = new PictureBox();
             pictureBox3 = new PictureBox();
             panel39 = new Panel();
+            button_BuscarModificar = new Button();
             button1 = new Button();
             panel2 = new Panel();
             panel3 = new Panel();
@@ -159,6 +160,7 @@
             // button_MOSTRARINVENTARIO
             // 
             button_MOSTRARINVENTARIO.BackColor = Color.FromArgb(23, 26, 33);
+            button_MOSTRARINVENTARIO.Cursor = Cursors.Hand;
             button_MOSTRARINVENTARIO.FlatAppearance.BorderSize = 0;
             button_MOSTRARINVENTARIO.FlatStyle = FlatStyle.Flat;
             button_MOSTRARINVENTARIO.Font = new Font("Century Gothic", 15.75F, FontStyle.Bold);
@@ -166,7 +168,7 @@
             button_MOSTRARINVENTARIO.Location = new Point(13, -2);
             button_MOSTRARINVENTARIO.Margin = new Padding(3, 2, 3, 2);
             button_MOSTRARINVENTARIO.Name = "button_MOSTRARINVENTARIO";
-            button_MOSTRARINVENTARIO.Size = new Size(336, 30);
+            button_MOSTRARINVENTARIO.Size = new Size(328, 30);
             button_MOSTRARINVENTARIO.TabIndex = 4;
             button_MOSTRARINVENTARIO.Text = "INVENTARIO - PRODUCTOS";
             button_MOSTRARINVENTARIO.UseVisualStyleBackColor = false;
@@ -175,13 +177,14 @@
             // button_Subir
             // 
             button_Subir.BackColor = Color.DimGray;
+            button_Subir.Cursor = Cursors.Hand;
             button_Subir.FlatAppearance.BorderSize = 0;
             button_Subir.FlatAppearance.MouseDownBackColor = Color.FromArgb(28, 28, 28);
             button_Subir.FlatAppearance.MouseOverBackColor = Color.FromArgb(60, 60, 60);
             button_Subir.FlatStyle = FlatStyle.Flat;
             button_Subir.Font = new Font("Century Gothic", 9.75F);
             button_Subir.ForeColor = Color.LightGray;
-            button_Subir.Location = new Point(598, 180);
+            button_Subir.Location = new Point(594, 210);
             button_Subir.Margin = new Padding(3, 2, 3, 2);
             button_Subir.Name = "button_Subir";
             button_Subir.Size = new Size(111, 22);
@@ -194,12 +197,14 @@
             // 
             txtSUBIRPRODUCTOS.BackColor = Color.FromArgb(40, 40, 40);
             txtSUBIRPRODUCTOS.BorderStyle = BorderStyle.None;
+            txtSUBIRPRODUCTOS.Enabled = false;
             txtSUBIRPRODUCTOS.Font = new Font("Century Gothic", 12F);
             txtSUBIRPRODUCTOS.ForeColor = Color.LightGray;
             txtSUBIRPRODUCTOS.Location = new Point(22, 17);
             txtSUBIRPRODUCTOS.Margin = new Padding(3, 2, 3, 2);
             txtSUBIRPRODUCTOS.Name = "txtSUBIRPRODUCTOS";
-            txtSUBIRPRODUCTOS.Size = new Size(331, 20);
+            txtSUBIRPRODUCTOS.ReadOnly = true;
+            txtSUBIRPRODUCTOS.Size = new Size(414, 20);
             txtSUBIRPRODUCTOS.TabIndex = 6;
             txtSUBIRPRODUCTOS.Text = "SUBIR PRODUCTO";
             txtSUBIRPRODUCTOS.TextAlign = HorizontalAlignment.Center;
@@ -255,7 +260,6 @@
             txtTITULO.Size = new Size(70, 16);
             txtTITULO.TabIndex = 9;
             txtTITULO.Text = "Nombre:";
-            txtTITULO.TextChanged += txtTITULO_TextChanged;
             // 
             // textBox_ModalidadSubir
             // 
@@ -403,7 +407,7 @@
             // button_EliminarProducto
             // 
             button_EliminarProducto.BackColor = Color.DarkGray;
-            button_EliminarProducto.Cursor = Cursors.No;
+            button_EliminarProducto.Cursor = Cursors.Hand;
             button_EliminarProducto.FlatAppearance.BorderSize = 0;
             button_EliminarProducto.FlatAppearance.MouseDownBackColor = Color.FromArgb(28, 28, 28);
             button_EliminarProducto.FlatAppearance.MouseOverBackColor = Color.FromArgb(60, 60, 60);
@@ -425,20 +429,21 @@
             pictureBox_Modificar.Location = new Point(454, 274);
             pictureBox_Modificar.Margin = new Padding(3, 2, 3, 2);
             pictureBox_Modificar.Name = "pictureBox_Modificar";
-            pictureBox_Modificar.Size = new Size(255, 127);
+            pictureBox_Modificar.Size = new Size(255, 120);
             pictureBox_Modificar.TabIndex = 27;
             pictureBox_Modificar.TabStop = false;
             // 
             // button_CargarImagenSubir
             // 
             button_CargarImagenSubir.BackColor = Color.FromArgb(40, 40, 40);
+            button_CargarImagenSubir.Cursor = Cursors.Hand;
             button_CargarImagenSubir.FlatAppearance.BorderSize = 0;
             button_CargarImagenSubir.FlatAppearance.MouseDownBackColor = Color.FromArgb(28, 28, 28);
             button_CargarImagenSubir.FlatAppearance.MouseOverBackColor = Color.FromArgb(60, 60, 60);
             button_CargarImagenSubir.FlatStyle = FlatStyle.Flat;
             button_CargarImagenSubir.Font = new Font("Century Gothic", 9.75F);
             button_CargarImagenSubir.ForeColor = Color.LightGray;
-            button_CargarImagenSubir.Location = new Point(454, 180);
+            button_CargarImagenSubir.Location = new Point(450, 210);
             button_CargarImagenSubir.Margin = new Padding(3, 2, 3, 2);
             button_CargarImagenSubir.Name = "button_CargarImagenSubir";
             button_CargarImagenSubir.Size = new Size(138, 22);
@@ -469,6 +474,7 @@
             // button_LogOut
             // 
             button_LogOut.BackColor = Color.FromArgb(23, 26, 33);
+            button_LogOut.Cursor = Cursors.Hand;
             button_LogOut.FlatAppearance.BorderSize = 0;
             button_LogOut.FlatStyle = FlatStyle.Flat;
             button_LogOut.Font = new Font("Century Gothic", 15.75F, FontStyle.Bold);
@@ -652,10 +658,10 @@
             textBox_IDModificar.Cursor = Cursors.IBeam;
             textBox_IDModificar.Font = new Font("OCR A Extended", 11.25F);
             textBox_IDModificar.ForeColor = Color.DimGray;
-            textBox_IDModificar.Location = new Point(53, 3);
+            textBox_IDModificar.Location = new Point(50, 2);
             textBox_IDModificar.Margin = new Padding(3, 2, 3, 2);
             textBox_IDModificar.Name = "textBox_IDModificar";
-            textBox_IDModificar.Size = new Size(358, 16);
+            textBox_IDModificar.Size = new Size(269, 16);
             textBox_IDModificar.TabIndex = 38;
             // 
             // txtMODIFICARID
@@ -683,7 +689,8 @@
             txtMODIFICAR.Location = new Point(22, 243);
             txtMODIFICAR.Margin = new Padding(3, 2, 3, 2);
             txtMODIFICAR.Name = "txtMODIFICAR";
-            txtMODIFICAR.Size = new Size(331, 20);
+            txtMODIFICAR.ReadOnly = true;
+            txtMODIFICAR.Size = new Size(299, 20);
             txtMODIFICAR.TabIndex = 45;
             txtMODIFICAR.Text = "MODIFICAR";
             txtMODIFICAR.TextAlign = HorizontalAlignment.Center;
@@ -691,6 +698,7 @@
             // button_CargarImagenModificar
             // 
             button_CargarImagenModificar.BackColor = Color.FromArgb(40, 40, 40);
+            button_CargarImagenModificar.Cursor = Cursors.Hand;
             button_CargarImagenModificar.FlatAppearance.BorderSize = 0;
             button_CargarImagenModificar.FlatAppearance.MouseDownBackColor = Color.FromArgb(28, 28, 28);
             button_CargarImagenModificar.FlatAppearance.MouseOverBackColor = Color.FromArgb(60, 60, 60);
@@ -709,6 +717,7 @@
             // button_Modificar
             // 
             button_Modificar.BackColor = Color.DimGray;
+            button_Modificar.Cursor = Cursors.Hand;
             button_Modificar.FlatAppearance.BorderSize = 0;
             button_Modificar.FlatAppearance.MouseDownBackColor = Color.FromArgb(28, 28, 28);
             button_Modificar.FlatAppearance.MouseOverBackColor = Color.FromArgb(60, 60, 60);
@@ -730,7 +739,7 @@
             pictureBox_Subir.Location = new Point(454, 49);
             pictureBox_Subir.Margin = new Padding(3, 2, 3, 2);
             pictureBox_Subir.Name = "pictureBox_Subir";
-            pictureBox_Subir.Size = new Size(255, 127);
+            pictureBox_Subir.Size = new Size(251, 153);
             pictureBox_Subir.TabIndex = 48;
             pictureBox_Subir.TabStop = false;
             // 
@@ -828,7 +837,7 @@
             panel10.Controls.Add(textBox_IDModificar);
             panel10.Location = new Point(22, 275);
             panel10.Name = "panel10";
-            panel10.Size = new Size(414, 21);
+            panel10.Size = new Size(322, 21);
             panel10.TabIndex = 55;
             // 
             // panel11
@@ -1130,6 +1139,7 @@
             // panel39
             // 
             panel39.BackColor = Color.FromArgb(42, 71, 94);
+            panel39.Controls.Add(button_BuscarModificar);
             panel39.Controls.Add(button1);
             panel39.Controls.Add(button_Modificar);
             panel39.Controls.Add(button_Subir);
@@ -1165,16 +1175,36 @@
             panel39.Size = new Size(736, 480);
             panel39.TabIndex = 77;
             // 
+            // button_BuscarModificar
+            // 
+            button_BuscarModificar.BackColor = Color.DimGray;
+            button_BuscarModificar.Cursor = Cursors.Hand;
+            button_BuscarModificar.FlatAppearance.BorderSize = 0;
+            button_BuscarModificar.FlatAppearance.MouseDownBackColor = Color.FromArgb(28, 28, 28);
+            button_BuscarModificar.FlatAppearance.MouseOverBackColor = Color.FromArgb(60, 60, 60);
+            button_BuscarModificar.FlatStyle = FlatStyle.Flat;
+            button_BuscarModificar.Font = new Font("Century Gothic", 9.75F);
+            button_BuscarModificar.ForeColor = Color.LightGray;
+            button_BuscarModificar.Location = new Point(350, 275);
+            button_BuscarModificar.Margin = new Padding(3, 2, 3, 2);
+            button_BuscarModificar.Name = "button_BuscarModificar";
+            button_BuscarModificar.Size = new Size(86, 22);
+            button_BuscarModificar.TabIndex = 77;
+            button_BuscarModificar.Text = "BUSCAR";
+            button_BuscarModificar.UseVisualStyleBackColor = false;
+            button_BuscarModificar.Click += button_BuscarModificar_Click;
+            // 
             // button1
             // 
             button1.BackColor = Color.FromArgb(40, 40, 40);
+            button1.Cursor = Cursors.Hand;
             button1.FlatAppearance.BorderSize = 0;
             button1.FlatAppearance.MouseDownBackColor = Color.FromArgb(28, 28, 28);
             button1.FlatAppearance.MouseOverBackColor = Color.FromArgb(60, 60, 60);
             button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Century Gothic", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button1.ForeColor = Color.LightGray;
-            button1.Location = new Point(539, 437);
+            button1.Location = new Point(503, 439);
             button1.Name = "button1";
             button1.Size = new Size(170, 26);
             button1.TabIndex = 76;
@@ -1219,7 +1249,6 @@
             Opacity = 0.98D;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FormAdmin";
-            Load += FormAdmin_Load;
             MouseDown += FormAdmin_MouseDown;
             ((System.ComponentModel.ISupportInitialize)pictureBox_Modificar).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView_Inventario).EndInit();
@@ -1381,5 +1410,6 @@
         private Panel panel2;
         private Panel panel3;
         private Button button1;
+        private Button button_BuscarModificar;
     }
 }

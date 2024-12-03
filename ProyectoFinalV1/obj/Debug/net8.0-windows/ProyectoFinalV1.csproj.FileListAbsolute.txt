@@ -354,3 +354,10 @@ C:\Users\OSCAR ISC\Desktop\ProyectoFinal\ProyectoFinalV1\obj\Debug\net8.0-window
 C:\Users\OSCAR ISC\Desktop\ProyectoFinal\ProyectoFinalV1\obj\Debug\net8.0-windows\ProyectoFinalV1.pdb
 C:\Users\OSCAR ISC\Desktop\ProyectoFinal\ProyectoFinalV1\obj\Debug\net8.0-windows\ProyectoFinalV1.genruntimeconfig.cache
 C:\Users\OSCAR ISC\Desktop\ProyectoFinal\ProyectoFinalV1\obj\Debug\net8.0-windows\ref\ProyectoFinalV1.dll
+C:\Users\Alegria\Desktop\ProyectoFinal\ProyectoFinalV1\bin\Debug\net8.0-windows\itextsharp.dll
+C:\Users\Alegria\Desktop\ProyectoFinal\ProyectoFinalV1\bin\Debug\net8.0-windows\Juegos\COD.jpg
+C:\Users\Alegria\Desktop\ProyectoFinal\ProyectoFinalV1\bin\Debug\net8.0-windows\Juegos\CSGO.jpg
+C:\Users\Alegria\Desktop\ProyectoFinal\ProyectoFinalV1\bin\Debug\net8.0-windows\Juegos\GTA.jpg
+C:\Users\Alegria\Desktop\ProyectoFinal\ProyectoFinalV1\bin\Debug\net8.0-windows\Juegos\Minecraft.jpg
+C:\Users\Alegria\Desktop\ProyectoFinal\ProyectoFinalV1\bin\Debug\net8.0-windows\Juegos\Rust.jpg
+C:\Users\Alegria\Desktop\ProyectoFinal\ProyectoFinalV1\bin\Debug\net8.0-windows\Juegos\Valorant.jpg

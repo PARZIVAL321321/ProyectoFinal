@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 02, 2024 at 08:06 PM
+-- Generation Time: Dec 03, 2024 at 07:08 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -43,7 +43,13 @@ CREATE TABLE `juegos` (
 --
 
 INSERT INTO `juegos` (`ID`, `Nombre`, `Imagen`, `Genero`, `Plataforma`, `Modalidad`, `Precio`, `Stock`) VALUES
-(1, 'Alien Isolation', 'AlienIsolation.jpg', 'Horror', 'Xbox', 'Individual', 600, 50);
+(1, 'Call of Duty', 'COD.jpg', '1200', 'Xbox', 'Multiplayer', 1200, 50),
+(2, 'Minecraft', 'Minecraft.jpg', 'Indie', 'Xbox', 'Sigleplayer', 800, 100),
+(3, 'Valorant', 'Valorant.jpg', 'Estrategia', 'PC', 'Multiplayer', 0, 1000),
+(4, 'Counter Strike', 'CSGO.jpg', 'Accion', 'PC', 'Multiplayer', 0, 1000),
+(5, 'GTA V', 'GTA.jpg', 'Mundo abierto', 'PlayStation', 'Multiplayer', 500, 10),
+(6, 'Rust', 'Rust.jpg', 'Supervivencia', 'PC', 'Multijugador', 400, 500),
+(7, 'Rainbow Six', 'R6.jpg', 'Estrategia', 'Xbox', 'Multijugador', 600, 20);
 
 --
 -- Indexes for dumped tables
