@@ -323,7 +323,7 @@ namespace ProyectoFinalV1
                 // Ejecutamos el comando
                 MySqlDataReader lector = comando.ExecuteReader();
 
-                
+
                 if (lector.Read())
                 {
                     // Asignamos los valores recuperados a los textBox correspondientes
@@ -358,7 +358,7 @@ namespace ProyectoFinalV1
                         MessageBox.Show("No se encontro la imagen deseada");
 
                         // Si habia una imagen en el pictureBox, la quitamos
-                        pictureBox_Modificar.Image = null; 
+                        pictureBox_Modificar.Image = null;
                     }
 
                 }
@@ -374,6 +374,31 @@ namespace ProyectoFinalV1
             {
                 MessageBox.Show("Error al buscar el registro: " + ex.Message);
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel39_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void textBox_StockSubir_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_IDSubir_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

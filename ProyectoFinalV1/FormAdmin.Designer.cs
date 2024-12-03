@@ -109,7 +109,6 @@
             panel37 = new Panel();
             panel38 = new Panel();
             pictureBox2 = new PictureBox();
-            pictureBox3 = new PictureBox();
             panel39 = new Panel();
             button_BuscarModificar = new Button();
             button1 = new Button();
@@ -153,7 +152,6 @@
             panel37.SuspendLayout();
             panel38.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             panel39.SuspendLayout();
             SuspendLayout();
             // 
@@ -184,7 +182,7 @@
             button_Subir.FlatStyle = FlatStyle.Flat;
             button_Subir.Font = new Font("Century Gothic", 9.75F);
             button_Subir.ForeColor = Color.LightGray;
-            button_Subir.Location = new Point(594, 210);
+            button_Subir.Location = new Point(647, 335);
             button_Subir.Margin = new Padding(3, 2, 3, 2);
             button_Subir.Name = "button_Subir";
             button_Subir.Size = new Size(111, 22);
@@ -234,6 +232,7 @@
             textBox_IDSubir.Name = "textBox_IDSubir";
             textBox_IDSubir.Size = new Size(361, 16);
             textBox_IDSubir.TabIndex = 8;
+            textBox_IDSubir.TextChanged += textBox_IDSubir_TextChanged;
             // 
             // textBox_NombreSubir
             // 
@@ -376,6 +375,7 @@
             textBox_StockSubir.Name = "textBox_StockSubir";
             textBox_StockSubir.Size = new Size(344, 16);
             textBox_StockSubir.TabIndex = 20;
+            textBox_StockSubir.TextChanged += textBox_StockSubir_TextChanged;
             // 
             // txtSTOCK
             // 
@@ -401,7 +401,7 @@
             textBox_IDBorrar.Margin = new Padding(3, 2, 3, 2);
             textBox_IDBorrar.Name = "textBox_IDBorrar";
             textBox_IDBorrar.PlaceholderText = "INGRESA ID";
-            textBox_IDBorrar.Size = new Size(298, 16);
+            textBox_IDBorrar.Size = new Size(428, 16);
             textBox_IDBorrar.TabIndex = 25;
             // 
             // button_EliminarProducto
@@ -414,7 +414,7 @@
             button_EliminarProducto.FlatStyle = FlatStyle.Flat;
             button_EliminarProducto.Font = new Font("Century Gothic", 9.75F);
             button_EliminarProducto.ForeColor = Color.Black;
-            button_EliminarProducto.Location = new Point(399, 399);
+            button_EliminarProducto.Location = new Point(533, 428);
             button_EliminarProducto.Margin = new Padding(3, 2, 3, 2);
             button_EliminarProducto.Name = "button_EliminarProducto";
             button_EliminarProducto.Size = new Size(82, 26);
@@ -426,10 +426,10 @@
             // pictureBox_Modificar
             // 
             pictureBox_Modificar.BackColor = Color.FromArgb(199, 213, 224);
-            pictureBox_Modificar.Location = new Point(454, 274);
+            pictureBox_Modificar.Location = new Point(486, 394);
             pictureBox_Modificar.Margin = new Padding(3, 2, 3, 2);
             pictureBox_Modificar.Name = "pictureBox_Modificar";
-            pictureBox_Modificar.Size = new Size(255, 120);
+            pictureBox_Modificar.Size = new Size(294, 314);
             pictureBox_Modificar.TabIndex = 27;
             pictureBox_Modificar.TabStop = false;
             // 
@@ -443,7 +443,7 @@
             button_CargarImagenSubir.FlatStyle = FlatStyle.Flat;
             button_CargarImagenSubir.Font = new Font("Century Gothic", 9.75F);
             button_CargarImagenSubir.ForeColor = Color.LightGray;
-            button_CargarImagenSubir.Location = new Point(450, 210);
+            button_CargarImagenSubir.Location = new Point(503, 335);
             button_CargarImagenSubir.Margin = new Padding(3, 2, 3, 2);
             button_CargarImagenSubir.Name = "button_CargarImagenSubir";
             button_CargarImagenSubir.Size = new Size(138, 22);
@@ -463,12 +463,12 @@
             dataGridView_Inventario.BackgroundColor = Color.FromArgb(199, 213, 224);
             dataGridView_Inventario.BorderStyle = BorderStyle.None;
             dataGridView_Inventario.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView_Inventario.Location = new Point(29, 23);
+            dataGridView_Inventario.Location = new Point(20, 17);
             dataGridView_Inventario.Margin = new Padding(3, 2, 3, 2);
             dataGridView_Inventario.Name = "dataGridView_Inventario";
             dataGridView_Inventario.RowHeadersVisible = false;
             dataGridView_Inventario.RowHeadersWidth = 51;
-            dataGridView_Inventario.Size = new Size(461, 365);
+            dataGridView_Inventario.Size = new Size(595, 397);
             dataGridView_Inventario.TabIndex = 29;
             // 
             // button_LogOut
@@ -479,7 +479,7 @@
             button_LogOut.FlatStyle = FlatStyle.Flat;
             button_LogOut.Font = new Font("Century Gothic", 15.75F, FontStyle.Bold);
             button_LogOut.ForeColor = Color.FromArgb(42, 71, 94);
-            button_LogOut.Location = new Point(1165, -6);
+            button_LogOut.Location = new Point(1333, -4);
             button_LogOut.Margin = new Padding(3, 2, 3, 2);
             button_LogOut.Name = "button_LogOut";
             button_LogOut.Size = new Size(114, 38);
@@ -686,11 +686,11 @@
             txtMODIFICAR.Enabled = false;
             txtMODIFICAR.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtMODIFICAR.ForeColor = Color.LightGray;
-            txtMODIFICAR.Location = new Point(22, 243);
+            txtMODIFICAR.Location = new Point(22, 394);
             txtMODIFICAR.Margin = new Padding(3, 2, 3, 2);
             txtMODIFICAR.Name = "txtMODIFICAR";
             txtMODIFICAR.ReadOnly = true;
-            txtMODIFICAR.Size = new Size(299, 20);
+            txtMODIFICAR.Size = new Size(414, 20);
             txtMODIFICAR.TabIndex = 45;
             txtMODIFICAR.Text = "MODIFICAR";
             txtMODIFICAR.TextAlign = HorizontalAlignment.Center;
@@ -705,7 +705,7 @@
             button_CargarImagenModificar.FlatStyle = FlatStyle.Flat;
             button_CargarImagenModificar.Font = new Font("Century Gothic", 9.75F);
             button_CargarImagenModificar.ForeColor = Color.LightGray;
-            button_CargarImagenModificar.Location = new Point(454, 405);
+            button_CargarImagenModificar.Location = new Point(503, 712);
             button_CargarImagenModificar.Margin = new Padding(3, 2, 3, 2);
             button_CargarImagenModificar.Name = "button_CargarImagenModificar";
             button_CargarImagenModificar.Size = new Size(134, 22);
@@ -724,7 +724,7 @@
             button_Modificar.FlatStyle = FlatStyle.Flat;
             button_Modificar.Font = new Font("Century Gothic", 9.75F);
             button_Modificar.ForeColor = Color.LightGray;
-            button_Modificar.Location = new Point(594, 405);
+            button_Modificar.Location = new Point(643, 712);
             button_Modificar.Margin = new Padding(3, 2, 3, 2);
             button_Modificar.Name = "button_Modificar";
             button_Modificar.Size = new Size(115, 22);
@@ -736,17 +736,17 @@
             // pictureBox_Subir
             // 
             pictureBox_Subir.BackColor = Color.FromArgb(199, 213, 224);
-            pictureBox_Subir.Location = new Point(454, 49);
+            pictureBox_Subir.Location = new Point(486, 17);
             pictureBox_Subir.Margin = new Padding(3, 2, 3, 2);
             pictureBox_Subir.Name = "pictureBox_Subir";
-            pictureBox_Subir.Size = new Size(251, 153);
+            pictureBox_Subir.Size = new Size(294, 314);
             pictureBox_Subir.TabIndex = 48;
             pictureBox_Subir.TabStop = false;
             // 
             // btncerrar
             // 
             btncerrar.Image = (Image)resources.GetObject("btncerrar.Image");
-            btncerrar.Location = new Point(1285, -2);
+            btncerrar.Location = new Point(1453, 0);
             btncerrar.Name = "btncerrar";
             btncerrar.Size = new Size(29, 29);
             btncerrar.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -796,7 +796,7 @@
             // panel4
             // 
             panel4.BackColor = Color.FromArgb(23, 26, 33);
-            panel4.Location = new Point(11, 550);
+            panel4.Location = new Point(0, 794);
             panel4.Name = "panel4";
             panel4.Size = new Size(1480, 8);
             panel4.TabIndex = 53;
@@ -806,9 +806,9 @@
             panel8.BackColor = Color.FromArgb(40, 40, 40);
             panel8.Controls.Add(panel9);
             panel8.Controls.Add(textBox_IDBorrar);
-            panel8.Location = new Point(29, 400);
+            panel8.Location = new Point(20, 429);
             panel8.Name = "panel8";
-            panel8.Size = new Size(340, 26);
+            panel8.Size = new Size(477, 26);
             panel8.TabIndex = 54;
             // 
             // panel9
@@ -835,7 +835,7 @@
             panel10.BackColor = Color.FromArgb(199, 213, 224);
             panel10.Controls.Add(panel11);
             panel10.Controls.Add(textBox_IDModificar);
-            panel10.Location = new Point(22, 275);
+            panel10.Location = new Point(22, 426);
             panel10.Name = "panel10";
             panel10.Size = new Size(322, 21);
             panel10.TabIndex = 55;
@@ -854,7 +854,7 @@
             panel12.BackColor = Color.FromArgb(199, 213, 224);
             panel12.Controls.Add(panel13);
             panel12.Controls.Add(textBox_NombreModificar);
-            panel12.Location = new Point(22, 302);
+            panel12.Location = new Point(22, 453);
             panel12.Name = "panel12";
             panel12.Size = new Size(414, 21);
             panel12.TabIndex = 56;
@@ -873,7 +873,7 @@
             panel14.BackColor = Color.FromArgb(199, 213, 224);
             panel14.Controls.Add(panel15);
             panel14.Controls.Add(textBox_GeneroModificar);
-            panel14.Location = new Point(22, 329);
+            panel14.Location = new Point(22, 480);
             panel14.Name = "panel14";
             panel14.Size = new Size(414, 21);
             panel14.TabIndex = 57;
@@ -892,7 +892,7 @@
             panel16.BackColor = Color.FromArgb(199, 213, 224);
             panel16.Controls.Add(panel17);
             panel16.Controls.Add(textBox_PlataformaModificar);
-            panel16.Location = new Point(22, 356);
+            panel16.Location = new Point(22, 507);
             panel16.Name = "panel16";
             panel16.Size = new Size(414, 21);
             panel16.TabIndex = 58;
@@ -911,7 +911,7 @@
             panel18.BackColor = Color.FromArgb(199, 213, 224);
             panel18.Controls.Add(panel19);
             panel18.Controls.Add(textBox_ModalidadModificar);
-            panel18.Location = new Point(22, 383);
+            panel18.Location = new Point(22, 534);
             panel18.Name = "panel18";
             panel18.Size = new Size(414, 21);
             panel18.TabIndex = 59;
@@ -930,7 +930,7 @@
             panel20.BackColor = Color.FromArgb(199, 213, 224);
             panel20.Controls.Add(panel21);
             panel20.Controls.Add(textBox_PrecioModificar);
-            panel20.Location = new Point(22, 410);
+            panel20.Location = new Point(22, 561);
             panel20.Name = "panel20";
             panel20.Size = new Size(414, 21);
             panel20.TabIndex = 60;
@@ -949,7 +949,7 @@
             panel22.BackColor = Color.FromArgb(199, 213, 224);
             panel22.Controls.Add(panel23);
             panel22.Controls.Add(textBox_StockModificar);
-            panel22.Location = new Point(22, 437);
+            panel22.Location = new Point(22, 588);
             panel22.Name = "panel22";
             panel22.Size = new Size(414, 21);
             panel22.TabIndex = 61;
@@ -1109,32 +1109,20 @@
             panel38.Controls.Add(button_EliminarProducto);
             panel38.Controls.Add(dataGridView_Inventario);
             panel38.Controls.Add(panel8);
-            panel38.Controls.Add(pictureBox2);
-            panel38.Controls.Add(pictureBox3);
-            panel38.Location = new Point(787, 48);
+            panel38.Location = new Point(846, 42);
             panel38.Name = "panel38";
-            panel38.Size = new Size(520, 452);
+            panel38.Size = new Size(634, 472);
             panel38.TabIndex = 76;
             // 
             // pictureBox2
             // 
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(110, 127);
+            pictureBox2.Location = new Point(1049, 419);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(1500, 465);
             pictureBox2.SizeMode = PictureBoxSizeMode.AutoSize;
             pictureBox2.TabIndex = 78;
             pictureBox2.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(364, -661);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(976, 976);
-            pictureBox3.SizeMode = PictureBoxSizeMode.AutoSize;
-            pictureBox3.TabIndex = 78;
-            pictureBox3.TabStop = false;
             // 
             // panel39
             // 
@@ -1149,10 +1137,10 @@
             panel39.Controls.Add(pictureBox_Modificar);
             panel39.Controls.Add(panel34);
             panel39.Controls.Add(button_CargarImagenSubir);
+            panel39.Controls.Add(button_CargarImagenModificar);
             panel39.Controls.Add(panel35);
             panel39.Controls.Add(txtMODIFICAR);
             panel39.Controls.Add(panel32);
-            panel39.Controls.Add(button_CargarImagenModificar);
             panel39.Controls.Add(panel33);
             panel39.Controls.Add(pictureBox_Subir);
             panel39.Controls.Add(panel30);
@@ -1172,8 +1160,9 @@
             panel39.Controls.Add(panel24);
             panel39.Location = new Point(18, 42);
             panel39.Name = "panel39";
-            panel39.Size = new Size(736, 480);
+            panel39.Size = new Size(807, 746);
             panel39.TabIndex = 77;
+            panel39.Paint += panel39_Paint;
             // 
             // button_BuscarModificar
             // 
@@ -1185,7 +1174,7 @@
             button_BuscarModificar.FlatStyle = FlatStyle.Flat;
             button_BuscarModificar.Font = new Font("Century Gothic", 9.75F);
             button_BuscarModificar.ForeColor = Color.LightGray;
-            button_BuscarModificar.Location = new Point(350, 275);
+            button_BuscarModificar.Location = new Point(350, 426);
             button_BuscarModificar.Margin = new Padding(3, 2, 3, 2);
             button_BuscarModificar.Name = "button_BuscarModificar";
             button_BuscarModificar.Size = new Size(86, 22);
@@ -1204,21 +1193,23 @@
             button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Century Gothic", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button1.ForeColor = Color.LightGray;
-            button1.Location = new Point(503, 439);
+            button1.Location = new Point(22, 671);
             button1.Name = "button1";
-            button1.Size = new Size(170, 26);
+            button1.Size = new Size(414, 63);
             button1.TabIndex = 76;
             button1.Text = "MOSTRAR GRAFICA";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // panel2
             // 
             panel2.BackColor = Color.FromArgb(23, 26, 33);
             panel2.BackgroundImageLayout = ImageLayout.Center;
-            panel2.Location = new Point(1313, 32);
+            panel2.Location = new Point(1490, 32);
             panel2.Name = "panel2";
-            panel2.Size = new Size(10, 568);
+            panel2.Size = new Size(10, 800);
             panel2.TabIndex = 51;
+            panel2.Paint += panel2_Paint;
             // 
             // panel3
             // 
@@ -1235,13 +1226,14 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(27, 40, 56);
             BackgroundImageLayout = ImageLayout.None;
-            ClientSize = new Size(1324, 559);
+            ClientSize = new Size(1500, 800);
             Controls.Add(panel39);
             Controls.Add(panel38);
             Controls.Add(panel4);
             Controls.Add(panel3);
             Controls.Add(panel2);
             Controls.Add(panel1);
+            Controls.Add(pictureBox2);
             DoubleBuffered = true;
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(3, 2, 3, 2);
@@ -1316,12 +1308,11 @@
             panel37.ResumeLayout(false);
             panel37.PerformLayout();
             panel38.ResumeLayout(false);
-            panel38.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             panel39.ResumeLayout(false);
             panel39.PerformLayout();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -1403,7 +1394,6 @@
         private Panel panel38;
         private Panel panel39;
         private PictureBox pictureBox2;
-        private PictureBox pictureBox3;
         private Panel panel7;
         private Panel panel6;
         private Panel panel5;

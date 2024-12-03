@@ -209,6 +209,7 @@
             // panel3
             // 
             panel3.BackColor = Color.FromArgb(23, 26, 33);
+            panel3.Controls.Add(btGenerarTicket);
             panel3.Controls.Add(label_Puntodeventa);
             panel3.Controls.Add(label_Bienvenido);
             panel3.Controls.Add(textBox_Nombre);
@@ -279,6 +280,7 @@
             TituloJuego1.Name = "TituloJuego1";
             TituloJuego1.Size = new Size(178, 20);
             TituloJuego1.TabIndex = 1;
+            TituloJuego1.TextChanged += TituloJuego1_TextChanged;
             // 
             // ImagenJuego1
             // 
@@ -400,7 +402,6 @@
             // 
             panel1.AutoScroll = true;
             panel1.BackColor = Color.Transparent;
-            panel1.Controls.Add(btGenerarTicket);
             panel1.Controls.Add(btnminimizar);
             panel1.Controls.Add(button7);
             panel1.Controls.Add(button6);
@@ -440,14 +441,20 @@
             // 
             // btGenerarTicket
             // 
-            btGenerarTicket.ForeColor = Color.Black;
-            btGenerarTicket.Location = new Point(10, 20);
+            btGenerarTicket.BackColor = Color.Transparent;
+            btGenerarTicket.FlatAppearance.BorderSize = 0;
+            btGenerarTicket.FlatAppearance.MouseDownBackColor = Color.FromArgb(28, 28, 28);
+            btGenerarTicket.FlatAppearance.MouseOverBackColor = Color.FromArgb(60, 60, 60);
+            btGenerarTicket.FlatStyle = FlatStyle.Flat;
+            btGenerarTicket.Font = new Font("Century Gothic", 15.75F, FontStyle.Bold);
+            btGenerarTicket.ForeColor = Color.LightGray;
+            btGenerarTicket.Location = new Point(1092, 29);
             btGenerarTicket.Margin = new Padding(3, 2, 3, 2);
             btGenerarTicket.Name = "btGenerarTicket";
-            btGenerarTicket.Size = new Size(134, 46);
+            btGenerarTicket.Size = new Size(187, 46);
             btGenerarTicket.TabIndex = 42;
             btGenerarTicket.Text = "Generar Ticket";
-            btGenerarTicket.UseVisualStyleBackColor = true;
+            btGenerarTicket.UseVisualStyleBackColor = false;
             btGenerarTicket.Click += btGenerarTicket_Click;
             // 
             // button7

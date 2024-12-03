@@ -68,5 +68,10 @@ namespace ProyectoFinalV1
             generador.GenerarPDF();
 
         }
+
+        private void TituloJuego1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
