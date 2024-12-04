@@ -79,7 +79,7 @@ namespace ProyectoFinalV1
 
             // Ocultamos el form actual
             this.Hide();
-            
+
             // Mostramos el nuevo form (usando ShowDialog)
             formCarrito.ShowDialog();
 
@@ -90,9 +90,6 @@ namespace ProyectoFinalV1
         // Funcion para mostrar nuestros juegos
         private void Cargar_Juegos()
         {
-
-            int id = 0;
-
             try
             {
                 // Creamos nuestra variable para la base de datos, y pasamos nuestra informacion
@@ -112,6 +109,7 @@ namespace ProyectoFinalV1
                 while (lector.Read())
                 {
                     // Creamos las variables que vamos a usar
+                    int id;
                     string nombre;
                     string imagen;
                     string genero;
@@ -121,6 +119,7 @@ namespace ProyectoFinalV1
                     int stock;
 
                     // Asignamos los valores recuperados a nuestras variables
+                    id = int.Parse(lector["ID"].ToString());
                     nombre = lector["Nombre"].ToString();
                     imagen = lector["Imagen"].ToString();
                     genero = lector["Genero"].ToString();
@@ -131,7 +130,7 @@ namespace ProyectoFinalV1
                     stock = int.Parse(lector["Stock"].ToString());
 
                     // Creamos el objeto de nuestra clase
-                    Juegos temp = new Juegos(id++, nombre, imagen, genero, plataforma, modalidad, precio, stock);
+                    Juegos temp = new Juegos(id, nombre, imagen, genero, plataforma, modalidad, precio, stock);
 
                     // Agregamos este objeto a nuestra lista
                     lista.Add(temp);
@@ -505,6 +504,47 @@ namespace ProyectoFinalV1
 
                 // Mostramos el nuevo valor del contador
                 textBox_ConteoCarrito.Text = conteo_carrito.ToString();
+
+                // Quitamos uno de nuestro stock
+                lista[0].Stock--;
+
+                // Mostramos el nuevo valor del stock
+                StockJuego1.Text = lista[0].Stock.ToString();
+
+                // Actualizamos nuestra base de datos
+                try
+                {
+                    // Creamos nuestra variable para la base de datos, y pasamos nuestra informacion
+                    MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=proyecto; User=root; Password=; Sslmode=none;");
+                    // Abrimos nuestra base de datos
+                    conexion.Open();
+
+                    // Linea de comando de SQL
+                    string consulta = "UPDATE juegos SET ID=" + "'" + lista[0].Id + "'" +
+                        ",Nombre=" + "'" + lista[0].Nombre + "'" +
+                        ",Imagen=" + "'" + lista[0].Imagen + "'" +
+                        ",Genero=" + "'" + lista[0].Genero + "'" +
+                        ",Plataforma=" + "'" + lista[0].Plataforma + "'" +
+                        ",Modalidad=" + "'" + lista[0].Modalidad + "'" +
+                        ",Precio=" + "'" + lista[0].Precio + "'" +
+                        ",Stock=" + "'" + lista[0].Stock + "'" +
+                        "WHERE ID =" + lista[0].Id;
+
+                    // Cargamos neestra linea de comandos
+                    MySqlCommand comando = new MySqlCommand(consulta, conexion);
+
+                    // Ejecutamos el comando
+                    comando.ExecuteNonQuery();
+
+                    // Cerramos nuestra conexion
+                    conexion.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error en la actualizacion del registro: " + ex.Message);
+                }
+
+
             }
             else
             {
@@ -528,6 +568,45 @@ namespace ProyectoFinalV1
 
                 // Mostramos el nuevo valor del contador
                 textBox_ConteoCarrito.Text = conteo_carrito.ToString();
+
+                // Quitamos uno de nuestro stock
+                lista[1].Stock--;
+
+                // Mostramos el nuevo valor del stock
+                StockJuego2.Text = lista[1].Stock.ToString();
+
+                // Actualizamos nuestra base de datos
+                try
+                {
+                    // Creamos nuestra variable para la base de datos, y pasamos nuestra informacion
+                    MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=proyecto; User=root; Password=; Sslmode=none;");
+                    // Abrimos nuestra base de datos
+                    conexion.Open();
+
+                    // Linea de comando de SQL
+                    string consulta = "UPDATE juegos SET ID=" + "'" + lista[1].Id + "'" +
+                        ",Nombre=" + "'" + lista[1].Nombre + "'" +
+                        ",Imagen=" + "'" + lista[1].Imagen + "'" +
+                        ",Genero=" + "'" + lista[1].Genero + "'" +
+                        ",Plataforma=" + "'" + lista[1].Plataforma + "'" +
+                        ",Modalidad=" + "'" + lista[1].Modalidad + "'" +
+                        ",Precio=" + "'" + lista[1].Precio + "'" +
+                        ",Stock=" + "'" + lista[1].Stock + "'" +
+                        "WHERE ID =" + lista[1].Id;
+
+                    // Cargamos neestra linea de comandos
+                    MySqlCommand comando = new MySqlCommand(consulta, conexion);
+
+                    // Ejecutamos el comando
+                    comando.ExecuteNonQuery();
+
+                    // Cerramos nuestra conexion
+                    conexion.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error en la actualizacion del registro: " + ex.Message);
+                }
             }
             else
             {
@@ -551,6 +630,45 @@ namespace ProyectoFinalV1
 
                 // Mostramos el nuevo valor del contador
                 textBox_ConteoCarrito.Text = conteo_carrito.ToString();
+
+                // Quitamos uno de nuestro stock
+                lista[2].Stock--;
+
+                // Mostramos el nuevo valor del stock
+                StockJuego3.Text = lista[2].Stock.ToString();
+
+                // Actualizamos nuestra base de datos
+                try
+                {
+                    // Creamos nuestra variable para la base de datos, y pasamos nuestra informacion
+                    MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=proyecto; User=root; Password=; Sslmode=none;");
+                    // Abrimos nuestra base de datos
+                    conexion.Open();
+
+                    // Linea de comando de SQL
+                    string consulta = "UPDATE juegos SET ID=" + "'" + lista[2].Id + "'" +
+                        ",Nombre=" + "'" + lista[2].Nombre + "'" +
+                        ",Imagen=" + "'" + lista[2].Imagen + "'" +
+                        ",Genero=" + "'" + lista[2].Genero + "'" +
+                        ",Plataforma=" + "'" + lista[2].Plataforma + "'" +
+                        ",Modalidad=" + "'" + lista[2].Modalidad + "'" +
+                        ",Precio=" + "'" + lista[2].Precio + "'" +
+                        ",Stock=" + "'" + lista[2].Stock + "'" +
+                        "WHERE ID =" + lista[2].Id;
+
+                    // Cargamos neestra linea de comandos
+                    MySqlCommand comando = new MySqlCommand(consulta, conexion);
+
+                    // Ejecutamos el comando
+                    comando.ExecuteNonQuery();
+
+                    // Cerramos nuestra conexion
+                    conexion.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error en la actualizacion del registro: " + ex.Message);
+                }
             }
             else
             {
@@ -574,6 +692,45 @@ namespace ProyectoFinalV1
 
                 // Mostramos el nuevo valor del contador
                 textBox_ConteoCarrito.Text = conteo_carrito.ToString();
+
+                // Quitamos uno de nuestro stock
+                lista[3].Stock--;
+
+                // Mostramos el nuevo valor del stock
+                StockJuego4.Text = lista[3].Stock.ToString();
+
+                // Actualizamos nuestra base de datos
+                try
+                {
+                    // Creamos nuestra variable para la base de datos, y pasamos nuestra informacion
+                    MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=proyecto; User=root; Password=; Sslmode=none;");
+                    // Abrimos nuestra base de datos
+                    conexion.Open();
+
+                    // Linea de comando de SQL
+                    string consulta = "UPDATE juegos SET ID=" + "'" + lista[3].Id + "'" +
+                        ",Nombre=" + "'" + lista[3].Nombre + "'" +
+                        ",Imagen=" + "'" + lista[3].Imagen + "'" +
+                        ",Genero=" + "'" + lista[3].Genero + "'" +
+                        ",Plataforma=" + "'" + lista[3].Plataforma + "'" +
+                        ",Modalidad=" + "'" + lista[3].Modalidad + "'" +
+                        ",Precio=" + "'" + lista[3].Precio + "'" +
+                        ",Stock=" + "'" + lista[3].Stock + "'" +
+                        "WHERE ID =" + lista[3].Id;
+
+                    // Cargamos neestra linea de comandos
+                    MySqlCommand comando = new MySqlCommand(consulta, conexion);
+
+                    // Ejecutamos el comando
+                    comando.ExecuteNonQuery();
+
+                    // Cerramos nuestra conexion
+                    conexion.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error en la actualizacion del registro: " + ex.Message);
+                }
             }
             else
             {
@@ -597,6 +754,45 @@ namespace ProyectoFinalV1
 
                 // Mostramos el nuevo valor del contador
                 textBox_ConteoCarrito.Text = conteo_carrito.ToString();
+
+                // Quitamos uno de nuestro stock
+                lista[4].Stock--;
+
+                // Mostramos el nuevo valor del stock
+                StockJuego5.Text = lista[5].Stock.ToString();
+
+                // Actualizamos nuestra base de datos
+                try
+                {
+                    // Creamos nuestra variable para la base de datos, y pasamos nuestra informacion
+                    MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=proyecto; User=root; Password=; Sslmode=none;");
+                    // Abrimos nuestra base de datos
+                    conexion.Open();
+
+                    // Linea de comando de SQL
+                    string consulta = "UPDATE juegos SET ID=" + "'" + lista[4].Id + "'" +
+                        ",Nombre=" + "'" + lista[4].Nombre + "'" +
+                        ",Imagen=" + "'" + lista[4].Imagen + "'" +
+                        ",Genero=" + "'" + lista[4].Genero + "'" +
+                        ",Plataforma=" + "'" + lista[4].Plataforma + "'" +
+                        ",Modalidad=" + "'" + lista[4].Modalidad + "'" +
+                        ",Precio=" + "'" + lista[4].Precio + "'" +
+                        ",Stock=" + "'" + lista[4].Stock + "'" +
+                        "WHERE ID =" + lista[4].Id;
+
+                    // Cargamos neestra linea de comandos
+                    MySqlCommand comando = new MySqlCommand(consulta, conexion);
+
+                    // Ejecutamos el comando
+                    comando.ExecuteNonQuery();
+
+                    // Cerramos nuestra conexion
+                    conexion.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error en la actualizacion del registro: " + ex.Message);
+                }
             }
             else
             {
@@ -620,6 +816,45 @@ namespace ProyectoFinalV1
 
                 // Mostramos el nuevo valor del contador
                 textBox_ConteoCarrito.Text = conteo_carrito.ToString();
+
+                // Quitamos uno de nuestro stock
+                lista[5].Stock--;
+
+                // Mostramos el nuevo valor del stock
+                StockJuego6.Text = lista[5].Stock.ToString();
+
+                // Actualizamos nuestra base de datos
+                try
+                {
+                    // Creamos nuestra variable para la base de datos, y pasamos nuestra informacion
+                    MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=proyecto; User=root; Password=; Sslmode=none;");
+                    // Abrimos nuestra base de datos
+                    conexion.Open();
+
+                    // Linea de comando de SQL
+                    string consulta = "UPDATE juegos SET ID=" + "'" + lista[5].Id + "'" +
+                        ",Nombre=" + "'" + lista[5].Nombre + "'" +
+                        ",Imagen=" + "'" + lista[5].Imagen + "'" +
+                        ",Genero=" + "'" + lista[5].Genero + "'" +
+                        ",Plataforma=" + "'" + lista[5].Plataforma + "'" +
+                        ",Modalidad=" + "'" + lista[5].Modalidad + "'" +
+                        ",Precio=" + "'" + lista[5].Precio + "'" +
+                        ",Stock=" + "'" + lista[5].Stock + "'" +
+                        "WHERE ID =" + lista[5].Id;
+
+                    // Cargamos neestra linea de comandos
+                    MySqlCommand comando = new MySqlCommand(consulta, conexion);
+
+                    // Ejecutamos el comando
+                    comando.ExecuteNonQuery();
+
+                    // Cerramos nuestra conexion
+                    conexion.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error en la actualizacion del registro: " + ex.Message);
+                }
             }
             else
             {
@@ -643,6 +878,45 @@ namespace ProyectoFinalV1
 
                 // Mostramos el nuevo valor del contador
                 textBox_ConteoCarrito.Text = conteo_carrito.ToString();
+
+                // Quitamos uno de nuestro stock
+                lista[6].Stock--;
+
+                // Mostramos el nuevo valor del stock
+                StockJuego7.Text = lista[6].Stock.ToString();
+
+                // Actualizamos nuestra base de datos
+                try
+                {
+                    // Creamos nuestra variable para la base de datos, y pasamos nuestra informacion
+                    MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=proyecto; User=root; Password=; Sslmode=none;");
+                    // Abrimos nuestra base de datos
+                    conexion.Open();
+
+                    // Linea de comando de SQL
+                    string consulta = "UPDATE juegos SET ID=" + "'" + lista[6].Id + "'" +
+                        ",Nombre=" + "'" + lista[6].Nombre + "'" +
+                        ",Imagen=" + "'" + lista[6].Imagen + "'" +
+                        ",Genero=" + "'" + lista[6].Genero + "'" +
+                        ",Plataforma=" + "'" + lista[6].Plataforma + "'" +
+                        ",Modalidad=" + "'" + lista[6].Modalidad + "'" +
+                        ",Precio=" + "'" + lista[6].Precio + "'" +
+                        ",Stock=" + "'" + lista[6].Stock + "'" +
+                        "WHERE ID =" + lista[6].Id;
+
+                    // Cargamos neestra linea de comandos
+                    MySqlCommand comando = new MySqlCommand(consulta, conexion);
+
+                    // Ejecutamos el comando
+                    comando.ExecuteNonQuery();
+
+                    // Cerramos nuestra conexion
+                    conexion.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error en la actualizacion del registro: " + ex.Message);
+                }
             }
             else
             {
@@ -666,6 +940,45 @@ namespace ProyectoFinalV1
 
                 // Mostramos el nuevo valor del contador
                 textBox_ConteoCarrito.Text = conteo_carrito.ToString();
+
+                // Quitamos uno de nuestro stock
+                lista[7].Stock--;
+
+                // Mostramos el nuevo valor del stock
+                StockJuego8.Text = lista[7].Stock.ToString();
+
+                // Actualizamos nuestra base de datos
+                try
+                {
+                    // Creamos nuestra variable para la base de datos, y pasamos nuestra informacion
+                    MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=proyecto; User=root; Password=; Sslmode=none;");
+                    // Abrimos nuestra base de datos
+                    conexion.Open();
+
+                    // Linea de comando de SQL
+                    string consulta = "UPDATE juegos SET ID=" + "'" + lista[7].Id + "'" +
+                        ",Nombre=" + "'" + lista[7].Nombre + "'" +
+                        ",Imagen=" + "'" + lista[7].Imagen + "'" +
+                        ",Genero=" + "'" + lista[7].Genero + "'" +
+                        ",Plataforma=" + "'" + lista[7].Plataforma + "'" +
+                        ",Modalidad=" + "'" + lista[7].Modalidad + "'" +
+                        ",Precio=" + "'" + lista[7].Precio + "'" +
+                        ",Stock=" + "'" + lista[7].Stock + "'" +
+                        "WHERE ID =" + lista[7].Id;
+
+                    // Cargamos neestra linea de comandos
+                    MySqlCommand comando = new MySqlCommand(consulta, conexion);
+
+                    // Ejecutamos el comando
+                    comando.ExecuteNonQuery();
+
+                    // Cerramos nuestra conexion
+                    conexion.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error en la actualizacion del registro: " + ex.Message);
+                }
             }
             else
             {
@@ -689,6 +1002,45 @@ namespace ProyectoFinalV1
 
                 // Mostramos el nuevo valor del contador
                 textBox_ConteoCarrito.Text = conteo_carrito.ToString();
+
+                // Quitamos uno de nuestro stock
+                lista[8].Stock--;
+
+                // Mostramos el nuevo valor del stock
+                StockJuego9.Text = lista[8].Stock.ToString();
+
+                // Actualizamos nuestra base de datos
+                try
+                {
+                    // Creamos nuestra variable para la base de datos, y pasamos nuestra informacion
+                    MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=proyecto; User=root; Password=; Sslmode=none;");
+                    // Abrimos nuestra base de datos
+                    conexion.Open();
+
+                    // Linea de comando de SQL
+                    string consulta = "UPDATE juegos SET ID=" + "'" + lista[8].Id + "'" +
+                        ",Nombre=" + "'" + lista[8].Nombre + "'" +
+                        ",Imagen=" + "'" + lista[8].Imagen + "'" +
+                        ",Genero=" + "'" + lista[8].Genero + "'" +
+                        ",Plataforma=" + "'" + lista[8].Plataforma + "'" +
+                        ",Modalidad=" + "'" + lista[8].Modalidad + "'" +
+                        ",Precio=" + "'" + lista[8].Precio + "'" +
+                        ",Stock=" + "'" + lista[8].Stock + "'" +
+                        "WHERE ID =" + lista[8].Id;
+
+                    // Cargamos neestra linea de comandos
+                    MySqlCommand comando = new MySqlCommand(consulta, conexion);
+
+                    // Ejecutamos el comando
+                    comando.ExecuteNonQuery();
+
+                    // Cerramos nuestra conexion
+                    conexion.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error en la actualizacion del registro: " + ex.Message);
+                }
             }
             else
             {
@@ -712,6 +1064,45 @@ namespace ProyectoFinalV1
 
                 // Mostramos el nuevo valor del contador
                 textBox_ConteoCarrito.Text = conteo_carrito.ToString();
+
+                // Quitamos uno de nuestro stock
+                lista[9].Stock--;
+
+                // Mostramos el nuevo valor del stock
+                StockJuego10.Text = lista[9].Stock.ToString();
+
+                // Actualizamos nuestra base de datos
+                try
+                {
+                    // Creamos nuestra variable para la base de datos, y pasamos nuestra informacion
+                    MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=proyecto; User=root; Password=; Sslmode=none;");
+                    // Abrimos nuestra base de datos
+                    conexion.Open();
+
+                    // Linea de comando de SQL
+                    string consulta = "UPDATE juegos SET ID=" + "'" + lista[9].Id + "'" +
+                        ",Nombre=" + "'" + lista[9].Nombre + "'" +
+                        ",Imagen=" + "'" + lista[9].Imagen + "'" +
+                        ",Genero=" + "'" + lista[9].Genero + "'" +
+                        ",Plataforma=" + "'" + lista[9].Plataforma + "'" +
+                        ",Modalidad=" + "'" + lista[9].Modalidad + "'" +
+                        ",Precio=" + "'" + lista[9].Precio + "'" +
+                        ",Stock=" + "'" + lista[9].Stock + "'" +
+                        "WHERE ID =" + lista[9].Id;
+
+                    // Cargamos neestra linea de comandos
+                    MySqlCommand comando = new MySqlCommand(consulta, conexion);
+
+                    // Ejecutamos el comando
+                    comando.ExecuteNonQuery();
+
+                    // Cerramos nuestra conexion
+                    conexion.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error en la actualizacion del registro: " + ex.Message);
+                }
             }
             else
             {

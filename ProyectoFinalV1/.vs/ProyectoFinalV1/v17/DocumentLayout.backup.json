@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Alegria\\Desktop\\ProyectoFinal\\ProyectoFinalV1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FB66F1B0-E526-4F56-8D53-094F3AB041D9}|ProyectoFinalV1.csproj|c:\\users\\alegria\\desktop\\proyectofinal\\proyectofinalv1\\formcarrito.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FB66F1B0-E526-4F56-8D53-094F3AB041D9}|ProyectoFinalV1.csproj|solutionrelative:formcarrito.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{FB66F1B0-E526-4F56-8D53-094F3AB041D9}|ProyectoFinalV1.csproj|c:\\users\\alegria\\desktop\\proyectofinal\\proyectofinalv1\\formproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FB66F1B0-E526-4F56-8D53-094F3AB041D9}|ProyectoFinalV1.csproj|solutionrelative:formproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB66F1B0-E526-4F56-8D53-094F3AB041D9}|ProyectoFinalV1.csproj|c:\\users\\alegria\\desktop\\proyectofinal\\proyectofinalv1\\formproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{FB66F1B0-E526-4F56-8D53-094F3AB041D9}|ProyectoFinalV1.csproj|solutionrelative:formproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB66F1B0-E526-4F56-8D53-094F3AB041D9}|ProyectoFinalV1.csproj|c:\\users\\alegria\\desktop\\proyectofinal\\proyectofinalv1\\formadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB66F1B0-E526-4F56-8D53-094F3AB041D9}|ProyectoFinalV1.csproj|solutionrelative:formadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,29 +30,41 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "FormProductos.cs",
-              "DocumentMoniker": "C:\\Users\\Alegria\\Desktop\\ProyectoFinal\\ProyectoFinalV1\\FormProductos.cs",
-              "RelativeDocumentMoniker": "FormProductos.cs",
-              "ToolTip": "C:\\Users\\Alegria\\Desktop\\ProyectoFinal\\ProyectoFinalV1\\FormProductos.cs",
-              "RelativeToolTip": "FormProductos.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAAAFEAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "FormAdmin.cs",
+              "DocumentMoniker": "C:\\Users\\Alegria\\Desktop\\ProyectoFinal\\ProyectoFinalV1\\FormAdmin.cs",
+              "RelativeDocumentMoniker": "FormAdmin.cs",
+              "ToolTip": "C:\\Users\\Alegria\\Desktop\\ProyectoFinal\\ProyectoFinalV1\\FormAdmin.cs",
+              "RelativeToolTip": "FormAdmin.cs",
+              "ViewState": "AgIAANkAAAAAAAAAAAAAACMBAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T04:20:21.476Z",
+              "WhenOpened": "2024-12-04T04:53:42.673Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "FormCarrito.cs",
-              "DocumentMoniker": "C:\\Users\\Alegria\\Desktop\\ProyectoFinal\\ProyectoFinalV1\\FormCarrito.cs",
-              "RelativeDocumentMoniker": "FormCarrito.cs",
-              "ToolTip": "C:\\Users\\Alegria\\Desktop\\ProyectoFinal\\ProyectoFinalV1\\FormCarrito.cs",
-              "RelativeToolTip": "FormCarrito.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAQAAAAAAAAAA==",
+              "Title": "FormProductos.cs",
+              "DocumentMoniker": "C:\\Users\\Alegria\\Desktop\\ProyectoFinal\\ProyectoFinalV1\\FormProductos.cs",
+              "RelativeDocumentMoniker": "FormProductos.cs",
+              "ToolTip": "C:\\Users\\Alegria\\Desktop\\ProyectoFinal\\ProyectoFinalV1\\FormProductos.cs",
+              "RelativeToolTip": "FormProductos.cs",
+              "ViewState": "AgIAAPgBAAAAAAAAAAAAADkEAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T04:20:51.092Z",
+              "WhenOpened": "2024-12-04T04:49:45.978Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FormProductos.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Alegria\\Desktop\\ProyectoFinal\\ProyectoFinalV1\\FormProductos.cs",
+              "RelativeDocumentMoniker": "FormProductos.cs",
+              "ToolTip": "C:\\Users\\Alegria\\Desktop\\ProyectoFinal\\ProyectoFinalV1\\FormProductos.cs [Design]",
+              "RelativeToolTip": "FormProductos.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-04T04:49:36.138Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }

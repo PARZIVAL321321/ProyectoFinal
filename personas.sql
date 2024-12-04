@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 03, 2024 at 07:08 PM
+-- Generation Time: Dec 04, 2024 at 06:21 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -43,7 +43,7 @@ CREATE TABLE `personas` (
 INSERT INTO `personas` (`ID`, `Nombre`, `Cuenta`, `Contra`, `Monto`, `Tipo`) VALUES
 (1, 'Patron', 'admin', 'admin', 0, 0),
 (2, 'Amigo', 'invitado', 'invitado', 0, 1),
-(3, 'Eduardo Arturo Alegria Vela', 'Alegria2812', 'Proyecto2024', 0, 1);
+(3, 'Eduardo Arturo Alegria Vela', 'Alegria', 'Alegria', 0, 1);
 
 --
 -- Indexes for dumped tables

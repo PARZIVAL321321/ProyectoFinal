@@ -230,6 +230,7 @@ namespace ProyectoFinalV1
                 // Abrimos nuestra base de datos
                 conexion.Open();
 
+                // Linea de comando de SQL
                 string consulta = "UPDATE juegos SET ID=" + "'" + textBox_IDModificar.Text + "'" +
                     ",Nombre=" + "'" + textBox_NombreModificar.Text + "'" +
                     ",Imagen=" + "'" + NombreModificar + "'" +
@@ -288,6 +289,7 @@ namespace ProyectoFinalV1
                 // Abrimos nuestra base de datos
                 conexion.Open();
 
+                // Linea de comando de SQL
                 string consulta = "SELECT COUNT(*) FROM juegos";
 
                 // Cargamos neestra linea de comandos
