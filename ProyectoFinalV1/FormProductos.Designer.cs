@@ -33,6 +33,7 @@
             btncerrar = new PictureBox();
             button_LogOut = new Button();
             panel3 = new Panel();
+            button8 = new Button();
             label_Puntodeventa = new Label();
             label_Bienvenido = new Label();
             textBox_Nombre = new TextBox();
@@ -48,7 +49,6 @@
             buttonComprarJuego2 = new Button();
             buttonComprarJuego3 = new Button();
             panel1 = new Panel();
-            btGenerarTicket = new Button();
             button7 = new Button();
             button6 = new Button();
             button4 = new Button();
@@ -209,7 +209,7 @@
             // panel3
             // 
             panel3.BackColor = Color.FromArgb(23, 26, 33);
-            panel3.Controls.Add(btGenerarTicket);
+            panel3.Controls.Add(button8);
             panel3.Controls.Add(label_Puntodeventa);
             panel3.Controls.Add(label_Bienvenido);
             panel3.Controls.Add(textBox_Nombre);
@@ -221,6 +221,24 @@
             panel3.Size = new Size(1500, 100);
             panel3.TabIndex = 6;
             panel3.MouseDown += panel3_MouseDown;
+            // 
+            // button8
+            // 
+            button8.BackColor = Color.Transparent;
+            button8.FlatAppearance.BorderSize = 0;
+            button8.FlatAppearance.MouseDownBackColor = Color.FromArgb(28, 28, 28);
+            button8.FlatAppearance.MouseOverBackColor = Color.FromArgb(60, 60, 60);
+            button8.FlatStyle = FlatStyle.Flat;
+            button8.Font = new Font("Century Gothic", 15.75F, FontStyle.Bold);
+            button8.ForeColor = Color.LightGray;
+            button8.Location = new Point(1070, 28);
+            button8.Margin = new Padding(3, 2, 3, 2);
+            button8.Name = "button8";
+            button8.Size = new Size(187, 46);
+            button8.TabIndex = 43;
+            button8.Text = "TU CARRITO";
+            button8.UseVisualStyleBackColor = false;
+            button8.Click += button8_Click;
             // 
             // label_Puntodeventa
             // 
@@ -251,7 +269,7 @@
             textBox_Nombre.BorderStyle = BorderStyle.None;
             textBox_Nombre.Enabled = false;
             textBox_Nombre.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox_Nombre.ForeColor = Color.Transparent;
+            textBox_Nombre.ForeColor = Color.LightGray;
             textBox_Nombre.Location = new Point(307, 42);
             textBox_Nombre.Margin = new Padding(3, 2, 3, 2);
             textBox_Nombre.Name = "textBox_Nombre";
@@ -361,7 +379,7 @@
             buttonComprarJuego1.Name = "buttonComprarJuego1";
             buttonComprarJuego1.Size = new Size(219, 49);
             buttonComprarJuego1.TabIndex = 1;
-            buttonComprarJuego1.Text = "COMPRAR";
+            buttonComprarJuego1.Text = "AGREGAR";
             buttonComprarJuego1.UseVisualStyleBackColor = false;
             // 
             // buttonComprarJuego2
@@ -378,7 +396,7 @@
             buttonComprarJuego2.Name = "buttonComprarJuego2";
             buttonComprarJuego2.Size = new Size(219, 49);
             buttonComprarJuego2.TabIndex = 3;
-            buttonComprarJuego2.Text = "COMPRAR";
+            buttonComprarJuego2.Text = "AGREGAR";
             buttonComprarJuego2.UseVisualStyleBackColor = false;
             // 
             // buttonComprarJuego3
@@ -395,7 +413,7 @@
             buttonComprarJuego3.Name = "buttonComprarJuego3";
             buttonComprarJuego3.Size = new Size(219, 49);
             buttonComprarJuego3.TabIndex = 5;
-            buttonComprarJuego3.Text = "COMPRAR";
+            buttonComprarJuego3.Text = "AGREGAR";
             buttonComprarJuego3.UseVisualStyleBackColor = false;
             // 
             // panel1
@@ -439,24 +457,6 @@
             panel1.Size = new Size(1500, 601);
             panel1.TabIndex = 4;
             // 
-            // btGenerarTicket
-            // 
-            btGenerarTicket.BackColor = Color.Transparent;
-            btGenerarTicket.FlatAppearance.BorderSize = 0;
-            btGenerarTicket.FlatAppearance.MouseDownBackColor = Color.FromArgb(28, 28, 28);
-            btGenerarTicket.FlatAppearance.MouseOverBackColor = Color.FromArgb(60, 60, 60);
-            btGenerarTicket.FlatStyle = FlatStyle.Flat;
-            btGenerarTicket.Font = new Font("Century Gothic", 15.75F, FontStyle.Bold);
-            btGenerarTicket.ForeColor = Color.LightGray;
-            btGenerarTicket.Location = new Point(1092, 29);
-            btGenerarTicket.Margin = new Padding(3, 2, 3, 2);
-            btGenerarTicket.Name = "btGenerarTicket";
-            btGenerarTicket.Size = new Size(187, 46);
-            btGenerarTicket.TabIndex = 42;
-            btGenerarTicket.Text = "Generar Ticket";
-            btGenerarTicket.UseVisualStyleBackColor = false;
-            btGenerarTicket.Click += btGenerarTicket_Click;
-            // 
             // button7
             // 
             button7.BackColor = Color.FromArgb(40, 40, 40);
@@ -470,7 +470,7 @@
             button7.Name = "button7";
             button7.Size = new Size(219, 49);
             button7.TabIndex = 40;
-            button7.Text = "COMPRAR";
+            button7.Text = "AGREGAR";
             button7.UseVisualStyleBackColor = false;
             // 
             // button6
@@ -486,7 +486,7 @@
             button6.Name = "button6";
             button6.Size = new Size(219, 49);
             button6.TabIndex = 39;
-            button6.Text = "COMPRAR";
+            button6.Text = "AGREGAR";
             button6.UseVisualStyleBackColor = false;
             // 
             // button4
@@ -502,7 +502,7 @@
             button4.Name = "button4";
             button4.Size = new Size(219, 49);
             button4.TabIndex = 38;
-            button4.Text = "COMPRAR";
+            button4.Text = "AGREGAR";
             button4.UseVisualStyleBackColor = false;
             // 
             // ModalidadJuego10
@@ -782,7 +782,7 @@
             button3.Name = "button3";
             button3.Size = new Size(219, 49);
             button3.TabIndex = 29;
-            button3.Text = "COMPRAR";
+            button3.Text = "AGREGAR";
             button3.UseVisualStyleBackColor = false;
             // 
             // button2
@@ -798,7 +798,7 @@
             button2.Name = "button2";
             button2.Size = new Size(219, 49);
             button2.TabIndex = 28;
-            button2.Text = "COMPRAR";
+            button2.Text = "AGREGAR";
             button2.UseVisualStyleBackColor = false;
             // 
             // button1
@@ -814,7 +814,7 @@
             button1.Name = "button1";
             button1.Size = new Size(219, 49);
             button1.TabIndex = 27;
-            button1.Text = "COMPRAR";
+            button1.Text = "AGREGAR";
             button1.UseVisualStyleBackColor = false;
             // 
             // panel7
@@ -1226,7 +1226,7 @@
             button5.Name = "button5";
             button5.Size = new Size(219, 49);
             button5.TabIndex = 21;
-            button5.Text = "COMPRAR";
+            button5.Text = "AGREGAR";
             button5.UseVisualStyleBackColor = false;
             // 
             // panel2
@@ -1248,6 +1248,7 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(1067, 479);
             panel2.TabIndex = 24;
+            panel2.Paint += panel2_Paint;
             // 
             // ModalidadJuego3
             // 
@@ -1613,6 +1614,6 @@
         private Label label_Bienvenido;
         private Label label_Puntodeventa;
         private PictureBox pictureBox1;
-        private Button btGenerarTicket;
+        private Button button8;
     }
 }

@@ -97,6 +97,7 @@
             textBox_Contra.PlaceholderText = "Contraseña";
             textBox_Contra.Size = new Size(700, 26);
             textBox_Contra.TabIndex = 5;
+            textBox_Contra.TextChanged += textBox_Contra_TextChanged;
             textBox_Contra.Enter += textBox_Contra_Enter;
             textBox_Contra.Leave += textBox_Contra_Leave;
             // 

@@ -233,6 +233,11 @@ namespace ProyectoFinalV1
         {
 
         }
+
+        private void textBox_Contra_TextChanged(object sender, EventArgs e)
+        {
+            textBox_Contra.UseSystemPasswordChar = true;
+        }
     }
 }
 
