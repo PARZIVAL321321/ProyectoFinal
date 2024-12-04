@@ -407,3 +407,5 @@ C:\Users\uriel\OneDrive\Desktop\Actual Repo\ProyectoFinal\ProyectoFinalV1\obj\De
 C:\Users\uriel\OneDrive\Desktop\Actual Repo\ProyectoFinal\ProyectoFinalV1\obj\Debug\net8.0-windows\ProyectoFinalV1.genruntimeconfig.cache
 C:\Users\uriel\OneDrive\Desktop\Actual Repo\ProyectoFinal\ProyectoFinalV1\obj\Debug\net8.0-windows\ref\ProyectoFinalV1.dll
 C:\Users\uriel\OneDrive\Desktop\Actual Repo\ProyectoFinal\ProyectoFinalV1\obj\Debug\net8.0-windows\ProyectoFinalV1.FormCarrito.resources
+C:\Users\Alegria\Desktop\ProyectoFinal\ProyectoFinalV1\bin\Debug\net8.0-windows\Juegos\R6.jpg
+C:\Users\Alegria\Desktop\ProyectoFinal\ProyectoFinalV1\obj\Debug\net8.0-windows\ProyectoFinalV1.FormCarrito.resources

@@ -27,6 +27,7 @@ namespace ProyectoFinalV1
             Validar_persona();
         }
 
+        // Funcion para checar el tipo de persona que ha entrado al sistema
         private void Validar_persona()
         {
             // Creamos nuestra variable para la base de datos, y pasamos nuestra informacion
@@ -100,6 +101,7 @@ namespace ProyectoFinalV1
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
 
+        // Funcion para obtener el tipo de cuenta de la persona que quiere ingresar al sistema
         private int Obtener_Tipo_Cuenta()
         {
             // Creamos nuestra variable para la base de datos, y pasamos nuestra informacion
@@ -138,6 +140,8 @@ namespace ProyectoFinalV1
             return regresar;
         }
 
+
+        // Funcion para obtener el nombre de la persona que ha ingresado al sistema
         private string Obtener_Nombre_Cuenta()
         {
             // Creamos nuestra variable para la base de datos, y pasamos nuestra informacion
@@ -227,11 +231,6 @@ namespace ProyectoFinalV1
                 textBox_Contra.ForeColor = Color.DimGray;
                 textBox_Contra.UseSystemPasswordChar = false;
             }
-        }
-
-        private void FormLogIn_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void textBox_Contra_TextChanged(object sender, EventArgs e)

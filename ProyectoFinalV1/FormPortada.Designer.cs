@@ -60,7 +60,6 @@
             label3.Size = new Size(428, 33);
             label3.TabIndex = 19;
             label3.Text = "Oscar de Jesus Guillen -  346148";
-            label3.Click += label3_Click;
             // 
             // label2
             // 
@@ -202,7 +201,6 @@
             label_Puntodeventa.Size = new Size(376, 141);
             label_Puntodeventa.TabIndex = 25;
             label_Puntodeventa.Text = "ESTIM";
-            label_Puntodeventa.Click += label_Puntodeventa_Click;
             // 
             // FormPortada
             // 
@@ -226,7 +224,6 @@
             Name = "FormPortada";
             Opacity = 0.95D;
             StartPosition = FormStartPosition.CenterScreen;
-            Load += FormPortada_Load;
             MouseDown += FormPortada_MouseDown;
             ((System.ComponentModel.ISupportInitialize)btncerrar).EndInit();
             ((System.ComponentModel.ISupportInitialize)btnminimizar).EndInit();

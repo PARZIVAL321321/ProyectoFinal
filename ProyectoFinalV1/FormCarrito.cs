@@ -13,11 +13,28 @@ namespace ProyectoFinalV1
 {
     public partial class FormCarrito : Form
     {
-        private int folio;//Declaramos un folio para la compra
-        public int Folio { get; set; }//Propiedad para el folio
+        //Declaramos un folio para la compra
+        private int folio;
+        //Propiedad para el folio
+        public int Folio { get; set; }
+
+        // Creamos nuestra lista que va a almacenar la lista que nos llego en el constructor
+        List<Juegos> carrito = new List<Juegos>();
+
+        // Constructor vacio
         public FormCarrito()
         {
             InitializeComponent();
+        }
+
+        // Constructor por parametros (recibimos la lista que representa nuestro carrito de compras)
+        public FormCarrito(List<Juegos> carrito_constructor)
+        {
+            // Llamamos a nuestra funcion importante
+            InitializeComponent();
+
+            // Guardamos la lista que nos llego a nuestra variable local
+            carrito = carrito_constructor;
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -25,31 +42,6 @@ namespace ProyectoFinalV1
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            FormProductos productos = new FormProductos();
-            this.Hide();
-            productos.ShowDialog();
-        }
-
-        private void FormCarrito_Load(object sender, EventArgs e)
-        {
-
-        }
 
         private void FormCarrito_MouseDown(object sender, MouseEventArgs e)
         {
@@ -63,11 +55,6 @@ namespace ProyectoFinalV1
             generador.GenerarPDF();
         }
 
-        private void btnminimizar_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btncerrar_Click_1(object sender, EventArgs e)
         {
             Application.Exit();
@@ -76,6 +63,12 @@ namespace ProyectoFinalV1
         private void btnminimizar_Click_1(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void button_SeguirComprando_Click(object sender, EventArgs e)
+        {
+            // Cerramos este form, y regresamos al anterior
+            this.Dispose();
         }
     }
 }

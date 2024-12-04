@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCarrito));
             label1 = new Label();
             label2 = new Label();
-            button1 = new Button();
+            button_SeguirComprando = new Button();
             panel1 = new Panel();
             CantidadProducto = new TextBox();
             PrecioJuego1 = new TextBox();
@@ -94,7 +94,6 @@
             label1.Size = new Size(370, 41);
             label1.TabIndex = 23;
             label1.Text = "Tu carrito de compra";
-            label1.Click += label1_Click;
             // 
             // label2
             // 
@@ -106,24 +105,23 @@
             label2.Size = new Size(253, 18);
             label2.TabIndex = 24;
             label2.Text = "Productos > Tu carrito de compra";
-            label2.Click += label2_Click;
             // 
-            // button1
+            // button_SeguirComprando
             // 
-            button1.BackColor = Color.FromArgb(40, 40, 40);
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatAppearance.MouseDownBackColor = Color.FromArgb(28, 28, 28);
-            button1.FlatAppearance.MouseOverBackColor = Color.FromArgb(60, 60, 60);
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Century Gothic", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button1.ForeColor = Color.FromArgb(199, 213, 224);
-            button1.Location = new Point(501, 481);
-            button1.Name = "button1";
-            button1.Size = new Size(226, 41);
-            button1.TabIndex = 25;
-            button1.Text = "Seguir comprando";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
+            button_SeguirComprando.BackColor = Color.FromArgb(40, 40, 40);
+            button_SeguirComprando.FlatAppearance.BorderSize = 0;
+            button_SeguirComprando.FlatAppearance.MouseDownBackColor = Color.FromArgb(28, 28, 28);
+            button_SeguirComprando.FlatAppearance.MouseOverBackColor = Color.FromArgb(60, 60, 60);
+            button_SeguirComprando.FlatStyle = FlatStyle.Flat;
+            button_SeguirComprando.Font = new Font("Century Gothic", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button_SeguirComprando.ForeColor = Color.FromArgb(199, 213, 224);
+            button_SeguirComprando.Location = new Point(501, 481);
+            button_SeguirComprando.Name = "button_SeguirComprando";
+            button_SeguirComprando.Size = new Size(226, 41);
+            button_SeguirComprando.TabIndex = 25;
+            button_SeguirComprando.Text = "Seguir comprando";
+            button_SeguirComprando.UseVisualStyleBackColor = false;
+            button_SeguirComprando.Click += button_SeguirComprando_Click;
             // 
             // panel1
             // 
@@ -193,7 +191,6 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(319, 135);
             panel2.TabIndex = 27;
-            panel2.Paint += panel2_Paint;
             // 
             // button2
             // 
@@ -593,7 +590,7 @@
             Controls.Add(panel3);
             Controls.Add(panel2);
             Controls.Add(panel1);
-            Controls.Add(button1);
+            Controls.Add(button_SeguirComprando);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(pictureBox1);
@@ -601,7 +598,6 @@
             Name = "FormCarrito";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
-            Load += FormCarrito_Load;
             MouseDown += FormCarrito_MouseDown;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
@@ -628,7 +624,7 @@
 
         private Label label1;
         private Label label2;
-        private Button button1;
+        private Button button_SeguirComprando;
         private Panel panel1;
         private TextBox TituloJuego1;
         private TextBox ModalidadJuego1;

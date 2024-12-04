@@ -232,7 +232,6 @@
             textBox_IDSubir.Name = "textBox_IDSubir";
             textBox_IDSubir.Size = new Size(361, 16);
             textBox_IDSubir.TabIndex = 8;
-            textBox_IDSubir.TextChanged += textBox_IDSubir_TextChanged;
             // 
             // textBox_NombreSubir
             // 
@@ -375,7 +374,6 @@
             textBox_StockSubir.Name = "textBox_StockSubir";
             textBox_StockSubir.Size = new Size(344, 16);
             textBox_StockSubir.TabIndex = 20;
-            textBox_StockSubir.TextChanged += textBox_StockSubir_TextChanged;
             // 
             // txtSTOCK
             // 
@@ -1162,7 +1160,6 @@
             panel39.Name = "panel39";
             panel39.Size = new Size(807, 746);
             panel39.TabIndex = 77;
-            panel39.Paint += panel39_Paint;
             // 
             // button_BuscarModificar
             // 
@@ -1199,7 +1196,6 @@
             button1.TabIndex = 76;
             button1.Text = "MOSTRAR GRAFICA";
             button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
             // 
             // panel2
             // 
@@ -1209,7 +1205,6 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(10, 800);
             panel2.TabIndex = 51;
-            panel2.Paint += panel2_Paint;
             // 
             // panel3
             // 

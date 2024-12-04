@@ -376,29 +376,5 @@ namespace ProyectoFinalV1
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel39_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void textBox_StockSubir_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox_IDSubir_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

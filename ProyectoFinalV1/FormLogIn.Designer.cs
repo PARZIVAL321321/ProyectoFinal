@@ -208,7 +208,6 @@
             Name = "FormLogIn";
             Opacity = 0.95D;
             StartPosition = FormStartPosition.CenterScreen;
-            Load += FormLogIn_Load;
             MouseDown += FormLogIn_MouseDown;
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
