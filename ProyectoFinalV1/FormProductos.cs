@@ -136,928 +136,306 @@ namespace ProyectoFinalV1
                     lista.Add(temp);
                 }
 
+                // Verificamos si hay al menos 6 juegos
+                if (lista.Count < 6)
+                {
+                    MessageBox.Show("Debe haber al menos 6 juegos disponibles.");
+                    this.Close(); // Cierra el formulario si no hay suficientes juegos
+                    return;
+                }
+
+                // Limitamos la lista a un máximo de 10 juegos, así el administrador puede agregar más juegos en la base de datos sin problemas
+                if (lista.Count > 10)
+                {
+                    lista = lista.Take(10).ToList();//Tomamos los primeros 10 elementos de la lista
+                }
+
                 // Recorremos nuestra lista
                 for (int i = 0; i < lista.Count; i++)
                 {
-                    // Para el primer elemento de nuestra lista
-                    if (i == 0)
-                    {
-                        // Para nuestro primer objeto
-                        TituloJuego1.Text = lista[i].Nombre;
-                        ModalidadJuego1.Text = lista[i].Modalidad;
-                        GeneroJuego1.Text = lista[i].Genero;
-                        PlataformaJuego1.Text = lista[i].Plataforma;
-                        StockJuego1.Text = lista[i].Stock.ToString();
-                        PrecioJuego1.Text = lista[i].Precio.ToString();
+                    AsignarValoresJuego(i, lista[i]);// Asignamos los valores a los controles correspondientes
+                }
 
-                        // Cargamos la imagen
-                        // Construimos la ruta hacia la carpeta donde estan las imagenes de los juegos
-                        string rutaImagenes = System.IO.Path.Combine(Application.StartupPath, "Juegos");
-
-                        // Construimos la ruta completa donde se encuentra nuestra imagen a buscar
-                        string rutaCompleta = System.IO.Path.Combine(rutaImagenes, lista[i].Imagen);
-
-                        // Si hay un archivo con esta direccion en especifico
-                        if (System.IO.File.Exists(rutaCompleta))
-                        {
-                            // Cargamos la imagen a nuestro picture box
-                            ImagenJuego1.Image = Image.FromFile(rutaCompleta);
-                        }
-                        else
-                        {
-                            // En caso de que la imagen no exista, entonces mostramos mensaje de error
-                            MessageBox.Show("No se encontro la imagen deseada 1");
-
-                            // Si habia una imagen en el pictureBox, la quitamos
-                            ImagenJuego1.Image = null;
-                        }
-                    }
-                    // Para el segundo elemento de nuestra lista
-                    else if (i == 1)
-                    {
-                        // Para nuestro primer objeto
-                        TituloJuego2.Text = lista[i].Nombre;
-                        ModalidadJuego2.Text = lista[i].Modalidad;
-                        GeneroJuego2.Text = lista[i].Genero;
-                        PlataformaJuego2.Text = lista[i].Plataforma;
-                        StockJuego2.Text = lista[i].Stock.ToString();
-                        PrecioJuego2.Text = lista[i].Precio.ToString();
-
-                        // Cargamos la imagen
-                        // Construimos la ruta hacia la carpeta donde estan las imagenes de los juegos
-                        string rutaImagenes = System.IO.Path.Combine(Application.StartupPath, "Juegos");
-
-                        // Construimos la ruta completa donde se encuentra nuestra imagen a buscar
-                        string rutaCompleta = System.IO.Path.Combine(rutaImagenes, lista[i].Imagen);
-
-                        // Si hay un archivo con esta direccion en especifico
-                        if (System.IO.File.Exists(rutaCompleta))
-                        {
-                            // Cargamos la imagen a nuestro picture box
-                            ImagenJuego2.Image = Image.FromFile(rutaCompleta);
-                        }
-                        else
-                        {
-                            // En caso de que la imagen no exista, entonces mostramos mensaje de error
-                            MessageBox.Show("No se encontro la imagen deseada 1");
-
-                            // Si habia una imagen en el pictureBox, la quitamos
-                            ImagenJuego2.Image = null;
-                        }
-
-                    }
-                    // Para el tercer elemento de nuestra lista
-                    else if (i == 2)
-                    {
-                        // Para nuestro primer objeto
-                        TituloJuego3.Text = lista[i].Nombre;
-                        ModalidadJuego3.Text = lista[i].Modalidad;
-                        GeneroJuego3.Text = lista[i].Genero;
-                        PlataformaJuego3.Text = lista[i].Plataforma;
-                        StockJuego3.Text = lista[i].Stock.ToString();
-                        PrecioJuego3.Text = lista[i].Precio.ToString();
-
-                        // Cargamos la imagen
-                        // Construimos la ruta hacia la carpeta donde estan las imagenes de los juegos
-                        string rutaImagenes = System.IO.Path.Combine(Application.StartupPath, "Juegos");
-
-                        // Construimos la ruta completa donde se encuentra nuestra imagen a buscar
-                        string rutaCompleta = System.IO.Path.Combine(rutaImagenes, lista[i].Imagen);
-
-                        // Si hay un archivo con esta direccion en especifico
-                        if (System.IO.File.Exists(rutaCompleta))
-                        {
-                            // Cargamos la imagen a nuestro picture box
-                            ImagenJuego3.Image = Image.FromFile(rutaCompleta);
-                        }
-                        else
-                        {
-                            // En caso de que la imagen no exista, entonces mostramos mensaje de error
-                            MessageBox.Show("No se encontro la imagen deseada 1");
-
-                            // Si habia una imagen en el pictureBox, la quitamos
-                            ImagenJuego3.Image = null;
-                        }
-
-                    }
-                    // Para el cuarto elemento de nuestra lista
-                    else if (i == 3)
-                    {
-                        // Para nuestro primer objeto
-                        TituloJuego4.Text = lista[i].Nombre;
-                        ModalidadJuego4.Text = lista[i].Modalidad;
-                        GeneroJuego4.Text = lista[i].Genero;
-                        PlataformaJuego4.Text = lista[i].Plataforma;
-                        StockJuego4.Text = lista[i].Stock.ToString();
-                        PrecioJuego4.Text = lista[i].Precio.ToString();
-
-                        // Cargamos la imagen
-                        // Construimos la ruta hacia la carpeta donde estan las imagenes de los juegos
-                        string rutaImagenes = System.IO.Path.Combine(Application.StartupPath, "Juegos");
-
-                        // Construimos la ruta completa donde se encuentra nuestra imagen a buscar
-                        string rutaCompleta = System.IO.Path.Combine(rutaImagenes, lista[i].Imagen);
-
-                        // Si hay un archivo con esta direccion en especifico
-                        if (System.IO.File.Exists(rutaCompleta))
-                        {
-                            // Cargamos la imagen a nuestro picture box
-                            ImagenJuego4.Image = Image.FromFile(rutaCompleta);
-                        }
-                        else
-                        {
-                            // En caso de que la imagen no exista, entonces mostramos mensaje de error
-                            MessageBox.Show("No se encontro la imagen deseada 1");
-
-                            // Si habia una imagen en el pictureBox, la quitamos
-                            ImagenJuego4.Image = null;
-                        }
-
-                    }
-                    // Para el quinto elemento de nuestra lista
-                    else if (i == 4)
-                    {
-                        // Para nuestro primer objeto
-                        TituloJuego5.Text = lista[i].Nombre;
-                        ModalidadJuego5.Text = lista[i].Modalidad;
-                        GeneroJuego5.Text = lista[i].Genero;
-                        PlataformaJuego5.Text = lista[i].Plataforma;
-                        StockJuego5.Text = lista[i].Stock.ToString();
-                        PrecioJuego5.Text = lista[i].Precio.ToString();
-
-                        // Cargamos la imagen
-                        // Construimos la ruta hacia la carpeta donde estan las imagenes de los juegos
-                        string rutaImagenes = System.IO.Path.Combine(Application.StartupPath, "Juegos");
-
-                        // Construimos la ruta completa donde se encuentra nuestra imagen a buscar
-                        string rutaCompleta = System.IO.Path.Combine(rutaImagenes, lista[i].Imagen);
-
-                        // Si hay un archivo con esta direccion en especifico
-                        if (System.IO.File.Exists(rutaCompleta))
-                        {
-                            // Cargamos la imagen a nuestro picture box
-                            ImagenJuego5.Image = Image.FromFile(rutaCompleta);
-                        }
-                        else
-                        {
-                            // En caso de que la imagen no exista, entonces mostramos mensaje de error
-                            MessageBox.Show("No se encontro la imagen deseada 1");
-
-                            // Si habia una imagen en el pictureBox, la quitamos
-                            ImagenJuego5.Image = null;
-                        }
-
-                    }
-                    // Para el sexto elemento de nuestra lista
-                    else if (i == 5)
-                    {
-                        // Para nuestro primer objeto
-                        TituloJuego6.Text = lista[i].Nombre;
-                        ModalidadJuego6.Text = lista[i].Modalidad;
-                        GeneroJuego6.Text = lista[i].Genero;
-                        PlataformaJuego6.Text = lista[i].Plataforma;
-                        StockJuego6.Text = lista[i].Stock.ToString();
-                        PrecioJuego6.Text = lista[i].Precio.ToString();
-
-                        // Cargamos la imagen
-                        // Construimos la ruta hacia la carpeta donde estan las imagenes de los juegos
-                        string rutaImagenes = System.IO.Path.Combine(Application.StartupPath, "Juegos");
-
-                        // Construimos la ruta completa donde se encuentra nuestra imagen a buscar
-                        string rutaCompleta = System.IO.Path.Combine(rutaImagenes, lista[i].Imagen);
-
-                        // Si hay un archivo con esta direccion en especifico
-                        if (System.IO.File.Exists(rutaCompleta))
-                        {
-                            // Cargamos la imagen a nuestro picture box
-                            ImagenJuego6.Image = Image.FromFile(rutaCompleta);
-                        }
-                        else
-                        {
-                            // En caso de que la imagen no exista, entonces mostramos mensaje de error
-                            MessageBox.Show("No se encontro la imagen deseada 1");
-
-                            // Si habia una imagen en el pictureBox, la quitamos
-                            ImagenJuego6.Image = null;
-                        }
-
-                    }
-                    // Para el septimo elemento de nuestra lista
-                    else if (i == 6)
-                    {
-                        // Para nuestro primer objeto
-                        TituloJuego7.Text = lista[i].Nombre;
-                        ModalidadJuego7.Text = lista[i].Modalidad;
-                        GeneroJuego7.Text = lista[i].Genero;
-                        PlataformaJuego7.Text = lista[i].Plataforma;
-                        StockJuego7.Text = lista[i].Stock.ToString();
-                        PrecioJuego7.Text = lista[i].Precio.ToString();
-
-                        // Cargamos la imagen
-                        // Construimos la ruta hacia la carpeta donde estan las imagenes de los juegos
-                        string rutaImagenes = System.IO.Path.Combine(Application.StartupPath, "Juegos");
-
-                        // Construimos la ruta completa donde se encuentra nuestra imagen a buscar
-                        string rutaCompleta = System.IO.Path.Combine(rutaImagenes, lista[i].Imagen);
-
-                        // Si hay un archivo con esta direccion en especifico
-                        if (System.IO.File.Exists(rutaCompleta))
-                        {
-                            // Cargamos la imagen a nuestro picture box
-                            ImagenJuego7.Image = Image.FromFile(rutaCompleta);
-                        }
-                        else
-                        {
-                            // En caso de que la imagen no exista, entonces mostramos mensaje de error
-                            MessageBox.Show("No se encontro la imagen deseada 1");
-
-                            // Si habia una imagen en el pictureBox, la quitamos
-                            ImagenJuego7.Image = null;
-                        }
-
-                    }
-                    // Para el octavo elemento de nuestra lista
-                    else if (i == 7)
-                    {
-                        // Para nuestro primer objeto
-                        TituloJuego8.Text = lista[i].Nombre;
-                        ModalidadJuego8.Text = lista[i].Modalidad;
-                        GeneroJuego8.Text = lista[i].Genero;
-                        PlataformaJuego8.Text = lista[i].Plataforma;
-                        StockJuego8.Text = lista[i].Stock.ToString();
-                        PrecioJuego8.Text = lista[i].Precio.ToString();
-
-                        // Cargamos la imagen
-                        // Construimos la ruta hacia la carpeta donde estan las imagenes de los juegos
-                        string rutaImagenes = System.IO.Path.Combine(Application.StartupPath, "Juegos");
-
-                        // Construimos la ruta completa donde se encuentra nuestra imagen a buscar
-                        string rutaCompleta = System.IO.Path.Combine(rutaImagenes, lista[i].Imagen);
-
-                        // Si hay un archivo con esta direccion en especifico
-                        if (System.IO.File.Exists(rutaCompleta))
-                        {
-                            // Cargamos la imagen a nuestro picture box
-                            ImagenJuego8.Image = Image.FromFile(rutaCompleta);
-                        }
-                        else
-                        {
-                            // En caso de que la imagen no exista, entonces mostramos mensaje de error
-                            MessageBox.Show("No se encontro la imagen deseada 1");
-
-                            // Si habia una imagen en el pictureBox, la quitamos
-                            ImagenJuego8.Image = null;
-                        }
-
-                    }
-                    // Para el noveno elemento de nuestra lista
-                    else if (i == 8)
-                    {
-                        // Para nuestro primer objeto
-                        TituloJuego9.Text = lista[i].Nombre;
-                        ModalidadJuego9.Text = lista[i].Modalidad;
-                        GeneroJuego9.Text = lista[i].Genero;
-                        PlataformaJuego9.Text = lista[i].Plataforma;
-                        StockJuego9.Text = lista[i].Stock.ToString();
-                        PrecioJuego9.Text = lista[i].Precio.ToString();
-
-                        // Cargamos la imagen
-                        // Construimos la ruta hacia la carpeta donde estan las imagenes de los juegos
-                        string rutaImagenes = System.IO.Path.Combine(Application.StartupPath, "Juegos");
-
-                        // Construimos la ruta completa donde se encuentra nuestra imagen a buscar
-                        string rutaCompleta = System.IO.Path.Combine(rutaImagenes, lista[i].Imagen);
-
-                        // Si hay un archivo con esta direccion en especifico
-                        if (System.IO.File.Exists(rutaCompleta))
-                        {
-                            // Cargamos la imagen a nuestro picture box
-                            ImagenJuego9.Image = Image.FromFile(rutaCompleta);
-                        }
-                        else
-                        {
-                            // En caso de que la imagen no exista, entonces mostramos mensaje de error
-                            MessageBox.Show("No se encontro la imagen deseada 1");
-
-                            // Si habia una imagen en el pictureBox, la quitamos
-                            ImagenJuego9.Image = null;
-                        }
-
-                    }
-                    // Para el decimo elemento de nuestra lista
-                    else if (i == 9)
-                    {
-                        // Para nuestro primer objeto
-                        TituloJuego10.Text = lista[i].Nombre;
-                        ModalidadJuego10.Text = lista[i].Modalidad;
-                        GeneroJuego10.Text = lista[i].Genero;
-                        PlataformaJuego10.Text = lista[i].Plataforma;
-                        StockJuego10.Text = lista[i].Stock.ToString();
-                        PrecioJuego10.Text = lista[i].Precio.ToString();
-
-                        // Cargamos la imagen
-                        // Construimos la ruta hacia la carpeta donde estan las imagenes de los juegos
-                        string rutaImagenes = System.IO.Path.Combine(Application.StartupPath, "Juegos");
-
-                        // Construimos la ruta completa donde se encuentra nuestra imagen a buscar
-                        string rutaCompleta = System.IO.Path.Combine(rutaImagenes, lista[i].Imagen);
-
-                        // Si hay un archivo con esta direccion en especifico
-                        if (System.IO.File.Exists(rutaCompleta))
-                        {
-                            // Cargamos la imagen a nuestro picture box
-                            ImagenJuego10.Image = Image.FromFile(rutaCompleta);
-                        }
-                        else
-                        {
-                            // En caso de que la imagen no exista, entonces mostramos mensaje de error
-                            MessageBox.Show("No se encontro la imagen deseada 1");
-
-                            // Si habia una imagen en el pictureBox, la quitamos
-                            ImagenJuego10.Image = null;
-                        }
-
-                    }
+                // Ocultamos los controles de los juegos que no existen
+                for (int i = lista.Count; i < 10; i++)
+                {
+                    OcultarJuego(i);
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error al conectarse a la base de datos: " + ex.Message);
             }
-
         }
 
-        /* Funciones para agregar al carrito los juegos respectivos */
+
+        // Método para asignar los valores de un juego a los controles correspondientes
+        private void AsignarValoresJuego(int indice, Juegos juego)
+        {
+            // Asignamos los valores a los controles correspondientes según el índice del juego
+            switch (indice)
+            {
+                case 0:
+                    // Asignamos los valores del primer juego a los controles correspondientes
+                    TituloJuego1.Text = juego.Nombre;
+                    ModalidadJuego1.Text = juego.Modalidad;
+                    GeneroJuego1.Text = juego.Genero;
+                    PlataformaJuego1.Text = juego.Plataforma;
+                    StockJuego1.Text = $"Stock: {juego.Stock}";
+                    PrecioJuego1.Text = $"${juego.Precio}";
+                    CargarImagen(ImagenJuego1, juego.Imagen);
+                    break;
+                case 1:
+                    // Asignamos los valores del segundo juego a los controles correspondientes
+                    TituloJuego2.Text = juego.Nombre;
+                    ModalidadJuego2.Text = juego.Modalidad;
+                    GeneroJuego2.Text = juego.Genero;
+                    PlataformaJuego2.Text = juego.Plataforma;
+                    StockJuego2.Text = $"Stock: {juego.Stock}";
+                    PrecioJuego2.Text = $"${juego.Precio}";
+                    CargarImagen(ImagenJuego2, juego.Imagen);
+                    break;
+                case 2:
+                    // Asignamos los valores del tercer juego a los controles correspondientes
+                    TituloJuego3.Text = juego.Nombre;
+                    ModalidadJuego3.Text = juego.Modalidad;
+                    GeneroJuego3.Text = juego.Genero;
+                    PlataformaJuego3.Text = juego.Plataforma;
+                    StockJuego3.Text = $"Stock: {juego.Stock}";
+                    PrecioJuego3.Text = $"${juego.Precio}";
+                    CargarImagen(ImagenJuego3, juego.Imagen);
+                    break;
+                case 3:
+                    // Asignamos los valores del cuarto juego a los controles correspondientes
+                    TituloJuego4.Text = juego.Nombre;
+                    ModalidadJuego4.Text = juego.Modalidad;
+                    GeneroJuego4.Text = juego.Genero;
+                    PlataformaJuego4.Text = juego.Plataforma;
+                    StockJuego4.Text = $"Stock: {juego.Stock}";
+                    PrecioJuego4.Text = $"${juego.Precio}";
+                    CargarImagen(ImagenJuego4, juego.Imagen);
+                    break;
+                case 4:
+                    // Asignamos los valores del quinto juego a los controles correspondientes
+                    TituloJuego5.Text = juego.Nombre;
+                    ModalidadJuego5.Text = juego.Modalidad;
+                    GeneroJuego5.Text = juego.Genero;
+                    PlataformaJuego5.Text = juego.Plataforma;
+                    StockJuego5.Text = $"Stock: {juego.Stock}";
+                    PrecioJuego5.Text = $"${juego.Precio}";
+                    CargarImagen(ImagenJuego5, juego.Imagen);
+                    break;
+                case 5:
+                    // Asignamos los valores del sexto juego a los controles correspondientes
+                    TituloJuego6.Text = juego.Nombre;
+                    ModalidadJuego6.Text = juego.Modalidad;
+                    GeneroJuego6.Text = juego.Genero;
+                    PlataformaJuego6.Text = juego.Plataforma;
+                    StockJuego6.Text = $"Stock: {juego.Stock}";
+                    PrecioJuego6.Text = $"${juego.Precio}";
+                    CargarImagen(ImagenJuego6, juego.Imagen);
+                    break;
+                case 6:
+                    // Asignamos los valores del séptimo juego a los controles correspondientes
+                    TituloJuego7.Text = juego.Nombre;
+                    ModalidadJuego7.Text = juego.Modalidad;
+                    GeneroJuego7.Text = juego.Genero;
+                    PlataformaJuego7.Text = juego.Plataforma;
+                    StockJuego7.Text = $"Stock: {juego.Stock}";
+                    PrecioJuego7.Text = $"${juego.Precio}";
+                    CargarImagen(ImagenJuego7, juego.Imagen);
+                    break;
+                case 7:
+                    // Asignamos los valores del octavo juego a los controles correspondientes
+                    TituloJuego8.Text = juego.Nombre;
+                    ModalidadJuego8.Text = juego.Modalidad;
+                    GeneroJuego8.Text = juego.Genero;
+                    PlataformaJuego8.Text = juego.Plataforma;
+                    StockJuego8.Text = $"Stock: {juego.Stock}";
+                    PrecioJuego8.Text = $"${juego.Precio}";
+                    CargarImagen(ImagenJuego8, juego.Imagen);
+                    break;
+                case 8:
+                    // Asignamos los valores del noveno juego a los controles correspondientes
+                    TituloJuego9.Text = juego.Nombre;
+                    ModalidadJuego9.Text = juego.Modalidad;
+                    GeneroJuego9.Text = juego.Genero;
+                    PlataformaJuego9.Text = juego.Plataforma;
+                    StockJuego9.Text = $"Stock: {juego.Stock}";
+                    PrecioJuego9.Text = $"${juego.Precio}";
+                    CargarImagen(ImagenJuego9, juego.Imagen);
+                    break;
+                case 9:
+                    // Asignamos los valores del décimo juego a los controles correspondientes
+                    TituloJuego10.Text = juego.Nombre;
+                    ModalidadJuego10.Text = juego.Modalidad;
+                    GeneroJuego10.Text = juego.Genero;
+                    PlataformaJuego10.Text = juego.Plataforma;
+                    StockJuego10.Text = $"Stock: {juego.Stock}";
+                    PrecioJuego10.Text = $"${juego.Precio}";
+                    CargarImagen(ImagenJuego10, juego.Imagen);
+                    break;
+            }
+        }
+
+        // Método para ocultar los controles de un juego
+        private void OcultarJuego(int indice)
+        {
+            switch (indice)
+            {
+                case 6:
+                    buttonComprarJuego7.Visible = false;
+                    panel11.Visible = false;
+                    TituloJuego7.Visible = false;
+                    ModalidadJuego7.Visible = false;
+                    GeneroJuego7.Visible = false;
+                    PlataformaJuego7.Visible = false;
+                    StockJuego7.Visible = false;
+                    PrecioJuego7.Visible = false;
+                    ImagenJuego7.Visible = false;
+                    break;
+                case 7:
+                    buttonComprarJuego8.Visible = false;
+                    panel12.Visible = false;
+                    TituloJuego8.Visible = false;
+                    ModalidadJuego8.Visible = false;
+                    GeneroJuego8.Visible = false;
+                    PlataformaJuego8.Visible = false;
+                    StockJuego8.Visible = false;
+                    PrecioJuego8.Visible = false;
+                    ImagenJuego8.Visible = false;
+                    break;
+                case 8:
+                    buttonComprarJuego9.Visible = false;
+                    panel13.Visible = false;
+                    TituloJuego9.Visible = false;
+                    ModalidadJuego9.Visible = false;
+                    GeneroJuego9.Visible = false;
+                    PlataformaJuego9.Visible = false;
+                    StockJuego9.Visible = false;
+                    PrecioJuego9.Visible = false;
+                    ImagenJuego9.Visible = false;
+                    break;
+                case 9:
+                    buttonComprarJuego10.Visible = false;
+                    panel14.Visible = false;
+                    TituloJuego10.Visible = false;
+                    ModalidadJuego10.Visible = false;
+                    GeneroJuego10.Visible = false;
+                    PlataformaJuego10.Visible = false;
+                    StockJuego10.Visible = false;
+                    PrecioJuego10.Visible = false;
+                    ImagenJuego10.Visible = false;
+                    break;
+            }
+        }
+
+        // Método para cargar una imagen a un pictureBox
+        private void CargarImagen(PictureBox pictureBox, string nombreImagen)
+        {
+            // Construimos la ruta hacia la carpeta donde estan las imagenes de los juegos
+            string rutaImagenes = System.IO.Path.Combine(Application.StartupPath, "Juegos");
+
+            // Construimos la ruta completa donde se encuentra nuestra imagen a buscar
+            string rutaCompleta = System.IO.Path.Combine(rutaImagenes, nombreImagen);
+
+            // Si hay un archivo con esta direccion en especifico
+            if (System.IO.File.Exists(rutaCompleta))
+            {
+                // Cargamos la imagen a nuestro picture box
+                pictureBox.Image = Image.FromFile(rutaCompleta);
+            }
+            else
+            {
+                // En caso de que la imagen no exista, entonces mostramos mensaje de error
+                MessageBox.Show("No se encontro la imagen deseada");
+
+                // Si habia una imagen en el pictureBox, la quitamos
+                pictureBox.Image = null;
+            }
+        }
+
+        // Evento para el botón de comprar el primer juego
         private void buttonComprarJuego1_Click(object sender, EventArgs e)
         {
-            // Verificamos si hay stock disponible 
-            if (lista[0].Stock > 0)
-            {
-                // Agregamos este objeto a nuestro carrito
-                carrito.Add(lista[0]);
-
-                // Mensaje de exito
-                MessageBox.Show($"{lista[0].Nombre} fue agregado correctamente al carrito");
-
-                // Aumentamos el contador del carrito
-                conteo_carrito++;
-
-                // Mostramos el nuevo valor del contador
-                textBox_ConteoCarrito.Text = conteo_carrito.ToString();
-
-                // Quitamos uno de nuestro stock
-                lista[0].Stock--;
-
-                // Mostramos el nuevo valor del stock
-                StockJuego1.Text = lista[0].Stock.ToString();
-
-                // Actualizamos nuestra base de datos
-                try
-                {
-                    // Creamos nuestra variable para la base de datos, y pasamos nuestra informacion
-                    MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=proyecto; User=root; Password=; Sslmode=none;");
-                    // Abrimos nuestra base de datos
-                    conexion.Open();
-
-                    // Linea de comando de SQL
-                    string consulta = "UPDATE juegos SET ID=" + "'" + lista[0].Id + "'" +
-                        ",Nombre=" + "'" + lista[0].Nombre + "'" +
-                        ",Imagen=" + "'" + lista[0].Imagen + "'" +
-                        ",Genero=" + "'" + lista[0].Genero + "'" +
-                        ",Plataforma=" + "'" + lista[0].Plataforma + "'" +
-                        ",Modalidad=" + "'" + lista[0].Modalidad + "'" +
-                        ",Precio=" + "'" + lista[0].Precio + "'" +
-                        ",Stock=" + "'" + lista[0].Stock + "'" +
-                        "WHERE ID =" + lista[0].Id;
-
-                    // Cargamos neestra linea de comandos
-                    MySqlCommand comando = new MySqlCommand(consulta, conexion);
-
-                    // Ejecutamos el comando
-                    comando.ExecuteNonQuery();
-
-                    // Cerramos nuestra conexion
-                    conexion.Close();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error en la actualizacion del registro: " + ex.Message);
-                }
-
-
-            }
-            else
-            {
-                MessageBox.Show($"No hay stock disponible del juego {lista[0].Nombre}");
-            }
+            // Llama al método para agregar el juego al carrito, pasando el índice 0
+            AgregarJuegoAlCarrito(0);
         }
 
+        // Evento para el botón de comprar el segundo juego
         private void buttonComprarJuego2_Click(object sender, EventArgs e)
         {
-            // Verificamos si hay stock disponible 
-            if (lista[1].Stock > 0)
-            {
-                // Agregamos este objeto a nuestro carrito
-                carrito.Add(lista[1]);
-
-                // Mensaje de exito
-                MessageBox.Show($"{lista[1].Nombre} fue agregado correctamente al carrito");
-
-                // Aumentamos el contador del carrito
-                conteo_carrito++;
-
-                // Mostramos el nuevo valor del contador
-                textBox_ConteoCarrito.Text = conteo_carrito.ToString();
-
-                // Quitamos uno de nuestro stock
-                lista[1].Stock--;
-
-                // Mostramos el nuevo valor del stock
-                StockJuego2.Text = lista[1].Stock.ToString();
-
-                // Actualizamos nuestra base de datos
-                try
-                {
-                    // Creamos nuestra variable para la base de datos, y pasamos nuestra informacion
-                    MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=proyecto; User=root; Password=; Sslmode=none;");
-                    // Abrimos nuestra base de datos
-                    conexion.Open();
-
-                    // Linea de comando de SQL
-                    string consulta = "UPDATE juegos SET ID=" + "'" + lista[1].Id + "'" +
-                        ",Nombre=" + "'" + lista[1].Nombre + "'" +
-                        ",Imagen=" + "'" + lista[1].Imagen + "'" +
-                        ",Genero=" + "'" + lista[1].Genero + "'" +
-                        ",Plataforma=" + "'" + lista[1].Plataforma + "'" +
-                        ",Modalidad=" + "'" + lista[1].Modalidad + "'" +
-                        ",Precio=" + "'" + lista[1].Precio + "'" +
-                        ",Stock=" + "'" + lista[1].Stock + "'" +
-                        "WHERE ID =" + lista[1].Id;
-
-                    // Cargamos neestra linea de comandos
-                    MySqlCommand comando = new MySqlCommand(consulta, conexion);
-
-                    // Ejecutamos el comando
-                    comando.ExecuteNonQuery();
-
-                    // Cerramos nuestra conexion
-                    conexion.Close();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error en la actualizacion del registro: " + ex.Message);
-                }
-            }
-            else
-            {
-                MessageBox.Show($"No hay stock disponible del juego {lista[1].Nombre}");
-            }
+            // Llama al método para agregar el juego al carrito, pasando el índice 1
+            AgregarJuegoAlCarrito(1);
         }
 
+        // Evento para el botón de comprar el tercer juego
         private void buttonComprarJuego3_Click(object sender, EventArgs e)
         {
-            // Verificamos si hay stock disponible 
-            if (lista[2].Stock > 0)
-            {
-                // Agregamos este objeto a nuestro carrito
-                carrito.Add(lista[2]);
-
-                // Mensaje de exito
-                MessageBox.Show($"{lista[2].Nombre} fue agregado correctamente al carrito");
-
-                // Aumentamos el contador del carrito
-                conteo_carrito++;
-
-                // Mostramos el nuevo valor del contador
-                textBox_ConteoCarrito.Text = conteo_carrito.ToString();
-
-                // Quitamos uno de nuestro stock
-                lista[2].Stock--;
-
-                // Mostramos el nuevo valor del stock
-                StockJuego3.Text = lista[2].Stock.ToString();
-
-                // Actualizamos nuestra base de datos
-                try
-                {
-                    // Creamos nuestra variable para la base de datos, y pasamos nuestra informacion
-                    MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=proyecto; User=root; Password=; Sslmode=none;");
-                    // Abrimos nuestra base de datos
-                    conexion.Open();
-
-                    // Linea de comando de SQL
-                    string consulta = "UPDATE juegos SET ID=" + "'" + lista[2].Id + "'" +
-                        ",Nombre=" + "'" + lista[2].Nombre + "'" +
-                        ",Imagen=" + "'" + lista[2].Imagen + "'" +
-                        ",Genero=" + "'" + lista[2].Genero + "'" +
-                        ",Plataforma=" + "'" + lista[2].Plataforma + "'" +
-                        ",Modalidad=" + "'" + lista[2].Modalidad + "'" +
-                        ",Precio=" + "'" + lista[2].Precio + "'" +
-                        ",Stock=" + "'" + lista[2].Stock + "'" +
-                        "WHERE ID =" + lista[2].Id;
-
-                    // Cargamos neestra linea de comandos
-                    MySqlCommand comando = new MySqlCommand(consulta, conexion);
-
-                    // Ejecutamos el comando
-                    comando.ExecuteNonQuery();
-
-                    // Cerramos nuestra conexion
-                    conexion.Close();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error en la actualizacion del registro: " + ex.Message);
-                }
-            }
-            else
-            {
-                MessageBox.Show($"No hay stock disponible del juego {lista[2].Nombre}");
-            }
+            // Llama al método para agregar el juego al carrito, pasando el índice 2
+            AgregarJuegoAlCarrito(2);
         }
 
+        // Evento para el botón de comprar el cuarto juego
         private void buttonComprarJuego4_Click(object sender, EventArgs e)
         {
-            // Verificamos si hay stock disponible 
-            if (lista[3].Stock > 0)
-            {
-                // Agregamos este objeto a nuestro carrito
-                carrito.Add(lista[3]);
-
-                // Mensaje de exito
-                MessageBox.Show($"{lista[3].Nombre} fue agregado correctamente al carrito");
-
-                // Aumentamos el contador del carrito
-                conteo_carrito++;
-
-                // Mostramos el nuevo valor del contador
-                textBox_ConteoCarrito.Text = conteo_carrito.ToString();
-
-                // Quitamos uno de nuestro stock
-                lista[3].Stock--;
-
-                // Mostramos el nuevo valor del stock
-                StockJuego4.Text = lista[3].Stock.ToString();
-
-                // Actualizamos nuestra base de datos
-                try
-                {
-                    // Creamos nuestra variable para la base de datos, y pasamos nuestra informacion
-                    MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=proyecto; User=root; Password=; Sslmode=none;");
-                    // Abrimos nuestra base de datos
-                    conexion.Open();
-
-                    // Linea de comando de SQL
-                    string consulta = "UPDATE juegos SET ID=" + "'" + lista[3].Id + "'" +
-                        ",Nombre=" + "'" + lista[3].Nombre + "'" +
-                        ",Imagen=" + "'" + lista[3].Imagen + "'" +
-                        ",Genero=" + "'" + lista[3].Genero + "'" +
-                        ",Plataforma=" + "'" + lista[3].Plataforma + "'" +
-                        ",Modalidad=" + "'" + lista[3].Modalidad + "'" +
-                        ",Precio=" + "'" + lista[3].Precio + "'" +
-                        ",Stock=" + "'" + lista[3].Stock + "'" +
-                        "WHERE ID =" + lista[3].Id;
-
-                    // Cargamos neestra linea de comandos
-                    MySqlCommand comando = new MySqlCommand(consulta, conexion);
-
-                    // Ejecutamos el comando
-                    comando.ExecuteNonQuery();
-
-                    // Cerramos nuestra conexion
-                    conexion.Close();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error en la actualizacion del registro: " + ex.Message);
-                }
-            }
-            else
-            {
-                MessageBox.Show($"No hay stock disponible del juego {lista[3].Nombre}");
-            }
+            // Llama al método para agregar el juego al carrito, pasando el índice 3
+            AgregarJuegoAlCarrito(3);
         }
 
+        // Evento para el botón de comprar el quinto juego
         private void buttonComprarJuego5_Click(object sender, EventArgs e)
         {
-            // Verificamos si hay stock disponible 
-            if (lista[4].Stock > 0)
-            {
-                // Agregamos este objeto a nuestro carrito
-                carrito.Add(lista[4]);
-
-                // Mensaje de exito
-                MessageBox.Show($"{lista[4].Nombre} fue agregado correctamente al carrito");
-
-                // Aumentamos el contador del carrito
-                conteo_carrito++;
-
-                // Mostramos el nuevo valor del contador
-                textBox_ConteoCarrito.Text = conteo_carrito.ToString();
-
-                // Quitamos uno de nuestro stock
-                lista[4].Stock--;
-
-                // Mostramos el nuevo valor del stock
-                StockJuego5.Text = lista[5].Stock.ToString();
-
-                // Actualizamos nuestra base de datos
-                try
-                {
-                    // Creamos nuestra variable para la base de datos, y pasamos nuestra informacion
-                    MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=proyecto; User=root; Password=; Sslmode=none;");
-                    // Abrimos nuestra base de datos
-                    conexion.Open();
-
-                    // Linea de comando de SQL
-                    string consulta = "UPDATE juegos SET ID=" + "'" + lista[4].Id + "'" +
-                        ",Nombre=" + "'" + lista[4].Nombre + "'" +
-                        ",Imagen=" + "'" + lista[4].Imagen + "'" +
-                        ",Genero=" + "'" + lista[4].Genero + "'" +
-                        ",Plataforma=" + "'" + lista[4].Plataforma + "'" +
-                        ",Modalidad=" + "'" + lista[4].Modalidad + "'" +
-                        ",Precio=" + "'" + lista[4].Precio + "'" +
-                        ",Stock=" + "'" + lista[4].Stock + "'" +
-                        "WHERE ID =" + lista[4].Id;
-
-                    // Cargamos neestra linea de comandos
-                    MySqlCommand comando = new MySqlCommand(consulta, conexion);
-
-                    // Ejecutamos el comando
-                    comando.ExecuteNonQuery();
-
-                    // Cerramos nuestra conexion
-                    conexion.Close();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error en la actualizacion del registro: " + ex.Message);
-                }
-            }
-            else
-            {
-                MessageBox.Show($"No hay stock disponible del juego {lista[4].Nombre}");
-            }
+            // Llama al método para agregar el juego al carrito, pasando el índice 4
+            AgregarJuegoAlCarrito(4);
         }
 
+        // Evento para el botón de comprar el sexto juego
         private void buttonComprarJuego6_Click(object sender, EventArgs e)
         {
-            // Verificamos si hay stock disponible 
-            if (lista[5].Stock > 0)
-            {
-                // Agregamos este objeto a nuestro carrito
-                carrito.Add(lista[5]);
-
-                // Mensaje de exito
-                MessageBox.Show($"{lista[5].Nombre} fue agregado correctamente al carrito");
-
-                // Aumentamos el contador del carrito
-                conteo_carrito++;
-
-                // Mostramos el nuevo valor del contador
-                textBox_ConteoCarrito.Text = conteo_carrito.ToString();
-
-                // Quitamos uno de nuestro stock
-                lista[5].Stock--;
-
-                // Mostramos el nuevo valor del stock
-                StockJuego6.Text = lista[5].Stock.ToString();
-
-                // Actualizamos nuestra base de datos
-                try
-                {
-                    // Creamos nuestra variable para la base de datos, y pasamos nuestra informacion
-                    MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=proyecto; User=root; Password=; Sslmode=none;");
-                    // Abrimos nuestra base de datos
-                    conexion.Open();
-
-                    // Linea de comando de SQL
-                    string consulta = "UPDATE juegos SET ID=" + "'" + lista[5].Id + "'" +
-                        ",Nombre=" + "'" + lista[5].Nombre + "'" +
-                        ",Imagen=" + "'" + lista[5].Imagen + "'" +
-                        ",Genero=" + "'" + lista[5].Genero + "'" +
-                        ",Plataforma=" + "'" + lista[5].Plataforma + "'" +
-                        ",Modalidad=" + "'" + lista[5].Modalidad + "'" +
-                        ",Precio=" + "'" + lista[5].Precio + "'" +
-                        ",Stock=" + "'" + lista[5].Stock + "'" +
-                        "WHERE ID =" + lista[5].Id;
-
-                    // Cargamos neestra linea de comandos
-                    MySqlCommand comando = new MySqlCommand(consulta, conexion);
-
-                    // Ejecutamos el comando
-                    comando.ExecuteNonQuery();
-
-                    // Cerramos nuestra conexion
-                    conexion.Close();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error en la actualizacion del registro: " + ex.Message);
-                }
-            }
-            else
-            {
-                MessageBox.Show($"No hay stock disponible del juego {lista[5].Nombre}");
-            }
+            // Llama al método para agregar el juego al carrito, pasando el índice 5
+            AgregarJuegoAlCarrito(5);
         }
 
+        // Evento para el botón de comprar el séptimo juego
         private void buttonComprarJuego7_Click(object sender, EventArgs e)
         {
-            // Verificamos si hay stock disponible 
-            if (lista[6].Stock > 0)
-            {
-                // Agregamos este objeto a nuestro carrito
-                carrito.Add(lista[6]);
-
-                // Mensaje de exito
-                MessageBox.Show($"{lista[6].Nombre} fue agregado correctamente al carrito");
-
-                // Aumentamos el contador del carrito
-                conteo_carrito++;
-
-                // Mostramos el nuevo valor del contador
-                textBox_ConteoCarrito.Text = conteo_carrito.ToString();
-
-                // Quitamos uno de nuestro stock
-                lista[6].Stock--;
-
-                // Mostramos el nuevo valor del stock
-                StockJuego7.Text = lista[6].Stock.ToString();
-
-                // Actualizamos nuestra base de datos
-                try
-                {
-                    // Creamos nuestra variable para la base de datos, y pasamos nuestra informacion
-                    MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=proyecto; User=root; Password=; Sslmode=none;");
-                    // Abrimos nuestra base de datos
-                    conexion.Open();
-
-                    // Linea de comando de SQL
-                    string consulta = "UPDATE juegos SET ID=" + "'" + lista[6].Id + "'" +
-                        ",Nombre=" + "'" + lista[6].Nombre + "'" +
-                        ",Imagen=" + "'" + lista[6].Imagen + "'" +
-                        ",Genero=" + "'" + lista[6].Genero + "'" +
-                        ",Plataforma=" + "'" + lista[6].Plataforma + "'" +
-                        ",Modalidad=" + "'" + lista[6].Modalidad + "'" +
-                        ",Precio=" + "'" + lista[6].Precio + "'" +
-                        ",Stock=" + "'" + lista[6].Stock + "'" +
-                        "WHERE ID =" + lista[6].Id;
-
-                    // Cargamos neestra linea de comandos
-                    MySqlCommand comando = new MySqlCommand(consulta, conexion);
-
-                    // Ejecutamos el comando
-                    comando.ExecuteNonQuery();
-
-                    // Cerramos nuestra conexion
-                    conexion.Close();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error en la actualizacion del registro: " + ex.Message);
-                }
-            }
-            else
-            {
-                MessageBox.Show($"No hay stock disponible del juego {lista[6].Nombre}");
-            }
+            // Llama al método para agregar el juego al carrito, pasando el índice 6
+            AgregarJuegoAlCarrito(6);
         }
 
+        // Evento para el botón de comprar el octavo juego
         private void buttonComprarJuego8_Click(object sender, EventArgs e)
         {
-            // Verificamos si hay stock disponible 
-            if (lista[7].Stock > 0)
-            {
-                // Agregamos este objeto a nuestro carrito
-                carrito.Add(lista[7]);
-
-                // Mensaje de exito
-                MessageBox.Show($"{lista[7].Nombre} fue agregado correctamente al carrito");
-
-                // Aumentamos el contador del carrito
-                conteo_carrito++;
-
-                // Mostramos el nuevo valor del contador
-                textBox_ConteoCarrito.Text = conteo_carrito.ToString();
-
-                // Quitamos uno de nuestro stock
-                lista[7].Stock--;
-
-                // Mostramos el nuevo valor del stock
-                StockJuego8.Text = lista[7].Stock.ToString();
-
-                // Actualizamos nuestra base de datos
-                try
-                {
-                    // Creamos nuestra variable para la base de datos, y pasamos nuestra informacion
-                    MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=proyecto; User=root; Password=; Sslmode=none;");
-                    // Abrimos nuestra base de datos
-                    conexion.Open();
-
-                    // Linea de comando de SQL
-                    string consulta = "UPDATE juegos SET ID=" + "'" + lista[7].Id + "'" +
-                        ",Nombre=" + "'" + lista[7].Nombre + "'" +
-                        ",Imagen=" + "'" + lista[7].Imagen + "'" +
-                        ",Genero=" + "'" + lista[7].Genero + "'" +
-                        ",Plataforma=" + "'" + lista[7].Plataforma + "'" +
-                        ",Modalidad=" + "'" + lista[7].Modalidad + "'" +
-                        ",Precio=" + "'" + lista[7].Precio + "'" +
-                        ",Stock=" + "'" + lista[7].Stock + "'" +
-                        "WHERE ID =" + lista[7].Id;
-
-                    // Cargamos neestra linea de comandos
-                    MySqlCommand comando = new MySqlCommand(consulta, conexion);
-
-                    // Ejecutamos el comando
-                    comando.ExecuteNonQuery();
-
-                    // Cerramos nuestra conexion
-                    conexion.Close();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error en la actualizacion del registro: " + ex.Message);
-                }
-            }
-            else
-            {
-                MessageBox.Show($"No hay stock disponible del juego {lista[7].Nombre}");
-            }
+            // Llama al método para agregar el juego al carrito, pasando el índice 7
+            AgregarJuegoAlCarrito(7);
         }
 
+        // Evento para el botón de comprar el noveno juego
         private void buttonComprarJuego9_Click(object sender, EventArgs e)
         {
-            // Verificamos si hay stock disponible 
-            if (lista[8].Stock > 0)
-            {
-                // Agregamos este objeto a nuestro carrito
-                carrito.Add(lista[8]);
-
-                // Mensaje de exito
-                MessageBox.Show($"{lista[8].Nombre} fue agregado correctamente al carrito");
-
-                // Aumentamos el contador del carrito
-                conteo_carrito++;
-
-                // Mostramos el nuevo valor del contador
-                textBox_ConteoCarrito.Text = conteo_carrito.ToString();
-
-                // Quitamos uno de nuestro stock
-                lista[8].Stock--;
-
-                // Mostramos el nuevo valor del stock
-                StockJuego9.Text = lista[8].Stock.ToString();
-
-                // Actualizamos nuestra base de datos
-                try
-                {
-                    // Creamos nuestra variable para la base de datos, y pasamos nuestra informacion
-                    MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=proyecto; User=root; Password=; Sslmode=none;");
-                    // Abrimos nuestra base de datos
-                    conexion.Open();
-
-                    // Linea de comando de SQL
-                    string consulta = "UPDATE juegos SET ID=" + "'" + lista[8].Id + "'" +
-                        ",Nombre=" + "'" + lista[8].Nombre + "'" +
-                        ",Imagen=" + "'" + lista[8].Imagen + "'" +
-                        ",Genero=" + "'" + lista[8].Genero + "'" +
-                        ",Plataforma=" + "'" + lista[8].Plataforma + "'" +
-                        ",Modalidad=" + "'" + lista[8].Modalidad + "'" +
-                        ",Precio=" + "'" + lista[8].Precio + "'" +
-                        ",Stock=" + "'" + lista[8].Stock + "'" +
-                        "WHERE ID =" + lista[8].Id;
-
-                    // Cargamos neestra linea de comandos
-                    MySqlCommand comando = new MySqlCommand(consulta, conexion);
-
-                    // Ejecutamos el comando
-                    comando.ExecuteNonQuery();
-
-                    // Cerramos nuestra conexion
-                    conexion.Close();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error en la actualizacion del registro: " + ex.Message);
-                }
-            }
-            else
-            {
-                MessageBox.Show($"No hay stock disponible del juego {lista[8].Nombre}");
-            }
+            // Llama al método para agregar el juego al carrito, pasando el índice 8
+            AgregarJuegoAlCarrito(8);
         }
 
+        // Evento para el botón de comprar el décimo juego
         private void buttonComprarJuego10_Click(object sender, EventArgs e)
         {
+            // Llama al método para agregar el juego al carrito, pasando el índice 9
+            AgregarJuegoAlCarrito(9);
+        }
+
+        // Método para agregar un juego al carrito
+        private void AgregarJuegoAlCarrito(int indice)
+        {
             // Verificamos si hay stock disponible 
-            if (lista[9].Stock > 0)
+            if (lista[indice].Stock > 0)
             {
                 // Agregamos este objeto a nuestro carrito
-                carrito.Add(lista[9]);
+                carrito.Add(lista[indice]);
 
                 // Mensaje de exito
-                MessageBox.Show($"{lista[9].Nombre} fue agregado correctamente al carrito");
+                MessageBox.Show($"{lista[indice].Nombre} fue agregado correctamente al carrito");
 
                 // Aumentamos el contador del carrito
                 conteo_carrito++;
@@ -1066,10 +444,42 @@ namespace ProyectoFinalV1
                 textBox_ConteoCarrito.Text = conteo_carrito.ToString();
 
                 // Quitamos uno de nuestro stock
-                lista[9].Stock--;
+                lista[indice].Stock--;
 
                 // Mostramos el nuevo valor del stock
-                StockJuego10.Text = lista[9].Stock.ToString();
+                switch (indice)
+                {
+                    case 0:
+                        StockJuego1.Text = lista[indice].Stock.ToString();
+                        break;
+                    case 1:
+                        StockJuego2.Text = lista[indice].Stock.ToString();
+                        break;
+                    case 2:
+                        StockJuego3.Text = lista[indice].Stock.ToString();
+                        break;
+                    case 3:
+                        StockJuego4.Text = lista[indice].Stock.ToString();
+                        break;
+                    case 4:
+                        StockJuego5.Text = lista[indice].Stock.ToString();
+                        break;
+                    case 5:
+                        StockJuego6.Text = lista[indice].Stock.ToString();
+                        break;
+                    case 6:
+                        StockJuego7.Text = lista[indice].Stock.ToString();
+                        break;
+                    case 7:
+                        StockJuego8.Text = lista[indice].Stock.ToString();
+                        break;
+                    case 8:
+                        StockJuego9.Text = lista[indice].Stock.ToString();
+                        break;
+                    case 9:
+                        StockJuego10.Text = lista[indice].Stock.ToString();
+                        break;
+                }
 
                 // Actualizamos nuestra base de datos
                 try
@@ -1080,18 +490,20 @@ namespace ProyectoFinalV1
                     conexion.Open();
 
                     // Linea de comando de SQL
-                    string consulta = "UPDATE juegos SET ID=" + "'" + lista[9].Id + "'" +
-                        ",Nombre=" + "'" + lista[9].Nombre + "'" +
-                        ",Imagen=" + "'" + lista[9].Imagen + "'" +
-                        ",Genero=" + "'" + lista[9].Genero + "'" +
-                        ",Plataforma=" + "'" + lista[9].Plataforma + "'" +
-                        ",Modalidad=" + "'" + lista[9].Modalidad + "'" +
-                        ",Precio=" + "'" + lista[9].Precio + "'" +
-                        ",Stock=" + "'" + lista[9].Stock + "'" +
-                        "WHERE ID =" + lista[9].Id;
+                    string consulta = "UPDATE juegos SET " +
+                        "ID=@Id, Nombre=@Nombre, Imagen=@Imagen, Genero=@Genero, Plataforma=@Plataforma, Modalidad=@Modalidad, Precio=@Precio, Stock=@Stock " +
+                        "WHERE ID=@Id";
 
-                    // Cargamos neestra linea de comandos
+                    // Cargamos nuestra linea de comandos
                     MySqlCommand comando = new MySqlCommand(consulta, conexion);
+                    comando.Parameters.AddWithValue("@Id", lista[indice].Id);
+                    comando.Parameters.AddWithValue("@Nombre", lista[indice].Nombre);
+                    comando.Parameters.AddWithValue("@Imagen", lista[indice].Imagen);
+                    comando.Parameters.AddWithValue("@Genero", lista[indice].Genero);
+                    comando.Parameters.AddWithValue("@Plataforma", lista[indice].Plataforma);
+                    comando.Parameters.AddWithValue("@Modalidad", lista[indice].Modalidad);
+                    comando.Parameters.AddWithValue("@Precio", lista[indice].Precio);
+                    comando.Parameters.AddWithValue("@Stock", lista[indice].Stock);
 
                     // Ejecutamos el comando
                     comando.ExecuteNonQuery();
@@ -1106,7 +518,7 @@ namespace ProyectoFinalV1
             }
             else
             {
-                MessageBox.Show($"No hay stock disponible del juego {lista[9].Nombre}");
+                MessageBox.Show($"No hay stock disponible del juego {lista[indice].Nombre}");
             }
         }
     }
