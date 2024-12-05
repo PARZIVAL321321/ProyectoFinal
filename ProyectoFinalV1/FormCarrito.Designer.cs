@@ -37,10 +37,10 @@
             button_SeguirComprando = new Button();
             panel2 = new Panel();
             button2 = new Button();
-            TotalIva = new TextBox();
+            textBox_TotalIva = new TextBox();
             label4 = new Label();
             label3 = new Label();
-            TotalEst = new TextBox();
+            textBox_Total = new TextBox();
             panel3 = new Panel();
             label7 = new Label();
             label6 = new Label();
@@ -54,6 +54,7 @@
             Plataforma = new DataGridViewTextBoxColumn();
             Cantidad = new DataGridViewTextBoxColumn();
             Precio = new DataGridViewTextBoxColumn();
+            button_BorrarCarrito = new Button();
             panel2.SuspendLayout();
             panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -94,10 +95,10 @@
             button_SeguirComprando.FlatStyle = FlatStyle.Flat;
             button_SeguirComprando.Font = new Font("Century Gothic", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button_SeguirComprando.ForeColor = Color.FromArgb(199, 213, 224);
-            button_SeguirComprando.Location = new Point(573, 641);
+            button_SeguirComprando.Location = new Point(502, 581);
             button_SeguirComprando.Margin = new Padding(3, 4, 3, 4);
             button_SeguirComprando.Name = "button_SeguirComprando";
-            button_SeguirComprando.Size = new Size(258, 55);
+            button_SeguirComprando.Size = new Size(307, 55);
             button_SeguirComprando.TabIndex = 25;
             button_SeguirComprando.Text = "Seguir comprando";
             button_SeguirComprando.UseVisualStyleBackColor = false;
@@ -107,14 +108,14 @@
             // 
             panel2.BackColor = Color.FromArgb(42, 71, 94);
             panel2.Controls.Add(button2);
-            panel2.Controls.Add(TotalIva);
+            panel2.Controls.Add(textBox_TotalIva);
             panel2.Controls.Add(label4);
             panel2.Controls.Add(label3);
-            panel2.Controls.Add(TotalEst);
-            panel2.Location = new Point(466, 152);
+            panel2.Controls.Add(textBox_Total);
+            panel2.Location = new Point(466, 140);
             panel2.Margin = new Padding(3, 4, 3, 4);
             panel2.Name = "panel2";
-            panel2.Size = new Size(365, 180);
+            panel2.Size = new Size(389, 180);
             panel2.TabIndex = 27;
             // 
             // button2
@@ -126,7 +127,7 @@
             button2.FlatStyle = FlatStyle.Flat;
             button2.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button2.ForeColor = Color.FromArgb(199, 213, 224);
-            button2.Location = new Point(18, 124);
+            button2.Location = new Point(36, 124);
             button2.Margin = new Padding(3, 4, 3, 4);
             button2.Name = "button2";
             button2.Size = new Size(329, 37);
@@ -134,53 +135,51 @@
             button2.Text = "CONTINUAR CON EL PAGO";
             button2.UseVisualStyleBackColor = false;
             // 
-            // TotalIva
+            // textBox_TotalIva
             // 
-            TotalIva.BackColor = Color.FromArgb(42, 71, 94);
-            TotalIva.BorderStyle = BorderStyle.None;
-            TotalIva.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            TotalIva.ForeColor = Color.LimeGreen;
-            TotalIva.Location = new Point(247, 75);
-            TotalIva.Margin = new Padding(3, 4, 3, 4);
-            TotalIva.Name = "TotalIva";
-            TotalIva.PlaceholderText = "TTEST";
-            TotalIva.Size = new Size(75, 25);
-            TotalIva.TabIndex = 29;
+            textBox_TotalIva.BackColor = Color.FromArgb(42, 71, 94);
+            textBox_TotalIva.BorderStyle = BorderStyle.None;
+            textBox_TotalIva.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBox_TotalIva.ForeColor = Color.LimeGreen;
+            textBox_TotalIva.Location = new Point(276, 75);
+            textBox_TotalIva.Margin = new Padding(3, 4, 3, 4);
+            textBox_TotalIva.Name = "textBox_TotalIva";
+            textBox_TotalIva.Size = new Size(110, 25);
+            textBox_TotalIva.TabIndex = 29;
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Century Gothic", 15.75F);
             label4.ForeColor = Color.LightGray;
-            label4.Location = new Point(75, 71);
+            label4.Location = new Point(93, 71);
             label4.Name = "label4";
-            label4.Size = new Size(166, 33);
+            label4.Size = new Size(173, 33);
             label4.TabIndex = 28;
-            label4.Text = "TOTAL + IVA";
+            label4.Text = "TOTAL + IVA:";
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Century Gothic", 15.75F);
             label3.ForeColor = Color.LightGray;
-            label3.Location = new Point(18, 25);
+            label3.Location = new Point(36, 25);
             label3.Name = "label3";
-            label3.Size = new Size(229, 33);
+            label3.Size = new Size(236, 33);
             label3.TabIndex = 1;
-            label3.Text = "TOTAL ESTIMADO";
+            label3.Text = "TOTAL ESTIMADO:";
             // 
-            // TotalEst
+            // textBox_Total
             // 
-            TotalEst.BackColor = Color.FromArgb(42, 71, 94);
-            TotalEst.BorderStyle = BorderStyle.None;
-            TotalEst.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            TotalEst.ForeColor = Color.LightGray;
-            TotalEst.Location = new Point(247, 29);
-            TotalEst.Margin = new Padding(3, 4, 3, 4);
-            TotalEst.Name = "TotalEst";
-            TotalEst.PlaceholderText = "TTEST";
-            TotalEst.Size = new Size(101, 25);
-            TotalEst.TabIndex = 0;
+            textBox_Total.BackColor = Color.FromArgb(42, 71, 94);
+            textBox_Total.BorderStyle = BorderStyle.None;
+            textBox_Total.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBox_Total.ForeColor = Color.LightGray;
+            textBox_Total.Location = new Point(276, 33);
+            textBox_Total.Margin = new Padding(3, 4, 3, 4);
+            textBox_Total.Name = "textBox_Total";
+            textBox_Total.Size = new Size(110, 25);
+            textBox_Total.TabIndex = 0;
             // 
             // panel3
             // 
@@ -188,10 +187,10 @@
             panel3.Controls.Add(label7);
             panel3.Controls.Add(label6);
             panel3.Controls.Add(label5);
-            panel3.Location = new Point(466, 340);
+            panel3.Location = new Point(466, 328);
             panel3.Margin = new Padding(3, 4, 3, 4);
             panel3.Name = "panel3";
-            panel3.Size = new Size(365, 141);
+            panel3.Size = new Size(391, 141);
             panel3.TabIndex = 28;
             // 
             // label7
@@ -230,7 +229,7 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(376, 227);
+            pictureBox1.Location = new Point(376, 215);
             pictureBox1.Margin = new Padding(3, 4, 3, 4);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(1500, 465);
@@ -247,7 +246,7 @@
             btGenerarTicket.FlatStyle = FlatStyle.Flat;
             btGenerarTicket.Font = new Font("Century Gothic", 15.75F, FontStyle.Bold);
             btGenerarTicket.ForeColor = Color.LightGray;
-            btGenerarTicket.Location = new Point(466, 488);
+            btGenerarTicket.Location = new Point(466, 476);
             btGenerarTicket.Name = "btGenerarTicket";
             btGenerarTicket.Size = new Size(365, 41);
             btGenerarTicket.TabIndex = 43;
@@ -320,7 +319,7 @@
             dataGridView_CarritodeCompras.DefaultCellStyle = dataGridViewCellStyle3;
             dataGridView_CarritodeCompras.EnableHeadersVisualStyles = false;
             dataGridView_CarritodeCompras.GridColor = SystemColors.Menu;
-            dataGridView_CarritodeCompras.Location = new Point(29, 152);
+            dataGridView_CarritodeCompras.Location = new Point(29, 140);
             dataGridView_CarritodeCompras.Name = "dataGridView_CarritodeCompras";
             dataGridView_CarritodeCompras.ReadOnly = true;
             dataGridView_CarritodeCompras.RowHeadersVisible = false;
@@ -360,12 +359,31 @@
             Precio.ReadOnly = true;
             Precio.Width = 88;
             // 
+            // button_BorrarCarrito
+            // 
+            button_BorrarCarrito.BackColor = Color.FromArgb(40, 40, 40);
+            button_BorrarCarrito.FlatAppearance.BorderSize = 0;
+            button_BorrarCarrito.FlatAppearance.MouseDownBackColor = Color.FromArgb(28, 28, 28);
+            button_BorrarCarrito.FlatAppearance.MouseOverBackColor = Color.FromArgb(60, 60, 60);
+            button_BorrarCarrito.FlatStyle = FlatStyle.Flat;
+            button_BorrarCarrito.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button_BorrarCarrito.ForeColor = Color.FromArgb(199, 213, 224);
+            button_BorrarCarrito.Location = new Point(158, 687);
+            button_BorrarCarrito.Margin = new Padding(3, 4, 3, 4);
+            button_BorrarCarrito.Name = "button_BorrarCarrito";
+            button_BorrarCarrito.Size = new Size(138, 37);
+            button_BorrarCarrito.TabIndex = 47;
+            button_BorrarCarrito.Text = "Borrar carrito";
+            button_BorrarCarrito.UseVisualStyleBackColor = false;
+            button_BorrarCarrito.Click += button_BorrarCarrito_Click;
+            // 
             // FormCarrito
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(27, 40, 56);
             ClientSize = new Size(869, 736);
+            Controls.Add(button_BorrarCarrito);
             Controls.Add(dataGridView_CarritodeCompras);
             Controls.Add(btnminimizar);
             Controls.Add(btncerrar);
@@ -400,10 +418,10 @@
         private Label label2;
         private Button button_SeguirComprando;
         private Panel panel2;
-        private TextBox TotalEst;
+        private TextBox textBox_Total;
         private Label label3;
         private Button button2;
-        private TextBox TotalIva;
+        private TextBox textBox_TotalIva;
         private Label label4;
         private Panel panel3;
         private Label label5;
@@ -418,5 +436,6 @@
         private DataGridViewTextBoxColumn Plataforma;
         private DataGridViewTextBoxColumn Cantidad;
         private DataGridViewTextBoxColumn Precio;
+        private Button button_BorrarCarrito;
     }
 }

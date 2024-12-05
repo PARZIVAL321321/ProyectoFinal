@@ -163,10 +163,9 @@
             button_MOSTRARINVENTARIO.FlatStyle = FlatStyle.Flat;
             button_MOSTRARINVENTARIO.Font = new Font("Century Gothic", 15.75F, FontStyle.Bold);
             button_MOSTRARINVENTARIO.ForeColor = Color.FromArgb(42, 71, 94);
-            button_MOSTRARINVENTARIO.Location = new Point(13, -2);
-            button_MOSTRARINVENTARIO.Margin = new Padding(3, 2, 3, 2);
+            button_MOSTRARINVENTARIO.Location = new Point(15, -3);
             button_MOSTRARINVENTARIO.Name = "button_MOSTRARINVENTARIO";
-            button_MOSTRARINVENTARIO.Size = new Size(328, 30);
+            button_MOSTRARINVENTARIO.Size = new Size(375, 40);
             button_MOSTRARINVENTARIO.TabIndex = 4;
             button_MOSTRARINVENTARIO.Text = "INVENTARIO - PRODUCTOS";
             button_MOSTRARINVENTARIO.UseVisualStyleBackColor = false;
@@ -182,10 +181,9 @@
             button_Subir.FlatStyle = FlatStyle.Flat;
             button_Subir.Font = new Font("Century Gothic", 9.75F);
             button_Subir.ForeColor = Color.LightGray;
-            button_Subir.Location = new Point(647, 335);
-            button_Subir.Margin = new Padding(3, 2, 3, 2);
+            button_Subir.Location = new Point(739, 447);
             button_Subir.Name = "button_Subir";
-            button_Subir.Size = new Size(111, 22);
+            button_Subir.Size = new Size(127, 29);
             button_Subir.TabIndex = 5;
             button_Subir.Text = "SUBIR";
             button_Subir.UseVisualStyleBackColor = false;
@@ -198,11 +196,10 @@
             txtSUBIRPRODUCTOS.Enabled = false;
             txtSUBIRPRODUCTOS.Font = new Font("Century Gothic", 12F);
             txtSUBIRPRODUCTOS.ForeColor = Color.LightGray;
-            txtSUBIRPRODUCTOS.Location = new Point(22, 17);
-            txtSUBIRPRODUCTOS.Margin = new Padding(3, 2, 3, 2);
+            txtSUBIRPRODUCTOS.Location = new Point(25, 23);
             txtSUBIRPRODUCTOS.Name = "txtSUBIRPRODUCTOS";
             txtSUBIRPRODUCTOS.ReadOnly = true;
-            txtSUBIRPRODUCTOS.Size = new Size(414, 20);
+            txtSUBIRPRODUCTOS.Size = new Size(473, 25);
             txtSUBIRPRODUCTOS.TabIndex = 6;
             txtSUBIRPRODUCTOS.Text = "SUBIR PRODUCTO";
             txtSUBIRPRODUCTOS.TextAlign = HorizontalAlignment.Center;
@@ -213,11 +210,10 @@
             txtID.BorderStyle = BorderStyle.None;
             txtID.Enabled = false;
             txtID.Font = new Font("Century Gothic", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtID.Location = new Point(12, 3);
-            txtID.Margin = new Padding(3, 2, 3, 2);
+            txtID.Location = new Point(14, 4);
             txtID.Name = "txtID";
             txtID.ReadOnly = true;
-            txtID.Size = new Size(24, 16);
+            txtID.Size = new Size(27, 20);
             txtID.TabIndex = 7;
             txtID.Text = "ID:";
             // 
@@ -227,10 +223,9 @@
             textBox_IDSubir.BorderStyle = BorderStyle.None;
             textBox_IDSubir.Font = new Font("OCR A Extended", 11.25F);
             textBox_IDSubir.ForeColor = Color.DimGray;
-            textBox_IDSubir.Location = new Point(53, 3);
-            textBox_IDSubir.Margin = new Padding(3, 2, 3, 2);
+            textBox_IDSubir.Location = new Point(61, 4);
             textBox_IDSubir.Name = "textBox_IDSubir";
-            textBox_IDSubir.Size = new Size(361, 16);
+            textBox_IDSubir.Size = new Size(413, 20);
             textBox_IDSubir.TabIndex = 8;
             // 
             // textBox_NombreSubir
@@ -239,10 +234,9 @@
             textBox_NombreSubir.BorderStyle = BorderStyle.None;
             textBox_NombreSubir.Font = new Font("OCR A Extended", 11.25F);
             textBox_NombreSubir.ForeColor = Color.DimGray;
-            textBox_NombreSubir.Location = new Point(79, 3);
-            textBox_NombreSubir.Margin = new Padding(3, 2, 3, 2);
+            textBox_NombreSubir.Location = new Point(90, 4);
             textBox_NombreSubir.Name = "textBox_NombreSubir";
-            textBox_NombreSubir.Size = new Size(335, 16);
+            textBox_NombreSubir.Size = new Size(383, 20);
             textBox_NombreSubir.TabIndex = 10;
             // 
             // txtTITULO
@@ -251,11 +245,10 @@
             txtTITULO.BorderStyle = BorderStyle.None;
             txtTITULO.Enabled = false;
             txtTITULO.Font = new Font("Century Gothic", 9.75F);
-            txtTITULO.Location = new Point(3, 3);
-            txtTITULO.Margin = new Padding(3, 2, 3, 2);
+            txtTITULO.Location = new Point(3, 4);
             txtTITULO.Name = "txtTITULO";
             txtTITULO.ReadOnly = true;
-            txtTITULO.Size = new Size(70, 16);
+            txtTITULO.Size = new Size(80, 20);
             txtTITULO.TabIndex = 9;
             txtTITULO.Text = "Nombre:";
             // 
@@ -265,10 +258,9 @@
             textBox_ModalidadSubir.BorderStyle = BorderStyle.None;
             textBox_ModalidadSubir.Font = new Font("OCR A Extended", 11.25F);
             textBox_ModalidadSubir.ForeColor = Color.DimGray;
-            textBox_ModalidadSubir.Location = new Point(100, 3);
-            textBox_ModalidadSubir.Margin = new Padding(3, 2, 3, 2);
+            textBox_ModalidadSubir.Location = new Point(114, 4);
             textBox_ModalidadSubir.Name = "textBox_ModalidadSubir";
-            textBox_ModalidadSubir.Size = new Size(314, 16);
+            textBox_ModalidadSubir.Size = new Size(359, 20);
             textBox_ModalidadSubir.TabIndex = 12;
             // 
             // txtMODALIDAD
@@ -277,11 +269,10 @@
             txtMODALIDAD.BorderStyle = BorderStyle.None;
             txtMODALIDAD.Enabled = false;
             txtMODALIDAD.Font = new Font("Century Gothic", 9.75F);
-            txtMODALIDAD.Location = new Point(0, 3);
-            txtMODALIDAD.Margin = new Padding(3, 2, 3, 2);
+            txtMODALIDAD.Location = new Point(0, 4);
             txtMODALIDAD.Name = "txtMODALIDAD";
             txtMODALIDAD.ReadOnly = true;
-            txtMODALIDAD.Size = new Size(94, 16);
+            txtMODALIDAD.Size = new Size(107, 20);
             txtMODALIDAD.TabIndex = 11;
             txtMODALIDAD.Text = "MODALIDAD:";
             // 
@@ -291,10 +282,9 @@
             textBox_GeneroSubir.BorderStyle = BorderStyle.None;
             textBox_GeneroSubir.Font = new Font("OCR A Extended", 11.25F);
             textBox_GeneroSubir.ForeColor = Color.DimGray;
-            textBox_GeneroSubir.Location = new Point(71, 2);
-            textBox_GeneroSubir.Margin = new Padding(3, 2, 3, 2);
+            textBox_GeneroSubir.Location = new Point(81, 3);
             textBox_GeneroSubir.Name = "textBox_GeneroSubir";
-            textBox_GeneroSubir.Size = new Size(343, 16);
+            textBox_GeneroSubir.Size = new Size(392, 20);
             textBox_GeneroSubir.TabIndex = 16;
             // 
             // txtGENERO
@@ -303,11 +293,10 @@
             txtGENERO.BorderStyle = BorderStyle.None;
             txtGENERO.Enabled = false;
             txtGENERO.Font = new Font("Century Gothic", 9.75F);
-            txtGENERO.Location = new Point(3, 2);
-            txtGENERO.Margin = new Padding(3, 2, 3, 2);
+            txtGENERO.Location = new Point(3, 3);
             txtGENERO.Name = "txtGENERO";
             txtGENERO.ReadOnly = true;
-            txtGENERO.Size = new Size(62, 16);
+            txtGENERO.Size = new Size(71, 20);
             txtGENERO.TabIndex = 15;
             txtGENERO.Text = "GENERO:";
             // 
@@ -317,10 +306,9 @@
             textBox_PlataformaSubir.BorderStyle = BorderStyle.None;
             textBox_PlataformaSubir.Font = new Font("OCR A Extended", 11.25F);
             textBox_PlataformaSubir.ForeColor = Color.DimGray;
-            textBox_PlataformaSubir.Location = new Point(107, 2);
-            textBox_PlataformaSubir.Margin = new Padding(3, 2, 3, 2);
+            textBox_PlataformaSubir.Location = new Point(122, 3);
             textBox_PlataformaSubir.Name = "textBox_PlataformaSubir";
-            textBox_PlataformaSubir.Size = new Size(307, 16);
+            textBox_PlataformaSubir.Size = new Size(351, 20);
             textBox_PlataformaSubir.TabIndex = 14;
             // 
             // txtPLATAFORMA
@@ -329,11 +317,10 @@
             txtPLATAFORMA.BorderStyle = BorderStyle.None;
             txtPLATAFORMA.Enabled = false;
             txtPLATAFORMA.Font = new Font("Century Gothic", 9.75F);
-            txtPLATAFORMA.Location = new Point(3, 3);
-            txtPLATAFORMA.Margin = new Padding(3, 2, 3, 2);
+            txtPLATAFORMA.Location = new Point(3, 4);
             txtPLATAFORMA.Name = "txtPLATAFORMA";
             txtPLATAFORMA.ReadOnly = true;
-            txtPLATAFORMA.Size = new Size(98, 16);
+            txtPLATAFORMA.Size = new Size(112, 20);
             txtPLATAFORMA.TabIndex = 13;
             txtPLATAFORMA.Text = "PLATAFORMA:";
             // 
@@ -343,10 +330,9 @@
             textBox_PrecioSubir.BorderStyle = BorderStyle.None;
             textBox_PrecioSubir.Font = new Font("OCR A Extended", 11.25F);
             textBox_PrecioSubir.ForeColor = Color.DimGray;
-            textBox_PrecioSubir.Location = new Point(71, 2);
-            textBox_PrecioSubir.Margin = new Padding(3, 2, 3, 2);
+            textBox_PrecioSubir.Location = new Point(81, 3);
             textBox_PrecioSubir.Name = "textBox_PrecioSubir";
-            textBox_PrecioSubir.Size = new Size(343, 16);
+            textBox_PrecioSubir.Size = new Size(392, 20);
             textBox_PrecioSubir.TabIndex = 18;
             // 
             // txtPRECIO
@@ -355,11 +341,10 @@
             txtPRECIO.BorderStyle = BorderStyle.None;
             txtPRECIO.Enabled = false;
             txtPRECIO.Font = new Font("Century Gothic", 9.75F);
-            txtPRECIO.Location = new Point(5, 2);
-            txtPRECIO.Margin = new Padding(3, 2, 3, 2);
+            txtPRECIO.Location = new Point(6, 3);
             txtPRECIO.Name = "txtPRECIO";
             txtPRECIO.ReadOnly = true;
-            txtPRECIO.Size = new Size(60, 16);
+            txtPRECIO.Size = new Size(69, 20);
             txtPRECIO.TabIndex = 17;
             txtPRECIO.Text = "PRECIO:";
             // 
@@ -369,10 +354,9 @@
             textBox_StockSubir.BorderStyle = BorderStyle.None;
             textBox_StockSubir.Font = new Font("OCR A Extended", 11.25F);
             textBox_StockSubir.ForeColor = Color.DimGray;
-            textBox_StockSubir.Location = new Point(70, 3);
-            textBox_StockSubir.Margin = new Padding(3, 2, 3, 2);
+            textBox_StockSubir.Location = new Point(80, 4);
             textBox_StockSubir.Name = "textBox_StockSubir";
-            textBox_StockSubir.Size = new Size(344, 16);
+            textBox_StockSubir.Size = new Size(393, 20);
             textBox_StockSubir.TabIndex = 20;
             // 
             // txtSTOCK
@@ -381,11 +365,10 @@
             txtSTOCK.BorderStyle = BorderStyle.None;
             txtSTOCK.Enabled = false;
             txtSTOCK.Font = new Font("Century Gothic", 9.75F);
-            txtSTOCK.Location = new Point(5, 2);
-            txtSTOCK.Margin = new Padding(3, 2, 3, 2);
+            txtSTOCK.Location = new Point(6, 3);
             txtSTOCK.Name = "txtSTOCK";
             txtSTOCK.ReadOnly = true;
-            txtSTOCK.Size = new Size(57, 16);
+            txtSTOCK.Size = new Size(65, 20);
             txtSTOCK.TabIndex = 19;
             txtSTOCK.Text = "STOCK:";
             // 
@@ -395,11 +378,10 @@
             textBox_IDBorrar.BorderStyle = BorderStyle.None;
             textBox_IDBorrar.Font = new Font("Century Gothic", 9.75F);
             textBox_IDBorrar.ForeColor = Color.LightGray;
-            textBox_IDBorrar.Location = new Point(42, 5);
-            textBox_IDBorrar.Margin = new Padding(3, 2, 3, 2);
+            textBox_IDBorrar.Location = new Point(48, 7);
             textBox_IDBorrar.Name = "textBox_IDBorrar";
             textBox_IDBorrar.PlaceholderText = "INGRESA ID";
-            textBox_IDBorrar.Size = new Size(428, 16);
+            textBox_IDBorrar.Size = new Size(489, 20);
             textBox_IDBorrar.TabIndex = 25;
             // 
             // button_EliminarProducto
@@ -412,10 +394,9 @@
             button_EliminarProducto.FlatStyle = FlatStyle.Flat;
             button_EliminarProducto.Font = new Font("Century Gothic", 9.75F);
             button_EliminarProducto.ForeColor = Color.Black;
-            button_EliminarProducto.Location = new Point(533, 428);
-            button_EliminarProducto.Margin = new Padding(3, 2, 3, 2);
+            button_EliminarProducto.Location = new Point(601, 571);
             button_EliminarProducto.Name = "button_EliminarProducto";
-            button_EliminarProducto.Size = new Size(82, 26);
+            button_EliminarProducto.Size = new Size(102, 35);
             button_EliminarProducto.TabIndex = 26;
             button_EliminarProducto.Text = "ELIMINAR";
             button_EliminarProducto.UseVisualStyleBackColor = false;
@@ -424,10 +405,9 @@
             // pictureBox_Modificar
             // 
             pictureBox_Modificar.BackColor = Color.FromArgb(199, 213, 224);
-            pictureBox_Modificar.Location = new Point(486, 394);
-            pictureBox_Modificar.Margin = new Padding(3, 2, 3, 2);
+            pictureBox_Modificar.Location = new Point(555, 525);
             pictureBox_Modificar.Name = "pictureBox_Modificar";
-            pictureBox_Modificar.Size = new Size(294, 314);
+            pictureBox_Modificar.Size = new Size(336, 419);
             pictureBox_Modificar.TabIndex = 27;
             pictureBox_Modificar.TabStop = false;
             // 
@@ -441,10 +421,9 @@
             button_CargarImagenSubir.FlatStyle = FlatStyle.Flat;
             button_CargarImagenSubir.Font = new Font("Century Gothic", 9.75F);
             button_CargarImagenSubir.ForeColor = Color.LightGray;
-            button_CargarImagenSubir.Location = new Point(503, 335);
-            button_CargarImagenSubir.Margin = new Padding(3, 2, 3, 2);
+            button_CargarImagenSubir.Location = new Point(575, 447);
             button_CargarImagenSubir.Name = "button_CargarImagenSubir";
-            button_CargarImagenSubir.Size = new Size(138, 22);
+            button_CargarImagenSubir.Size = new Size(158, 29);
             button_CargarImagenSubir.TabIndex = 28;
             button_CargarImagenSubir.Text = "CARGAR IMAGEN:";
             button_CargarImagenSubir.UseVisualStyleBackColor = false;
@@ -461,12 +440,11 @@
             dataGridView_Inventario.BackgroundColor = Color.FromArgb(199, 213, 224);
             dataGridView_Inventario.BorderStyle = BorderStyle.None;
             dataGridView_Inventario.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView_Inventario.Location = new Point(20, 17);
-            dataGridView_Inventario.Margin = new Padding(3, 2, 3, 2);
+            dataGridView_Inventario.Location = new Point(23, 23);
             dataGridView_Inventario.Name = "dataGridView_Inventario";
             dataGridView_Inventario.RowHeadersVisible = false;
             dataGridView_Inventario.RowHeadersWidth = 51;
-            dataGridView_Inventario.Size = new Size(595, 397);
+            dataGridView_Inventario.Size = new Size(680, 529);
             dataGridView_Inventario.TabIndex = 29;
             // 
             // button_LogOut
@@ -477,10 +455,9 @@
             button_LogOut.FlatStyle = FlatStyle.Flat;
             button_LogOut.Font = new Font("Century Gothic", 15.75F, FontStyle.Bold);
             button_LogOut.ForeColor = Color.FromArgb(42, 71, 94);
-            button_LogOut.Location = new Point(1333, -4);
-            button_LogOut.Margin = new Padding(3, 2, 3, 2);
+            button_LogOut.Location = new Point(1523, -5);
             button_LogOut.Name = "button_LogOut";
-            button_LogOut.Size = new Size(114, 38);
+            button_LogOut.Size = new Size(130, 51);
             button_LogOut.TabIndex = 30;
             button_LogOut.Text = "Log-Out";
             button_LogOut.UseVisualStyleBackColor = false;
@@ -493,10 +470,9 @@
             textBox_StockModificar.Cursor = Cursors.IBeam;
             textBox_StockModificar.Font = new Font("OCR A Extended", 11.25F);
             textBox_StockModificar.ForeColor = Color.DimGray;
-            textBox_StockModificar.Location = new Point(68, 3);
-            textBox_StockModificar.Margin = new Padding(3, 2, 3, 2);
+            textBox_StockModificar.Location = new Point(78, 4);
             textBox_StockModificar.Name = "textBox_StockModificar";
-            textBox_StockModificar.Size = new Size(343, 16);
+            textBox_StockModificar.Size = new Size(392, 20);
             textBox_StockModificar.TabIndex = 36;
             // 
             // txtSTOCKMODIFCAR
@@ -505,11 +481,10 @@
             txtSTOCKMODIFCAR.BorderStyle = BorderStyle.None;
             txtSTOCKMODIFCAR.Enabled = false;
             txtSTOCKMODIFCAR.Font = new Font("Century Gothic", 9.75F);
-            txtSTOCKMODIFCAR.Location = new Point(0, 2);
-            txtSTOCKMODIFCAR.Margin = new Padding(3, 2, 3, 2);
+            txtSTOCKMODIFCAR.Location = new Point(0, 3);
             txtSTOCKMODIFCAR.Name = "txtSTOCKMODIFCAR";
             txtSTOCKMODIFCAR.ReadOnly = true;
-            txtSTOCKMODIFCAR.Size = new Size(62, 16);
+            txtSTOCKMODIFCAR.Size = new Size(71, 20);
             txtSTOCKMODIFCAR.TabIndex = 35;
             txtSTOCKMODIFCAR.Text = "STOCK:";
             // 
@@ -520,10 +495,9 @@
             textBox_PrecioModificar.Cursor = Cursors.IBeam;
             textBox_PrecioModificar.Font = new Font("OCR A Extended", 11.25F);
             textBox_PrecioModificar.ForeColor = Color.DimGray;
-            textBox_PrecioModificar.Location = new Point(78, 3);
-            textBox_PrecioModificar.Margin = new Padding(3, 2, 3, 2);
+            textBox_PrecioModificar.Location = new Point(89, 4);
             textBox_PrecioModificar.Name = "textBox_PrecioModificar";
-            textBox_PrecioModificar.Size = new Size(336, 16);
+            textBox_PrecioModificar.Size = new Size(384, 20);
             textBox_PrecioModificar.TabIndex = 34;
             // 
             // txtPRECIOMODIFICAR
@@ -532,11 +506,10 @@
             txtPRECIOMODIFICAR.BorderStyle = BorderStyle.None;
             txtPRECIOMODIFICAR.Enabled = false;
             txtPRECIOMODIFICAR.Font = new Font("Century Gothic", 9.75F);
-            txtPRECIOMODIFICAR.Location = new Point(0, 3);
-            txtPRECIOMODIFICAR.Margin = new Padding(3, 2, 3, 2);
+            txtPRECIOMODIFICAR.Location = new Point(0, 4);
             txtPRECIOMODIFICAR.Name = "txtPRECIOMODIFICAR";
             txtPRECIOMODIFICAR.ReadOnly = true;
-            txtPRECIOMODIFICAR.Size = new Size(76, 16);
+            txtPRECIOMODIFICAR.Size = new Size(87, 20);
             txtPRECIOMODIFICAR.TabIndex = 33;
             txtPRECIOMODIFICAR.Text = "PRECIO:";
             // 
@@ -547,10 +520,9 @@
             textBox_GeneroModificar.Cursor = Cursors.IBeam;
             textBox_GeneroModificar.Font = new Font("OCR A Extended", 11.25F);
             textBox_GeneroModificar.ForeColor = Color.DimGray;
-            textBox_GeneroModificar.Location = new Point(78, 3);
-            textBox_GeneroModificar.Margin = new Padding(3, 2, 3, 2);
+            textBox_GeneroModificar.Location = new Point(89, 4);
             textBox_GeneroModificar.Name = "textBox_GeneroModificar";
-            textBox_GeneroModificar.Size = new Size(333, 16);
+            textBox_GeneroModificar.Size = new Size(381, 20);
             textBox_GeneroModificar.TabIndex = 32;
             // 
             // txtGENEROMODIFICAR
@@ -559,11 +531,10 @@
             txtGENEROMODIFICAR.BorderStyle = BorderStyle.None;
             txtGENEROMODIFICAR.Enabled = false;
             txtGENEROMODIFICAR.Font = new Font("Century Gothic", 9.75F);
-            txtGENEROMODIFICAR.Location = new Point(3, 2);
-            txtGENEROMODIFICAR.Margin = new Padding(3, 2, 3, 2);
+            txtGENEROMODIFICAR.Location = new Point(3, 3);
             txtGENEROMODIFICAR.Name = "txtGENEROMODIFICAR";
             txtGENEROMODIFICAR.ReadOnly = true;
-            txtGENEROMODIFICAR.Size = new Size(69, 16);
+            txtGENEROMODIFICAR.Size = new Size(79, 20);
             txtGENEROMODIFICAR.TabIndex = 31;
             txtGENEROMODIFICAR.Text = "GENERO:";
             // 
@@ -574,10 +545,9 @@
             textBox_PlataformaModificar.Cursor = Cursors.IBeam;
             textBox_PlataformaModificar.Font = new Font("OCR A Extended", 11.25F);
             textBox_PlataformaModificar.ForeColor = Color.DimGray;
-            textBox_PlataformaModificar.Location = new Point(107, 1);
-            textBox_PlataformaModificar.Margin = new Padding(3, 2, 3, 2);
+            textBox_PlataformaModificar.Location = new Point(122, 1);
             textBox_PlataformaModificar.Name = "textBox_PlataformaModificar";
-            textBox_PlataformaModificar.Size = new Size(307, 16);
+            textBox_PlataformaModificar.Size = new Size(351, 20);
             textBox_PlataformaModificar.TabIndex = 44;
             // 
             // txtPLATAFORMAMODIFICAR
@@ -586,11 +556,10 @@
             txtPLATAFORMAMODIFICAR.BorderStyle = BorderStyle.None;
             txtPLATAFORMAMODIFICAR.Enabled = false;
             txtPLATAFORMAMODIFICAR.Font = new Font("Century Gothic", 9.75F);
-            txtPLATAFORMAMODIFICAR.Location = new Point(3, 2);
-            txtPLATAFORMAMODIFICAR.Margin = new Padding(3, 2, 3, 2);
+            txtPLATAFORMAMODIFICAR.Location = new Point(3, 3);
             txtPLATAFORMAMODIFICAR.Name = "txtPLATAFORMAMODIFICAR";
             txtPLATAFORMAMODIFICAR.ReadOnly = true;
-            txtPLATAFORMAMODIFICAR.Size = new Size(107, 16);
+            txtPLATAFORMAMODIFICAR.Size = new Size(122, 20);
             txtPLATAFORMAMODIFICAR.TabIndex = 43;
             txtPLATAFORMAMODIFICAR.Text = "PLATAFORMA:";
             // 
@@ -601,10 +570,9 @@
             textBox_ModalidadModificar.Cursor = Cursors.IBeam;
             textBox_ModalidadModificar.Font = new Font("OCR A Extended", 11.25F);
             textBox_ModalidadModificar.ForeColor = Color.DimGray;
-            textBox_ModalidadModificar.Location = new Point(102, 2);
-            textBox_ModalidadModificar.Margin = new Padding(3, 2, 3, 2);
+            textBox_ModalidadModificar.Location = new Point(117, 3);
             textBox_ModalidadModificar.Name = "textBox_ModalidadModificar";
-            textBox_ModalidadModificar.Size = new Size(309, 16);
+            textBox_ModalidadModificar.Size = new Size(353, 20);
             textBox_ModalidadModificar.TabIndex = 42;
             // 
             // txtMODALIDADMODIFY
@@ -613,11 +581,10 @@
             txtMODALIDADMODIFY.BorderStyle = BorderStyle.None;
             txtMODALIDADMODIFY.Enabled = false;
             txtMODALIDADMODIFY.Font = new Font("Century Gothic", 9.75F);
-            txtMODALIDADMODIFY.Location = new Point(3, 3);
-            txtMODALIDADMODIFY.Margin = new Padding(3, 2, 3, 2);
+            txtMODALIDADMODIFY.Location = new Point(3, 4);
             txtMODALIDADMODIFY.Name = "txtMODALIDADMODIFY";
             txtMODALIDADMODIFY.ReadOnly = true;
-            txtMODALIDADMODIFY.Size = new Size(93, 16);
+            txtMODALIDADMODIFY.Size = new Size(106, 20);
             txtMODALIDADMODIFY.TabIndex = 41;
             txtMODALIDADMODIFY.Text = "MODALIDAD:";
             // 
@@ -628,10 +595,9 @@
             textBox_NombreModificar.Cursor = Cursors.IBeam;
             textBox_NombreModificar.Font = new Font("OCR A Extended", 11.25F);
             textBox_NombreModificar.ForeColor = Color.DimGray;
-            textBox_NombreModificar.Location = new Point(78, 3);
-            textBox_NombreModificar.Margin = new Padding(3, 2, 3, 2);
+            textBox_NombreModificar.Location = new Point(89, 4);
             textBox_NombreModificar.Name = "textBox_NombreModificar";
-            textBox_NombreModificar.Size = new Size(336, 16);
+            textBox_NombreModificar.Size = new Size(384, 20);
             textBox_NombreModificar.TabIndex = 40;
             // 
             // txtTITULOMODIFICAR
@@ -641,11 +607,10 @@
             txtTITULOMODIFICAR.Enabled = false;
             txtTITULOMODIFICAR.Font = new Font("Century Gothic", 9.75F);
             txtTITULOMODIFICAR.ForeColor = Color.Black;
-            txtTITULOMODIFICAR.Location = new Point(3, 3);
-            txtTITULOMODIFICAR.Margin = new Padding(3, 2, 3, 2);
+            txtTITULOMODIFICAR.Location = new Point(3, 4);
             txtTITULOMODIFICAR.Name = "txtTITULOMODIFICAR";
             txtTITULOMODIFICAR.ReadOnly = true;
-            txtTITULOMODIFICAR.Size = new Size(69, 16);
+            txtTITULOMODIFICAR.Size = new Size(79, 20);
             txtTITULOMODIFICAR.TabIndex = 39;
             txtTITULOMODIFICAR.Text = "NOMBRE:";
             // 
@@ -656,10 +621,9 @@
             textBox_IDModificar.Cursor = Cursors.IBeam;
             textBox_IDModificar.Font = new Font("OCR A Extended", 11.25F);
             textBox_IDModificar.ForeColor = Color.DimGray;
-            textBox_IDModificar.Location = new Point(50, 2);
-            textBox_IDModificar.Margin = new Padding(3, 2, 3, 2);
+            textBox_IDModificar.Location = new Point(57, 3);
             textBox_IDModificar.Name = "textBox_IDModificar";
-            textBox_IDModificar.Size = new Size(269, 16);
+            textBox_IDModificar.Size = new Size(307, 20);
             textBox_IDModificar.TabIndex = 38;
             // 
             // txtMODIFICARID
@@ -669,11 +633,10 @@
             txtMODIFICARID.Enabled = false;
             txtMODIFICARID.Font = new Font("Century Gothic", 9.75F);
             txtMODIFICARID.ForeColor = Color.Black;
-            txtMODIFICARID.Location = new Point(12, 3);
-            txtMODIFICARID.Margin = new Padding(3, 2, 3, 2);
+            txtMODIFICARID.Location = new Point(14, 4);
             txtMODIFICARID.Name = "txtMODIFICARID";
             txtMODIFICARID.ReadOnly = true;
-            txtMODIFICARID.Size = new Size(24, 16);
+            txtMODIFICARID.Size = new Size(27, 20);
             txtMODIFICARID.TabIndex = 37;
             txtMODIFICARID.Text = "ID:";
             // 
@@ -684,11 +647,10 @@
             txtMODIFICAR.Enabled = false;
             txtMODIFICAR.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtMODIFICAR.ForeColor = Color.LightGray;
-            txtMODIFICAR.Location = new Point(22, 394);
-            txtMODIFICAR.Margin = new Padding(3, 2, 3, 2);
+            txtMODIFICAR.Location = new Point(25, 525);
             txtMODIFICAR.Name = "txtMODIFICAR";
             txtMODIFICAR.ReadOnly = true;
-            txtMODIFICAR.Size = new Size(414, 20);
+            txtMODIFICAR.Size = new Size(473, 25);
             txtMODIFICAR.TabIndex = 45;
             txtMODIFICAR.Text = "MODIFICAR";
             txtMODIFICAR.TextAlign = HorizontalAlignment.Center;
@@ -703,10 +665,9 @@
             button_CargarImagenModificar.FlatStyle = FlatStyle.Flat;
             button_CargarImagenModificar.Font = new Font("Century Gothic", 9.75F);
             button_CargarImagenModificar.ForeColor = Color.LightGray;
-            button_CargarImagenModificar.Location = new Point(503, 712);
-            button_CargarImagenModificar.Margin = new Padding(3, 2, 3, 2);
+            button_CargarImagenModificar.Location = new Point(575, 949);
             button_CargarImagenModificar.Name = "button_CargarImagenModificar";
-            button_CargarImagenModificar.Size = new Size(134, 22);
+            button_CargarImagenModificar.Size = new Size(153, 29);
             button_CargarImagenModificar.TabIndex = 46;
             button_CargarImagenModificar.Text = "CARGAR IMAGEN:";
             button_CargarImagenModificar.UseVisualStyleBackColor = false;
@@ -722,10 +683,9 @@
             button_Modificar.FlatStyle = FlatStyle.Flat;
             button_Modificar.Font = new Font("Century Gothic", 9.75F);
             button_Modificar.ForeColor = Color.LightGray;
-            button_Modificar.Location = new Point(643, 712);
-            button_Modificar.Margin = new Padding(3, 2, 3, 2);
+            button_Modificar.Location = new Point(735, 949);
             button_Modificar.Name = "button_Modificar";
-            button_Modificar.Size = new Size(115, 22);
+            button_Modificar.Size = new Size(131, 29);
             button_Modificar.TabIndex = 47;
             button_Modificar.Text = "MODIFICAR";
             button_Modificar.UseVisualStyleBackColor = false;
@@ -734,19 +694,19 @@
             // pictureBox_Subir
             // 
             pictureBox_Subir.BackColor = Color.FromArgb(199, 213, 224);
-            pictureBox_Subir.Location = new Point(486, 17);
-            pictureBox_Subir.Margin = new Padding(3, 2, 3, 2);
+            pictureBox_Subir.Location = new Point(555, 23);
             pictureBox_Subir.Name = "pictureBox_Subir";
-            pictureBox_Subir.Size = new Size(294, 314);
+            pictureBox_Subir.Size = new Size(336, 419);
             pictureBox_Subir.TabIndex = 48;
             pictureBox_Subir.TabStop = false;
             // 
             // btncerrar
             // 
             btncerrar.Image = (Image)resources.GetObject("btncerrar.Image");
-            btncerrar.Location = new Point(1453, 0);
+            btncerrar.Location = new Point(1661, 0);
+            btncerrar.Margin = new Padding(3, 4, 3, 4);
             btncerrar.Name = "btncerrar";
-            btncerrar.Size = new Size(29, 29);
+            btncerrar.Size = new Size(33, 39);
             btncerrar.SizeMode = PictureBoxSizeMode.StretchImage;
             btncerrar.TabIndex = 49;
             btncerrar.TabStop = false;
@@ -762,41 +722,46 @@
             panel1.Controls.Add(panel6);
             panel1.Controls.Add(panel5);
             panel1.Location = new Point(-2, -1);
+            panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1502, 34);
+            panel1.Size = new Size(1717, 45);
             panel1.TabIndex = 50;
             panel1.MouseDown += panel1_MouseDown;
             // 
             // panel7
             // 
             panel7.BackColor = Color.FromArgb(42, 71, 94);
-            panel7.Location = new Point(122, 20);
+            panel7.Location = new Point(139, 27);
+            panel7.Margin = new Padding(3, 4, 3, 4);
             panel7.Name = "panel7";
-            panel7.Size = new Size(1100, 1);
+            panel7.Size = new Size(1257, 1);
             panel7.TabIndex = 55;
             // 
             // panel6
             // 
             panel6.BackColor = Color.FromArgb(42, 71, 94);
-            panel6.Location = new Point(122, 13);
+            panel6.Location = new Point(139, 17);
+            panel6.Margin = new Padding(3, 4, 3, 4);
             panel6.Name = "panel6";
-            panel6.Size = new Size(1100, 1);
+            panel6.Size = new Size(1257, 1);
             panel6.TabIndex = 55;
             // 
             // panel5
             // 
             panel5.BackColor = Color.FromArgb(42, 71, 94);
-            panel5.Location = new Point(122, 6);
+            panel5.Location = new Point(139, 8);
+            panel5.Margin = new Padding(3, 4, 3, 4);
             panel5.Name = "panel5";
-            panel5.Size = new Size(1100, 1);
+            panel5.Size = new Size(1257, 1);
             panel5.TabIndex = 54;
             // 
             // panel4
             // 
             panel4.BackColor = Color.FromArgb(23, 26, 33);
-            panel4.Location = new Point(0, 794);
+            panel4.Location = new Point(0, 1059);
+            panel4.Margin = new Padding(3, 4, 3, 4);
             panel4.Name = "panel4";
-            panel4.Size = new Size(1480, 8);
+            panel4.Size = new Size(1691, 11);
             panel4.TabIndex = 53;
             // 
             // panel8
@@ -804,9 +769,10 @@
             panel8.BackColor = Color.FromArgb(40, 40, 40);
             panel8.Controls.Add(panel9);
             panel8.Controls.Add(textBox_IDBorrar);
-            panel8.Location = new Point(20, 429);
+            panel8.Location = new Point(23, 572);
+            panel8.Margin = new Padding(3, 4, 3, 4);
             panel8.Name = "panel8";
-            panel8.Size = new Size(477, 26);
+            panel8.Size = new Size(545, 35);
             panel8.TabIndex = 54;
             // 
             // panel9
@@ -814,16 +780,18 @@
             panel9.BackColor = Color.Silver;
             panel9.Controls.Add(pictureBox1);
             panel9.Location = new Point(0, 0);
+            panel9.Margin = new Padding(3, 4, 3, 4);
             panel9.Name = "panel9";
-            panel9.Size = new Size(36, 26);
+            panel9.Size = new Size(41, 35);
             panel9.TabIndex = 55;
             // 
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(8, 3);
+            pictureBox1.Location = new Point(9, 4);
+            pictureBox1.Margin = new Padding(3, 4, 3, 4);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(25, 23);
+            pictureBox1.Size = new Size(29, 31);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 55;
             pictureBox1.TabStop = false;
@@ -833,9 +801,10 @@
             panel10.BackColor = Color.FromArgb(199, 213, 224);
             panel10.Controls.Add(panel11);
             panel10.Controls.Add(textBox_IDModificar);
-            panel10.Location = new Point(22, 426);
+            panel10.Location = new Point(25, 568);
+            panel10.Margin = new Padding(3, 4, 3, 4);
             panel10.Name = "panel10";
-            panel10.Size = new Size(322, 21);
+            panel10.Size = new Size(368, 28);
             panel10.TabIndex = 55;
             // 
             // panel11
@@ -843,8 +812,9 @@
             panel11.BackColor = Color.LightGray;
             panel11.Controls.Add(txtMODIFICARID);
             panel11.Location = new Point(0, 0);
+            panel11.Margin = new Padding(3, 4, 3, 4);
             panel11.Name = "panel11";
-            panel11.Size = new Size(47, 21);
+            panel11.Size = new Size(54, 28);
             panel11.TabIndex = 56;
             // 
             // panel12
@@ -852,9 +822,10 @@
             panel12.BackColor = Color.FromArgb(199, 213, 224);
             panel12.Controls.Add(panel13);
             panel12.Controls.Add(textBox_NombreModificar);
-            panel12.Location = new Point(22, 453);
+            panel12.Location = new Point(25, 604);
+            panel12.Margin = new Padding(3, 4, 3, 4);
             panel12.Name = "panel12";
-            panel12.Size = new Size(414, 21);
+            panel12.Size = new Size(473, 28);
             panel12.TabIndex = 56;
             // 
             // panel13
@@ -862,8 +833,9 @@
             panel13.BackColor = Color.LightGray;
             panel13.Controls.Add(txtTITULOMODIFICAR);
             panel13.Location = new Point(0, 0);
+            panel13.Margin = new Padding(3, 4, 3, 4);
             panel13.Name = "panel13";
-            panel13.Size = new Size(75, 21);
+            panel13.Size = new Size(86, 28);
             panel13.TabIndex = 56;
             // 
             // panel14
@@ -871,9 +843,10 @@
             panel14.BackColor = Color.FromArgb(199, 213, 224);
             panel14.Controls.Add(panel15);
             panel14.Controls.Add(textBox_GeneroModificar);
-            panel14.Location = new Point(22, 480);
+            panel14.Location = new Point(25, 640);
+            panel14.Margin = new Padding(3, 4, 3, 4);
             panel14.Name = "panel14";
-            panel14.Size = new Size(414, 21);
+            panel14.Size = new Size(473, 28);
             panel14.TabIndex = 57;
             // 
             // panel15
@@ -881,8 +854,9 @@
             panel15.BackColor = Color.LightGray;
             panel15.Controls.Add(txtGENEROMODIFICAR);
             panel15.Location = new Point(0, 0);
+            panel15.Margin = new Padding(3, 4, 3, 4);
             panel15.Name = "panel15";
-            panel15.Size = new Size(75, 21);
+            panel15.Size = new Size(86, 28);
             panel15.TabIndex = 56;
             // 
             // panel16
@@ -890,9 +864,10 @@
             panel16.BackColor = Color.FromArgb(199, 213, 224);
             panel16.Controls.Add(panel17);
             panel16.Controls.Add(textBox_PlataformaModificar);
-            panel16.Location = new Point(22, 507);
+            panel16.Location = new Point(25, 676);
+            panel16.Margin = new Padding(3, 4, 3, 4);
             panel16.Name = "panel16";
-            panel16.Size = new Size(414, 21);
+            panel16.Size = new Size(473, 28);
             panel16.TabIndex = 58;
             // 
             // panel17
@@ -900,8 +875,9 @@
             panel17.BackColor = Color.LightGray;
             panel17.Controls.Add(txtPLATAFORMAMODIFICAR);
             panel17.Location = new Point(0, 0);
+            panel17.Margin = new Padding(3, 4, 3, 4);
             panel17.Name = "panel17";
-            panel17.Size = new Size(108, 21);
+            panel17.Size = new Size(123, 28);
             panel17.TabIndex = 56;
             // 
             // panel18
@@ -909,9 +885,10 @@
             panel18.BackColor = Color.FromArgb(199, 213, 224);
             panel18.Controls.Add(panel19);
             panel18.Controls.Add(textBox_ModalidadModificar);
-            panel18.Location = new Point(22, 534);
+            panel18.Location = new Point(25, 712);
+            panel18.Margin = new Padding(3, 4, 3, 4);
             panel18.Name = "panel18";
-            panel18.Size = new Size(414, 21);
+            panel18.Size = new Size(473, 28);
             panel18.TabIndex = 59;
             // 
             // panel19
@@ -919,8 +896,9 @@
             panel19.BackColor = Color.LightGray;
             panel19.Controls.Add(txtMODALIDADMODIFY);
             panel19.Location = new Point(0, 0);
+            panel19.Margin = new Padding(3, 4, 3, 4);
             panel19.Name = "panel19";
-            panel19.Size = new Size(97, 21);
+            panel19.Size = new Size(111, 28);
             panel19.TabIndex = 56;
             // 
             // panel20
@@ -928,9 +906,10 @@
             panel20.BackColor = Color.FromArgb(199, 213, 224);
             panel20.Controls.Add(panel21);
             panel20.Controls.Add(textBox_PrecioModificar);
-            panel20.Location = new Point(22, 561);
+            panel20.Location = new Point(25, 748);
+            panel20.Margin = new Padding(3, 4, 3, 4);
             panel20.Name = "panel20";
-            panel20.Size = new Size(414, 21);
+            panel20.Size = new Size(473, 28);
             panel20.TabIndex = 60;
             // 
             // panel21
@@ -938,8 +917,9 @@
             panel21.BackColor = Color.LightGray;
             panel21.Controls.Add(txtPRECIOMODIFICAR);
             panel21.Location = new Point(0, 0);
+            panel21.Margin = new Padding(3, 4, 3, 4);
             panel21.Name = "panel21";
-            panel21.Size = new Size(75, 21);
+            panel21.Size = new Size(86, 28);
             panel21.TabIndex = 56;
             // 
             // panel22
@@ -947,9 +927,10 @@
             panel22.BackColor = Color.FromArgb(199, 213, 224);
             panel22.Controls.Add(panel23);
             panel22.Controls.Add(textBox_StockModificar);
-            panel22.Location = new Point(22, 588);
+            panel22.Location = new Point(25, 784);
+            panel22.Margin = new Padding(3, 4, 3, 4);
             panel22.Name = "panel22";
-            panel22.Size = new Size(414, 21);
+            panel22.Size = new Size(473, 28);
             panel22.TabIndex = 61;
             // 
             // panel23
@@ -957,8 +938,9 @@
             panel23.BackColor = Color.LightGray;
             panel23.Controls.Add(txtSTOCKMODIFCAR);
             panel23.Location = new Point(0, 0);
+            panel23.Margin = new Padding(3, 4, 3, 4);
             panel23.Name = "panel23";
-            panel23.Size = new Size(64, 21);
+            panel23.Size = new Size(73, 28);
             panel23.TabIndex = 56;
             // 
             // panel24
@@ -966,9 +948,10 @@
             panel24.BackColor = Color.FromArgb(199, 213, 224);
             panel24.Controls.Add(textBox_IDSubir);
             panel24.Font = new Font("Century Gothic", 12F);
-            panel24.Location = new Point(22, 49);
+            panel24.Location = new Point(25, 65);
+            panel24.Margin = new Padding(3, 4, 3, 4);
             panel24.Name = "panel24";
-            panel24.Size = new Size(414, 21);
+            panel24.Size = new Size(473, 28);
             panel24.TabIndex = 62;
             // 
             // panel25
@@ -976,9 +959,10 @@
             panel25.BackColor = Color.LightGray;
             panel25.Controls.Add(txtID);
             panel25.Font = new Font("Century Gothic", 12F);
-            panel25.Location = new Point(22, 49);
+            panel25.Location = new Point(25, 65);
+            panel25.Margin = new Padding(3, 4, 3, 4);
             panel25.Name = "panel25";
-            panel25.Size = new Size(48, 21);
+            panel25.Size = new Size(55, 28);
             panel25.TabIndex = 63;
             // 
             // panel26
@@ -986,9 +970,10 @@
             panel26.BackColor = Color.LightGray;
             panel26.Controls.Add(txtTITULO);
             panel26.Font = new Font("Century Gothic", 12F);
-            panel26.Location = new Point(22, 76);
+            panel26.Location = new Point(25, 101);
+            panel26.Margin = new Padding(3, 4, 3, 4);
             panel26.Name = "panel26";
-            panel26.Size = new Size(73, 21);
+            panel26.Size = new Size(83, 28);
             panel26.TabIndex = 65;
             // 
             // panel27
@@ -996,9 +981,10 @@
             panel27.BackColor = Color.FromArgb(199, 213, 224);
             panel27.Controls.Add(textBox_NombreSubir);
             panel27.Font = new Font("Century Gothic", 12F);
-            panel27.Location = new Point(22, 76);
+            panel27.Location = new Point(25, 101);
+            panel27.Margin = new Padding(3, 4, 3, 4);
             panel27.Name = "panel27";
-            panel27.Size = new Size(414, 21);
+            panel27.Size = new Size(473, 28);
             panel27.TabIndex = 64;
             // 
             // panel28
@@ -1006,9 +992,10 @@
             panel28.BackColor = Color.LightGray;
             panel28.Controls.Add(txtGENERO);
             panel28.Font = new Font("Century Gothic", 12F);
-            panel28.Location = new Point(22, 103);
+            panel28.Location = new Point(25, 137);
+            panel28.Margin = new Padding(3, 4, 3, 4);
             panel28.Name = "panel28";
-            panel28.Size = new Size(72, 21);
+            panel28.Size = new Size(82, 28);
             panel28.TabIndex = 67;
             // 
             // panel29
@@ -1016,9 +1003,10 @@
             panel29.BackColor = Color.FromArgb(199, 213, 224);
             panel29.Controls.Add(textBox_GeneroSubir);
             panel29.Font = new Font("Century Gothic", 12F);
-            panel29.Location = new Point(22, 103);
+            panel29.Location = new Point(25, 137);
+            panel29.Margin = new Padding(3, 4, 3, 4);
             panel29.Name = "panel29";
-            panel29.Size = new Size(414, 21);
+            panel29.Size = new Size(473, 28);
             panel29.TabIndex = 66;
             // 
             // panel30
@@ -1026,9 +1014,10 @@
             panel30.BackColor = Color.LightGray;
             panel30.Controls.Add(txtPLATAFORMA);
             panel30.Font = new Font("Century Gothic", 12F);
-            panel30.Location = new Point(22, 130);
+            panel30.Location = new Point(25, 173);
+            panel30.Margin = new Padding(3, 4, 3, 4);
             panel30.Name = "panel30";
-            panel30.Size = new Size(108, 21);
+            panel30.Size = new Size(123, 28);
             panel30.TabIndex = 69;
             // 
             // panel31
@@ -1036,9 +1025,10 @@
             panel31.BackColor = Color.FromArgb(199, 213, 224);
             panel31.Controls.Add(textBox_PlataformaSubir);
             panel31.Font = new Font("Century Gothic", 12F);
-            panel31.Location = new Point(22, 130);
+            panel31.Location = new Point(25, 173);
+            panel31.Margin = new Padding(3, 4, 3, 4);
             panel31.Name = "panel31";
-            panel31.Size = new Size(414, 21);
+            panel31.Size = new Size(473, 28);
             panel31.TabIndex = 68;
             // 
             // panel32
@@ -1046,9 +1036,10 @@
             panel32.BackColor = Color.LightGray;
             panel32.Controls.Add(txtMODALIDAD);
             panel32.Font = new Font("Century Gothic", 12F);
-            panel32.Location = new Point(22, 157);
+            panel32.Location = new Point(25, 209);
+            panel32.Margin = new Padding(3, 4, 3, 4);
             panel32.Name = "panel32";
-            panel32.Size = new Size(97, 21);
+            panel32.Size = new Size(111, 28);
             panel32.TabIndex = 71;
             // 
             // panel33
@@ -1056,9 +1047,10 @@
             panel33.BackColor = Color.FromArgb(199, 213, 224);
             panel33.Controls.Add(textBox_ModalidadSubir);
             panel33.Font = new Font("Century Gothic", 12F);
-            panel33.Location = new Point(22, 157);
+            panel33.Location = new Point(25, 209);
+            panel33.Margin = new Padding(3, 4, 3, 4);
             panel33.Name = "panel33";
-            panel33.Size = new Size(414, 21);
+            panel33.Size = new Size(473, 28);
             panel33.TabIndex = 70;
             // 
             // panel34
@@ -1066,9 +1058,10 @@
             panel34.BackColor = Color.LightGray;
             panel34.Controls.Add(txtPRECIO);
             panel34.Font = new Font("Century Gothic", 12F);
-            panel34.Location = new Point(22, 184);
+            panel34.Location = new Point(25, 245);
+            panel34.Margin = new Padding(3, 4, 3, 4);
             panel34.Name = "panel34";
-            panel34.Size = new Size(72, 21);
+            panel34.Size = new Size(82, 28);
             panel34.TabIndex = 73;
             // 
             // panel35
@@ -1076,9 +1069,10 @@
             panel35.BackColor = Color.FromArgb(199, 213, 224);
             panel35.Controls.Add(textBox_PrecioSubir);
             panel35.Font = new Font("Century Gothic", 12F);
-            panel35.Location = new Point(22, 184);
+            panel35.Location = new Point(25, 245);
+            panel35.Margin = new Padding(3, 4, 3, 4);
             panel35.Name = "panel35";
-            panel35.Size = new Size(414, 21);
+            panel35.Size = new Size(473, 28);
             panel35.TabIndex = 72;
             // 
             // panel36
@@ -1086,9 +1080,10 @@
             panel36.BackColor = Color.LightGray;
             panel36.Controls.Add(txtSTOCK);
             panel36.Font = new Font("Century Gothic", 12F);
-            panel36.Location = new Point(22, 211);
+            panel36.Location = new Point(25, 281);
+            panel36.Margin = new Padding(3, 4, 3, 4);
             panel36.Name = "panel36";
-            panel36.Size = new Size(65, 21);
+            panel36.Size = new Size(74, 28);
             panel36.TabIndex = 75;
             // 
             // panel37
@@ -1096,9 +1091,10 @@
             panel37.BackColor = Color.FromArgb(199, 213, 224);
             panel37.Controls.Add(textBox_StockSubir);
             panel37.Font = new Font("Century Gothic", 12F);
-            panel37.Location = new Point(22, 211);
+            panel37.Location = new Point(25, 281);
+            panel37.Margin = new Padding(3, 4, 3, 4);
             panel37.Name = "panel37";
-            panel37.Size = new Size(414, 21);
+            panel37.Size = new Size(473, 28);
             panel37.TabIndex = 74;
             // 
             // panel38
@@ -1107,15 +1103,17 @@
             panel38.Controls.Add(button_EliminarProducto);
             panel38.Controls.Add(dataGridView_Inventario);
             panel38.Controls.Add(panel8);
-            panel38.Location = new Point(846, 42);
+            panel38.Location = new Point(967, 56);
+            panel38.Margin = new Padding(3, 4, 3, 4);
             panel38.Name = "panel38";
-            panel38.Size = new Size(634, 472);
+            panel38.Size = new Size(725, 629);
             panel38.TabIndex = 76;
             // 
             // pictureBox2
             // 
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(1049, 419);
+            pictureBox2.Location = new Point(1199, 559);
+            pictureBox2.Margin = new Padding(3, 4, 3, 4);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(1500, 465);
             pictureBox2.SizeMode = PictureBoxSizeMode.AutoSize;
@@ -1156,9 +1154,10 @@
             panel39.Controls.Add(panel25);
             panel39.Controls.Add(panel22);
             panel39.Controls.Add(panel24);
-            panel39.Location = new Point(18, 42);
+            panel39.Location = new Point(21, 56);
+            panel39.Margin = new Padding(3, 4, 3, 4);
             panel39.Name = "panel39";
-            panel39.Size = new Size(807, 746);
+            panel39.Size = new Size(922, 995);
             panel39.TabIndex = 77;
             // 
             // button_BuscarModificar
@@ -1171,10 +1170,9 @@
             button_BuscarModificar.FlatStyle = FlatStyle.Flat;
             button_BuscarModificar.Font = new Font("Century Gothic", 9.75F);
             button_BuscarModificar.ForeColor = Color.LightGray;
-            button_BuscarModificar.Location = new Point(350, 426);
-            button_BuscarModificar.Margin = new Padding(3, 2, 3, 2);
+            button_BuscarModificar.Location = new Point(400, 568);
             button_BuscarModificar.Name = "button_BuscarModificar";
-            button_BuscarModificar.Size = new Size(86, 22);
+            button_BuscarModificar.Size = new Size(98, 29);
             button_BuscarModificar.TabIndex = 77;
             button_BuscarModificar.Text = "BUSCAR";
             button_BuscarModificar.UseVisualStyleBackColor = false;
@@ -1190,9 +1188,10 @@
             button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Century Gothic", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button1.ForeColor = Color.LightGray;
-            button1.Location = new Point(22, 671);
+            button1.Location = new Point(25, 895);
+            button1.Margin = new Padding(3, 4, 3, 4);
             button1.Name = "button1";
-            button1.Size = new Size(414, 63);
+            button1.Size = new Size(473, 84);
             button1.TabIndex = 76;
             button1.Text = "MOSTRAR GRAFICA";
             button1.UseVisualStyleBackColor = false;
@@ -1201,27 +1200,29 @@
             // 
             panel2.BackColor = Color.FromArgb(23, 26, 33);
             panel2.BackgroundImageLayout = ImageLayout.Center;
-            panel2.Location = new Point(1490, 32);
+            panel2.Location = new Point(1703, 43);
+            panel2.Margin = new Padding(3, 4, 3, 4);
             panel2.Name = "panel2";
-            panel2.Size = new Size(10, 800);
+            panel2.Size = new Size(11, 1067);
             panel2.TabIndex = 51;
             // 
             // panel3
             // 
             panel3.BackColor = Color.FromArgb(23, 26, 33);
             panel3.BackgroundImageLayout = ImageLayout.Center;
-            panel3.Location = new Point(0, 32);
+            panel3.Location = new Point(0, 43);
+            panel3.Margin = new Padding(3, 4, 3, 4);
             panel3.Name = "panel3";
-            panel3.Size = new Size(12, 568);
+            panel3.Size = new Size(14, 757);
             panel3.TabIndex = 52;
             // 
             // FormAdmin
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(27, 40, 56);
             BackgroundImageLayout = ImageLayout.None;
-            ClientSize = new Size(1500, 800);
+            ClientSize = new Size(1714, 1067);
             Controls.Add(panel39);
             Controls.Add(panel38);
             Controls.Add(panel4);
@@ -1231,7 +1232,6 @@
             Controls.Add(pictureBox2);
             DoubleBuffered = true;
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(3, 2, 3, 2);
             Name = "FormAdmin";
             Opacity = 0.98D;
             StartPosition = FormStartPosition.CenterScreen;

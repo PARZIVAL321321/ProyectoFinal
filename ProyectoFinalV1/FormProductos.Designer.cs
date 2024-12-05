@@ -33,8 +33,8 @@
             btncerrar = new PictureBox();
             button_LogOut = new Button();
             panel3 = new Panel();
-            textBox_ConteoCarrito = new TextBox();
             button_Carrito = new Button();
+            textBox_ConteoCarrito = new TextBox();
             label_Puntodeventa = new Label();
             label_Bienvenido = new Label();
             textBox_Nombre = new TextBox();
@@ -194,6 +194,7 @@
             // button_LogOut
             // 
             button_LogOut.BackColor = Color.Transparent;
+            button_LogOut.Cursor = Cursors.Hand;
             button_LogOut.FlatAppearance.BorderSize = 0;
             button_LogOut.FlatAppearance.MouseDownBackColor = Color.FromArgb(28, 28, 28);
             button_LogOut.FlatAppearance.MouseOverBackColor = Color.FromArgb(60, 60, 60);
@@ -211,8 +212,8 @@
             // panel3
             // 
             panel3.BackColor = Color.FromArgb(23, 26, 33);
-            panel3.Controls.Add(textBox_ConteoCarrito);
             panel3.Controls.Add(button_Carrito);
+            panel3.Controls.Add(textBox_ConteoCarrito);
             panel3.Controls.Add(label_Puntodeventa);
             panel3.Controls.Add(label_Bienvenido);
             panel3.Controls.Add(textBox_Nombre);
@@ -226,34 +227,35 @@
             panel3.TabIndex = 6;
             panel3.MouseDown += panel3_MouseDown;
             // 
-            // textBox_ConteoCarrito
-            // 
-            textBox_ConteoCarrito.BackColor = Color.FromArgb(23, 26, 33);
-            textBox_ConteoCarrito.BorderStyle = BorderStyle.None;
-            textBox_ConteoCarrito.Enabled = false;
-            textBox_ConteoCarrito.Font = new Font("Century Gothic", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox_ConteoCarrito.ForeColor = SystemColors.Window;
-            textBox_ConteoCarrito.Location = new Point(1371, 49);
-            textBox_ConteoCarrito.Name = "textBox_ConteoCarrito";
-            textBox_ConteoCarrito.Size = new Size(51, 30);
-            textBox_ConteoCarrito.TabIndex = 18;
-            // 
             // button_Carrito
             // 
             button_Carrito.BackColor = Color.Transparent;
+            button_Carrito.Cursor = Cursors.Hand;
             button_Carrito.FlatAppearance.BorderSize = 0;
             button_Carrito.FlatAppearance.MouseDownBackColor = Color.FromArgb(28, 28, 28);
             button_Carrito.FlatAppearance.MouseOverBackColor = Color.FromArgb(60, 60, 60);
             button_Carrito.FlatStyle = FlatStyle.Flat;
             button_Carrito.Font = new Font("Century Gothic", 15.75F, FontStyle.Bold);
             button_Carrito.ForeColor = Color.LightGray;
-            button_Carrito.Location = new Point(1200, 35);
+            button_Carrito.Location = new Point(1138, 43);
             button_Carrito.Name = "button_Carrito";
-            button_Carrito.Size = new Size(166, 61);
+            button_Carrito.Size = new Size(181, 36);
             button_Carrito.TabIndex = 43;
             button_Carrito.Text = "TU CARRITO";
             button_Carrito.UseVisualStyleBackColor = false;
             button_Carrito.Click += button_Carrito_Click;
+            // 
+            // textBox_ConteoCarrito
+            // 
+            textBox_ConteoCarrito.BackColor = Color.FromArgb(23, 26, 33);
+            textBox_ConteoCarrito.BorderStyle = BorderStyle.None;
+            textBox_ConteoCarrito.Enabled = false;
+            textBox_ConteoCarrito.Font = new Font("Century Gothic", 16.2F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            textBox_ConteoCarrito.ForeColor = SystemColors.Window;
+            textBox_ConteoCarrito.Location = new Point(1325, 43);
+            textBox_ConteoCarrito.Name = "textBox_ConteoCarrito";
+            textBox_ConteoCarrito.Size = new Size(36, 34);
+            textBox_ConteoCarrito.TabIndex = 18;
             // 
             // label_Puntodeventa
             // 
@@ -285,7 +287,7 @@
             textBox_Nombre.Enabled = false;
             textBox_Nombre.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             textBox_Nombre.ForeColor = Color.LightGray;
-            textBox_Nombre.Location = new Point(351, 56);
+            textBox_Nombre.Location = new Point(361, 56);
             textBox_Nombre.Name = "textBox_Nombre";
             textBox_Nombre.ReadOnly = true;
             textBox_Nombre.Size = new Size(392, 25);
@@ -376,6 +378,7 @@
             // buttonComprarJuego1
             // 
             buttonComprarJuego1.BackColor = Color.FromArgb(40, 40, 40);
+            buttonComprarJuego1.Cursor = Cursors.Hand;
             buttonComprarJuego1.FlatAppearance.BorderSize = 0;
             buttonComprarJuego1.FlatAppearance.CheckedBackColor = Color.FromArgb(28, 28, 28);
             buttonComprarJuego1.FlatAppearance.MouseDownBackColor = Color.FromArgb(28, 28, 28);
@@ -393,6 +396,7 @@
             // buttonComprarJuego2
             // 
             buttonComprarJuego2.BackColor = Color.FromArgb(40, 40, 40);
+            buttonComprarJuego2.Cursor = Cursors.Hand;
             buttonComprarJuego2.FlatAppearance.BorderSize = 0;
             buttonComprarJuego2.FlatAppearance.CheckedBackColor = Color.FromArgb(28, 28, 28);
             buttonComprarJuego2.FlatAppearance.MouseDownBackColor = Color.FromArgb(28, 28, 28);
@@ -410,6 +414,7 @@
             // buttonComprarJuego3
             // 
             buttonComprarJuego3.BackColor = Color.FromArgb(40, 40, 40);
+            buttonComprarJuego3.Cursor = Cursors.Hand;
             buttonComprarJuego3.FlatAppearance.BorderSize = 0;
             buttonComprarJuego3.FlatAppearance.CheckedBackColor = Color.FromArgb(28, 28, 28);
             buttonComprarJuego3.FlatAppearance.MouseDownBackColor = Color.FromArgb(28, 28, 28);
@@ -467,6 +472,7 @@
             // buttonComprarJuego10
             // 
             buttonComprarJuego10.BackColor = Color.FromArgb(40, 40, 40);
+            buttonComprarJuego10.Cursor = Cursors.Hand;
             buttonComprarJuego10.FlatAppearance.BorderSize = 0;
             buttonComprarJuego10.FlatAppearance.MouseDownBackColor = Color.FromArgb(28, 28, 28);
             buttonComprarJuego10.FlatAppearance.MouseOverBackColor = Color.FromArgb(60, 60, 60);
@@ -483,6 +489,7 @@
             // buttonComprarJuego9
             // 
             buttonComprarJuego9.BackColor = Color.FromArgb(40, 40, 40);
+            buttonComprarJuego9.Cursor = Cursors.Hand;
             buttonComprarJuego9.FlatAppearance.BorderSize = 0;
             buttonComprarJuego9.FlatAppearance.MouseDownBackColor = Color.FromArgb(28, 28, 28);
             buttonComprarJuego9.FlatAppearance.MouseOverBackColor = Color.FromArgb(60, 60, 60);
@@ -499,6 +506,7 @@
             // buttonComprarJuego8
             // 
             buttonComprarJuego8.BackColor = Color.FromArgb(40, 40, 40);
+            buttonComprarJuego8.Cursor = Cursors.Hand;
             buttonComprarJuego8.FlatAppearance.BorderSize = 0;
             buttonComprarJuego8.FlatAppearance.MouseDownBackColor = Color.FromArgb(28, 28, 28);
             buttonComprarJuego8.FlatAppearance.MouseOverBackColor = Color.FromArgb(60, 60, 60);
@@ -764,6 +772,7 @@
             // buttonComprarJuego7
             // 
             buttonComprarJuego7.BackColor = Color.FromArgb(40, 40, 40);
+            buttonComprarJuego7.Cursor = Cursors.Hand;
             buttonComprarJuego7.FlatAppearance.BorderSize = 0;
             buttonComprarJuego7.FlatAppearance.MouseDownBackColor = Color.FromArgb(28, 28, 28);
             buttonComprarJuego7.FlatAppearance.MouseOverBackColor = Color.FromArgb(60, 60, 60);
@@ -780,6 +789,7 @@
             // buttonComprarJuego6
             // 
             buttonComprarJuego6.BackColor = Color.FromArgb(40, 40, 40);
+            buttonComprarJuego6.Cursor = Cursors.Hand;
             buttonComprarJuego6.FlatAppearance.BorderSize = 0;
             buttonComprarJuego6.FlatAppearance.MouseDownBackColor = Color.FromArgb(28, 28, 28);
             buttonComprarJuego6.FlatAppearance.MouseOverBackColor = Color.FromArgb(60, 60, 60);
@@ -796,6 +806,7 @@
             // buttonComprarJuego5
             // 
             buttonComprarJuego5.BackColor = Color.FromArgb(40, 40, 40);
+            buttonComprarJuego5.Cursor = Cursors.Hand;
             buttonComprarJuego5.FlatAppearance.BorderSize = 0;
             buttonComprarJuego5.FlatAppearance.MouseDownBackColor = Color.FromArgb(28, 28, 28);
             buttonComprarJuego5.FlatAppearance.MouseOverBackColor = Color.FromArgb(60, 60, 60);
@@ -1189,6 +1200,7 @@
             // buttonComprarJuego4
             // 
             buttonComprarJuego4.BackColor = Color.FromArgb(40, 40, 40);
+            buttonComprarJuego4.Cursor = Cursors.Hand;
             buttonComprarJuego4.FlatAppearance.BorderSize = 0;
             buttonComprarJuego4.FlatAppearance.MouseDownBackColor = Color.FromArgb(28, 28, 28);
             buttonComprarJuego4.FlatAppearance.MouseOverBackColor = Color.FromArgb(60, 60, 60);

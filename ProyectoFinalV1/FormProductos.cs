@@ -19,9 +19,6 @@ namespace ProyectoFinalV1
         // Creamos otra lista donde se va a guardar el carrito de compras
         List<Juegos> carrito = new List<Juegos>();
 
-        // Variable para llevar un conteo de los objetos que han sido agregados al carrito
-        int conteo_carrito;
-
         public FormProductos()
         {
             InitializeComponent();
@@ -36,6 +33,8 @@ namespace ProyectoFinalV1
             textBox_Nombre.Text = nombre;
             // Al iniciar el form, cargamos los juegos
             Cargar_Juegos();
+            // Al iniciar el form, no tenemos nada en el carrito
+            textBox_ConteoCarrito.Text = 0.ToString();
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -75,7 +74,7 @@ namespace ProyectoFinalV1
         private void button_Carrito_Click(object sender, EventArgs e)
         {
             // Creamos nuestro form para el carrito
-            FormCarrito formCarrito = new FormCarrito(carrito);
+            FormCarrito formCarrito = new FormCarrito(carrito, lista);
 
             // Ocultamos el form actual
             this.Hide();
@@ -85,6 +84,15 @@ namespace ProyectoFinalV1
 
             // Volvemos a mostrar este form
             this.Show();
+
+            // Limpiamos nuevamente nuestra lista
+            lista.Clear();
+
+            // Cargamos todos los juegos que tenemos
+            Cargar_Juegos();
+
+            textBox_ConteoCarrito.Text = carrito.Count.ToString();
+
         }
 
         // Funcion para mostrar nuestros juegos
@@ -139,21 +147,23 @@ namespace ProyectoFinalV1
                 // Verificamos si hay al menos 6 juegos
                 if (lista.Count < 6)
                 {
-                    MessageBox.Show("Debe haber al menos 6 juegos disponibles.");
-                    this.Close(); // Cierra el formulario si no hay suficientes juegos
-                    return;
+                    MessageBox.Show("Debe haber al menos 6 juegos disponibles");
+                    // Cerramos por completo la aplicacion, ya que no se puede iniciar
+                    Application.Exit(); 
                 }
 
                 // Limitamos la lista a un máximo de 10 juegos, así el administrador puede agregar más juegos en la base de datos sin problemas
                 if (lista.Count > 10)
                 {
-                    lista = lista.Take(10).ToList();//Tomamos los primeros 10 elementos de la lista
+                    //Tomamos los primeros 10 elementos de la lista
+                    lista = lista.Take(10).ToList();
                 }
 
                 // Recorremos nuestra lista
                 for (int i = 0; i < lista.Count; i++)
                 {
-                    AsignarValoresJuego(i, lista[i]);// Asignamos los valores a los controles correspondientes
+                    // Asignamos los valores a los controles correspondientes
+                    AsignarValoresJuego(i, lista[i]);
                 }
 
                 // Ocultamos los controles de los juegos que no existen
@@ -167,7 +177,6 @@ namespace ProyectoFinalV1
                 MessageBox.Show("Error al conectarse a la base de datos: " + ex.Message);
             }
         }
-
 
         // Método para asignar los valores de un juego a los controles correspondientes
         private void AsignarValoresJuego(int indice, Juegos juego)
@@ -437,11 +446,8 @@ namespace ProyectoFinalV1
                 // Mensaje de exito
                 MessageBox.Show($"{lista[indice].Nombre} fue agregado correctamente al carrito");
 
-                // Aumentamos el contador del carrito
-                conteo_carrito++;
-
-                // Mostramos el nuevo valor del contador
-                textBox_ConteoCarrito.Text = conteo_carrito.ToString();
+                // Mostramos el valor del contador
+                textBox_ConteoCarrito.Text = carrito.Count.ToString();
 
                 // Quitamos uno de nuestro stock
                 lista[indice].Stock--;
@@ -450,34 +456,34 @@ namespace ProyectoFinalV1
                 switch (indice)
                 {
                     case 0:
-                        StockJuego1.Text = lista[indice].Stock.ToString();
+                        StockJuego1.Text = $"Stock: {lista[indice].Stock.ToString()}";
                         break;
                     case 1:
-                        StockJuego2.Text = lista[indice].Stock.ToString();
+                        StockJuego2.Text = $"Stock: {lista[indice].Stock.ToString()}";
                         break;
                     case 2:
-                        StockJuego3.Text = lista[indice].Stock.ToString();
+                        StockJuego3.Text = $"Stock: {lista[indice].Stock.ToString()}";
                         break;
                     case 3:
-                        StockJuego4.Text = lista[indice].Stock.ToString();
+                        StockJuego4.Text = $"Stock: {lista[indice].Stock.ToString()}";
                         break;
                     case 4:
-                        StockJuego5.Text = lista[indice].Stock.ToString();
+                        StockJuego5.Text = $"Stock: {lista[indice].Stock.ToString()}";
                         break;
                     case 5:
-                        StockJuego6.Text = lista[indice].Stock.ToString();
+                        StockJuego6.Text = $"Stock: {lista[indice].Stock.ToString()}";
                         break;
                     case 6:
-                        StockJuego7.Text = lista[indice].Stock.ToString();
+                        StockJuego7.Text = $"Stock: {lista[indice].Stock.ToString()}";
                         break;
                     case 7:
-                        StockJuego8.Text = lista[indice].Stock.ToString();
+                        StockJuego8.Text = $"Stock: {lista[indice].Stock.ToString()}";
                         break;
                     case 8:
-                        StockJuego9.Text = lista[indice].Stock.ToString();
+                        StockJuego9.Text = $"Stock: {lista[indice].Stock.ToString()}";
                         break;
                     case 9:
-                        StockJuego10.Text = lista[indice].Stock.ToString();
+                        StockJuego10.Text = $"Stock: {lista[indice].Stock.ToString()}";
                         break;
                 }
 

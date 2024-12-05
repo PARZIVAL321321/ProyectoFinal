@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,13 +14,17 @@ namespace ProyectoFinalV1
 {
     public partial class FormCarrito : Form
     {
-        //Declaramos un folio para la compra
-        private int folio;
-        //Propiedad para el folio
-        public int Folio { get; set; }
+        // Variable para nuestro PDF
+        int folio;
 
-        // Creamos nuestra lista que va a almacenar la lista que nos llego en el constructor
+        // Propiedad para guardar el monto total de la compra
+        int total;
+
+        // Creamos nuestra lista que va a almacenar el carrito que nos llego en el constructor
         List<Juegos> carrito = new List<Juegos>();
+
+        // Creamos nuestra lista que va a almacenar la informacion de los juegos que nos llego en el constructor
+        List<Juegos> lista = new List<Juegos>();
 
         // Constructor vacio
         public FormCarrito()
@@ -28,7 +33,7 @@ namespace ProyectoFinalV1
         }
 
         // Constructor por parametros (recibimos la lista que representa nuestro carrito de compras)
-        public FormCarrito(List<Juegos> carrito_constructor)
+        public FormCarrito(List<Juegos> carrito_constructor, List<Juegos> lista_constructor)
         {
             // Llamamos a nuestra funcion importante
             InitializeComponent();
@@ -36,15 +41,20 @@ namespace ProyectoFinalV1
             // Guardamos la lista que nos llego a nuestra variable local
             carrito = carrito_constructor;
 
+            // Guardamos la lista que nos llego a nuestra variable local
+            lista = lista_constructor;
+
             // Llenamos el DataGridView con los datos del carrito
             LlenarDataGridView();
+
+            // Mostramos los precios
+            Calcular_Total();
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
-
 
         private void FormCarrito_MouseDown(object sender, MouseEventArgs e)
         {
@@ -85,7 +95,7 @@ namespace ProyectoFinalV1
                     Nombre = g.Key.Nombre,//Key es una propiedad de la clase GroupBy que nos permite acceder a la clave por la que se agruparon los datos
                     Plataforma = g.Key.Plataforma,//Key es una propiedad de la clase GroupBy que nos permite acceder a la clave por la que se agruparon los datos
                     Cantidad = g.Count(),//Count es una funcion de la libreria LINQ que nos permite contar los elementos de un grupo
-                    Precio = g.Key.Precio* g.Count()//Count es una funcion de la libreria LINQ que nos permite contar los elementos de un grupo
+                    Precio = g.Key.Precio * g.Count()//Count es una funcion de la libreria LINQ que nos permite contar los elementos de un grupo
                 })
                 .ToList();//ToList es una funcion de la libreria LINQ que nos permite convertir los datos a una lista
 
@@ -94,6 +104,101 @@ namespace ProyectoFinalV1
             {
                 dataGridView_CarritodeCompras.Rows.Add(juego.Nombre, juego.Plataforma, juego.Cantidad, juego.Precio);
             }
+        }
+
+        // Funcion para calcular el precio estimado y el precio con iva
+        private void Calcular_Total()
+        {
+            // Recorremos nuestra lista
+            for (int i = 0; i < carrito.Count; i++)
+            {
+                // Acumulamos el precio de los productos
+                total += carrito[i].Precio;
+            }
+
+            // Mostramos el valor en nuestro textBox
+            textBox_Total.Text = $"${total.ToString()} MXN";
+
+            // Calculamos el 6% de impuesto
+            double total_impuesto = total * 1.06;
+
+            // Mostramos el valor en nuestro textBox
+            textBox_TotalIva.Text = $"${total_impuesto.ToString()} MXN";
+        }
+
+        // Cuando el usuario haga click, se borrara el carrito por completo
+        private void button_BorrarCarrito_Click(object sender, EventArgs e)
+        {
+            // Como no se efectuo la compra, entonces regresamos al stock los productos
+            Regresar_Stock();
+
+            // Vaciamos por completo nuestra lista que representa nuestro carrito
+            carrito.Clear();
+
+            // Mostramos el valor en nuestro textBox
+            textBox_Total.Text = "$0 MXN";
+
+            // Mostramos el valor en nuestro textBox
+            textBox_TotalIva.Text = "$0 MXN";
+
+            // Limpiamos el dataGrid
+            dataGridView_CarritodeCompras.Rows.Clear();
+
+            // Actualizamos el dataGrid
+            dataGridView_CarritodeCompras.Refresh();
+        }
+
+        private void Regresar_Stock()
+        {
+            // Agrupamos los juegos por nombre y plataforma, y contamos la cantidad de veces que se repiten
+            var juegosAgrupados = carrito //Var es una palabra reservada de C# que nos permite declarar una variable sin especificar su tipo
+                .GroupBy(j => new { j.Nombre, j.Plataforma, j.Precio })//GroupBy es una funcion de la libreria LINQ funciona para agrupar los datos
+                .Select(g => new//Select es una funcion de la libreria LINQ funciona para seleccionar los datos
+                {
+                    Nombre = g.Key.Nombre,//Key es una propiedad de la clase GroupBy que nos permite acceder a la clave por la que se agruparon los datos
+                    Plataforma = g.Key.Plataforma,//Key es una propiedad de la clase GroupBy que nos permite acceder a la clave por la que se agruparon los datos
+                    Cantidad = g.Count(),//Count es una funcion de la libreria LINQ que nos permite contar los elementos de un grupo
+                    Precio = g.Key.Precio * g.Count()//Count es una funcion de la libreria LINQ que nos permite contar los elementos de un grupo
+                })
+                .ToList();//ToList es una funcion de la libreria LINQ que nos permite convertir los datos a una lista
+
+            // Actualizamos nuestra base de datos
+            try
+            {
+                // Creamos nuestra variable para la base de datos, y pasamos nuestra informacion
+                MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=proyecto; User=root; Password=; Sslmode=none;");
+                // Abrimos nuestra base de datos
+                conexion.Open();
+
+                for (int i = 0; i < carrito.Count; i++)
+                {
+
+                    // Linea de comando de SQL
+                    string consulta = "UPDATE juegos SET " +
+                        "ID=@Id, Nombre=@Nombre, Imagen=@Imagen, Genero=@Genero, Plataforma=@Plataforma, Modalidad=@Modalidad, Precio=@Precio, Stock=@Stock " +
+                        "WHERE ID=@Id";
+
+                    // Cargamos nuestra linea de comandos
+                    MySqlCommand comando = new MySqlCommand(consulta, conexion);
+                    comando.Parameters.AddWithValue("@Id", carrito[i].Id);
+                    comando.Parameters.AddWithValue("@Nombre", carrito[i].Nombre);
+                    comando.Parameters.AddWithValue("@Imagen", carrito[i].Imagen);
+                    comando.Parameters.AddWithValue("@Genero", carrito[i].Genero);
+                    comando.Parameters.AddWithValue("@Plataforma", carrito[i].Plataforma);
+                    comando.Parameters.AddWithValue("@Modalidad", carrito[i].Modalidad);
+                    comando.Parameters.AddWithValue("@Precio", carrito[i].Precio);
+                    comando.Parameters.AddWithValue("@Stock", carrito[i].Stock + juegosAgrupados[i].Cantidad);
+
+                    // Agregamos el stock a la lista
+                    lista[i].Stock += juegosAgrupados[i].Cantidad;
+
+                    // Ejecutamos el comando
+                    comando.ExecuteNonQuery();
+                }
+                // Cerramos nuestra conexion
+                conexion.Close();
+            }
+            catch (Exception ex) { }
         }
     }
 }
