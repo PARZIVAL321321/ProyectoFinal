@@ -114,6 +114,7 @@
             button1 = new Button();
             panel2 = new Panel();
             panel3 = new Panel();
+            textBox1 = new TextBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox_Modificar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView_Inventario).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox_Subir).BeginInit();
@@ -724,7 +725,7 @@
             panel1.Location = new Point(-2, -1);
             panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1717, 45);
+            panel1.Size = new Size(1713, 45);
             panel1.TabIndex = 50;
             panel1.MouseDown += panel1_MouseDown;
             // 
@@ -1216,6 +1217,13 @@
             panel3.Size = new Size(14, 757);
             panel3.TabIndex = 52;
             // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(1037, 774);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(266, 27);
+            textBox1.TabIndex = 79;
+            // 
             // FormAdmin
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -1223,6 +1231,7 @@
             BackColor = Color.FromArgb(27, 40, 56);
             BackgroundImageLayout = ImageLayout.None;
             ClientSize = new Size(1714, 1067);
+            Controls.Add(textBox1);
             Controls.Add(panel39);
             Controls.Add(panel38);
             Controls.Add(panel4);
@@ -1396,5 +1405,6 @@
         private Panel panel3;
         private Button button1;
         private Button button_BuscarModificar;
+        private TextBox textBox1;
     }
 }

@@ -73,7 +73,7 @@ namespace ProyectoFinalV1
                     case 1:
 
                         // Creamos nuestro form (obtenemos el nombre de la persona que ingreso)
-                        FormProductos formProductos = new FormProductos(Obtener_Nombre_Cuenta());
+                        FormProductos formProductos = new FormProductos(Obtener_Nombre_Cuenta(), Obtener_Id_Cuenta());
                         // Ocultamos este form
                         this.Hide();
                         // Usamos el ShowDialog para cuando el usuario haga Logout
@@ -140,7 +140,6 @@ namespace ProyectoFinalV1
             return regresar;
         }
 
-
         // Funcion para obtener el nombre de la persona que ha ingresado al sistema
         private string Obtener_Nombre_Cuenta()
         {
@@ -178,6 +177,44 @@ namespace ProyectoFinalV1
 
             return regresar;
         }
+
+        private int Obtener_Id_Cuenta()
+        {
+            // Creamos nuestra variable para la base de datos, y pasamos nuestra informacion
+            MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=proyecto; User=root; Password=; Sslmode=none;");
+            // Abrimos nuestra base de datos
+            conexion.Open();
+
+            // Variable a retornar
+            int regresar = 0;
+
+            try
+            {
+                string consulta = "SELECT ID FROM personas WHERE Cuenta='" + textBox_Cuenta.Text + "' AND Contra='" + textBox_Contra.Text + "'";
+                MySqlCommand comando = new MySqlCommand(consulta, conexion);
+
+                // Ejecutamos la consulta y leer los resultados
+                MySqlDataReader reader = comando.ExecuteReader();
+
+                while (reader.Read()) // Solo va a encontrar un registro (gracias a la consulta)
+                {
+                    // Guardamos el valor
+                    regresar = Convert.ToInt32(reader["ID"]);
+                }
+
+                reader.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al leer la base de datos: " + ex.Message);
+            }
+
+            // Cerramos la conexion
+            conexion.Close();
+
+
+            return regresar;
+        } 
 
         private void btncerrar_Click(object sender, EventArgs e)
         {

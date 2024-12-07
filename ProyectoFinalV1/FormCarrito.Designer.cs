@@ -36,7 +36,7 @@
             label2 = new Label();
             button_SeguirComprando = new Button();
             panel2 = new Panel();
-            button2 = new Button();
+            button_ContinuarPago = new Button();
             textBox_TotalIva = new TextBox();
             label4 = new Label();
             label3 = new Label();
@@ -46,7 +46,6 @@
             label6 = new Label();
             label5 = new Label();
             pictureBox1 = new PictureBox();
-            btGenerarTicket = new Button();
             btnminimizar = new PictureBox();
             btncerrar = new PictureBox();
             dataGridView_CarritodeCompras = new DataGridView();
@@ -95,7 +94,7 @@
             button_SeguirComprando.FlatStyle = FlatStyle.Flat;
             button_SeguirComprando.Font = new Font("Century Gothic", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button_SeguirComprando.ForeColor = Color.FromArgb(199, 213, 224);
-            button_SeguirComprando.Location = new Point(502, 581);
+            button_SeguirComprando.Location = new Point(502, 544);
             button_SeguirComprando.Margin = new Padding(3, 4, 3, 4);
             button_SeguirComprando.Name = "button_SeguirComprando";
             button_SeguirComprando.Size = new Size(307, 55);
@@ -107,7 +106,7 @@
             // panel2
             // 
             panel2.BackColor = Color.FromArgb(42, 71, 94);
-            panel2.Controls.Add(button2);
+            panel2.Controls.Add(button_ContinuarPago);
             panel2.Controls.Add(textBox_TotalIva);
             panel2.Controls.Add(label4);
             panel2.Controls.Add(label3);
@@ -118,22 +117,23 @@
             panel2.Size = new Size(389, 180);
             panel2.TabIndex = 27;
             // 
-            // button2
+            // button_ContinuarPago
             // 
-            button2.BackColor = Color.FromArgb(23, 26, 33);
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatAppearance.MouseDownBackColor = Color.FromArgb(28, 28, 28);
-            button2.FlatAppearance.MouseOverBackColor = Color.FromArgb(60, 60, 60);
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button2.ForeColor = Color.FromArgb(199, 213, 224);
-            button2.Location = new Point(36, 124);
-            button2.Margin = new Padding(3, 4, 3, 4);
-            button2.Name = "button2";
-            button2.Size = new Size(329, 37);
-            button2.TabIndex = 28;
-            button2.Text = "CONTINUAR CON EL PAGO";
-            button2.UseVisualStyleBackColor = false;
+            button_ContinuarPago.BackColor = Color.FromArgb(23, 26, 33);
+            button_ContinuarPago.FlatAppearance.BorderSize = 0;
+            button_ContinuarPago.FlatAppearance.MouseDownBackColor = Color.FromArgb(28, 28, 28);
+            button_ContinuarPago.FlatAppearance.MouseOverBackColor = Color.FromArgb(60, 60, 60);
+            button_ContinuarPago.FlatStyle = FlatStyle.Flat;
+            button_ContinuarPago.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button_ContinuarPago.ForeColor = Color.FromArgb(199, 213, 224);
+            button_ContinuarPago.Location = new Point(36, 124);
+            button_ContinuarPago.Margin = new Padding(3, 4, 3, 4);
+            button_ContinuarPago.Name = "button_ContinuarPago";
+            button_ContinuarPago.Size = new Size(329, 37);
+            button_ContinuarPago.TabIndex = 28;
+            button_ContinuarPago.Text = "CONTINUAR CON EL PAGO";
+            button_ContinuarPago.UseVisualStyleBackColor = false;
+            button_ContinuarPago.Click += button_ContinuarPago_Click;
             // 
             // textBox_TotalIva
             // 
@@ -236,23 +236,6 @@
             pictureBox1.SizeMode = PictureBoxSizeMode.AutoSize;
             pictureBox1.TabIndex = 29;
             pictureBox1.TabStop = false;
-            // 
-            // btGenerarTicket
-            // 
-            btGenerarTicket.BackColor = Color.FromArgb(40, 40, 40);
-            btGenerarTicket.FlatAppearance.BorderSize = 0;
-            btGenerarTicket.FlatAppearance.MouseDownBackColor = Color.FromArgb(28, 28, 28);
-            btGenerarTicket.FlatAppearance.MouseOverBackColor = Color.FromArgb(60, 60, 60);
-            btGenerarTicket.FlatStyle = FlatStyle.Flat;
-            btGenerarTicket.Font = new Font("Century Gothic", 15.75F, FontStyle.Bold);
-            btGenerarTicket.ForeColor = Color.LightGray;
-            btGenerarTicket.Location = new Point(466, 476);
-            btGenerarTicket.Name = "btGenerarTicket";
-            btGenerarTicket.Size = new Size(365, 41);
-            btGenerarTicket.TabIndex = 43;
-            btGenerarTicket.Text = "Generar Ticket";
-            btGenerarTicket.UseVisualStyleBackColor = false;
-            btGenerarTicket.Click += btGenerarTicket_Click;
             // 
             // btnminimizar
             // 
@@ -387,7 +370,6 @@
             Controls.Add(dataGridView_CarritodeCompras);
             Controls.Add(btnminimizar);
             Controls.Add(btncerrar);
-            Controls.Add(btGenerarTicket);
             Controls.Add(panel3);
             Controls.Add(panel2);
             Controls.Add(button_SeguirComprando);
@@ -420,7 +402,7 @@
         private Panel panel2;
         private TextBox textBox_Total;
         private Label label3;
-        private Button button2;
+        private Button button_ContinuarPago;
         private TextBox textBox_TotalIva;
         private Label label4;
         private Panel panel3;
@@ -428,7 +410,6 @@
         private Label label7;
         private Label label6;
         private PictureBox pictureBox1;
-        private Button btGenerarTicket;
         private PictureBox btnminimizar;
         private PictureBox btncerrar;
         private DataGridView dataGridView_CarritodeCompras;

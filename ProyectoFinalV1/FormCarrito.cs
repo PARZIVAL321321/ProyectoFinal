@@ -14,17 +14,20 @@ namespace ProyectoFinalV1
 {
     public partial class FormCarrito : Form
     {
-        // Variable para nuestro PDF
-        int folio;
-
-        // Propiedad para guardar el monto total de la compra
+        // Variable para guardar el monto total de la compra
         int total;
+
+        // Variable para guardar el monto total tras el aumento del 6%
+        double total_impuesto;
 
         // Creamos nuestra lista que va a almacenar el carrito que nos llego en el constructor
         List<Juegos> carrito = new List<Juegos>();
 
         // Creamos nuestra lista que va a almacenar la informacion de los juegos que nos llego en el constructor
         List<Juegos> lista = new List<Juegos>();
+
+        // Variable para almacenar el id de la persona que entro al sistema
+        int id;
 
         // Constructor vacio
         public FormCarrito()
@@ -33,7 +36,7 @@ namespace ProyectoFinalV1
         }
 
         // Constructor por parametros (recibimos la lista que representa nuestro carrito de compras)
-        public FormCarrito(List<Juegos> carrito_constructor, List<Juegos> lista_constructor)
+        public FormCarrito(List<Juegos> carrito_constructor, List<Juegos> lista_constructor, int id_constructor)
         {
             // Llamamos a nuestra funcion importante
             InitializeComponent();
@@ -49,6 +52,9 @@ namespace ProyectoFinalV1
 
             // Mostramos los precios
             Calcular_Total();
+
+            // Guardamos el id que nos llego
+            id = id_constructor;
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -60,12 +66,6 @@ namespace ProyectoFinalV1
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }
-
-        private void btGenerarTicket_Click(object sender, EventArgs e)
-        {
-            GeneradorPdf generador = new GeneradorPdf(folio);
-            generador.GenerarPDF();
         }
 
         private void btncerrar_Click_1(object sender, EventArgs e)
@@ -120,7 +120,7 @@ namespace ProyectoFinalV1
             textBox_Total.Text = $"${total.ToString()} MXN";
 
             // Calculamos el 6% de impuesto
-            double total_impuesto = total * 1.06;
+            total_impuesto = total * 1.06;
 
             // Mostramos el valor en nuestro textBox
             textBox_TotalIva.Text = $"${total_impuesto.ToString()} MXN";
@@ -199,6 +199,23 @@ namespace ProyectoFinalV1
                 conexion.Close();
             }
             catch (Exception ex) { }
+        }
+
+        // Cuando el usuario quiera seguir con el pago
+        private void button_ContinuarPago_Click(object sender, EventArgs e)
+        {
+
+            // Creamos el formPago, mandando nuestro total
+            FormPago formPago = new FormPago(total_impuesto, id);
+
+            // Ocultamos este form
+            this.Hide();
+
+            // Mostramos el form creado usando ShowDialog para cuando nos querramos salir
+            formPago.ShowDialog();
+
+            // Cerramos este form por completo
+            this.Dispose();
         }
     }
 }

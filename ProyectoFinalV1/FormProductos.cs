@@ -19,13 +19,16 @@ namespace ProyectoFinalV1
         // Creamos otra lista donde se va a guardar el carrito de compras
         List<Juegos> carrito = new List<Juegos>();
 
+        // Variable para guardar el ID de la persona que ha entrado al sistema
+        int id;
+
         public FormProductos()
         {
             InitializeComponent();
         }
 
         // Constructor por parametros (recibe el nombre de la persona que ingreso)
-        public FormProductos(string nombre)
+        public FormProductos(string nombre, int id_constructor)
         {
             // Llamamos la funcion importante
             InitializeComponent();
@@ -35,6 +38,8 @@ namespace ProyectoFinalV1
             Cargar_Juegos();
             // Al iniciar el form, no tenemos nada en el carrito
             textBox_ConteoCarrito.Text = 0.ToString();
+            // Guardamos el valor de nuestro id
+            id = id_constructor;
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -44,7 +49,17 @@ namespace ProyectoFinalV1
 
         private void button_LogOut_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+
+            // Verificamos si hay productos en el carrito
+            if (carrito.Count() != 0)
+            {
+                MessageBox.Show("No es posible salirle sin antes vaciar el carrito");
+            }
+            else
+            {
+                this.Dispose();
+            }
+
         }
 
         private void FormProductos_MouseDown(object sender, MouseEventArgs e)
@@ -74,7 +89,7 @@ namespace ProyectoFinalV1
         private void button_Carrito_Click(object sender, EventArgs e)
         {
             // Creamos nuestro form para el carrito
-            FormCarrito formCarrito = new FormCarrito(carrito, lista);
+            FormCarrito formCarrito = new FormCarrito(carrito, lista, id);
 
             // Ocultamos el form actual
             this.Hide();
@@ -149,7 +164,7 @@ namespace ProyectoFinalV1
                 {
                     MessageBox.Show("Debe haber al menos 6 juegos disponibles");
                     // Cerramos por completo la aplicacion, ya que no se puede iniciar
-                    Application.Exit(); 
+                    Application.Exit();
                 }
 
                 // Limitamos la lista a un máximo de 10 juegos, así el administrador puede agregar más juegos en la base de datos sin problemas
