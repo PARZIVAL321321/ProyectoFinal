@@ -169,10 +169,9 @@
             // 
             btnminimizar.BackColor = Color.FromArgb(27, 40, 56);
             btnminimizar.Image = (Image)resources.GetObject("btnminimizar.Image");
-            btnminimizar.Location = new Point(1616, 27);
-            btnminimizar.Margin = new Padding(3, 4, 3, 4);
+            btnminimizar.Location = new Point(1414, 20);
             btnminimizar.Name = "btnminimizar";
-            btnminimizar.Size = new Size(29, 8);
+            btnminimizar.Size = new Size(25, 6);
             btnminimizar.SizeMode = PictureBoxSizeMode.StretchImage;
             btnminimizar.TabIndex = 22;
             btnminimizar.TabStop = false;
@@ -182,10 +181,9 @@
             // 
             btncerrar.BackColor = Color.FromArgb(27, 40, 56);
             btncerrar.Image = (Image)resources.GetObject("btncerrar.Image");
-            btncerrar.Location = new Point(1651, 15);
-            btncerrar.Margin = new Padding(3, 4, 3, 4);
+            btncerrar.Location = new Point(1445, 11);
             btncerrar.Name = "btncerrar";
-            btncerrar.Size = new Size(29, 33);
+            btncerrar.Size = new Size(25, 25);
             btncerrar.SizeMode = PictureBoxSizeMode.StretchImage;
             btncerrar.TabIndex = 21;
             btncerrar.TabStop = false;
@@ -201,9 +199,10 @@
             button_LogOut.FlatStyle = FlatStyle.Flat;
             button_LogOut.Font = new Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button_LogOut.ForeColor = Color.FromArgb(42, 71, 94);
-            button_LogOut.Location = new Point(31, 43);
+            button_LogOut.Location = new Point(27, 32);
+            button_LogOut.Margin = new Padding(3, 2, 3, 2);
             button_LogOut.Name = "button_LogOut";
-            button_LogOut.Size = new Size(145, 47);
+            button_LogOut.Size = new Size(127, 35);
             button_LogOut.TabIndex = 2;
             button_LogOut.Text = "Log-Out";
             button_LogOut.UseVisualStyleBackColor = false;
@@ -215,15 +214,14 @@
             panel3.Controls.Add(button_Carrito);
             panel3.Controls.Add(textBox_ConteoCarrito);
             panel3.Controls.Add(label_Puntodeventa);
-            panel3.Controls.Add(label_Bienvenido);
             panel3.Controls.Add(textBox_Nombre);
             panel3.Controls.Add(button_LogOut);
             panel3.Controls.Add(pictureBox2);
+            panel3.Controls.Add(label_Bienvenido);
             panel3.Dock = DockStyle.Top;
             panel3.Location = new Point(0, 0);
-            panel3.Margin = new Padding(3, 4, 3, 4);
             panel3.Name = "panel3";
-            panel3.Size = new Size(1714, 133);
+            panel3.Size = new Size(1500, 100);
             panel3.TabIndex = 6;
             panel3.MouseDown += panel3_MouseDown;
             // 
@@ -237,9 +235,10 @@
             button_Carrito.FlatStyle = FlatStyle.Flat;
             button_Carrito.Font = new Font("Century Gothic", 15.75F, FontStyle.Bold);
             button_Carrito.ForeColor = Color.LightGray;
-            button_Carrito.Location = new Point(1138, 43);
+            button_Carrito.Location = new Point(996, 32);
+            button_Carrito.Margin = new Padding(3, 2, 3, 2);
             button_Carrito.Name = "button_Carrito";
-            button_Carrito.Size = new Size(181, 36);
+            button_Carrito.Size = new Size(158, 35);
             button_Carrito.TabIndex = 43;
             button_Carrito.Text = "TU CARRITO";
             button_Carrito.UseVisualStyleBackColor = false;
@@ -252,9 +251,10 @@
             textBox_ConteoCarrito.Enabled = false;
             textBox_ConteoCarrito.Font = new Font("Century Gothic", 16.2F, FontStyle.Italic, GraphicsUnit.Point, 0);
             textBox_ConteoCarrito.ForeColor = SystemColors.Window;
-            textBox_ConteoCarrito.Location = new Point(1325, 43);
+            textBox_ConteoCarrito.Location = new Point(1159, 32);
+            textBox_ConteoCarrito.Margin = new Padding(3, 2, 3, 2);
             textBox_ConteoCarrito.Name = "textBox_ConteoCarrito";
-            textBox_ConteoCarrito.Size = new Size(36, 34);
+            textBox_ConteoCarrito.Size = new Size(32, 27);
             textBox_ConteoCarrito.TabIndex = 18;
             // 
             // label_Puntodeventa
@@ -263,20 +263,21 @@
             label_Puntodeventa.BackColor = Color.Transparent;
             label_Puntodeventa.Font = new Font("Century Gothic", 48F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label_Puntodeventa.ForeColor = Color.DimGray;
-            label_Puntodeventa.Location = new Point(765, 12);
+            label_Puntodeventa.Location = new Point(669, 9);
             label_Puntodeventa.Name = "label_Puntodeventa";
-            label_Puntodeventa.Size = new Size(252, 93);
+            label_Puntodeventa.Size = new Size(202, 77);
             label_Puntodeventa.TabIndex = 42;
             label_Puntodeventa.Text = "ESTIM";
             // 
             // label_Bienvenido
             // 
             label_Bienvenido.AutoSize = true;
+            label_Bienvenido.BackColor = Color.Transparent;
             label_Bienvenido.Font = new Font("Century Gothic", 12F, FontStyle.Italic, GraphicsUnit.Point, 0);
             label_Bienvenido.ForeColor = SystemColors.ActiveCaption;
-            label_Bienvenido.Location = new Point(232, 56);
+            label_Bienvenido.Location = new Point(203, 42);
             label_Bienvenido.Name = "label_Bienvenido";
-            label_Bienvenido.Size = new Size(123, 23);
+            label_Bienvenido.Size = new Size(101, 19);
             label_Bienvenido.TabIndex = 41;
             label_Bienvenido.Text = "Bienvenido,";
             // 
@@ -287,20 +288,20 @@
             textBox_Nombre.Enabled = false;
             textBox_Nombre.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             textBox_Nombre.ForeColor = Color.LightGray;
-            textBox_Nombre.Location = new Point(361, 56);
+            textBox_Nombre.Location = new Point(301, 41);
+            textBox_Nombre.Margin = new Padding(3, 2, 3, 2);
             textBox_Nombre.Name = "textBox_Nombre";
             textBox_Nombre.ReadOnly = true;
-            textBox_Nombre.Size = new Size(392, 25);
+            textBox_Nombre.Size = new Size(343, 20);
             textBox_Nombre.TabIndex = 8;
             // 
             // pictureBox2
             // 
             pictureBox2.BackColor = Color.Transparent;
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(1502, -67);
-            pictureBox2.Margin = new Padding(3, 4, 3, 4);
+            pictureBox2.Location = new Point(1314, -50);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(850, 295);
+            pictureBox2.Size = new Size(744, 221);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex = 7;
             pictureBox2.TabStop = false;
@@ -310,17 +311,19 @@
             TituloJuego1.BackColor = Color.FromArgb(40, 40, 40);
             TituloJuego1.BorderStyle = BorderStyle.None;
             TituloJuego1.Enabled = false;
-            TituloJuego1.Location = new Point(33, 28);
+            TituloJuego1.Location = new Point(29, 21);
+            TituloJuego1.Margin = new Padding(3, 2, 3, 2);
             TituloJuego1.Name = "TituloJuego1";
-            TituloJuego1.Size = new Size(203, 25);
+            TituloJuego1.Size = new Size(178, 20);
             TituloJuego1.TabIndex = 1;
             // 
             // ImagenJuego1
             // 
             ImagenJuego1.BackColor = Color.FromArgb(199, 213, 224);
-            ImagenJuego1.Location = new Point(32, 60);
+            ImagenJuego1.Location = new Point(28, 45);
+            ImagenJuego1.Margin = new Padding(3, 2, 3, 2);
             ImagenJuego1.Name = "ImagenJuego1";
-            ImagenJuego1.Size = new Size(336, 419);
+            ImagenJuego1.Size = new Size(294, 314);
             ImagenJuego1.SizeMode = PictureBoxSizeMode.StretchImage;
             ImagenJuego1.TabIndex = 2;
             ImagenJuego1.TabStop = false;
@@ -330,9 +333,10 @@
             GeneroJuego1.BackColor = Color.FromArgb(199, 213, 224);
             GeneroJuego1.BorderStyle = BorderStyle.None;
             GeneroJuego1.Enabled = false;
-            GeneroJuego1.Location = new Point(15, 20);
+            GeneroJuego1.Location = new Point(13, 15);
+            GeneroJuego1.Margin = new Padding(3, 2, 3, 2);
             GeneroJuego1.Name = "GeneroJuego1";
-            GeneroJuego1.Size = new Size(159, 25);
+            GeneroJuego1.Size = new Size(139, 20);
             GeneroJuego1.TabIndex = 4;
             // 
             // StockJuego1
@@ -340,9 +344,10 @@
             StockJuego1.BackColor = Color.FromArgb(199, 213, 224);
             StockJuego1.BorderStyle = BorderStyle.None;
             StockJuego1.Enabled = false;
-            StockJuego1.Location = new Point(15, 67);
+            StockJuego1.Location = new Point(13, 50);
+            StockJuego1.Margin = new Padding(3, 2, 3, 2);
             StockJuego1.Name = "StockJuego1";
-            StockJuego1.Size = new Size(159, 25);
+            StockJuego1.Size = new Size(139, 20);
             StockJuego1.TabIndex = 5;
             // 
             // PlataformaJuego1
@@ -350,9 +355,10 @@
             PlataformaJuego1.BackColor = Color.FromArgb(199, 213, 224);
             PlataformaJuego1.BorderStyle = BorderStyle.None;
             PlataformaJuego1.Enabled = false;
-            PlataformaJuego1.Location = new Point(181, 20);
+            PlataformaJuego1.Location = new Point(158, 15);
+            PlataformaJuego1.Margin = new Padding(3, 2, 3, 2);
             PlataformaJuego1.Name = "PlataformaJuego1";
-            PlataformaJuego1.Size = new Size(142, 25);
+            PlataformaJuego1.Size = new Size(124, 20);
             PlataformaJuego1.TabIndex = 6;
             // 
             // ModalidadJuego1
@@ -360,9 +366,10 @@
             ModalidadJuego1.BackColor = Color.FromArgb(199, 213, 224);
             ModalidadJuego1.BorderStyle = BorderStyle.None;
             ModalidadJuego1.Enabled = false;
-            ModalidadJuego1.Location = new Point(243, 28);
+            ModalidadJuego1.Location = new Point(213, 21);
+            ModalidadJuego1.Margin = new Padding(3, 2, 3, 2);
             ModalidadJuego1.Name = "ModalidadJuego1";
-            ModalidadJuego1.Size = new Size(126, 25);
+            ModalidadJuego1.Size = new Size(110, 20);
             ModalidadJuego1.TabIndex = 7;
             // 
             // PrecioJuego1
@@ -370,9 +377,10 @@
             PrecioJuego1.BackColor = Color.FromArgb(199, 213, 224);
             PrecioJuego1.BorderStyle = BorderStyle.None;
             PrecioJuego1.Enabled = false;
-            PrecioJuego1.Location = new Point(181, 67);
+            PrecioJuego1.Location = new Point(158, 50);
+            PrecioJuego1.Margin = new Padding(3, 2, 3, 2);
             PrecioJuego1.Name = "PrecioJuego1";
-            PrecioJuego1.Size = new Size(142, 25);
+            PrecioJuego1.Size = new Size(124, 20);
             PrecioJuego1.TabIndex = 8;
             // 
             // buttonComprarJuego1
@@ -385,9 +393,10 @@
             buttonComprarJuego1.FlatAppearance.MouseOverBackColor = Color.FromArgb(60, 60, 60);
             buttonComprarJuego1.FlatStyle = FlatStyle.Flat;
             buttonComprarJuego1.Font = new Font("Century Gothic", 15.75F);
-            buttonComprarJuego1.Location = new Point(321, 800);
+            buttonComprarJuego1.Location = new Point(281, 600);
+            buttonComprarJuego1.Margin = new Padding(3, 2, 3, 2);
             buttonComprarJuego1.Name = "buttonComprarJuego1";
-            buttonComprarJuego1.Size = new Size(250, 65);
+            buttonComprarJuego1.Size = new Size(219, 49);
             buttonComprarJuego1.TabIndex = 1;
             buttonComprarJuego1.Text = "AGREGAR";
             buttonComprarJuego1.UseVisualStyleBackColor = false;
@@ -403,9 +412,10 @@
             buttonComprarJuego2.FlatAppearance.MouseOverBackColor = Color.FromArgb(60, 60, 60);
             buttonComprarJuego2.FlatStyle = FlatStyle.Flat;
             buttonComprarJuego2.Font = new Font("Century Gothic", 15.75F);
-            buttonComprarJuego2.Location = new Point(745, 800);
+            buttonComprarJuego2.Location = new Point(652, 600);
+            buttonComprarJuego2.Margin = new Padding(3, 2, 3, 2);
             buttonComprarJuego2.Name = "buttonComprarJuego2";
-            buttonComprarJuego2.Size = new Size(250, 65);
+            buttonComprarJuego2.Size = new Size(219, 49);
             buttonComprarJuego2.TabIndex = 3;
             buttonComprarJuego2.Text = "AGREGAR";
             buttonComprarJuego2.UseVisualStyleBackColor = false;
@@ -421,9 +431,10 @@
             buttonComprarJuego3.FlatAppearance.MouseOverBackColor = Color.FromArgb(60, 60, 60);
             buttonComprarJuego3.FlatStyle = FlatStyle.Flat;
             buttonComprarJuego3.Font = new Font("Century Gothic", 15.75F);
-            buttonComprarJuego3.Location = new Point(1152, 800);
+            buttonComprarJuego3.Location = new Point(1008, 600);
+            buttonComprarJuego3.Margin = new Padding(3, 2, 3, 2);
             buttonComprarJuego3.Name = "buttonComprarJuego3";
-            buttonComprarJuego3.Size = new Size(250, 65);
+            buttonComprarJuego3.Size = new Size(219, 49);
             buttonComprarJuego3.TabIndex = 5;
             buttonComprarJuego3.Text = "AGREGAR";
             buttonComprarJuego3.UseVisualStyleBackColor = false;
@@ -464,9 +475,10 @@
             panel1.Controls.Add(pictureBox1);
             panel1.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             panel1.ForeColor = Color.LightGray;
-            panel1.Location = new Point(0, 140);
+            panel1.Location = new Point(0, 105);
+            panel1.Margin = new Padding(3, 2, 3, 2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1714, 801);
+            panel1.Size = new Size(1500, 601);
             panel1.TabIndex = 4;
             // 
             // buttonComprarJuego10
@@ -478,9 +490,10 @@
             buttonComprarJuego10.FlatAppearance.MouseOverBackColor = Color.FromArgb(60, 60, 60);
             buttonComprarJuego10.FlatStyle = FlatStyle.Flat;
             buttonComprarJuego10.Font = new Font("Century Gothic", 15.75F);
-            buttonComprarJuego10.Location = new Point(1186, 2397);
+            buttonComprarJuego10.Location = new Point(1038, 1798);
+            buttonComprarJuego10.Margin = new Padding(3, 2, 3, 2);
             buttonComprarJuego10.Name = "buttonComprarJuego10";
-            buttonComprarJuego10.Size = new Size(250, 65);
+            buttonComprarJuego10.Size = new Size(219, 49);
             buttonComprarJuego10.TabIndex = 40;
             buttonComprarJuego10.Text = "AGREGAR";
             buttonComprarJuego10.UseVisualStyleBackColor = false;
@@ -495,9 +508,10 @@
             buttonComprarJuego9.FlatAppearance.MouseOverBackColor = Color.FromArgb(60, 60, 60);
             buttonComprarJuego9.FlatStyle = FlatStyle.Flat;
             buttonComprarJuego9.Font = new Font("Century Gothic", 15.75F);
-            buttonComprarJuego9.Location = new Point(736, 2263);
+            buttonComprarJuego9.Location = new Point(644, 1697);
+            buttonComprarJuego9.Margin = new Padding(3, 2, 3, 2);
             buttonComprarJuego9.Name = "buttonComprarJuego9";
-            buttonComprarJuego9.Size = new Size(250, 65);
+            buttonComprarJuego9.Size = new Size(219, 49);
             buttonComprarJuego9.TabIndex = 39;
             buttonComprarJuego9.Text = "AGREGAR";
             buttonComprarJuego9.UseVisualStyleBackColor = false;
@@ -512,9 +526,10 @@
             buttonComprarJuego8.FlatAppearance.MouseOverBackColor = Color.FromArgb(60, 60, 60);
             buttonComprarJuego8.FlatStyle = FlatStyle.Flat;
             buttonComprarJuego8.Font = new Font("Century Gothic", 15.75F);
-            buttonComprarJuego8.Location = new Point(289, 2397);
+            buttonComprarJuego8.Location = new Point(253, 1798);
+            buttonComprarJuego8.Margin = new Padding(3, 2, 3, 2);
             buttonComprarJuego8.Name = "buttonComprarJuego8";
-            buttonComprarJuego8.Size = new Size(250, 65);
+            buttonComprarJuego8.Size = new Size(219, 49);
             buttonComprarJuego8.TabIndex = 38;
             buttonComprarJuego8.Text = "AGREGAR";
             buttonComprarJuego8.UseVisualStyleBackColor = false;
@@ -525,9 +540,10 @@
             ModalidadJuego10.BackColor = Color.FromArgb(199, 213, 224);
             ModalidadJuego10.BorderStyle = BorderStyle.None;
             ModalidadJuego10.Enabled = false;
-            ModalidadJuego10.Location = new Point(1350, 1805);
+            ModalidadJuego10.Location = new Point(1181, 1354);
+            ModalidadJuego10.Margin = new Padding(3, 2, 3, 2);
             ModalidadJuego10.Name = "ModalidadJuego10";
-            ModalidadJuego10.Size = new Size(126, 25);
+            ModalidadJuego10.Size = new Size(110, 20);
             ModalidadJuego10.TabIndex = 36;
             // 
             // ModalidadJuego9
@@ -535,9 +551,10 @@
             ModalidadJuego9.BackColor = Color.FromArgb(199, 213, 224);
             ModalidadJuego9.BorderStyle = BorderStyle.None;
             ModalidadJuego9.Enabled = false;
-            ModalidadJuego9.Location = new Point(909, 1668);
+            ModalidadJuego9.Location = new Point(795, 1251);
+            ModalidadJuego9.Margin = new Padding(3, 2, 3, 2);
             ModalidadJuego9.Name = "ModalidadJuego9";
-            ModalidadJuego9.Size = new Size(126, 25);
+            ModalidadJuego9.Size = new Size(110, 20);
             ModalidadJuego9.TabIndex = 36;
             // 
             // panel14
@@ -547,10 +564,9 @@
             panel14.Controls.Add(PlataformaJuego10);
             panel14.Controls.Add(PrecioJuego10);
             panel14.Controls.Add(StockJuego10);
-            panel14.Location = new Point(1139, 2263);
-            panel14.Margin = new Padding(3, 4, 3, 4);
+            panel14.Location = new Point(997, 1697);
             panel14.Name = "panel14";
-            panel14.Size = new Size(336, 121);
+            panel14.Size = new Size(294, 91);
             panel14.TabIndex = 37;
             // 
             // GeneroJuego10
@@ -558,9 +574,10 @@
             GeneroJuego10.BackColor = Color.FromArgb(199, 213, 224);
             GeneroJuego10.BorderStyle = BorderStyle.None;
             GeneroJuego10.Enabled = false;
-            GeneroJuego10.Location = new Point(15, 20);
+            GeneroJuego10.Location = new Point(13, 15);
+            GeneroJuego10.Margin = new Padding(3, 2, 3, 2);
             GeneroJuego10.Name = "GeneroJuego10";
-            GeneroJuego10.Size = new Size(150, 25);
+            GeneroJuego10.Size = new Size(131, 20);
             GeneroJuego10.TabIndex = 4;
             // 
             // PlataformaJuego10
@@ -568,9 +585,10 @@
             PlataformaJuego10.BackColor = Color.FromArgb(199, 213, 224);
             PlataformaJuego10.BorderStyle = BorderStyle.None;
             PlataformaJuego10.Enabled = false;
-            PlataformaJuego10.Location = new Point(171, 20);
+            PlataformaJuego10.Location = new Point(150, 15);
+            PlataformaJuego10.Margin = new Padding(3, 2, 3, 2);
             PlataformaJuego10.Name = "PlataformaJuego10";
-            PlataformaJuego10.Size = new Size(151, 25);
+            PlataformaJuego10.Size = new Size(132, 20);
             PlataformaJuego10.TabIndex = 6;
             // 
             // PrecioJuego10
@@ -578,9 +596,10 @@
             PrecioJuego10.BackColor = Color.FromArgb(199, 213, 224);
             PrecioJuego10.BorderStyle = BorderStyle.None;
             PrecioJuego10.Enabled = false;
-            PrecioJuego10.Location = new Point(171, 67);
+            PrecioJuego10.Location = new Point(150, 50);
+            PrecioJuego10.Margin = new Padding(3, 2, 3, 2);
             PrecioJuego10.Name = "PrecioJuego10";
-            PrecioJuego10.Size = new Size(151, 25);
+            PrecioJuego10.Size = new Size(132, 20);
             PrecioJuego10.TabIndex = 8;
             // 
             // StockJuego10
@@ -588,17 +607,19 @@
             StockJuego10.BackColor = Color.FromArgb(199, 213, 224);
             StockJuego10.BorderStyle = BorderStyle.None;
             StockJuego10.Enabled = false;
-            StockJuego10.Location = new Point(15, 67);
+            StockJuego10.Location = new Point(13, 50);
+            StockJuego10.Margin = new Padding(3, 2, 3, 2);
             StockJuego10.Name = "StockJuego10";
-            StockJuego10.Size = new Size(150, 25);
+            StockJuego10.Size = new Size(131, 20);
             StockJuego10.TabIndex = 5;
             // 
             // ImagenJuego10
             // 
             ImagenJuego10.BackColor = Color.FromArgb(199, 213, 224);
-            ImagenJuego10.Location = new Point(1139, 1837);
+            ImagenJuego10.Location = new Point(997, 1378);
+            ImagenJuego10.Margin = new Padding(3, 2, 3, 2);
             ImagenJuego10.Name = "ImagenJuego10";
-            ImagenJuego10.Size = new Size(336, 419);
+            ImagenJuego10.Size = new Size(294, 314);
             ImagenJuego10.SizeMode = PictureBoxSizeMode.StretchImage;
             ImagenJuego10.TabIndex = 35;
             ImagenJuego10.TabStop = false;
@@ -610,10 +631,9 @@
             panel13.Controls.Add(PlataformaJuego9);
             panel13.Controls.Add(PrecioJuego9);
             panel13.Controls.Add(StockJuego9);
-            panel13.Location = new Point(698, 2125);
-            panel13.Margin = new Padding(3, 4, 3, 4);
+            panel13.Location = new Point(611, 1594);
             panel13.Name = "panel13";
-            panel13.Size = new Size(336, 121);
+            panel13.Size = new Size(294, 91);
             panel13.TabIndex = 37;
             // 
             // GeneroJuego9
@@ -621,9 +641,10 @@
             GeneroJuego9.BackColor = Color.FromArgb(199, 213, 224);
             GeneroJuego9.BorderStyle = BorderStyle.None;
             GeneroJuego9.Enabled = false;
-            GeneroJuego9.Location = new Point(15, 20);
+            GeneroJuego9.Location = new Point(13, 15);
+            GeneroJuego9.Margin = new Padding(3, 2, 3, 2);
             GeneroJuego9.Name = "GeneroJuego9";
-            GeneroJuego9.Size = new Size(153, 25);
+            GeneroJuego9.Size = new Size(134, 20);
             GeneroJuego9.TabIndex = 4;
             // 
             // PlataformaJuego9
@@ -631,9 +652,10 @@
             PlataformaJuego9.BackColor = Color.FromArgb(199, 213, 224);
             PlataformaJuego9.BorderStyle = BorderStyle.None;
             PlataformaJuego9.Enabled = false;
-            PlataformaJuego9.Location = new Point(175, 20);
+            PlataformaJuego9.Location = new Point(153, 15);
+            PlataformaJuego9.Margin = new Padding(3, 2, 3, 2);
             PlataformaJuego9.Name = "PlataformaJuego9";
-            PlataformaJuego9.Size = new Size(147, 25);
+            PlataformaJuego9.Size = new Size(129, 20);
             PlataformaJuego9.TabIndex = 6;
             // 
             // PrecioJuego9
@@ -641,9 +663,10 @@
             PrecioJuego9.BackColor = Color.FromArgb(199, 213, 224);
             PrecioJuego9.BorderStyle = BorderStyle.None;
             PrecioJuego9.Enabled = false;
-            PrecioJuego9.Location = new Point(175, 67);
+            PrecioJuego9.Location = new Point(153, 50);
+            PrecioJuego9.Margin = new Padding(3, 2, 3, 2);
             PrecioJuego9.Name = "PrecioJuego9";
-            PrecioJuego9.Size = new Size(147, 25);
+            PrecioJuego9.Size = new Size(129, 20);
             PrecioJuego9.TabIndex = 8;
             // 
             // StockJuego9
@@ -651,9 +674,10 @@
             StockJuego9.BackColor = Color.FromArgb(199, 213, 224);
             StockJuego9.BorderStyle = BorderStyle.None;
             StockJuego9.Enabled = false;
-            StockJuego9.Location = new Point(15, 67);
+            StockJuego9.Location = new Point(13, 50);
+            StockJuego9.Margin = new Padding(3, 2, 3, 2);
             StockJuego9.Name = "StockJuego9";
-            StockJuego9.Size = new Size(153, 25);
+            StockJuego9.Size = new Size(134, 20);
             StockJuego9.TabIndex = 5;
             // 
             // TituloJuego10
@@ -661,17 +685,19 @@
             TituloJuego10.BackColor = Color.FromArgb(40, 40, 40);
             TituloJuego10.BorderStyle = BorderStyle.None;
             TituloJuego10.Enabled = false;
-            TituloJuego10.Location = new Point(1139, 1805);
+            TituloJuego10.Location = new Point(997, 1354);
+            TituloJuego10.Margin = new Padding(3, 2, 3, 2);
             TituloJuego10.Name = "TituloJuego10";
-            TituloJuego10.Size = new Size(203, 25);
+            TituloJuego10.Size = new Size(178, 20);
             TituloJuego10.TabIndex = 34;
             // 
             // ImagenJuego9
             // 
             ImagenJuego9.BackColor = Color.FromArgb(199, 213, 224);
-            ImagenJuego9.Location = new Point(698, 1700);
+            ImagenJuego9.Location = new Point(611, 1275);
+            ImagenJuego9.Margin = new Padding(3, 2, 3, 2);
             ImagenJuego9.Name = "ImagenJuego9";
-            ImagenJuego9.Size = new Size(336, 419);
+            ImagenJuego9.Size = new Size(294, 314);
             ImagenJuego9.SizeMode = PictureBoxSizeMode.StretchImage;
             ImagenJuego9.TabIndex = 35;
             ImagenJuego9.TabStop = false;
@@ -681,9 +707,10 @@
             TituloJuego9.BackColor = Color.FromArgb(40, 40, 40);
             TituloJuego9.BorderStyle = BorderStyle.None;
             TituloJuego9.Enabled = false;
-            TituloJuego9.Location = new Point(698, 1668);
+            TituloJuego9.Location = new Point(611, 1251);
+            TituloJuego9.Margin = new Padding(3, 2, 3, 2);
             TituloJuego9.Name = "TituloJuego9";
-            TituloJuego9.Size = new Size(203, 25);
+            TituloJuego9.Size = new Size(178, 20);
             TituloJuego9.TabIndex = 34;
             // 
             // ModalidadJuego8
@@ -691,9 +718,10 @@
             ModalidadJuego8.BackColor = Color.FromArgb(199, 213, 224);
             ModalidadJuego8.BorderStyle = BorderStyle.None;
             ModalidadJuego8.Enabled = false;
-            ModalidadJuego8.Location = new Point(469, 1805);
+            ModalidadJuego8.Location = new Point(410, 1354);
+            ModalidadJuego8.Margin = new Padding(3, 2, 3, 2);
             ModalidadJuego8.Name = "ModalidadJuego8";
-            ModalidadJuego8.Size = new Size(126, 25);
+            ModalidadJuego8.Size = new Size(110, 20);
             ModalidadJuego8.TabIndex = 32;
             // 
             // panel12
@@ -703,10 +731,9 @@
             panel12.Controls.Add(PlataformaJuego8);
             panel12.Controls.Add(PrecioJuego8);
             panel12.Controls.Add(StockJuego8);
-            panel12.Location = new Point(258, 2263);
-            panel12.Margin = new Padding(3, 4, 3, 4);
+            panel12.Location = new Point(226, 1697);
             panel12.Name = "panel12";
-            panel12.Size = new Size(336, 121);
+            panel12.Size = new Size(294, 91);
             panel12.TabIndex = 33;
             // 
             // GeneroJuego8
@@ -714,9 +741,10 @@
             GeneroJuego8.BackColor = Color.FromArgb(199, 213, 224);
             GeneroJuego8.BorderStyle = BorderStyle.None;
             GeneroJuego8.Enabled = false;
-            GeneroJuego8.Location = new Point(15, 20);
+            GeneroJuego8.Location = new Point(13, 15);
+            GeneroJuego8.Margin = new Padding(3, 2, 3, 2);
             GeneroJuego8.Name = "GeneroJuego8";
-            GeneroJuego8.Size = new Size(151, 25);
+            GeneroJuego8.Size = new Size(132, 20);
             GeneroJuego8.TabIndex = 4;
             // 
             // PlataformaJuego8
@@ -724,9 +752,10 @@
             PlataformaJuego8.BackColor = Color.FromArgb(199, 213, 224);
             PlataformaJuego8.BorderStyle = BorderStyle.None;
             PlataformaJuego8.Enabled = false;
-            PlataformaJuego8.Location = new Point(173, 20);
+            PlataformaJuego8.Location = new Point(151, 15);
+            PlataformaJuego8.Margin = new Padding(3, 2, 3, 2);
             PlataformaJuego8.Name = "PlataformaJuego8";
-            PlataformaJuego8.Size = new Size(150, 25);
+            PlataformaJuego8.Size = new Size(131, 20);
             PlataformaJuego8.TabIndex = 6;
             // 
             // PrecioJuego8
@@ -734,9 +763,10 @@
             PrecioJuego8.BackColor = Color.FromArgb(199, 213, 224);
             PrecioJuego8.BorderStyle = BorderStyle.None;
             PrecioJuego8.Enabled = false;
-            PrecioJuego8.Location = new Point(173, 67);
+            PrecioJuego8.Location = new Point(151, 50);
+            PrecioJuego8.Margin = new Padding(3, 2, 3, 2);
             PrecioJuego8.Name = "PrecioJuego8";
-            PrecioJuego8.Size = new Size(150, 25);
+            PrecioJuego8.Size = new Size(131, 20);
             PrecioJuego8.TabIndex = 8;
             // 
             // StockJuego8
@@ -744,17 +774,19 @@
             StockJuego8.BackColor = Color.FromArgb(199, 213, 224);
             StockJuego8.BorderStyle = BorderStyle.None;
             StockJuego8.Enabled = false;
-            StockJuego8.Location = new Point(15, 67);
+            StockJuego8.Location = new Point(13, 50);
+            StockJuego8.Margin = new Padding(3, 2, 3, 2);
             StockJuego8.Name = "StockJuego8";
-            StockJuego8.Size = new Size(151, 25);
+            StockJuego8.Size = new Size(132, 20);
             StockJuego8.TabIndex = 5;
             // 
             // ImagenJuego8
             // 
             ImagenJuego8.BackColor = Color.FromArgb(199, 213, 224);
-            ImagenJuego8.Location = new Point(258, 1837);
+            ImagenJuego8.Location = new Point(226, 1378);
+            ImagenJuego8.Margin = new Padding(3, 2, 3, 2);
             ImagenJuego8.Name = "ImagenJuego8";
-            ImagenJuego8.Size = new Size(336, 419);
+            ImagenJuego8.Size = new Size(294, 314);
             ImagenJuego8.SizeMode = PictureBoxSizeMode.StretchImage;
             ImagenJuego8.TabIndex = 31;
             ImagenJuego8.TabStop = false;
@@ -764,9 +796,10 @@
             TituloJuego8.BackColor = Color.FromArgb(40, 40, 40);
             TituloJuego8.BorderStyle = BorderStyle.None;
             TituloJuego8.Enabled = false;
-            TituloJuego8.Location = new Point(258, 1805);
+            TituloJuego8.Location = new Point(226, 1354);
+            TituloJuego8.Margin = new Padding(3, 2, 3, 2);
             TituloJuego8.Name = "TituloJuego8";
-            TituloJuego8.Size = new Size(203, 25);
+            TituloJuego8.Size = new Size(178, 20);
             TituloJuego8.TabIndex = 30;
             // 
             // buttonComprarJuego7
@@ -778,9 +811,10 @@
             buttonComprarJuego7.FlatAppearance.MouseOverBackColor = Color.FromArgb(60, 60, 60);
             buttonComprarJuego7.FlatStyle = FlatStyle.Flat;
             buttonComprarJuego7.Font = new Font("Century Gothic", 15.75F);
-            buttonComprarJuego7.Location = new Point(1360, 1560);
+            buttonComprarJuego7.Location = new Point(1190, 1170);
+            buttonComprarJuego7.Margin = new Padding(3, 2, 3, 2);
             buttonComprarJuego7.Name = "buttonComprarJuego7";
-            buttonComprarJuego7.Size = new Size(250, 65);
+            buttonComprarJuego7.Size = new Size(219, 49);
             buttonComprarJuego7.TabIndex = 29;
             buttonComprarJuego7.Text = "AGREGAR";
             buttonComprarJuego7.UseVisualStyleBackColor = false;
@@ -795,9 +829,10 @@
             buttonComprarJuego6.FlatAppearance.MouseOverBackColor = Color.FromArgb(60, 60, 60);
             buttonComprarJuego6.FlatStyle = FlatStyle.Flat;
             buttonComprarJuego6.Font = new Font("Century Gothic", 15.75F);
-            buttonComprarJuego6.Location = new Point(936, 1560);
+            buttonComprarJuego6.Location = new Point(819, 1170);
+            buttonComprarJuego6.Margin = new Padding(3, 2, 3, 2);
             buttonComprarJuego6.Name = "buttonComprarJuego6";
-            buttonComprarJuego6.Size = new Size(250, 65);
+            buttonComprarJuego6.Size = new Size(219, 49);
             buttonComprarJuego6.TabIndex = 28;
             buttonComprarJuego6.Text = "AGREGAR";
             buttonComprarJuego6.UseVisualStyleBackColor = false;
@@ -812,9 +847,10 @@
             buttonComprarJuego5.FlatAppearance.MouseOverBackColor = Color.FromArgb(60, 60, 60);
             buttonComprarJuego5.FlatStyle = FlatStyle.Flat;
             buttonComprarJuego5.Font = new Font("Century Gothic", 15.75F);
-            buttonComprarJuego5.Location = new Point(511, 1560);
+            buttonComprarJuego5.Location = new Point(447, 1170);
+            buttonComprarJuego5.Margin = new Padding(3, 2, 3, 2);
             buttonComprarJuego5.Name = "buttonComprarJuego5";
-            buttonComprarJuego5.Size = new Size(250, 65);
+            buttonComprarJuego5.Size = new Size(219, 49);
             buttonComprarJuego5.TabIndex = 27;
             buttonComprarJuego5.Text = "AGREGAR";
             buttonComprarJuego5.UseVisualStyleBackColor = false;
@@ -839,10 +875,9 @@
             panel7.Controls.Add(panel10);
             panel7.Controls.Add(ImagenJuego4);
             panel7.Controls.Add(TituloJuego4);
-            panel7.Location = new Point(3, 911);
-            panel7.Margin = new Padding(3, 4, 3, 4);
+            panel7.Location = new Point(3, 683);
             panel7.Name = "panel7";
-            panel7.Size = new Size(1688, 639);
+            panel7.Size = new Size(1477, 479);
             panel7.TabIndex = 26;
             // 
             // ModalidadJuego7
@@ -850,9 +885,10 @@
             ModalidadJuego7.BackColor = Color.FromArgb(199, 213, 224);
             ModalidadJuego7.BorderStyle = BorderStyle.None;
             ModalidadJuego7.Enabled = false;
-            ModalidadJuego7.Location = new Point(1518, 28);
+            ModalidadJuego7.Location = new Point(1328, 21);
+            ModalidadJuego7.Margin = new Padding(3, 2, 3, 2);
             ModalidadJuego7.Name = "ModalidadJuego7";
-            ModalidadJuego7.Size = new Size(126, 25);
+            ModalidadJuego7.Size = new Size(110, 20);
             ModalidadJuego7.TabIndex = 20;
             // 
             // panel11
@@ -862,10 +898,9 @@
             panel11.Controls.Add(PlataformaJuego7);
             panel11.Controls.Add(PrecioJuego7);
             panel11.Controls.Add(StockJuego7);
-            panel11.Location = new Point(1307, 485);
-            panel11.Margin = new Padding(3, 4, 3, 4);
+            panel11.Location = new Point(1144, 364);
             panel11.Name = "panel11";
-            panel11.Size = new Size(336, 121);
+            panel11.Size = new Size(294, 91);
             panel11.TabIndex = 21;
             // 
             // GeneroJuego7
@@ -873,9 +908,10 @@
             GeneroJuego7.BackColor = Color.FromArgb(199, 213, 224);
             GeneroJuego7.BorderStyle = BorderStyle.None;
             GeneroJuego7.Enabled = false;
-            GeneroJuego7.Location = new Point(15, 20);
+            GeneroJuego7.Location = new Point(13, 15);
+            GeneroJuego7.Margin = new Padding(3, 2, 3, 2);
             GeneroJuego7.Name = "GeneroJuego7";
-            GeneroJuego7.Size = new Size(151, 25);
+            GeneroJuego7.Size = new Size(132, 20);
             GeneroJuego7.TabIndex = 4;
             // 
             // PlataformaJuego7
@@ -883,9 +919,10 @@
             PlataformaJuego7.BackColor = Color.FromArgb(199, 213, 224);
             PlataformaJuego7.BorderStyle = BorderStyle.None;
             PlataformaJuego7.Enabled = false;
-            PlataformaJuego7.Location = new Point(173, 20);
+            PlataformaJuego7.Location = new Point(151, 15);
+            PlataformaJuego7.Margin = new Padding(3, 2, 3, 2);
             PlataformaJuego7.Name = "PlataformaJuego7";
-            PlataformaJuego7.Size = new Size(150, 25);
+            PlataformaJuego7.Size = new Size(131, 20);
             PlataformaJuego7.TabIndex = 6;
             // 
             // PrecioJuego7
@@ -893,9 +930,10 @@
             PrecioJuego7.BackColor = Color.FromArgb(199, 213, 224);
             PrecioJuego7.BorderStyle = BorderStyle.None;
             PrecioJuego7.Enabled = false;
-            PrecioJuego7.Location = new Point(173, 67);
+            PrecioJuego7.Location = new Point(151, 50);
+            PrecioJuego7.Margin = new Padding(3, 2, 3, 2);
             PrecioJuego7.Name = "PrecioJuego7";
-            PrecioJuego7.Size = new Size(150, 25);
+            PrecioJuego7.Size = new Size(131, 20);
             PrecioJuego7.TabIndex = 8;
             // 
             // StockJuego7
@@ -903,17 +941,19 @@
             StockJuego7.BackColor = Color.FromArgb(199, 213, 224);
             StockJuego7.BorderStyle = BorderStyle.None;
             StockJuego7.Enabled = false;
-            StockJuego7.Location = new Point(15, 67);
+            StockJuego7.Location = new Point(13, 50);
+            StockJuego7.Margin = new Padding(3, 2, 3, 2);
             StockJuego7.Name = "StockJuego7";
-            StockJuego7.Size = new Size(151, 25);
+            StockJuego7.Size = new Size(132, 20);
             StockJuego7.TabIndex = 5;
             // 
             // ImagenJuego7
             // 
             ImagenJuego7.BackColor = Color.FromArgb(199, 213, 224);
-            ImagenJuego7.Location = new Point(1307, 60);
+            ImagenJuego7.Location = new Point(1144, 45);
+            ImagenJuego7.Margin = new Padding(3, 2, 3, 2);
             ImagenJuego7.Name = "ImagenJuego7";
-            ImagenJuego7.Size = new Size(336, 419);
+            ImagenJuego7.Size = new Size(294, 314);
             ImagenJuego7.SizeMode = PictureBoxSizeMode.StretchImage;
             ImagenJuego7.TabIndex = 19;
             ImagenJuego7.TabStop = false;
@@ -923,9 +963,10 @@
             TituloJuego7.BackColor = Color.FromArgb(40, 40, 40);
             TituloJuego7.BorderStyle = BorderStyle.None;
             TituloJuego7.Enabled = false;
-            TituloJuego7.Location = new Point(1307, 28);
+            TituloJuego7.Location = new Point(1144, 21);
+            TituloJuego7.Margin = new Padding(3, 2, 3, 2);
             TituloJuego7.Name = "TituloJuego7";
-            TituloJuego7.Size = new Size(203, 25);
+            TituloJuego7.Size = new Size(178, 20);
             TituloJuego7.TabIndex = 18;
             // 
             // ModalidadJuego6
@@ -933,9 +974,10 @@
             ModalidadJuego6.BackColor = Color.FromArgb(199, 213, 224);
             ModalidadJuego6.BorderStyle = BorderStyle.None;
             ModalidadJuego6.Enabled = false;
-            ModalidadJuego6.Location = new Point(1102, 28);
+            ModalidadJuego6.Location = new Point(964, 21);
+            ModalidadJuego6.Margin = new Padding(3, 2, 3, 2);
             ModalidadJuego6.Name = "ModalidadJuego6";
-            ModalidadJuego6.Size = new Size(126, 25);
+            ModalidadJuego6.Size = new Size(110, 20);
             ModalidadJuego6.TabIndex = 16;
             // 
             // panel8
@@ -945,10 +987,9 @@
             panel8.Controls.Add(PlataformaJuego6);
             panel8.Controls.Add(PrecioJuego6);
             panel8.Controls.Add(StockJuego6);
-            panel8.Location = new Point(891, 485);
-            panel8.Margin = new Padding(3, 4, 3, 4);
+            panel8.Location = new Point(780, 364);
             panel8.Name = "panel8";
-            panel8.Size = new Size(336, 121);
+            panel8.Size = new Size(294, 91);
             panel8.TabIndex = 17;
             // 
             // GeneroJuego6
@@ -956,9 +997,10 @@
             GeneroJuego6.BackColor = Color.FromArgb(199, 213, 224);
             GeneroJuego6.BorderStyle = BorderStyle.None;
             GeneroJuego6.Enabled = false;
-            GeneroJuego6.Location = new Point(15, 20);
+            GeneroJuego6.Location = new Point(13, 15);
+            GeneroJuego6.Margin = new Padding(3, 2, 3, 2);
             GeneroJuego6.Name = "GeneroJuego6";
-            GeneroJuego6.Size = new Size(153, 25);
+            GeneroJuego6.Size = new Size(134, 20);
             GeneroJuego6.TabIndex = 4;
             // 
             // PlataformaJuego6
@@ -966,9 +1008,10 @@
             PlataformaJuego6.BackColor = Color.FromArgb(199, 213, 224);
             PlataformaJuego6.BorderStyle = BorderStyle.None;
             PlataformaJuego6.Enabled = false;
-            PlataformaJuego6.Location = new Point(175, 20);
+            PlataformaJuego6.Location = new Point(153, 15);
+            PlataformaJuego6.Margin = new Padding(3, 2, 3, 2);
             PlataformaJuego6.Name = "PlataformaJuego6";
-            PlataformaJuego6.Size = new Size(147, 25);
+            PlataformaJuego6.Size = new Size(129, 20);
             PlataformaJuego6.TabIndex = 6;
             // 
             // PrecioJuego6
@@ -976,9 +1019,10 @@
             PrecioJuego6.BackColor = Color.FromArgb(199, 213, 224);
             PrecioJuego6.BorderStyle = BorderStyle.None;
             PrecioJuego6.Enabled = false;
-            PrecioJuego6.Location = new Point(175, 67);
+            PrecioJuego6.Location = new Point(153, 50);
+            PrecioJuego6.Margin = new Padding(3, 2, 3, 2);
             PrecioJuego6.Name = "PrecioJuego6";
-            PrecioJuego6.Size = new Size(147, 25);
+            PrecioJuego6.Size = new Size(129, 20);
             PrecioJuego6.TabIndex = 8;
             // 
             // StockJuego6
@@ -986,17 +1030,19 @@
             StockJuego6.BackColor = Color.FromArgb(199, 213, 224);
             StockJuego6.BorderStyle = BorderStyle.None;
             StockJuego6.Enabled = false;
-            StockJuego6.Location = new Point(15, 67);
+            StockJuego6.Location = new Point(13, 50);
+            StockJuego6.Margin = new Padding(3, 2, 3, 2);
             StockJuego6.Name = "StockJuego6";
-            StockJuego6.Size = new Size(153, 25);
+            StockJuego6.Size = new Size(134, 20);
             StockJuego6.TabIndex = 5;
             // 
             // ImagenJuego6
             // 
             ImagenJuego6.BackColor = Color.FromArgb(199, 213, 224);
-            ImagenJuego6.Location = new Point(891, 60);
+            ImagenJuego6.Location = new Point(780, 45);
+            ImagenJuego6.Margin = new Padding(3, 2, 3, 2);
             ImagenJuego6.Name = "ImagenJuego6";
-            ImagenJuego6.Size = new Size(336, 419);
+            ImagenJuego6.Size = new Size(294, 314);
             ImagenJuego6.SizeMode = PictureBoxSizeMode.StretchImage;
             ImagenJuego6.TabIndex = 15;
             ImagenJuego6.TabStop = false;
@@ -1006,9 +1052,10 @@
             TituloJuego6.BackColor = Color.FromArgb(40, 40, 40);
             TituloJuego6.BorderStyle = BorderStyle.None;
             TituloJuego6.Enabled = false;
-            TituloJuego6.Location = new Point(891, 28);
+            TituloJuego6.Location = new Point(780, 21);
+            TituloJuego6.Margin = new Padding(3, 2, 3, 2);
             TituloJuego6.Name = "TituloJuego6";
-            TituloJuego6.Size = new Size(203, 25);
+            TituloJuego6.Size = new Size(178, 20);
             TituloJuego6.TabIndex = 14;
             // 
             // ModalidadJuego5
@@ -1016,9 +1063,10 @@
             ModalidadJuego5.BackColor = Color.FromArgb(199, 213, 224);
             ModalidadJuego5.BorderStyle = BorderStyle.None;
             ModalidadJuego5.Enabled = false;
-            ModalidadJuego5.Location = new Point(677, 28);
+            ModalidadJuego5.Location = new Point(592, 21);
+            ModalidadJuego5.Margin = new Padding(3, 2, 3, 2);
             ModalidadJuego5.Name = "ModalidadJuego5";
-            ModalidadJuego5.Size = new Size(126, 25);
+            ModalidadJuego5.Size = new Size(110, 20);
             ModalidadJuego5.TabIndex = 12;
             // 
             // panel9
@@ -1028,10 +1076,9 @@
             panel9.Controls.Add(PlataformaJuego5);
             panel9.Controls.Add(PrecioJuego5);
             panel9.Controls.Add(StockJuego5);
-            panel9.Location = new Point(466, 485);
-            panel9.Margin = new Padding(3, 4, 3, 4);
+            panel9.Location = new Point(408, 364);
             panel9.Name = "panel9";
-            panel9.Size = new Size(336, 121);
+            panel9.Size = new Size(294, 91);
             panel9.TabIndex = 13;
             // 
             // GeneroJuego5
@@ -1039,9 +1086,10 @@
             GeneroJuego5.BackColor = Color.FromArgb(199, 213, 224);
             GeneroJuego5.BorderStyle = BorderStyle.None;
             GeneroJuego5.Enabled = false;
-            GeneroJuego5.Location = new Point(15, 20);
+            GeneroJuego5.Location = new Point(13, 15);
+            GeneroJuego5.Margin = new Padding(3, 2, 3, 2);
             GeneroJuego5.Name = "GeneroJuego5";
-            GeneroJuego5.Size = new Size(152, 25);
+            GeneroJuego5.Size = new Size(133, 20);
             GeneroJuego5.TabIndex = 4;
             // 
             // PlataformaJuego5
@@ -1049,9 +1097,10 @@
             PlataformaJuego5.BackColor = Color.FromArgb(199, 213, 224);
             PlataformaJuego5.BorderStyle = BorderStyle.None;
             PlataformaJuego5.Enabled = false;
-            PlataformaJuego5.Location = new Point(174, 20);
+            PlataformaJuego5.Location = new Point(152, 15);
+            PlataformaJuego5.Margin = new Padding(3, 2, 3, 2);
             PlataformaJuego5.Name = "PlataformaJuego5";
-            PlataformaJuego5.Size = new Size(149, 25);
+            PlataformaJuego5.Size = new Size(130, 20);
             PlataformaJuego5.TabIndex = 6;
             // 
             // PrecioJuego5
@@ -1059,9 +1108,10 @@
             PrecioJuego5.BackColor = Color.FromArgb(199, 213, 224);
             PrecioJuego5.BorderStyle = BorderStyle.None;
             PrecioJuego5.Enabled = false;
-            PrecioJuego5.Location = new Point(174, 67);
+            PrecioJuego5.Location = new Point(152, 50);
+            PrecioJuego5.Margin = new Padding(3, 2, 3, 2);
             PrecioJuego5.Name = "PrecioJuego5";
-            PrecioJuego5.Size = new Size(149, 25);
+            PrecioJuego5.Size = new Size(130, 20);
             PrecioJuego5.TabIndex = 8;
             // 
             // StockJuego5
@@ -1069,17 +1119,19 @@
             StockJuego5.BackColor = Color.FromArgb(199, 213, 224);
             StockJuego5.BorderStyle = BorderStyle.None;
             StockJuego5.Enabled = false;
-            StockJuego5.Location = new Point(15, 67);
+            StockJuego5.Location = new Point(13, 50);
+            StockJuego5.Margin = new Padding(3, 2, 3, 2);
             StockJuego5.Name = "StockJuego5";
-            StockJuego5.Size = new Size(152, 25);
+            StockJuego5.Size = new Size(133, 20);
             StockJuego5.TabIndex = 5;
             // 
             // ImagenJuego5
             // 
             ImagenJuego5.BackColor = Color.FromArgb(199, 213, 224);
-            ImagenJuego5.Location = new Point(466, 60);
+            ImagenJuego5.Location = new Point(408, 45);
+            ImagenJuego5.Margin = new Padding(3, 2, 3, 2);
             ImagenJuego5.Name = "ImagenJuego5";
-            ImagenJuego5.Size = new Size(336, 419);
+            ImagenJuego5.Size = new Size(294, 314);
             ImagenJuego5.SizeMode = PictureBoxSizeMode.StretchImage;
             ImagenJuego5.TabIndex = 11;
             ImagenJuego5.TabStop = false;
@@ -1089,9 +1141,10 @@
             TituloJuego5.BackColor = Color.FromArgb(40, 40, 40);
             TituloJuego5.BorderStyle = BorderStyle.None;
             TituloJuego5.Enabled = false;
-            TituloJuego5.Location = new Point(466, 28);
+            TituloJuego5.Location = new Point(408, 21);
+            TituloJuego5.Margin = new Padding(3, 2, 3, 2);
             TituloJuego5.Name = "TituloJuego5";
-            TituloJuego5.Size = new Size(203, 25);
+            TituloJuego5.Size = new Size(178, 20);
             TituloJuego5.TabIndex = 10;
             // 
             // ModalidadJuego4
@@ -1099,9 +1152,10 @@
             ModalidadJuego4.BackColor = Color.FromArgb(199, 213, 224);
             ModalidadJuego4.BorderStyle = BorderStyle.None;
             ModalidadJuego4.Enabled = false;
-            ModalidadJuego4.Location = new Point(255, 28);
+            ModalidadJuego4.Location = new Point(223, 21);
+            ModalidadJuego4.Margin = new Padding(3, 2, 3, 2);
             ModalidadJuego4.Name = "ModalidadJuego4";
-            ModalidadJuego4.Size = new Size(126, 25);
+            ModalidadJuego4.Size = new Size(110, 20);
             ModalidadJuego4.TabIndex = 7;
             // 
             // panel10
@@ -1111,10 +1165,9 @@
             panel10.Controls.Add(PlataformaJuego4);
             panel10.Controls.Add(PrecioJuego4);
             panel10.Controls.Add(StockJuego4);
-            panel10.Location = new Point(45, 485);
-            panel10.Margin = new Padding(3, 4, 3, 4);
+            panel10.Location = new Point(39, 364);
             panel10.Name = "panel10";
-            panel10.Size = new Size(336, 121);
+            panel10.Size = new Size(294, 91);
             panel10.TabIndex = 9;
             // 
             // GeneroJuego4
@@ -1122,9 +1175,10 @@
             GeneroJuego4.BackColor = Color.FromArgb(199, 213, 224);
             GeneroJuego4.BorderStyle = BorderStyle.None;
             GeneroJuego4.Enabled = false;
-            GeneroJuego4.Location = new Point(15, 20);
+            GeneroJuego4.Location = new Point(13, 15);
+            GeneroJuego4.Margin = new Padding(3, 2, 3, 2);
             GeneroJuego4.Name = "GeneroJuego4";
-            GeneroJuego4.Size = new Size(154, 25);
+            GeneroJuego4.Size = new Size(135, 20);
             GeneroJuego4.TabIndex = 4;
             // 
             // PlataformaJuego4
@@ -1132,9 +1186,10 @@
             PlataformaJuego4.BackColor = Color.FromArgb(199, 213, 224);
             PlataformaJuego4.BorderStyle = BorderStyle.None;
             PlataformaJuego4.Enabled = false;
-            PlataformaJuego4.Location = new Point(176, 20);
+            PlataformaJuego4.Location = new Point(154, 15);
+            PlataformaJuego4.Margin = new Padding(3, 2, 3, 2);
             PlataformaJuego4.Name = "PlataformaJuego4";
-            PlataformaJuego4.Size = new Size(146, 25);
+            PlataformaJuego4.Size = new Size(128, 20);
             PlataformaJuego4.TabIndex = 6;
             // 
             // PrecioJuego4
@@ -1142,9 +1197,10 @@
             PrecioJuego4.BackColor = Color.FromArgb(199, 213, 224);
             PrecioJuego4.BorderStyle = BorderStyle.None;
             PrecioJuego4.Enabled = false;
-            PrecioJuego4.Location = new Point(176, 67);
+            PrecioJuego4.Location = new Point(154, 50);
+            PrecioJuego4.Margin = new Padding(3, 2, 3, 2);
             PrecioJuego4.Name = "PrecioJuego4";
-            PrecioJuego4.Size = new Size(146, 25);
+            PrecioJuego4.Size = new Size(128, 20);
             PrecioJuego4.TabIndex = 8;
             // 
             // StockJuego4
@@ -1152,17 +1208,19 @@
             StockJuego4.BackColor = Color.FromArgb(199, 213, 224);
             StockJuego4.BorderStyle = BorderStyle.None;
             StockJuego4.Enabled = false;
-            StockJuego4.Location = new Point(15, 67);
+            StockJuego4.Location = new Point(13, 50);
+            StockJuego4.Margin = new Padding(3, 2, 3, 2);
             StockJuego4.Name = "StockJuego4";
-            StockJuego4.Size = new Size(154, 25);
+            StockJuego4.Size = new Size(135, 20);
             StockJuego4.TabIndex = 5;
             // 
             // ImagenJuego4
             // 
             ImagenJuego4.BackColor = Color.FromArgb(199, 213, 224);
-            ImagenJuego4.Location = new Point(45, 60);
+            ImagenJuego4.Location = new Point(39, 45);
+            ImagenJuego4.Margin = new Padding(3, 2, 3, 2);
             ImagenJuego4.Name = "ImagenJuego4";
-            ImagenJuego4.Size = new Size(336, 419);
+            ImagenJuego4.Size = new Size(294, 314);
             ImagenJuego4.SizeMode = PictureBoxSizeMode.StretchImage;
             ImagenJuego4.TabIndex = 2;
             ImagenJuego4.TabStop = false;
@@ -1172,18 +1230,19 @@
             TituloJuego4.BackColor = Color.FromArgb(40, 40, 40);
             TituloJuego4.BorderStyle = BorderStyle.None;
             TituloJuego4.Enabled = false;
-            TituloJuego4.Location = new Point(45, 28);
+            TituloJuego4.Location = new Point(39, 21);
+            TituloJuego4.Margin = new Padding(3, 2, 3, 2);
             TituloJuego4.Name = "TituloJuego4";
-            TituloJuego4.Size = new Size(203, 25);
+            TituloJuego4.Size = new Size(178, 20);
             TituloJuego4.TabIndex = 1;
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Century Gothic", 20.25F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            label2.Location = new Point(470, 71);
+            label2.Location = new Point(411, 53);
             label2.Name = "label2";
-            label2.Size = new Size(917, 40);
+            label2.Size = new Size(735, 33);
             label2.TabIndex = 23;
             label2.Text = "50% a 90% de descuento hasta el 31 de dic, a las 20:00";
             // 
@@ -1191,9 +1250,9 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Century Gothic", 26.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(638, 15);
+            label1.Location = new Point(558, 11);
             label1.Name = "label1";
-            label1.Size = new Size(534, 55);
+            label1.Size = new Size(424, 42);
             label1.TabIndex = 22;
             label1.Text = "REBAJAS DE FIN DE AÑO";
             // 
@@ -1206,9 +1265,10 @@
             buttonComprarJuego4.FlatAppearance.MouseOverBackColor = Color.FromArgb(60, 60, 60);
             buttonComprarJuego4.FlatStyle = FlatStyle.Flat;
             buttonComprarJuego4.Font = new Font("Century Gothic", 15.75F);
-            buttonComprarJuego4.Location = new Point(83, 1560);
+            buttonComprarJuego4.Location = new Point(73, 1170);
+            buttonComprarJuego4.Margin = new Padding(3, 2, 3, 2);
             buttonComprarJuego4.Name = "buttonComprarJuego4";
-            buttonComprarJuego4.Size = new Size(250, 65);
+            buttonComprarJuego4.Size = new Size(219, 49);
             buttonComprarJuego4.TabIndex = 21;
             buttonComprarJuego4.Text = "AGREGAR";
             buttonComprarJuego4.UseVisualStyleBackColor = false;
@@ -1229,10 +1289,9 @@
             panel2.Controls.Add(ImagenJuego2);
             panel2.Controls.Add(TituloJuego2);
             panel2.Controls.Add(panel4);
-            panel2.Location = new Point(253, 153);
-            panel2.Margin = new Padding(3, 4, 3, 4);
+            panel2.Location = new Point(221, 115);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1219, 639);
+            panel2.Size = new Size(1067, 479);
             panel2.TabIndex = 24;
             // 
             // ModalidadJuego3
@@ -1240,9 +1299,10 @@
             ModalidadJuego3.BackColor = Color.FromArgb(199, 213, 224);
             ModalidadJuego3.BorderStyle = BorderStyle.None;
             ModalidadJuego3.Enabled = false;
-            ModalidadJuego3.Location = new Point(1055, 28);
+            ModalidadJuego3.Location = new Point(923, 21);
+            ModalidadJuego3.Margin = new Padding(3, 2, 3, 2);
             ModalidadJuego3.Name = "ModalidadJuego3";
-            ModalidadJuego3.Size = new Size(126, 25);
+            ModalidadJuego3.Size = new Size(110, 20);
             ModalidadJuego3.TabIndex = 16;
             // 
             // panel6
@@ -1252,10 +1312,9 @@
             panel6.Controls.Add(PlataformaJuego3);
             panel6.Controls.Add(PrecioJuego3);
             panel6.Controls.Add(StockJuego3);
-            panel6.Location = new Point(845, 485);
-            panel6.Margin = new Padding(3, 4, 3, 4);
+            panel6.Location = new Point(739, 364);
             panel6.Name = "panel6";
-            panel6.Size = new Size(336, 121);
+            panel6.Size = new Size(294, 91);
             panel6.TabIndex = 17;
             // 
             // GeneroJuego3
@@ -1263,9 +1322,10 @@
             GeneroJuego3.BackColor = Color.FromArgb(199, 213, 224);
             GeneroJuego3.BorderStyle = BorderStyle.None;
             GeneroJuego3.Enabled = false;
-            GeneroJuego3.Location = new Point(15, 20);
+            GeneroJuego3.Location = new Point(13, 15);
+            GeneroJuego3.Margin = new Padding(3, 2, 3, 2);
             GeneroJuego3.Name = "GeneroJuego3";
-            GeneroJuego3.Size = new Size(146, 25);
+            GeneroJuego3.Size = new Size(128, 20);
             GeneroJuego3.TabIndex = 4;
             // 
             // PlataformaJuego3
@@ -1273,9 +1333,10 @@
             PlataformaJuego3.BackColor = Color.FromArgb(199, 213, 224);
             PlataformaJuego3.BorderStyle = BorderStyle.None;
             PlataformaJuego3.Enabled = false;
-            PlataformaJuego3.Location = new Point(168, 20);
+            PlataformaJuego3.Location = new Point(147, 15);
+            PlataformaJuego3.Margin = new Padding(3, 2, 3, 2);
             PlataformaJuego3.Name = "PlataformaJuego3";
-            PlataformaJuego3.Size = new Size(154, 25);
+            PlataformaJuego3.Size = new Size(135, 20);
             PlataformaJuego3.TabIndex = 6;
             // 
             // PrecioJuego3
@@ -1283,9 +1344,10 @@
             PrecioJuego3.BackColor = Color.FromArgb(199, 213, 224);
             PrecioJuego3.BorderStyle = BorderStyle.None;
             PrecioJuego3.Enabled = false;
-            PrecioJuego3.Location = new Point(168, 67);
+            PrecioJuego3.Location = new Point(147, 50);
+            PrecioJuego3.Margin = new Padding(3, 2, 3, 2);
             PrecioJuego3.Name = "PrecioJuego3";
-            PrecioJuego3.Size = new Size(154, 25);
+            PrecioJuego3.Size = new Size(135, 20);
             PrecioJuego3.TabIndex = 8;
             // 
             // StockJuego3
@@ -1293,17 +1355,19 @@
             StockJuego3.BackColor = Color.FromArgb(199, 213, 224);
             StockJuego3.BorderStyle = BorderStyle.None;
             StockJuego3.Enabled = false;
-            StockJuego3.Location = new Point(15, 67);
+            StockJuego3.Location = new Point(13, 50);
+            StockJuego3.Margin = new Padding(3, 2, 3, 2);
             StockJuego3.Name = "StockJuego3";
-            StockJuego3.Size = new Size(146, 25);
+            StockJuego3.Size = new Size(128, 20);
             StockJuego3.TabIndex = 5;
             // 
             // ImagenJuego3
             // 
             ImagenJuego3.BackColor = Color.FromArgb(199, 213, 224);
-            ImagenJuego3.Location = new Point(845, 60);
+            ImagenJuego3.Location = new Point(739, 45);
+            ImagenJuego3.Margin = new Padding(3, 2, 3, 2);
             ImagenJuego3.Name = "ImagenJuego3";
-            ImagenJuego3.Size = new Size(336, 419);
+            ImagenJuego3.Size = new Size(294, 314);
             ImagenJuego3.SizeMode = PictureBoxSizeMode.StretchImage;
             ImagenJuego3.TabIndex = 15;
             ImagenJuego3.TabStop = false;
@@ -1313,9 +1377,10 @@
             TituloJuego3.BackColor = Color.FromArgb(40, 40, 40);
             TituloJuego3.BorderStyle = BorderStyle.None;
             TituloJuego3.Enabled = false;
-            TituloJuego3.Location = new Point(845, 28);
+            TituloJuego3.Location = new Point(739, 21);
+            TituloJuego3.Margin = new Padding(3, 2, 3, 2);
             TituloJuego3.Name = "TituloJuego3";
-            TituloJuego3.Size = new Size(203, 25);
+            TituloJuego3.Size = new Size(178, 20);
             TituloJuego3.TabIndex = 14;
             // 
             // ModalidadJuego2
@@ -1323,9 +1388,10 @@
             ModalidadJuego2.BackColor = Color.FromArgb(199, 213, 224);
             ModalidadJuego2.BorderStyle = BorderStyle.None;
             ModalidadJuego2.Enabled = false;
-            ModalidadJuego2.Location = new Point(653, 28);
+            ModalidadJuego2.Location = new Point(571, 21);
+            ModalidadJuego2.Margin = new Padding(3, 2, 3, 2);
             ModalidadJuego2.Name = "ModalidadJuego2";
-            ModalidadJuego2.Size = new Size(126, 25);
+            ModalidadJuego2.Size = new Size(110, 20);
             ModalidadJuego2.TabIndex = 12;
             // 
             // panel5
@@ -1335,10 +1401,9 @@
             panel5.Controls.Add(PlataformaJuego2);
             panel5.Controls.Add(PrecioJuego2);
             panel5.Controls.Add(StockJuego2);
-            panel5.Location = new Point(442, 485);
-            panel5.Margin = new Padding(3, 4, 3, 4);
+            panel5.Location = new Point(387, 364);
             panel5.Name = "panel5";
-            panel5.Size = new Size(336, 121);
+            panel5.Size = new Size(294, 91);
             panel5.TabIndex = 13;
             // 
             // GeneroJuego2
@@ -1346,9 +1411,10 @@
             GeneroJuego2.BackColor = Color.FromArgb(199, 213, 224);
             GeneroJuego2.BorderStyle = BorderStyle.None;
             GeneroJuego2.Enabled = false;
-            GeneroJuego2.Location = new Point(15, 20);
+            GeneroJuego2.Location = new Point(13, 15);
+            GeneroJuego2.Margin = new Padding(3, 2, 3, 2);
             GeneroJuego2.Name = "GeneroJuego2";
-            GeneroJuego2.Size = new Size(153, 25);
+            GeneroJuego2.Size = new Size(134, 20);
             GeneroJuego2.TabIndex = 4;
             // 
             // PlataformaJuego2
@@ -1356,9 +1422,10 @@
             PlataformaJuego2.BackColor = Color.FromArgb(199, 213, 224);
             PlataformaJuego2.BorderStyle = BorderStyle.None;
             PlataformaJuego2.Enabled = false;
-            PlataformaJuego2.Location = new Point(175, 20);
+            PlataformaJuego2.Location = new Point(153, 15);
+            PlataformaJuego2.Margin = new Padding(3, 2, 3, 2);
             PlataformaJuego2.Name = "PlataformaJuego2";
-            PlataformaJuego2.Size = new Size(147, 25);
+            PlataformaJuego2.Size = new Size(129, 20);
             PlataformaJuego2.TabIndex = 6;
             // 
             // PrecioJuego2
@@ -1366,9 +1433,10 @@
             PrecioJuego2.BackColor = Color.FromArgb(199, 213, 224);
             PrecioJuego2.BorderStyle = BorderStyle.None;
             PrecioJuego2.Enabled = false;
-            PrecioJuego2.Location = new Point(175, 67);
+            PrecioJuego2.Location = new Point(153, 50);
+            PrecioJuego2.Margin = new Padding(3, 2, 3, 2);
             PrecioJuego2.Name = "PrecioJuego2";
-            PrecioJuego2.Size = new Size(147, 25);
+            PrecioJuego2.Size = new Size(129, 20);
             PrecioJuego2.TabIndex = 8;
             // 
             // StockJuego2
@@ -1376,17 +1444,19 @@
             StockJuego2.BackColor = Color.FromArgb(199, 213, 224);
             StockJuego2.BorderStyle = BorderStyle.None;
             StockJuego2.Enabled = false;
-            StockJuego2.Location = new Point(15, 67);
+            StockJuego2.Location = new Point(13, 50);
+            StockJuego2.Margin = new Padding(3, 2, 3, 2);
             StockJuego2.Name = "StockJuego2";
-            StockJuego2.Size = new Size(153, 25);
+            StockJuego2.Size = new Size(134, 20);
             StockJuego2.TabIndex = 5;
             // 
             // ImagenJuego2
             // 
             ImagenJuego2.BackColor = Color.FromArgb(199, 213, 224);
-            ImagenJuego2.Location = new Point(442, 60);
+            ImagenJuego2.Location = new Point(387, 45);
+            ImagenJuego2.Margin = new Padding(3, 2, 3, 2);
             ImagenJuego2.Name = "ImagenJuego2";
-            ImagenJuego2.Size = new Size(336, 419);
+            ImagenJuego2.Size = new Size(294, 314);
             ImagenJuego2.SizeMode = PictureBoxSizeMode.StretchImage;
             ImagenJuego2.TabIndex = 11;
             ImagenJuego2.TabStop = false;
@@ -1397,9 +1467,10 @@
             TituloJuego2.BorderStyle = BorderStyle.None;
             TituloJuego2.Enabled = false;
             TituloJuego2.ForeColor = Color.White;
-            TituloJuego2.Location = new Point(442, 28);
+            TituloJuego2.Location = new Point(387, 21);
+            TituloJuego2.Margin = new Padding(3, 2, 3, 2);
             TituloJuego2.Name = "TituloJuego2";
-            TituloJuego2.Size = new Size(203, 25);
+            TituloJuego2.Size = new Size(178, 20);
             TituloJuego2.TabIndex = 10;
             // 
             // panel4
@@ -1409,32 +1480,31 @@
             panel4.Controls.Add(PrecioJuego1);
             panel4.Controls.Add(PlataformaJuego1);
             panel4.Controls.Add(GeneroJuego1);
-            panel4.Location = new Point(33, 485);
-            panel4.Margin = new Padding(3, 4, 3, 4);
+            panel4.Location = new Point(29, 364);
             panel4.Name = "panel4";
-            panel4.Size = new Size(336, 121);
+            panel4.Size = new Size(294, 91);
             panel4.TabIndex = 9;
             // 
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(1311, 2001);
-            pictureBox1.Margin = new Padding(3, 4, 3, 4);
+            pictureBox1.Location = new Point(1147, 1501);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(471, 465);
+            pictureBox1.Size = new Size(412, 349);
             pictureBox1.TabIndex = 41;
             pictureBox1.TabStop = false;
             // 
             // FormProductos
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(27, 40, 56);
-            ClientSize = new Size(1714, 936);
+            ClientSize = new Size(1500, 702);
             Controls.Add(panel1);
             Controls.Add(panel3);
             ForeColor = Color.LightGray;
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 2, 3, 2);
             Name = "FormProductos";
             Opacity = 0.95D;
             StartPosition = FormStartPosition.CenterScreen;

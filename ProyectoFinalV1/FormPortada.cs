@@ -19,7 +19,10 @@ namespace ProyectoFinalV1
             this.Hide();
 
             // Mostramos ahora el siguiente form (FormLogIn)
-            form.Show();
+            form.ShowDialog();
+
+            // Cerramos nuestro sistema
+            Application.Exit();
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]

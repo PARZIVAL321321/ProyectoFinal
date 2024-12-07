@@ -20,6 +20,11 @@ namespace ProyectoFinalV1
             InitializeComponent();
         }
 
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
+
         // Boton para verificar si el usuario puede entrar al punto de venta o no
         private void button_Acceder_Click(object sender, EventArgs e)
         {
@@ -48,11 +53,13 @@ namespace ProyectoFinalV1
             if (lector.HasRows == true)
             {
 
+                Persona usuario = Obtener_Persona();
+
                 // Mostramos mensaje de bienvenida si la persona pudo acceder al sistema
                 MessageBox.Show("¡Bienvenido!");
 
                 // Verificamos que tipo de cuenta ingreso
-                switch (Obtener_Tipo_Cuenta())
+                switch (usuario.Tipo)
                 {
                     // En caso de que haya entrado el Admin
                     case 0:
@@ -73,7 +80,7 @@ namespace ProyectoFinalV1
                     case 1:
 
                         // Creamos nuestro form (obtenemos el nombre de la persona que ingreso)
-                        FormProductos formProductos = new FormProductos(Obtener_Nombre_Cuenta(), Obtener_Id_Cuenta());
+                        FormProductos formProductos = new FormProductos(usuario);
                         // Ocultamos este form
                         this.Hide();
                         // Usamos el ShowDialog para cuando el usuario haga Logout
@@ -91,130 +98,64 @@ namespace ProyectoFinalV1
             {
                 MessageBox.Show("Usuario o contraseña incorrectos");
             }
-
-            // Cerramos la conexion con nuestro servidor
-            conexion.Close();
         }
 
-        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
-        private extern static void ReleaseCapture();
-        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
-        private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
-
-        // Funcion para obtener el tipo de cuenta de la persona que quiere ingresar al sistema
-        private int Obtener_Tipo_Cuenta()
+        private Persona Obtener_Persona()
         {
-            // Creamos nuestra variable para la base de datos, y pasamos nuestra informacion
-            MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=proyecto; User=root; Password=; Sslmode=none;");
-            // Abrimos nuestra base de datos
-            conexion.Open();
-
-            // Variable a retornar
-            int regresar = 0;
-
             try
             {
-                string consulta = "SELECT Tipo FROM personas WHERE Cuenta='" + textBox_Cuenta.Text + "' AND Contra='" + textBox_Contra.Text + "'";
+                // Creamos nuestra variable para la base de datos, y pasamos nuestra informacion
+                MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=proyecto; User=root; Password=; Sslmode=none;");
+                // Abrimos nuestra base de datos
+                conexion.Open();
+
+                // Linea de comando de SQL
+                string consulta = "SELECT * FROM personas WHERE Cuenta='" + textBox_Cuenta.Text + "' AND Contra='" + textBox_Contra.Text + "'";
+                // Cargamos nuestro comando
                 MySqlCommand comando = new MySqlCommand(consulta, conexion);
 
-                // Ejecutamos la consulta y leer los resultados
-                MySqlDataReader reader = comando.ExecuteReader();
+                // Ejecutamos el comando
+                MySqlDataReader lector = comando.ExecuteReader();
 
-                while (reader.Read()) // Solo va a encontrar un registro (gracias a la consulta)
+                // Mientras haya algo que leer
+                if (lector.Read())
                 {
-                    // Guardamos el valor
-                    regresar = Convert.ToInt32(reader["Tipo"]);
-                }
+                    // Creamos las variables que vamos a usar
+                    int id;
+                    string nombre;
+                    string cuenta;
+                    string contra;
+                    int monto;
+                    int tipo;
 
-                reader.Close();
+                    // Asignamos los valores recuperados a nuestras variables
+                    id = int.Parse(lector["ID"].ToString());
+                    nombre = lector["Nombre"].ToString();
+                    cuenta = lector["Cuenta"].ToString();
+                    contra = lector["Contra"].ToString();
+                    // Convertimos el valor recuperado a string, para despues pasarlo a entero
+                    monto = int.Parse(lector["Monto"].ToString());
+                    tipo = int.Parse(lector["Tipo"].ToString());
+
+                    // Creamos el objeto de nuestra clase
+                   Persona usuario = new Persona(id, nombre, cuenta, contra, monto, tipo);
+
+                    return usuario;
+
+                }
+                else
+                {
+                    return null;
+                }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al leer la base de datos: " + ex.Message);
+                MessageBox.Show("Error al obtener al usuario: " + ex.Message);
+
+                return null;
             }
 
-            // Cerramos la conexion
-            conexion.Close();
-
-
-            return regresar;
         }
-
-        // Funcion para obtener el nombre de la persona que ha ingresado al sistema
-        private string Obtener_Nombre_Cuenta()
-        {
-            // Creamos nuestra variable para la base de datos, y pasamos nuestra informacion
-            MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=proyecto; User=root; Password=; Sslmode=none;");
-            // Abrimos nuestra base de datos
-            conexion.Open();
-
-            // Variable a retornar
-            string regresar = "";
-
-            try
-            {
-                string consulta = "SELECT Nombre FROM personas WHERE Cuenta='" + textBox_Cuenta.Text + "' AND Contra='" + textBox_Contra.Text + "'";
-                MySqlCommand comando = new MySqlCommand(consulta, conexion);
-
-                // Ejecutamos la consulta y leer los resultados
-                MySqlDataReader reader = comando.ExecuteReader();
-
-                while (reader.Read()) // Solo va a encontrar un registro (gracias a la consulta)
-                {
-                    // Guardamos el valor
-                    regresar = Convert.ToString(reader["Nombre"]);
-                }
-
-                reader.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al leer la base de datos: " + ex.Message);
-            }
-
-            // Cerramos la conexion
-            conexion.Close();
-
-            return regresar;
-        }
-
-        private int Obtener_Id_Cuenta()
-        {
-            // Creamos nuestra variable para la base de datos, y pasamos nuestra informacion
-            MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=proyecto; User=root; Password=; Sslmode=none;");
-            // Abrimos nuestra base de datos
-            conexion.Open();
-
-            // Variable a retornar
-            int regresar = 0;
-
-            try
-            {
-                string consulta = "SELECT ID FROM personas WHERE Cuenta='" + textBox_Cuenta.Text + "' AND Contra='" + textBox_Contra.Text + "'";
-                MySqlCommand comando = new MySqlCommand(consulta, conexion);
-
-                // Ejecutamos la consulta y leer los resultados
-                MySqlDataReader reader = comando.ExecuteReader();
-
-                while (reader.Read()) // Solo va a encontrar un registro (gracias a la consulta)
-                {
-                    // Guardamos el valor
-                    regresar = Convert.ToInt32(reader["ID"]);
-                }
-
-                reader.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al leer la base de datos: " + ex.Message);
-            }
-
-            // Cerramos la conexion
-            conexion.Close();
-
-
-            return regresar;
-        } 
 
         private void btncerrar_Click(object sender, EventArgs e)
         {

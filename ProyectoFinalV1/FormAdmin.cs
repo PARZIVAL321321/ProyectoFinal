@@ -100,7 +100,7 @@ namespace ProyectoFinalV1
             conexion.Open();
 
             // Linea de comando de SQL
-            string consulta = "SELECT * from juegos";
+            string consulta = "SELECT * FROM juegos";
             MySqlDataAdapter adaptador = new MySqlDataAdapter(consulta, conexion);
 
             // Creamos nuestra tabla
@@ -297,6 +297,9 @@ namespace ProyectoFinalV1
 
                 // Ejecutamos el comando y guardamos el resultado
                 total = Convert.ToInt32(comando.ExecuteScalar());
+
+                // Cerramos nuestra conexion
+                conexion.Close();
             }
             catch (Exception ex)
             {

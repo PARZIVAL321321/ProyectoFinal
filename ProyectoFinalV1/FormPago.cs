@@ -16,15 +16,15 @@ namespace ProyectoFinalV1
     {
 
         // Variable para almacenar el total que nos llega por parte del constructor
-        double total_impuesto;
+        int total_impuesto;
         // Variable para nuestro PDF
         int folio;
 
         // Banderas para saber que tipo de pago se esta realizando
         bool bandera_Efectivo, bandera_Tarjeta;
 
-        // Variable para guardar el id de la persona que entro al sistema
-        int id;
+        // Variable para almacenar al usuario que ingreso
+        Persona usuario;
 
         // Constuctor vacio
         public FormPago()
@@ -33,7 +33,7 @@ namespace ProyectoFinalV1
         }
 
         // Constructor por parametros (nos llega nuestro total de la compra)
-        public FormPago(double total_impuesto_constructor, int id_constructor)
+        public FormPago(int total_impuesto_constructor, Persona usuario_constructor)
         {
             // Llamamos a nuestra funcion importante
             InitializeComponent();
@@ -41,8 +41,10 @@ namespace ProyectoFinalV1
             // Guardamos el valor de nuestra variable
             total_impuesto = total_impuesto_constructor;
 
-            // Guardamos nuestro id
-            id = id_constructor;
+            // Guardamos a nuestro usuario
+            usuario = usuario_constructor;
+
+            textBox_TotalCompra.Text = total_impuesto.ToString();
         }
 
         // En caso de que se haya elegido para con efectivo
@@ -100,7 +102,7 @@ namespace ProyectoFinalV1
                     );
 
                 // Llamamos a una funcion para que verifique si la informacion de la tarjeta es correcta Verificar_Informacion(informacion
-                if (true)
+                if (Verificar_Informacion(informacion))
                 {
                     // Realizamos la compra
                     try
@@ -111,8 +113,8 @@ namespace ProyectoFinalV1
                         conexion.Open();
 
                         // Linea de comando de SQL
-                        string consulta = "UPDATE personas SET Monto=" + "'" + total_impuesto + "'" +
-                            "WHERE ID =" + id;
+                        string consulta = "UPDATE personas SET Monto=" + "'" + (total_impuesto + usuario.Monto) + "'" +
+                            "WHERE ID =" + usuario.Id;
 
                         // Cargamos neestra linea de comandos
                         MySqlCommand comando = new MySqlCommand(consulta, conexion);
@@ -120,10 +122,13 @@ namespace ProyectoFinalV1
                         // Ejecutamos el comando
                         comando.ExecuteNonQuery();
 
-                        // Cerramos nuestra conexion
-                        conexion.Close();
-
                         MessageBox.Show("Compra realizada con exito");
+
+                        // Actualizamos el valor del monto
+                        usuario.Monto += total_impuesto; 
+
+                        // Tras realizar la compra, cerramos este form
+                        this.Dispose();
 
 
                     }
@@ -142,7 +147,47 @@ namespace ProyectoFinalV1
             }
             else if (bandera_Efectivo)
             {
+                int dinero_usuario = Convert.ToInt32(textBox_Efectivo.Text);
 
+                if (dinero_usuario < total_impuesto)
+                {
+                    MessageBox.Show("Dinero insuficiente para la compra");
+                }
+                else
+                {
+                    // Realizamos la compra
+                    try
+                    {
+                        // Creamos nuestra variable para la base de datos, y pasamos nuestra informacion
+                        MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=proyecto; User=root; Password=; Sslmode=none;");
+                        // Abrimos nuestra base de datos
+                        conexion.Open();
+
+                        // Linea de comando de SQL
+                        string consulta = "UPDATE personas SET Monto=" + "'" + (total_impuesto + usuario.Monto) + "'" +
+                            "WHERE ID =" + usuario.Id;
+
+                        // Cargamos neestra linea de comandos
+                        MySqlCommand comando = new MySqlCommand(consulta, conexion);
+
+                        // Ejecutamos el comando
+                        comando.ExecuteNonQuery();
+
+                        MessageBox.Show("Compra realizada con exito");
+
+                        // Actualizamos el valor del monto
+                        usuario.Monto += total_impuesto;
+
+                        // Tras realizar la compra, cerramos este form
+                        this.Dispose();
+
+
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error en la actualizacion del registro: " + ex.Message);
+                    }
+                }
             }
 
         }
@@ -150,32 +195,21 @@ namespace ProyectoFinalV1
         private bool Verificar_Informacion(Tarjeta objeto)
         {
             // Primero verificamos si el numero de cuenta es de 16 digitos
-            if (objeto.Numero > 16)
+            if (objeto.Numero.ToString().Length != 16)
             {
                 return false;
             }
-            else
-            {
-                // Obtenemos la fecha actual
-                DateTime hoy = DateTime.Today;
 
-                // Verificamos si la tarjeta es vigente
-                if (objeto.Year < hoy.Year)
-                {
-                    return false;
-                }
-                else
-                {
-                    if (objeto.Mes < hoy.Month)
-                    {
-                        return false;
-                    }
-                    else
-                    {
-                        return true;
-                    }
-                }
+            // Obtenemos la fecha actual
+            DateTime hoy = DateTime.Today;
+
+            // Verificamos si la tarjeta es vigente
+            if (objeto.Year < hoy.Year || (objeto.Year == hoy.Year && objeto.Mes < hoy.Month))
+            {
+                return false;
             }
+
+            return true;
 
         }
 

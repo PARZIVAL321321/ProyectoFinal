@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 06, 2024 at 12:45 AM
+-- Generation Time: Dec 07, 2024 at 04:19 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -43,13 +43,14 @@ CREATE TABLE `juegos` (
 --
 
 INSERT INTO `juegos` (`ID`, `Nombre`, `Imagen`, `Genero`, `Plataforma`, `Modalidad`, `Precio`, `Stock`) VALUES
-(1, 'Call of Duty', 'COD.jpg', 'Accion', 'Xbox', 'Multiplayer', 1200, 15),
-(2, 'Minecraft', 'Minecraft.jpg', 'Indie', 'Xbox', 'Singleplayer', 800, 15),
+(1, 'Call of Duty', 'COD.jpg', 'Accion', 'Xbox', 'Multiplayer', 1200, 13),
+(2, 'Minecraft', 'Minecraft.jpg', 'Indie', 'Xbox', 'Singleplayer', 800, 9),
 (3, 'Valorant', 'Valorant.jpg', 'Estrategia', 'PC', 'Multiplayer', 0, 500),
 (4, 'Counter Strike', 'CSGO.jpg', 'Accion', 'PC', 'Multiplayer', 0, 500),
 (5, 'GTA V', 'GTA.jpg', 'Mundo abierto', 'PlayStation', 'Multiplayer', 500, 10),
-(6, 'Rust', 'Rust.jpg', 'Supervivencia', 'PC', 'Multijugador', 400, 30),
-(7, 'Rainbow Six', 'R6.jpg', 'Estrategia', 'Xbox', 'Multijugador', 600, 10);
+(6, 'Rust', 'Rust.jpg', 'Supervivencia', 'PC', 'Multijugador', 400, 3),
+(7, 'Rainbow Six', 'R6.jpg', 'Estrategia', 'Xbox', 'Multijugador', 600, 10),
+(8, 'Halo Infinite', 'HaloInf.jpg', 'Aventura', 'Xbox', 'Individual', 300, 4);
 
 --
 -- Indexes for dumped tables

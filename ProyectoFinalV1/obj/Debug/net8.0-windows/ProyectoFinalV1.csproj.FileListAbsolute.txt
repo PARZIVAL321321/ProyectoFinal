@@ -427,3 +427,5 @@ C:\Users\alegr\Desktop\ProyectoFinal\ProyectoFinalV1\bin\Debug\net8.0-windows\Ju
 C:\Users\alegr\Desktop\ProyectoFinal\ProyectoFinalV1\bin\Debug\net8.0-windows\itextsharp.dll
 C:\Users\alegr\Desktop\ProyectoFinal\ProyectoFinalV1\obj\Debug\net8.0-windows\ProyectoFinalV1.FormCarrito.resources
 C:\Users\alegr\Desktop\ProyectoFinal\ProyectoFinalV1\obj\Debug\net8.0-windows\ProyectoFinalV1.FormPago.resources
+C:\Users\Alegria\Desktop\ProyectoFinal\ProyectoFinalV1\obj\Debug\net8.0-windows\ProyectoFinalV1.FormPago.resources
+C:\Users\Alegria\Desktop\ProyectoFinal\ProyectoFinalV1\bin\Debug\net8.0-windows\Juegos\HaloInf.jpg

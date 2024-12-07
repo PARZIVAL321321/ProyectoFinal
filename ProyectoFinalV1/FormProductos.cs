@@ -19,8 +19,11 @@ namespace ProyectoFinalV1
         // Creamos otra lista donde se va a guardar el carrito de compras
         List<Juegos> carrito = new List<Juegos>();
 
-        // Variable para guardar el ID de la persona que ha entrado al sistema
-        int id;
+        // Variable para almacenar al usuario que ingreso
+        Persona usuario;
+
+        // Variable para almacenar si el usuario llego a comprar
+        int monto_usuario = 0;
 
         public FormProductos()
         {
@@ -28,18 +31,20 @@ namespace ProyectoFinalV1
         }
 
         // Constructor por parametros (recibe el nombre de la persona que ingreso)
-        public FormProductos(string nombre, int id_constructor)
+        public FormProductos(Persona usuario_constructor)
         {
             // Llamamos la funcion importante
             InitializeComponent();
+            // Guardamos al usuario
+            usuario = usuario_constructor;
             // Ponemos le nombre recibido en nuestro textBox
-            textBox_Nombre.Text = nombre;
+            textBox_Nombre.Text = usuario.Nombre;
             // Al iniciar el form, cargamos los juegos
             Cargar_Juegos();
             // Al iniciar el form, no tenemos nada en el carrito
             textBox_ConteoCarrito.Text = 0.ToString();
-            // Guardamos el valor de nuestro id
-            id = id_constructor;
+            // Guardamos el monto actual del usuario
+            monto_usuario = usuario.Monto;
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -53,7 +58,7 @@ namespace ProyectoFinalV1
             // Verificamos si hay productos en el carrito
             if (carrito.Count() != 0)
             {
-                MessageBox.Show("No es posible salirle sin antes vaciar el carrito");
+                MessageBox.Show("No es posible salirse sin antes vaciar el carrito");
             }
             else
             {
@@ -89,7 +94,7 @@ namespace ProyectoFinalV1
         private void button_Carrito_Click(object sender, EventArgs e)
         {
             // Creamos nuestro form para el carrito
-            FormCarrito formCarrito = new FormCarrito(carrito, lista, id);
+            FormCarrito formCarrito = new FormCarrito(carrito, lista, usuario);
 
             // Ocultamos el form actual
             this.Hide();
@@ -97,16 +102,30 @@ namespace ProyectoFinalV1
             // Mostramos el nuevo form (usando ShowDialog)
             formCarrito.ShowDialog();
 
-            // Volvemos a mostrar este form
-            this.Show();
+            // Verificamos si al regresar del carrito, el usuario realizo una compra o no
+            // En caso de que el usuario si haya realizado una compra, entonces cerramos ya este form
+            if (usuario.Monto != monto_usuario)
+            {
+                this.Dispose();
+            }
+            // En caso contrario, mostramos todo como estaba
+            else
+            {
 
-            // Limpiamos nuevamente nuestra lista
-            lista.Clear();
+                // Volvemos a mostrar este form
+                this.Show();
 
-            // Cargamos todos los juegos que tenemos
-            Cargar_Juegos();
+                // Limpiamos nuevamente nuestra lista
+                lista.Clear();
 
-            textBox_ConteoCarrito.Text = carrito.Count.ToString();
+                // Cargamos todos los juegos que tenemos
+                Cargar_Juegos();
+
+                // Mostramos nuevamente la cantidad de productos que tenemos en nuestro carrito
+                textBox_ConteoCarrito.Text = carrito.Count.ToString();
+            }
+
+
 
         }
 
@@ -167,7 +186,7 @@ namespace ProyectoFinalV1
                     Application.Exit();
                 }
 
-                // Limitamos la lista a un máximo de 10 juegos, así el administrador puede agregar más juegos en la base de datos sin problemas
+                // Limitamos la lista a un maximo de 10 juegos, asi el administrador puede agregar mas juegos en la base de datos sin problemas
                 if (lista.Count > 10)
                 {
                     //Tomamos los primeros 10 elementos de la lista
@@ -193,10 +212,10 @@ namespace ProyectoFinalV1
             }
         }
 
-        // Método para asignar los valores de un juego a los controles correspondientes
+        // Metodo para asignar los valores de un juego a los controles correspondientes
         private void AsignarValoresJuego(int indice, Juegos juego)
         {
-            // Asignamos los valores a los controles correspondientes según el índice del juego
+            // Asignamos los valores a los controles correspondientes segun el indice del juego
             switch (indice)
             {
                 case 0:
@@ -260,7 +279,7 @@ namespace ProyectoFinalV1
                     CargarImagen(ImagenJuego6, juego.Imagen);
                     break;
                 case 6:
-                    // Asignamos los valores del séptimo juego a los controles correspondientes
+                    // Asignamos los valores del septimo juego a los controles correspondientes
                     TituloJuego7.Text = juego.Nombre;
                     ModalidadJuego7.Text = juego.Modalidad;
                     GeneroJuego7.Text = juego.Genero;
@@ -290,7 +309,7 @@ namespace ProyectoFinalV1
                     CargarImagen(ImagenJuego9, juego.Imagen);
                     break;
                 case 9:
-                    // Asignamos los valores del décimo juego a los controles correspondientes
+                    // Asignamos los valores del decimo juego a los controles correspondientes
                     TituloJuego10.Text = juego.Nombre;
                     ModalidadJuego10.Text = juego.Modalidad;
                     GeneroJuego10.Text = juego.Genero;
@@ -302,7 +321,7 @@ namespace ProyectoFinalV1
             }
         }
 
-        // Método para ocultar los controles de un juego
+        // Metodo para ocultar los controles de un juego
         private void OcultarJuego(int indice)
         {
             switch (indice)
@@ -354,7 +373,7 @@ namespace ProyectoFinalV1
             }
         }
 
-        // Método para cargar una imagen a un pictureBox
+        // Metodo para cargar una imagen a un pictureBox
         private void CargarImagen(PictureBox pictureBox, string nombreImagen)
         {
             // Construimos la ruta hacia la carpeta donde estan las imagenes de los juegos
@@ -379,77 +398,77 @@ namespace ProyectoFinalV1
             }
         }
 
-        // Evento para el botón de comprar el primer juego
+        // Evento para el boton de comprar el primer juego
         private void buttonComprarJuego1_Click(object sender, EventArgs e)
         {
-            // Llama al método para agregar el juego al carrito, pasando el índice 0
+            // Llama al metodo para agregar el juego al carrito, pasando el indice 0
             AgregarJuegoAlCarrito(0);
         }
 
-        // Evento para el botón de comprar el segundo juego
+        // Evento para el boton de comprar el segundo juego
         private void buttonComprarJuego2_Click(object sender, EventArgs e)
         {
-            // Llama al método para agregar el juego al carrito, pasando el índice 1
+            // Llama al metodo para agregar el juego al carrito, pasando el indice 1
             AgregarJuegoAlCarrito(1);
         }
 
-        // Evento para el botón de comprar el tercer juego
+        // Evento para el boton de comprar el tercer juego
         private void buttonComprarJuego3_Click(object sender, EventArgs e)
         {
-            // Llama al método para agregar el juego al carrito, pasando el índice 2
+            // Llama al metodo para agregar el juego al carrito, pasando el indice 2
             AgregarJuegoAlCarrito(2);
         }
 
-        // Evento para el botón de comprar el cuarto juego
+        // Evento para el boton de comprar el cuarto juego
         private void buttonComprarJuego4_Click(object sender, EventArgs e)
         {
-            // Llama al método para agregar el juego al carrito, pasando el índice 3
+            // Llama al metodo para agregar el juego al carrito, pasando el indice 3
             AgregarJuegoAlCarrito(3);
         }
 
-        // Evento para el botón de comprar el quinto juego
+        // Evento para el boton de comprar el quinto juego
         private void buttonComprarJuego5_Click(object sender, EventArgs e)
         {
-            // Llama al método para agregar el juego al carrito, pasando el índice 4
+            // Llama al metodo para agregar el juego al carrito, pasando el indice 4
             AgregarJuegoAlCarrito(4);
         }
 
-        // Evento para el botón de comprar el sexto juego
+        // Evento para el boton de comprar el sexto juego
         private void buttonComprarJuego6_Click(object sender, EventArgs e)
         {
-            // Llama al método para agregar el juego al carrito, pasando el índice 5
+            // Llama al metodo para agregar el juego al carrito, pasando el indice 5
             AgregarJuegoAlCarrito(5);
         }
 
-        // Evento para el botón de comprar el séptimo juego
+        // Evento para el boton de comprar el septimo juego
         private void buttonComprarJuego7_Click(object sender, EventArgs e)
         {
-            // Llama al método para agregar el juego al carrito, pasando el índice 6
+            // Llama al metodo para agregar el juego al carrito, pasando el indice 6
             AgregarJuegoAlCarrito(6);
         }
 
-        // Evento para el botón de comprar el octavo juego
+        // Evento para el boton de comprar el octavo juego
         private void buttonComprarJuego8_Click(object sender, EventArgs e)
         {
-            // Llama al método para agregar el juego al carrito, pasando el índice 7
+            // Llama al metodo para agregar el juego al carrito, pasando el indice 7
             AgregarJuegoAlCarrito(7);
         }
 
-        // Evento para el botón de comprar el noveno juego
+        // Evento para el boton de comprar el noveno juego
         private void buttonComprarJuego9_Click(object sender, EventArgs e)
         {
-            // Llama al método para agregar el juego al carrito, pasando el índice 8
+            // Llama al metodo para agregar el juego al carrito, pasando el indice 8
             AgregarJuegoAlCarrito(8);
         }
 
-        // Evento para el botón de comprar el décimo juego
+        // Evento para el boton de comprar el decimo juego
         private void buttonComprarJuego10_Click(object sender, EventArgs e)
         {
-            // Llama al método para agregar el juego al carrito, pasando el índice 9
+            // Llama al metodo para agregar el juego al carrito, pasando el indice 9
             AgregarJuegoAlCarrito(9);
         }
 
-        // Método para agregar un juego al carrito
+        // Metodo para agregar un juego al carrito
         private void AgregarJuegoAlCarrito(int indice)
         {
             // Verificamos si hay stock disponible 
@@ -529,8 +548,6 @@ namespace ProyectoFinalV1
                     // Ejecutamos el comando
                     comando.ExecuteNonQuery();
 
-                    // Cerramos nuestra conexion
-                    conexion.Close();
                 }
                 catch (Exception ex)
                 {

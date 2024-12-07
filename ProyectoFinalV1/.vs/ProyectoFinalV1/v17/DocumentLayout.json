@@ -1,36 +1,7 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\alegr\\Desktop\\ProyectoFinal\\ProyectoFinalV1\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{FB66F1B0-E526-4F56-8D53-094F3AB041D9}|ProyectoFinalV1.csproj|c:\\users\\alegr\\desktop\\proyectofinal\\proyectofinalv1\\formpago.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FB66F1B0-E526-4F56-8D53-094F3AB041D9}|ProyectoFinalV1.csproj|solutionrelative:formpago.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FB66F1B0-E526-4F56-8D53-094F3AB041D9}|ProyectoFinalV1.csproj|c:\\users\\alegr\\desktop\\proyectofinal\\proyectofinalv1\\tarjeta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FB66F1B0-E526-4F56-8D53-094F3AB041D9}|ProyectoFinalV1.csproj|solutionrelative:tarjeta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FB66F1B0-E526-4F56-8D53-094F3AB041D9}|ProyectoFinalV1.csproj|c:\\users\\alegr\\desktop\\proyectofinal\\proyectofinalv1\\formpago.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FB66F1B0-E526-4F56-8D53-094F3AB041D9}|ProyectoFinalV1.csproj|solutionrelative:formpago.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FB66F1B0-E526-4F56-8D53-094F3AB041D9}|ProyectoFinalV1.csproj|c:\\users\\alegr\\desktop\\proyectofinal\\proyectofinalv1\\formproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FB66F1B0-E526-4F56-8D53-094F3AB041D9}|ProyectoFinalV1.csproj|solutionrelative:formproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FB66F1B0-E526-4F56-8D53-094F3AB041D9}|ProyectoFinalV1.csproj|c:\\users\\alegr\\desktop\\proyectofinal\\proyectofinalv1\\formcarrito.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FB66F1B0-E526-4F56-8D53-094F3AB041D9}|ProyectoFinalV1.csproj|solutionrelative:formcarrito.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FB66F1B0-E526-4F56-8D53-094F3AB041D9}|ProyectoFinalV1.csproj|c:\\users\\alegr\\desktop\\proyectofinal\\proyectofinalv1\\formadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FB66F1B0-E526-4F56-8D53-094F3AB041D9}|ProyectoFinalV1.csproj|solutionrelative:formadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FB66F1B0-E526-4F56-8D53-094F3AB041D9}|ProyectoFinalV1.csproj|c:\\users\\alegr\\desktop\\proyectofinal\\proyectofinalv1\\formcarrito.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FB66F1B0-E526-4F56-8D53-094F3AB041D9}|ProyectoFinalV1.csproj|solutionrelative:formcarrito.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    }
-  ],
+  "WorkspaceRootPath": "C:\\Users\\Alegria\\Desktop\\ProyectoFinal\\ProyectoFinalV1\\",
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -38,100 +9,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 2,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Tarjeta.cs",
-              "DocumentMoniker": "C:\\Users\\alegr\\Desktop\\ProyectoFinal\\ProyectoFinalV1\\Tarjeta.cs",
-              "RelativeDocumentMoniker": "Tarjeta.cs",
-              "ToolTip": "C:\\Users\\alegr\\Desktop\\ProyectoFinal\\ProyectoFinalV1\\Tarjeta.cs",
-              "RelativeToolTip": "Tarjeta.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAD4vx4AAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-06T23:36:16.781Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "FormAdmin.cs",
-              "DocumentMoniker": "C:\\Users\\alegr\\Desktop\\ProyectoFinal\\ProyectoFinalV1\\FormAdmin.cs",
-              "RelativeDocumentMoniker": "FormAdmin.cs",
-              "ToolTip": "C:\\Users\\alegr\\Desktop\\ProyectoFinal\\ProyectoFinalV1\\FormAdmin.cs",
-              "RelativeToolTip": "FormAdmin.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-06T23:27:21.781Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "FormProductos.cs",
-              "DocumentMoniker": "C:\\Users\\alegr\\Desktop\\ProyectoFinal\\ProyectoFinalV1\\FormProductos.cs",
-              "RelativeDocumentMoniker": "FormProductos.cs",
-              "ToolTip": "C:\\Users\\alegr\\Desktop\\ProyectoFinal\\ProyectoFinalV1\\FormProductos.cs",
-              "RelativeToolTip": "FormProductos.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAqwFgAAABFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-06T22:30:03.877Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "FormCarrito.cs",
-              "DocumentMoniker": "C:\\Users\\alegr\\Desktop\\ProyectoFinal\\ProyectoFinalV1\\FormCarrito.cs",
-              "RelativeDocumentMoniker": "FormCarrito.cs",
-              "ToolTip": "C:\\Users\\alegr\\Desktop\\ProyectoFinal\\ProyectoFinalV1\\FormCarrito.cs",
-              "RelativeToolTip": "FormCarrito.cs",
-              "ViewState": "AgIAACUAAAAAAAAAAAAswM8AAAA6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-06T21:54:05.503Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "FormCarrito.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\alegr\\Desktop\\ProyectoFinal\\ProyectoFinalV1\\FormCarrito.cs",
-              "RelativeDocumentMoniker": "FormCarrito.cs",
-              "ToolTip": "C:\\Users\\alegr\\Desktop\\ProyectoFinal\\ProyectoFinalV1\\FormCarrito.cs [Design]",
-              "RelativeToolTip": "FormCarrito.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-06T21:53:36.314Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "FormPago.cs",
-              "DocumentMoniker": "C:\\Users\\alegr\\Desktop\\ProyectoFinal\\ProyectoFinalV1\\FormPago.cs",
-              "RelativeDocumentMoniker": "FormPago.cs",
-              "ToolTip": "C:\\Users\\alegr\\Desktop\\ProyectoFinal\\ProyectoFinalV1\\FormPago.cs",
-              "RelativeToolTip": "FormPago.cs",
-              "ViewState": "AgIAAF4AAAAAAAAAAAAgwGYAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-06T21:56:33.74Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "FormPago.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\alegr\\Desktop\\ProyectoFinal\\ProyectoFinalV1\\FormPago.cs",
-              "RelativeDocumentMoniker": "FormPago.cs",
-              "ToolTip": "C:\\Users\\alegr\\Desktop\\ProyectoFinal\\ProyectoFinalV1\\FormPago.cs [Design]",
-              "RelativeToolTip": "FormPago.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-06T22:07:41.973Z",
-              "EditorCaption": " [Design]"
             }
           ]
         }
