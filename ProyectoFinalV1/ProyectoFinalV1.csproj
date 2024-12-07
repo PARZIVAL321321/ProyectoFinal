@@ -9,6 +9,45 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Juegos\COD.jpg" />
+    <None Remove="Juegos\CSGO.jpg" />
+    <None Remove="Juegos\GTA.jpg" />
+    <None Remove="Juegos\HaloInf.jpg" />
+    <None Remove="Juegos\Minecraft.jpg" />
+    <None Remove="Juegos\R6.jpg" />
+    <None Remove="Juegos\Rust.jpg" />
+    <None Remove="Juegos\Valorant.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Juegos\COD.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Juegos\CSGO.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Juegos\GTA.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Juegos\HaloInf.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Juegos\Minecraft.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Juegos\R6.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Juegos\Rust.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Juegos\Valorant.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="iTextSharp" Version="5.5.13.4" />
     <PackageReference Include="MySql.Data" Version="9.1.0" />
   </ItemGroup>
 

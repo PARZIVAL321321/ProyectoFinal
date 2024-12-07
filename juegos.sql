@@ -2,10 +2,10 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Servidor: 127.0.0.1
--- Tiempo de generación: 28-11-2024 a las 15:33:13
--- Versión del servidor: 10.4.32-MariaDB
--- Versión de PHP: 8.2.12
+-- Host: 127.0.0.1
+-- Generation Time: Dec 07, 2024 at 04:19 AM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,24 +18,49 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `proyecto`
+-- Database: `proyecto`
 --
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `juegos`
+-- Table structure for table `juegos`
 --
 
 CREATE TABLE `juegos` (
   `ID` int(11) NOT NULL,
-  `Nombre` varchar(50) NOT NULL,
-  `Sinopsis` text NOT NULL,
-  `Genero` varchar(50) NOT NULL,
-  `Plataforma` varchar(50) NOT NULL,
-  `Modalidad` varchar(50) NOT NULL,
-  `Precio` int(11) NOT NULL
+  `Nombre` varchar(50) DEFAULT NULL,
+  `Imagen` varchar(50) DEFAULT NULL,
+  `Genero` varchar(50) DEFAULT NULL,
+  `Plataforma` varchar(50) DEFAULT NULL,
+  `Modalidad` varchar(50) DEFAULT NULL,
+  `Precio` int(11) DEFAULT NULL,
+  `Stock` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `juegos`
+--
+
+INSERT INTO `juegos` (`ID`, `Nombre`, `Imagen`, `Genero`, `Plataforma`, `Modalidad`, `Precio`, `Stock`) VALUES
+(1, 'Call of Duty', 'COD.jpg', 'Accion', 'Xbox', 'Multiplayer', 1200, 13),
+(2, 'Minecraft', 'Minecraft.jpg', 'Indie', 'Xbox', 'Singleplayer', 800, 9),
+(3, 'Valorant', 'Valorant.jpg', 'Estrategia', 'PC', 'Multiplayer', 0, 500),
+(4, 'Counter Strike', 'CSGO.jpg', 'Accion', 'PC', 'Multiplayer', 0, 500),
+(5, 'GTA V', 'GTA.jpg', 'Mundo abierto', 'PlayStation', 'Multiplayer', 500, 10),
+(6, 'Rust', 'Rust.jpg', 'Supervivencia', 'PC', 'Multijugador', 400, 3),
+(7, 'Rainbow Six', 'R6.jpg', 'Estrategia', 'Xbox', 'Multijugador', 600, 10),
+(8, 'Halo Infinite', 'HaloInf.jpg', 'Aventura', 'Xbox', 'Individual', 300, 4);
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `juegos`
+--
+ALTER TABLE `juegos`
+  ADD PRIMARY KEY (`ID`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
