@@ -138,7 +138,7 @@ namespace ProyectoFinalV1
                     tipo = int.Parse(lector["Tipo"].ToString());
 
                     // Creamos el objeto de nuestra clase
-                   Persona usuario = new Persona(id, nombre, cuenta, contra, monto, tipo);
+                    Persona usuario = new Persona(id, nombre, cuenta, contra, monto, tipo);
 
                     return usuario;
 
@@ -214,6 +214,11 @@ namespace ProyectoFinalV1
         private void textBox_Contra_TextChanged(object sender, EventArgs e)
         {
             textBox_Contra.UseSystemPasswordChar = true;
+        }
+
+        private void textBox_Cuenta_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

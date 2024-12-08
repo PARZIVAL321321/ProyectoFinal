@@ -54,9 +54,9 @@
             label_Puntodeventa.BackColor = Color.Transparent;
             label_Puntodeventa.Font = new Font("Century Gothic", 36F, FontStyle.Bold);
             label_Puntodeventa.ForeColor = Color.DimGray;
-            label_Puntodeventa.Location = new Point(585, 12);
+            label_Puntodeventa.Location = new Point(512, 9);
             label_Puntodeventa.Name = "label_Puntodeventa";
-            label_Puntodeventa.Size = new Size(470, 70);
+            label_Puntodeventa.Size = new Size(376, 56);
             label_Puntodeventa.TabIndex = 0;
             label_Puntodeventa.Text = "Punto de venta";
             // 
@@ -66,9 +66,9 @@
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Century Gothic", 9.75F, FontStyle.Italic, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.DimGray;
-            label1.Location = new Point(656, 88);
+            label1.Location = new Point(574, 66);
             label1.Name = "label1";
-            label1.Size = new Size(335, 21);
+            label1.Size = new Size(257, 16);
             label1.TabIndex = 2;
             label1.Text = "\"La diversion a la palma de tus manos\"";
             // 
@@ -78,12 +78,12 @@
             textBox_Cuenta.BorderStyle = BorderStyle.None;
             textBox_Cuenta.Font = new Font("Century Gothic", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             textBox_Cuenta.ForeColor = Color.Transparent;
-            textBox_Cuenta.Location = new Point(397, 225);
-            textBox_Cuenta.Margin = new Padding(3, 4, 3, 4);
+            textBox_Cuenta.Location = new Point(347, 169);
             textBox_Cuenta.Name = "textBox_Cuenta";
             textBox_Cuenta.PlaceholderText = "Cuenta";
-            textBox_Cuenta.Size = new Size(800, 33);
+            textBox_Cuenta.Size = new Size(700, 26);
             textBox_Cuenta.TabIndex = 4;
+            textBox_Cuenta.TextChanged += textBox_Cuenta_TextChanged;
             textBox_Cuenta.Enter += textBox_Cuenta_Enter;
             textBox_Cuenta.Leave += textBox_Cuenta_Leave;
             // 
@@ -93,11 +93,10 @@
             textBox_Contra.BorderStyle = BorderStyle.None;
             textBox_Contra.Font = new Font("Century Gothic", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             textBox_Contra.ForeColor = Color.Transparent;
-            textBox_Contra.Location = new Point(397, 311);
-            textBox_Contra.Margin = new Padding(3, 4, 3, 4);
+            textBox_Contra.Location = new Point(347, 233);
             textBox_Contra.Name = "textBox_Contra";
             textBox_Contra.PlaceholderText = "Contraseña";
-            textBox_Contra.Size = new Size(800, 33);
+            textBox_Contra.Size = new Size(700, 26);
             textBox_Contra.TabIndex = 5;
             textBox_Contra.TextChanged += textBox_Contra_TextChanged;
             textBox_Contra.Enter += textBox_Contra_Enter;
@@ -113,10 +112,9 @@
             button_Acceder.FlatStyle = FlatStyle.Flat;
             button_Acceder.Font = new Font("Century Gothic", 15.75F);
             button_Acceder.ForeColor = Color.LightGray;
-            button_Acceder.Location = new Point(408, 473);
-            button_Acceder.Margin = new Padding(3, 4, 3, 4);
+            button_Acceder.Location = new Point(357, 355);
             button_Acceder.Name = "button_Acceder";
-            button_Acceder.Size = new Size(777, 73);
+            button_Acceder.Size = new Size(680, 55);
             button_Acceder.TabIndex = 6;
             button_Acceder.Text = "ACCEDER";
             button_Acceder.UseVisualStyleBackColor = false;
@@ -125,19 +123,17 @@
             // panel3
             // 
             panel3.BackColor = Color.DimGray;
-            panel3.Location = new Point(397, 353);
-            panel3.Margin = new Padding(3, 4, 3, 4);
+            panel3.Location = new Point(347, 265);
             panel3.Name = "panel3";
-            panel3.Size = new Size(800, 1);
+            panel3.Size = new Size(700, 1);
             panel3.TabIndex = 12;
             // 
             // panel1
             // 
             panel1.BackColor = Color.DimGray;
-            panel1.Location = new Point(397, 277);
-            panel1.Margin = new Padding(3, 4, 3, 4);
+            panel1.Location = new Point(347, 208);
             panel1.Name = "panel1";
-            panel1.Size = new Size(800, 1);
+            panel1.Size = new Size(700, 1);
             panel1.TabIndex = 13;
             // 
             // panel2
@@ -146,17 +142,15 @@
             panel2.Controls.Add(pictureBox2);
             panel2.Dock = DockStyle.Left;
             panel2.Location = new Point(0, 0);
-            panel2.Margin = new Padding(3, 4, 3, 4);
             panel2.Name = "panel2";
-            panel2.Size = new Size(333, 667);
+            panel2.Size = new Size(291, 500);
             panel2.TabIndex = 14;
             // 
             // pictureBox2
             // 
             pictureBox2.BackColor = Color.Transparent;
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(37, 131);
-            pictureBox2.Margin = new Padding(3, 4, 3, 4);
+            pictureBox2.Location = new Point(32, 98);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(1500, 465);
             pictureBox2.SizeMode = PictureBoxSizeMode.AutoSize;
@@ -166,10 +160,9 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(1130, -53);
-            pictureBox1.Margin = new Padding(3, 4, 3, 4);
+            pictureBox1.Location = new Point(989, -40);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(303, 804);
+            pictureBox1.Size = new Size(265, 603);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 5;
             pictureBox1.TabStop = false;
@@ -177,10 +170,9 @@
             // btncerrar
             // 
             btncerrar.Image = (Image)resources.GetObject("btncerrar.Image");
-            btncerrar.Location = new Point(1299, 16);
-            btncerrar.Margin = new Padding(3, 4, 3, 4);
+            btncerrar.Location = new Point(1137, 12);
             btncerrar.Name = "btncerrar";
-            btncerrar.Size = new Size(29, 33);
+            btncerrar.Size = new Size(25, 25);
             btncerrar.SizeMode = PictureBoxSizeMode.StretchImage;
             btncerrar.TabIndex = 15;
             btncerrar.TabStop = false;
@@ -189,10 +181,9 @@
             // btnminimizar
             // 
             btnminimizar.Image = (Image)resources.GetObject("btnminimizar.Image");
-            btnminimizar.Location = new Point(1264, 27);
-            btnminimizar.Margin = new Padding(3, 4, 3, 4);
+            btnminimizar.Location = new Point(1106, 20);
             btnminimizar.Name = "btnminimizar";
-            btnminimizar.Size = new Size(29, 11);
+            btnminimizar.Size = new Size(25, 8);
             btnminimizar.SizeMode = PictureBoxSizeMode.StretchImage;
             btnminimizar.TabIndex = 16;
             btnminimizar.TabStop = false;
@@ -200,10 +191,10 @@
             // 
             // FormLogIn
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(15, 15, 15);
-            ClientSize = new Size(1353, 667);
+            ClientSize = new Size(1184, 500);
             Controls.Add(btnminimizar);
             Controls.Add(btncerrar);
             Controls.Add(panel2);
@@ -216,7 +207,6 @@
             Controls.Add(label_Puntodeventa);
             Controls.Add(pictureBox1);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(3, 4, 3, 4);
             Name = "FormLogIn";
             Opacity = 0.95D;
             StartPosition = FormStartPosition.CenterScreen;

@@ -50,6 +50,9 @@ namespace ProyectoFinalV1
         // En caso de que se haya elegido para con efectivo
         private void radioButton_Efectivo_CheckedChanged(object sender, EventArgs e)
         {
+            PanelEfectivo.Width = 482; // Mostrar panel efectivo
+            panel1.Width = 0; // Ocultar panel tarjeta
+
             // Ocultamos la informacion para hacer el pago por tarjeta
             textBox_NombreCuenta.Visible = false;
             textBox_NumeroTarjeta.Visible = false;
@@ -69,6 +72,8 @@ namespace ProyectoFinalV1
         // En caso de que se haya elegido con tarjeta 
         private void radioButton_Tarjeta_CheckedChanged(object sender, EventArgs e)
         {
+            panel1.Width = 482; // Mostrar panel tarjeta
+            PanelEfectivo.Width = 0; // Ocultar panel efectivo
 
             // Ocultamos la informacion para hacer el pago de efectivo
             textBox_Efectivo.Visible = false;
@@ -125,7 +130,7 @@ namespace ProyectoFinalV1
                         MessageBox.Show("Compra realizada con exito");
 
                         // Actualizamos el valor del monto
-                        usuario.Monto += total_impuesto; 
+                        usuario.Monto += total_impuesto;
 
                         // Tras realizar la compra, cerramos este form
                         this.Dispose();
@@ -213,5 +218,71 @@ namespace ProyectoFinalV1
 
         }
 
+        private void textBox_TotalIva_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+        private void label_Pregunta_Click(object sender, EventArgs e)
+        {
+            // Lógica para manejar el evento
+        }
+
+
+        private void textBox_TotalCompra_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_Efectivo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_MesTarjeta_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+        private void FormPago_Load(object sender, EventArgs e)
+        {
+            panel1.Width = 0; // Ocultar el panel tarjeta
+            PanelEfectivo.Width = 0; // Ocultar el panel efectivo
+
+            textBox_Efectivo.Visible = false; // Ocultar campos de efectivo
+            textBox_NombreCuenta.Visible = false; // Ocultar campos de tarjeta
+            textBox_NumeroTarjeta.Visible = false;
+            textBox_MesTarjeta.Visible = false;
+            textBox_YearTarjeta.Visible = false;
+            textBox_CVVTarjeta.Visible = false;
+
+            // Inicializar banderas
+            bandera_Tarjeta = false;
+            bandera_Efectivo = false;
+        }
+
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void PanelEfectivo_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+ 
     }
+
 }

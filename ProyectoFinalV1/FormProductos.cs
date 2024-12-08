@@ -186,6 +186,15 @@ namespace ProyectoFinalV1
                     Application.Exit();
                 }
 
+                if (lista.Count < 7)
+                {
+                    this.Size = new Size(1500, 330);
+                }
+                else if (lista.Count >= 7)
+                {
+                    this.Size = new Size(1500, 702);
+                }
+
                 // Limitamos la lista a un maximo de 10 juegos, asi el administrador puede agregar mas juegos en la base de datos sin problemas
                 if (lista.Count > 10)
                 {
@@ -558,6 +567,33 @@ namespace ProyectoFinalV1
             {
                 MessageBox.Show($"No hay stock disponible del juego {lista[indice].Nombre}");
             }
+        }
+
+        private void panel7_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btncerrar_Click_1(object sender, EventArgs e)
+        {
+            if (carrito.Count() != 0)
+            {
+                MessageBox.Show("No es posible salirse sin antes vaciar el carrito");
+            }
+            else
+            {
+                Application.Exit();
+            }
+        }
+
+        private void ImagenJuego8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
