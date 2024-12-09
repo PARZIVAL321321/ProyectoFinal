@@ -110,7 +110,7 @@
             pictureBox2 = new PictureBox();
             panel39 = new Panel();
             button_BuscarModificar = new Button();
-            button1 = new Button();
+            button_MostrarGrafica = new Button();
             panel2 = new Panel();
             panel3 = new Panel();
             ((System.ComponentModel.ISupportInitialize)pictureBox_Modificar).BeginInit();
@@ -1112,7 +1112,7 @@
             // 
             panel39.BackColor = Color.FromArgb(42, 71, 94);
             panel39.Controls.Add(button_BuscarModificar);
-            panel39.Controls.Add(button1);
+            panel39.Controls.Add(button_MostrarGrafica);
             panel39.Controls.Add(button_Modificar);
             panel39.Controls.Add(button_Subir);
             panel39.Controls.Add(panel36);
@@ -1166,22 +1166,23 @@
             button_BuscarModificar.UseVisualStyleBackColor = false;
             button_BuscarModificar.Click += button_BuscarModificar_Click;
             // 
-            // button1
+            // button_MostrarGrafica
             // 
-            button1.BackColor = Color.FromArgb(40, 40, 40);
-            button1.Cursor = Cursors.Hand;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatAppearance.MouseDownBackColor = Color.FromArgb(28, 28, 28);
-            button1.FlatAppearance.MouseOverBackColor = Color.FromArgb(60, 60, 60);
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Century Gothic", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button1.ForeColor = Color.LightGray;
-            button1.Location = new Point(22, 671);
-            button1.Name = "button1";
-            button1.Size = new Size(414, 63);
-            button1.TabIndex = 76;
-            button1.Text = "MOSTRAR GRAFICA";
-            button1.UseVisualStyleBackColor = false;
+            button_MostrarGrafica.BackColor = Color.FromArgb(40, 40, 40);
+            button_MostrarGrafica.Cursor = Cursors.Hand;
+            button_MostrarGrafica.FlatAppearance.BorderSize = 0;
+            button_MostrarGrafica.FlatAppearance.MouseDownBackColor = Color.FromArgb(28, 28, 28);
+            button_MostrarGrafica.FlatAppearance.MouseOverBackColor = Color.FromArgb(60, 60, 60);
+            button_MostrarGrafica.FlatStyle = FlatStyle.Flat;
+            button_MostrarGrafica.Font = new Font("Century Gothic", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button_MostrarGrafica.ForeColor = Color.LightGray;
+            button_MostrarGrafica.Location = new Point(22, 671);
+            button_MostrarGrafica.Name = "button_MostrarGrafica";
+            button_MostrarGrafica.Size = new Size(414, 63);
+            button_MostrarGrafica.TabIndex = 76;
+            button_MostrarGrafica.Text = "MOSTRAR GRAFICA";
+            button_MostrarGrafica.UseVisualStyleBackColor = false;
+            button_MostrarGrafica.Click += button_MostrarGrafica_Click;
             // 
             // panel2
             // 
@@ -1378,7 +1379,7 @@
         private Panel panel5;
         private Panel panel2;
         private Panel panel3;
-        private Button button1;
+        private Button button_MostrarGrafica;
         private Button button_BuscarModificar;
     }
 }

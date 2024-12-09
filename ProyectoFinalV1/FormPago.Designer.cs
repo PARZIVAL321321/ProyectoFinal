@@ -123,7 +123,7 @@
             textBox_MesTarjeta.Location = new Point(0, 2);
             textBox_MesTarjeta.Margin = new Padding(3, 2, 3, 2);
             textBox_MesTarjeta.Name = "textBox_MesTarjeta";
-            textBox_MesTarjeta.PlaceholderText = "dd/mm";
+            textBox_MesTarjeta.PlaceholderText = "mm";
             textBox_MesTarjeta.Size = new Size(72, 19);
             textBox_MesTarjeta.TabIndex = 5;
             textBox_MesTarjeta.TextAlign = HorizontalAlignment.Center;
@@ -498,6 +498,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(3, 2, 3, 2);
             Name = "FormPago";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "FormPago";
             Load += FormPago_Load;
             panel3.ResumeLayout(false);

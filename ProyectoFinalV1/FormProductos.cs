@@ -73,11 +73,6 @@ namespace ProyectoFinalV1
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-        private void btncerrar_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
         private void btnminimizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;

@@ -48,7 +48,6 @@
             buttonComprarJuego2 = new Button();
             buttonComprarJuego3 = new Button();
             panel1 = new Panel();
-            btncerrar = new PictureBox();
             btnminimizar = new PictureBox();
             buttonComprarJuego10 = new Button();
             buttonComprarJuego9 = new Button();
@@ -139,7 +138,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)ImagenJuego1).BeginInit();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)btncerrar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btnminimizar).BeginInit();
             panel14.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)ImagenJuego10).BeginInit();
@@ -426,7 +424,6 @@
             // 
             panel1.AutoScroll = true;
             panel1.BackColor = Color.Transparent;
-            panel1.Controls.Add(btncerrar);
             panel1.Controls.Add(btnminimizar);
             panel1.Controls.Add(buttonComprarJuego10);
             panel1.Controls.Add(buttonComprarJuego9);
@@ -464,22 +461,11 @@
             panel1.TabIndex = 4;
             panel1.Paint += panel1_Paint;
             // 
-            // btncerrar
-            // 
-            btncerrar.Image = (Image)resources.GetObject("btncerrar.Image");
-            btncerrar.Location = new Point(1435, 3);
-            btncerrar.Name = "btncerrar";
-            btncerrar.Size = new Size(25, 25);
-            btncerrar.SizeMode = PictureBoxSizeMode.StretchImage;
-            btncerrar.TabIndex = 42;
-            btncerrar.TabStop = false;
-            btncerrar.Click += btncerrar_Click_1;
-            // 
             // btnminimizar
             // 
             btnminimizar.BackColor = Color.FromArgb(27, 40, 56);
             btnminimizar.Image = (Image)resources.GetObject("btnminimizar.Image");
-            btnminimizar.Location = new Point(1404, 11);
+            btnminimizar.Location = new Point(1436, 11);
             btnminimizar.Name = "btnminimizar";
             btnminimizar.Size = new Size(25, 6);
             btnminimizar.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -1576,7 +1562,6 @@
             ((System.ComponentModel.ISupportInitialize)ImagenJuego1).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)btncerrar).EndInit();
             ((System.ComponentModel.ISupportInitialize)btnminimizar).EndInit();
             panel14.ResumeLayout(false);
             panel14.PerformLayout();
@@ -1721,6 +1706,5 @@
         private TextBox textBox_ConteoCarrito;
         private PictureBox ImagenJuego7;
         private PictureBox btnminimizar;
-        private PictureBox btncerrar;
     }
 }

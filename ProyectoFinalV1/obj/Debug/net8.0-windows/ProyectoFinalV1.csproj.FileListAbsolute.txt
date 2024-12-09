@@ -477,3 +477,4 @@ C:\Users\uriel\OneDrive\Desktop\Nueva Rama\ProyectoFinal\ProyectoFinalV1\obj\Deb
 C:\Users\uriel\OneDrive\Desktop\Nueva Rama\ProyectoFinal\ProyectoFinalV1\obj\Debug\net8.0-windows\ProyectoFinalV1.pdb
 C:\Users\uriel\OneDrive\Desktop\Nueva Rama\ProyectoFinal\ProyectoFinalV1\obj\Debug\net8.0-windows\ProyectoFinalV1.genruntimeconfig.cache
 C:\Users\uriel\OneDrive\Desktop\Nueva Rama\ProyectoFinal\ProyectoFinalV1\obj\Debug\net8.0-windows\ref\ProyectoFinalV1.dll
+C:\Users\Alegria\Desktop\ProyectoFinal\ProyectoFinalV1\obj\Debug\net8.0-windows\ProyectoFinalV1.FormGrafica.resources
