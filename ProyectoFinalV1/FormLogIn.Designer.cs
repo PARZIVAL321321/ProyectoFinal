@@ -83,7 +83,6 @@
             textBox_Cuenta.PlaceholderText = "Cuenta";
             textBox_Cuenta.Size = new Size(700, 26);
             textBox_Cuenta.TabIndex = 4;
-            textBox_Cuenta.TextChanged += textBox_Cuenta_TextChanged;
             textBox_Cuenta.Enter += textBox_Cuenta_Enter;
             textBox_Cuenta.Leave += textBox_Cuenta_Leave;
             // 

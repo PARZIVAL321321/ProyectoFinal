@@ -62,7 +62,7 @@
             label9 = new Label();
             label12 = new Label();
             panel16 = new Panel();
-            textBox6 = new TextBox();
+            textBox_Nombre = new TextBox();
             panel3.SuspendLayout();
             panel2.SuspendLayout();
             panel1.SuspendLayout();
@@ -127,7 +127,6 @@
             textBox_MesTarjeta.Size = new Size(72, 19);
             textBox_MesTarjeta.TabIndex = 5;
             textBox_MesTarjeta.TextAlign = HorizontalAlignment.Center;
-            textBox_MesTarjeta.TextChanged += textBox_MesTarjeta_TextChanged;
             // 
             // textBox_YearTarjeta
             // 
@@ -167,7 +166,6 @@
             textBox_TotalCompra.PlaceholderText = "Total compra";
             textBox_TotalCompra.Size = new Size(99, 19);
             textBox_TotalCompra.TabIndex = 8;
-            textBox_TotalCompra.TextChanged += textBox_TotalCompra_TextChanged;
             // 
             // button_Pagar
             // 
@@ -269,7 +267,6 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(482, 215);
             panel1.TabIndex = 31;
-            panel1.Paint += panel1_Paint;
             // 
             // pictureBox2
             // 
@@ -416,7 +413,6 @@
             PanelEfectivo.Name = "PanelEfectivo";
             PanelEfectivo.Size = new Size(482, 144);
             PanelEfectivo.TabIndex = 34;
-            PanelEfectivo.Paint += PanelEfectivo_Paint;
             // 
             // panel11
             // 
@@ -466,23 +462,23 @@
             // panel16
             // 
             panel16.BackColor = Color.FromArgb(23, 26, 33);
-            panel16.Controls.Add(textBox6);
+            panel16.Controls.Add(textBox_Nombre);
             panel16.Location = new Point(15, 35);
             panel16.Name = "panel16";
             panel16.Size = new Size(452, 27);
             panel16.TabIndex = 8;
             // 
-            // textBox6
+            // textBox_Nombre
             // 
-            textBox6.BackColor = Color.FromArgb(23, 26, 33);
-            textBox6.BorderStyle = BorderStyle.None;
-            textBox6.Font = new Font("Century Gothic", 11.25F);
-            textBox6.ForeColor = Color.LightGray;
-            textBox6.Location = new Point(3, 2);
-            textBox6.Margin = new Padding(3, 2, 3, 2);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(446, 19);
-            textBox6.TabIndex = 4;
+            textBox_Nombre.BackColor = Color.FromArgb(23, 26, 33);
+            textBox_Nombre.BorderStyle = BorderStyle.None;
+            textBox_Nombre.Font = new Font("Century Gothic", 11.25F);
+            textBox_Nombre.ForeColor = Color.LightGray;
+            textBox_Nombre.Location = new Point(3, 2);
+            textBox_Nombre.Margin = new Padding(3, 2, 3, 2);
+            textBox_Nombre.Name = "textBox_Nombre";
+            textBox_Nombre.Size = new Size(446, 19);
+            textBox_Nombre.TabIndex = 4;
             // 
             // FormPago
             // 
@@ -564,6 +560,6 @@
         private Label label9;
         private Label label12;
         private Panel panel16;
-        private TextBox textBox6;
+        private TextBox textBox_Nombre;
     }
 }

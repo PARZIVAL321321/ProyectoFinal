@@ -11,13 +11,13 @@ Partes del proyecto:
 - Tabla productos (Oscar) ✅
 - Pantalla productos (Oscar) ✅
 	7-9
-- Permisos/alta/baja productos (Uriel) ❗
-- Grafica (Uriel) 
+- Permisos/alta/baja productos (Uriel) ✅
+- Grafica (Uriel) ✅
 	10-15
-- Permisos comprar (Alegria)
+- Permisos comprar (Alegria) ✅
 - Mostrar nombre (Alegria) ✅
-- Presentar productos dinamicos (Alegria)
-- Checar si el producto esta agotado (Alegria)
+- Presentar productos dinamicos (Alegria) ✅
+- Checar si el producto esta agotado (Alegria) ✅
 	16-19
 - PDF tras compra (Uriel y Oscar) ❗
 

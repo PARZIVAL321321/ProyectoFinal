@@ -564,11 +564,6 @@ namespace ProyectoFinalV1
             }
         }
 
-        private void panel7_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void btncerrar_Click_1(object sender, EventArgs e)
         {
             if (carrito.Count() != 0)
@@ -579,16 +574,6 @@ namespace ProyectoFinalV1
             {
                 Application.Exit();
             }
-        }
-
-        private void ImagenJuego8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

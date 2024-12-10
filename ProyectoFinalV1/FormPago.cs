@@ -98,101 +98,126 @@ namespace ProyectoFinalV1
             // Checamos cual metodo de pago ha sido seleccionado
             if (bandera_Tarjeta)
             {
-                // Guardamos la informacion en nuestro objeto de la clase Tarjeta
-                Tarjeta informacion = new Tarjeta(textBox_NombreCuenta.Text,
-                    Convert.ToInt64(textBox_NumeroTarjeta.Text),
-                    Convert.ToInt32(textBox_MesTarjeta.Text),
-                    Convert.ToInt32(textBox_YearTarjeta.Text),
-                    Convert.ToInt32(textBox_CVVTarjeta.Text)
-                    );
-
-                // Llamamos a una funcion para que verifique si la informacion de la tarjeta es correcta Verificar_Informacion(informacion
-                if (Verificar_Informacion(informacion))
+                if (
+                    (string.IsNullOrWhiteSpace(textBox_Nombre.Text) ||
+                    string.IsNullOrWhiteSpace(textBox_Efectivo.Text) ||
+                    string.IsNullOrWhiteSpace(textBox_MesTarjeta.Text) ||
+                    string.IsNullOrWhiteSpace(textBox_YearTarjeta.Text) ||
+                    string.IsNullOrWhiteSpace(textBox_CVVTarjeta.Text))
+                    )
                 {
-                    // Realizamos la compra
-                    try
-                    {
-                        // Creamos nuestra variable para la base de datos, y pasamos nuestra informacion
-                        MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=proyecto; User=root; Password=; Sslmode=none;");
-                        // Abrimos nuestra base de datos
-                        conexion.Open();
-
-                        // Linea de comando de SQL
-                        string consulta = "UPDATE personas SET Monto=" + "'" + (total_impuesto + usuario.Monto) + "'" +
-                            "WHERE ID =" + usuario.Id;
-
-                        // Cargamos neestra linea de comandos
-                        MySqlCommand comando = new MySqlCommand(consulta, conexion);
-
-                        // Ejecutamos el comando
-                        comando.ExecuteNonQuery();
-
-                        MessageBox.Show("Compra realizada con exito");
-
-                        // Actualizamos el valor del monto
-                        usuario.Monto += total_impuesto;
-
-                        // Tras realizar la compra, cerramos este form
-                        this.Dispose();
-
-
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Error en la actualizacion del registro: " + ex.Message);
-                    }
-
+                    MessageBox.Show("Asegurese de que todos los campos esten completos antes de realizar la compra");
                 }
                 else
                 {
-                    // Mostramos mensaje de que la tarjeta no es valida
-                    MessageBox.Show("La informacion de la tarjeta no es valida, verifica la informacion");
+
+                    // Guardamos la informacion en nuestro objeto de la clase Tarjeta
+                    Tarjeta informacion = new Tarjeta(textBox_Nombre.Text,
+                        Convert.ToInt64(textBox_NumeroTarjeta.Text),
+                        Convert.ToInt32(textBox_MesTarjeta.Text),
+                        Convert.ToInt32(textBox_YearTarjeta.Text),
+                        Convert.ToInt32(textBox_CVVTarjeta.Text)
+                        );
+
+                    // Llamamos a una funcion para que verifique si la informacion de la tarjeta es correcta Verificar_Informacion(informacion
+                    if (Verificar_Informacion(informacion))
+                    {
+                        // Realizamos la compra
+                        try
+                        {
+                            // Creamos nuestra variable para la base de datos, y pasamos nuestra informacion
+                            MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=proyecto; User=root; Password=; Sslmode=none;");
+                            // Abrimos nuestra base de datos
+                            conexion.Open();
+
+                            // Linea de comando de SQL
+                            string consulta = "UPDATE personas SET Monto=" + "'" + (total_impuesto + usuario.Monto) + "'" +
+                                "WHERE ID =" + usuario.Id;
+
+                            // Cargamos neestra linea de comandos
+                            MySqlCommand comando = new MySqlCommand(consulta, conexion);
+
+                            // Ejecutamos el comando
+                            comando.ExecuteNonQuery();
+
+                            MessageBox.Show("Compra realizada con exito");
+
+                            // Actualizamos el valor del monto
+                            usuario.Monto += total_impuesto;
+
+                            // Tras realizar la compra, cerramos este form
+                            this.Dispose();
+
+
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Error en la actualizacion del registro: " + ex.Message);
+                        }
+
+                    }
+                    else
+                    {
+                        // Mostramos mensaje de que la tarjeta no es valida
+                        MessageBox.Show("La informacion de la tarjeta no es valida, verifica la informacion");
+                    }
                 }
+
 
             }
             else if (bandera_Efectivo)
             {
-                int dinero_usuario = Convert.ToInt32(textBox_Efectivo.Text);
 
-                if (dinero_usuario < total_impuesto)
+                if (string.IsNullOrWhiteSpace(textBox_Nombre.Text) || string.IsNullOrWhiteSpace(textBox_Efectivo.Text))
                 {
-                    MessageBox.Show("Dinero insuficiente para la compra");
+                    MessageBox.Show("Asegurese de que todos los campos esten completos antes de realizar la compra");
                 }
                 else
                 {
-                    // Realizamos la compra
-                    try
+                    int dinero_usuario = Convert.ToInt32(textBox_Efectivo.Text);
+
+                    if (dinero_usuario < total_impuesto)
                     {
-                        // Creamos nuestra variable para la base de datos, y pasamos nuestra informacion
-                        MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=proyecto; User=root; Password=; Sslmode=none;");
-                        // Abrimos nuestra base de datos
-                        conexion.Open();
-
-                        // Linea de comando de SQL
-                        string consulta = "UPDATE personas SET Monto=" + "'" + (total_impuesto + usuario.Monto) + "'" +
-                            "WHERE ID =" + usuario.Id;
-
-                        // Cargamos neestra linea de comandos
-                        MySqlCommand comando = new MySqlCommand(consulta, conexion);
-
-                        // Ejecutamos el comando
-                        comando.ExecuteNonQuery();
-
-                        MessageBox.Show("Compra realizada con exito");
-
-                        // Actualizamos el valor del monto
-                        usuario.Monto += total_impuesto;
-
-                        // Tras realizar la compra, cerramos este form
-                        this.Dispose();
-
-
+                        MessageBox.Show("Dinero insuficiente para la compra");
                     }
-                    catch (Exception ex)
+                    else
                     {
-                        MessageBox.Show("Error en la actualizacion del registro: " + ex.Message);
+                        // Realizamos la compra
+                        try
+                        {
+                            // Creamos nuestra variable para la base de datos, y pasamos nuestra informacion
+                            MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=proyecto; User=root; Password=; Sslmode=none;");
+                            // Abrimos nuestra base de datos
+                            conexion.Open();
+
+                            // Linea de comando de SQL
+                            string consulta = "UPDATE personas SET Monto=" + "'" + (total_impuesto + usuario.Monto) + "'" +
+                                "WHERE ID =" + usuario.Id;
+
+                            // Cargamos neestra linea de comandos
+                            MySqlCommand comando = new MySqlCommand(consulta, conexion);
+
+                            // Ejecutamos el comando
+                            comando.ExecuteNonQuery();
+
+                            MessageBox.Show("Compra realizada con exito");
+
+                            // Actualizamos el valor del monto
+                            usuario.Monto += total_impuesto;
+
+                            // Tras realizar la compra, cerramos este form
+                            this.Dispose();
+
+
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Error en la actualizacion del registro: " + ex.Message);
+                        }
                     }
                 }
+
+
             }
 
         }
@@ -218,42 +243,6 @@ namespace ProyectoFinalV1
 
         }
 
-        private void textBox_TotalIva_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-        private void label_Pregunta_Click(object sender, EventArgs e)
-        {
-            // Lógica para manejar el evento
-        }
-
-
-        private void textBox_TotalCompra_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox_Efectivo_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox_MesTarjeta_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
         private void FormPago_Load(object sender, EventArgs e)
         {
             panel1.Width = 0; // Ocultar el panel tarjeta
@@ -272,17 +261,6 @@ namespace ProyectoFinalV1
         }
 
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void PanelEfectivo_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
- 
     }
 
 }

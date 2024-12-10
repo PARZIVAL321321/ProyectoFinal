@@ -459,7 +459,6 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(1500, 601);
             panel1.TabIndex = 4;
-            panel1.Paint += panel1_Paint;
             // 
             // btnminimizar
             // 
@@ -799,7 +798,6 @@
             ImagenJuego8.SizeMode = PictureBoxSizeMode.StretchImage;
             ImagenJuego8.TabIndex = 31;
             ImagenJuego8.TabStop = false;
-            ImagenJuego8.Click += ImagenJuego8_Click;
             // 
             // TituloJuego8
             // 
