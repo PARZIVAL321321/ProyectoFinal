@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Alegria\\Desktop\\ProyectoFinal\\ProyectoFinalV1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FB66F1B0-E526-4F56-8D53-094F3AB041D9}|ProyectoFinalV1.csproj|c:\\users\\alegria\\desktop\\proyectofinal\\proyectofinalv1\\formlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FB66F1B0-E526-4F56-8D53-094F3AB041D9}|ProyectoFinalV1.csproj|solutionrelative:formlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{FB66F1B0-E526-4F56-8D53-094F3AB041D9}|ProyectoFinalV1.csproj|c:\\users\\alegria\\desktop\\proyectofinal\\proyectofinalv1\\formgrafica.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB66F1B0-E526-4F56-8D53-094F3AB041D9}|ProyectoFinalV1.csproj|solutionrelative:formgrafica.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB66F1B0-E526-4F56-8D53-094F3AB041D9}|ProyectoFinalV1.csproj|c:\\users\\alegria\\desktop\\proyectofinal\\proyectofinalv1\\formgrafica.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{FB66F1B0-E526-4F56-8D53-094F3AB041D9}|ProyectoFinalV1.csproj|solutionrelative:formgrafica.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB66F1B0-E526-4F56-8D53-094F3AB041D9}|ProyectoFinalV1.csproj|c:\\users\\alegria\\desktop\\proyectofinal\\proyectofinalv1\\formadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB66F1B0-E526-4F56-8D53-094F3AB041D9}|ProyectoFinalV1.csproj|solutionrelative:formadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 2,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -22,15 +30,41 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "FormLogIn.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Alegria\\Desktop\\ProyectoFinal\\ProyectoFinalV1\\FormLogIn.cs",
-              "RelativeDocumentMoniker": "FormLogIn.cs",
-              "ToolTip": "C:\\Users\\Alegria\\Desktop\\ProyectoFinal\\ProyectoFinalV1\\FormLogIn.cs [Design]",
-              "RelativeToolTip": "FormLogIn.cs [Design]",
+              "DocumentIndex": 2,
+              "Title": "FormAdmin.cs",
+              "DocumentMoniker": "C:\\Users\\Alegria\\Desktop\\ProyectoFinal\\ProyectoFinalV1\\FormAdmin.cs",
+              "RelativeDocumentMoniker": "FormAdmin.cs",
+              "ToolTip": "C:\\Users\\Alegria\\Desktop\\ProyectoFinal\\ProyectoFinalV1\\FormAdmin.cs",
+              "RelativeToolTip": "FormAdmin.cs",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAuwBYAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-09T04:45:02.677Z",
+              "WhenOpened": "2024-12-10T00:32:48.682Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FormGrafica.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Alegria\\Desktop\\ProyectoFinal\\ProyectoFinalV1\\FormGrafica.cs",
+              "RelativeDocumentMoniker": "FormGrafica.cs",
+              "ToolTip": "C:\\Users\\Alegria\\Desktop\\ProyectoFinal\\ProyectoFinalV1\\FormGrafica.cs [Design]",
+              "RelativeToolTip": "FormGrafica.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-09T23:41:07.341Z",
               "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FormGrafica.cs",
+              "DocumentMoniker": "C:\\Users\\Alegria\\Desktop\\ProyectoFinal\\ProyectoFinalV1\\FormGrafica.cs",
+              "RelativeDocumentMoniker": "FormGrafica.cs",
+              "ToolTip": "C:\\Users\\Alegria\\Desktop\\ProyectoFinal\\ProyectoFinalV1\\FormGrafica.cs",
+              "RelativeToolTip": "FormGrafica.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAAAEAAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-09T23:56:16.517Z",
+              "EditorCaption": ""
             }
           ]
         }

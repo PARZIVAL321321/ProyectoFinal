@@ -478,6 +478,25 @@
           }
         }
       },
+      "WinForms.DataVisualization/1.9.2": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-windows7.0/WinForms.DataVisualization.Utilities.dll": {
+            "related": ".pdb;.xml"
+          },
+          "lib/net8.0-windows7.0/WinForms.DataVisualization.dll": {
+            "related": ".pdb;.Utilities.pdb;.Utilities.xml;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows7.0/WinForms.DataVisualization.Utilities.dll": {
+            "related": ".pdb;.xml"
+          },
+          "lib/net8.0-windows7.0/WinForms.DataVisualization.dll": {
+            "related": ".pdb;.Utilities.pdb;.Utilities.xml;.xml"
+          }
+        }
+      },
       "ZstdSharp.Port/0.8.0": {
         "type": "package",
         "compile": {
@@ -1611,6 +1630,55 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "WinForms.DataVisualization/1.9.2": {
+      "sha512": "e1aPoWqPS1GThTK2ZpI4GkIhteorW7smNQ5SP3y5EaODL7W2u21nX0hlHtmkerBWi9gpy6Rw8I53jvo5CF+4rA==",
+      "type": "package",
+      "path": "winforms.datavisualization/1.9.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "NuGetReadme.md",
+        "lib/net6.0-windows7.0/Design/WinForms/Server/WinForms.DataVisualization.Designer.ClientServerProtocol.dll",
+        "lib/net6.0-windows7.0/Design/WinForms/Server/WinForms.DataVisualization.Designer.Server.dll",
+        "lib/net6.0-windows7.0/Design/WinForms/Server/WinForms.DataVisualization.Utilities.dll",
+        "lib/net6.0-windows7.0/Design/WinForms/WinForms.DataVisualization.Designer.Client.dll",
+        "lib/net6.0-windows7.0/Design/WinForms/WinForms.DataVisualization.Designer.ClientServerProtocol.dll",
+        "lib/net6.0-windows7.0/Design/WinForms/WinForms.DataVisualization.Utilities.dll",
+        "lib/net6.0-windows7.0/WinForms.DataVisualization.Utilities.dll",
+        "lib/net6.0-windows7.0/WinForms.DataVisualization.Utilities.pdb",
+        "lib/net6.0-windows7.0/WinForms.DataVisualization.Utilities.xml",
+        "lib/net6.0-windows7.0/WinForms.DataVisualization.dll",
+        "lib/net6.0-windows7.0/WinForms.DataVisualization.pdb",
+        "lib/net6.0-windows7.0/WinForms.DataVisualization.xml",
+        "lib/net7.0-windows7.0/Design/WinForms/Server/WinForms.DataVisualization.Designer.ClientServerProtocol.dll",
+        "lib/net7.0-windows7.0/Design/WinForms/Server/WinForms.DataVisualization.Designer.Server.dll",
+        "lib/net7.0-windows7.0/Design/WinForms/Server/WinForms.DataVisualization.Utilities.dll",
+        "lib/net7.0-windows7.0/Design/WinForms/WinForms.DataVisualization.Designer.Client.dll",
+        "lib/net7.0-windows7.0/Design/WinForms/WinForms.DataVisualization.Designer.ClientServerProtocol.dll",
+        "lib/net7.0-windows7.0/Design/WinForms/WinForms.DataVisualization.Utilities.dll",
+        "lib/net7.0-windows7.0/WinForms.DataVisualization.Utilities.dll",
+        "lib/net7.0-windows7.0/WinForms.DataVisualization.Utilities.pdb",
+        "lib/net7.0-windows7.0/WinForms.DataVisualization.Utilities.xml",
+        "lib/net7.0-windows7.0/WinForms.DataVisualization.dll",
+        "lib/net7.0-windows7.0/WinForms.DataVisualization.pdb",
+        "lib/net7.0-windows7.0/WinForms.DataVisualization.xml",
+        "lib/net8.0-windows7.0/Design/WinForms/Server/WinForms.DataVisualization.Designer.ClientServerProtocol.dll",
+        "lib/net8.0-windows7.0/Design/WinForms/Server/WinForms.DataVisualization.Designer.Server.dll",
+        "lib/net8.0-windows7.0/Design/WinForms/Server/WinForms.DataVisualization.Utilities.dll",
+        "lib/net8.0-windows7.0/Design/WinForms/WinForms.DataVisualization.Designer.Client.dll",
+        "lib/net8.0-windows7.0/Design/WinForms/WinForms.DataVisualization.Designer.ClientServerProtocol.dll",
+        "lib/net8.0-windows7.0/Design/WinForms/WinForms.DataVisualization.Utilities.dll",
+        "lib/net8.0-windows7.0/WinForms.DataVisualization.Utilities.dll",
+        "lib/net8.0-windows7.0/WinForms.DataVisualization.Utilities.pdb",
+        "lib/net8.0-windows7.0/WinForms.DataVisualization.Utilities.xml",
+        "lib/net8.0-windows7.0/WinForms.DataVisualization.dll",
+        "lib/net8.0-windows7.0/WinForms.DataVisualization.pdb",
+        "lib/net8.0-windows7.0/WinForms.DataVisualization.xml",
+        "winforms.datavisualization.1.9.2.nupkg.sha512",
+        "winforms.datavisualization.nuspec"
+      ]
+    },
     "ZstdSharp.Port/0.8.0": {
       "sha512": "Z62eNBIu8E8YtbqlMy57tK3dV1+m2b9NhPeaYovB5exmLKvrGCqOhJTzrEUH5VyUWU6vwX3c1XHJGhW5HVs8dA==",
       "type": "package",
@@ -1634,28 +1702,36 @@
   "projectFileDependencyGroups": {
     "net8.0-windows7.0": [
       "MySql.Data >= 9.1.0",
+      "WinForms.DataVisualization >= 1.9.2",
       "iTextSharp >= 5.5.13.4"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\uriel\\.nuget\\packages\\": {}
+    "C:\\Users\\Alegria\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\uriel\\OneDrive\\Desktop\\Nueva carpeta\\ProyectoFinal\\ProyectoFinalV1\\ProyectoFinalV1.csproj",
+      "projectUniqueName": "C:\\Users\\Alegria\\Desktop\\ProyectoFinal\\ProyectoFinalV1\\ProyectoFinalV1.csproj",
       "projectName": "ProyectoFinalV1",
-      "projectPath": "C:\\Users\\uriel\\OneDrive\\Desktop\\Nueva carpeta\\ProyectoFinal\\ProyectoFinalV1\\ProyectoFinalV1.csproj",
-      "packagesPath": "C:\\Users\\uriel\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\uriel\\OneDrive\\Desktop\\Nueva carpeta\\ProyectoFinal\\ProyectoFinalV1\\obj\\",
+      "projectPath": "C:\\Users\\Alegria\\Desktop\\ProyectoFinal\\ProyectoFinalV1\\ProyectoFinalV1.csproj",
+      "packagesPath": "C:\\Users\\Alegria\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Alegria\\Desktop\\ProyectoFinal\\ProyectoFinalV1\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\uriel\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Alegria\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net8.0-windows7.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -1672,8 +1748,9 @@
       "restoreAuditProperties": {
         "enableAudit": "true",
         "auditLevel": "low",
-        "auditMode": "direct"
-      }
+        "auditMode": "all"
+      },
+      "SdkAnalysisLevel": "9.0.100"
     },
     "frameworks": {
       "net8.0-windows7.0": {
@@ -1682,6 +1759,10 @@
           "MySql.Data": {
             "target": "Package",
             "version": "[9.1.0, )"
+          },
+          "WinForms.DataVisualization": {
+            "target": "Package",
+            "version": "[1.9.2, )"
           },
           "iTextSharp": {
             "target": "Package",
@@ -1707,16 +1788,26 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
       }
     }
   },
   "logs": [
     {
+      "code": "NU1903",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'System.Text.Json' 8.0.4 has a known high severity vulnerability, https://github.com/advisories/GHSA-8g4q-xg66-9fp4",
+      "libraryId": "System.Text.Json",
+      "targetGraphs": [
+        "net8.0-windows7.0"
+      ]
+    },
+    {
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "El paquete \"iTextSharp 5.5.13.4\" se restauró con \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" en lugar de la plataforma de destino del proyecto \"net8.0-windows7.0\". Puede que el paquete no sea totalmente compatible con el proyecto.",
+      "message": "Package 'iTextSharp 5.5.13.4' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0-windows7.0'. This package may not be fully compatible with your project.",
       "libraryId": "iTextSharp",
       "targetGraphs": [
         "net8.0-windows7.0"
