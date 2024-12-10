@@ -73,11 +73,6 @@ namespace ProyectoFinalV1
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-        private void btncerrar_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
         private void btnminimizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
@@ -184,6 +179,15 @@ namespace ProyectoFinalV1
                     MessageBox.Show("Debe haber al menos 6 juegos disponibles");
                     // Cerramos por completo la aplicacion, ya que no se puede iniciar
                     Application.Exit();
+                }
+
+                if (lista.Count < 7)
+                {
+                    this.Size = new Size(1500, 330);
+                }
+                else if (lista.Count >= 7)
+                {
+                    this.Size = new Size(1500, 702);
                 }
 
                 // Limitamos la lista a un maximo de 10 juegos, asi el administrador puede agregar mas juegos en la base de datos sin problemas
@@ -557,6 +561,18 @@ namespace ProyectoFinalV1
             else
             {
                 MessageBox.Show($"No hay stock disponible del juego {lista[indice].Nombre}");
+            }
+        }
+
+        private void btncerrar_Click_1(object sender, EventArgs e)
+        {
+            if (carrito.Count() != 0)
+            {
+                MessageBox.Show("No es posible salirse sin antes vaciar el carrito");
+            }
+            else
+            {
+                Application.Exit();
             }
         }
     }

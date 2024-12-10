@@ -70,7 +70,6 @@
             button_CargarImagenModificar = new Button();
             button_Modificar = new Button();
             pictureBox_Subir = new PictureBox();
-            btncerrar = new PictureBox();
             panel1 = new Panel();
             panel7 = new Panel();
             panel6 = new Panel();
@@ -111,13 +110,12 @@
             pictureBox2 = new PictureBox();
             panel39 = new Panel();
             button_BuscarModificar = new Button();
-            button1 = new Button();
+            button_MostrarGrafica = new Button();
             panel2 = new Panel();
             panel3 = new Panel();
             ((System.ComponentModel.ISupportInitialize)pictureBox_Modificar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView_Inventario).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox_Subir).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)btncerrar).BeginInit();
             panel1.SuspendLayout();
             panel8.SuspendLayout();
             panel9.SuspendLayout();
@@ -477,7 +475,7 @@
             button_LogOut.FlatStyle = FlatStyle.Flat;
             button_LogOut.Font = new Font("Century Gothic", 15.75F, FontStyle.Bold);
             button_LogOut.ForeColor = Color.FromArgb(42, 71, 94);
-            button_LogOut.Location = new Point(1333, -4);
+            button_LogOut.Location = new Point(1368, -2);
             button_LogOut.Margin = new Padding(3, 2, 3, 2);
             button_LogOut.Name = "button_LogOut";
             button_LogOut.Size = new Size(114, 38);
@@ -741,21 +739,9 @@
             pictureBox_Subir.TabIndex = 48;
             pictureBox_Subir.TabStop = false;
             // 
-            // btncerrar
-            // 
-            btncerrar.Image = (Image)resources.GetObject("btncerrar.Image");
-            btncerrar.Location = new Point(1453, 0);
-            btncerrar.Name = "btncerrar";
-            btncerrar.Size = new Size(29, 29);
-            btncerrar.SizeMode = PictureBoxSizeMode.StretchImage;
-            btncerrar.TabIndex = 49;
-            btncerrar.TabStop = false;
-            btncerrar.Click += btncerrar_Click;
-            // 
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(23, 26, 33);
-            panel1.Controls.Add(btncerrar);
             panel1.Controls.Add(button_LogOut);
             panel1.Controls.Add(button_MOSTRARINVENTARIO);
             panel1.Controls.Add(panel7);
@@ -1126,7 +1112,7 @@
             // 
             panel39.BackColor = Color.FromArgb(42, 71, 94);
             panel39.Controls.Add(button_BuscarModificar);
-            panel39.Controls.Add(button1);
+            panel39.Controls.Add(button_MostrarGrafica);
             panel39.Controls.Add(button_Modificar);
             panel39.Controls.Add(button_Subir);
             panel39.Controls.Add(panel36);
@@ -1180,22 +1166,23 @@
             button_BuscarModificar.UseVisualStyleBackColor = false;
             button_BuscarModificar.Click += button_BuscarModificar_Click;
             // 
-            // button1
+            // button_MostrarGrafica
             // 
-            button1.BackColor = Color.FromArgb(40, 40, 40);
-            button1.Cursor = Cursors.Hand;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatAppearance.MouseDownBackColor = Color.FromArgb(28, 28, 28);
-            button1.FlatAppearance.MouseOverBackColor = Color.FromArgb(60, 60, 60);
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Century Gothic", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button1.ForeColor = Color.LightGray;
-            button1.Location = new Point(22, 671);
-            button1.Name = "button1";
-            button1.Size = new Size(414, 63);
-            button1.TabIndex = 76;
-            button1.Text = "MOSTRAR GRAFICA";
-            button1.UseVisualStyleBackColor = false;
+            button_MostrarGrafica.BackColor = Color.FromArgb(40, 40, 40);
+            button_MostrarGrafica.Cursor = Cursors.Hand;
+            button_MostrarGrafica.FlatAppearance.BorderSize = 0;
+            button_MostrarGrafica.FlatAppearance.MouseDownBackColor = Color.FromArgb(28, 28, 28);
+            button_MostrarGrafica.FlatAppearance.MouseOverBackColor = Color.FromArgb(60, 60, 60);
+            button_MostrarGrafica.FlatStyle = FlatStyle.Flat;
+            button_MostrarGrafica.Font = new Font("Century Gothic", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button_MostrarGrafica.ForeColor = Color.LightGray;
+            button_MostrarGrafica.Location = new Point(22, 671);
+            button_MostrarGrafica.Name = "button_MostrarGrafica";
+            button_MostrarGrafica.Size = new Size(414, 63);
+            button_MostrarGrafica.TabIndex = 76;
+            button_MostrarGrafica.Text = "MOSTRAR GRAFICA";
+            button_MostrarGrafica.UseVisualStyleBackColor = false;
+            button_MostrarGrafica.Click += button_MostrarGrafica_Click;
             // 
             // panel2
             // 
@@ -1240,7 +1227,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox_Modificar).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView_Inventario).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox_Subir).EndInit();
-            ((System.ComponentModel.ISupportInitialize)btncerrar).EndInit();
             panel1.ResumeLayout(false);
             panel8.ResumeLayout(false);
             panel8.PerformLayout();
@@ -1352,7 +1338,6 @@
         private Button button_CargarImagenModificar;
         private Button button_Modificar;
         private PictureBox pictureBox_Subir;
-        private PictureBox btncerrar;
         private Panel panel1;
         private Panel panel4;
         private Panel panel8;
@@ -1394,7 +1379,7 @@
         private Panel panel5;
         private Panel panel2;
         private Panel panel3;
-        private Button button1;
+        private Button button_MostrarGrafica;
         private Button button_BuscarModificar;
     }
 }

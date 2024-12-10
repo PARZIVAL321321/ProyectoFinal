@@ -29,16 +29,14 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormProductos));
-            btnminimizar = new PictureBox();
-            btncerrar = new PictureBox();
             button_LogOut = new Button();
             panel3 = new Panel();
             button_Carrito = new Button();
             textBox_ConteoCarrito = new TextBox();
             label_Puntodeventa = new Label();
-            label_Bienvenido = new Label();
             textBox_Nombre = new TextBox();
             pictureBox2 = new PictureBox();
+            label_Bienvenido = new Label();
             TituloJuego1 = new TextBox();
             ImagenJuego1 = new PictureBox();
             GeneroJuego1 = new TextBox();
@@ -50,6 +48,7 @@
             buttonComprarJuego2 = new Button();
             buttonComprarJuego3 = new Button();
             panel1 = new Panel();
+            btnminimizar = new PictureBox();
             buttonComprarJuego10 = new Button();
             buttonComprarJuego9 = new Button();
             buttonComprarJuego8 = new Button();
@@ -135,12 +134,11 @@
             TituloJuego2 = new TextBox();
             panel4 = new Panel();
             pictureBox1 = new PictureBox();
-            ((System.ComponentModel.ISupportInitialize)btnminimizar).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)btncerrar).BeginInit();
             panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)ImagenJuego1).BeginInit();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)btnminimizar).BeginInit();
             panel14.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)ImagenJuego10).BeginInit();
             panel13.SuspendLayout();
@@ -164,30 +162,6 @@
             panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
-            // 
-            // btnminimizar
-            // 
-            btnminimizar.BackColor = Color.FromArgb(27, 40, 56);
-            btnminimizar.Image = (Image)resources.GetObject("btnminimizar.Image");
-            btnminimizar.Location = new Point(1414, 20);
-            btnminimizar.Name = "btnminimizar";
-            btnminimizar.Size = new Size(25, 6);
-            btnminimizar.SizeMode = PictureBoxSizeMode.StretchImage;
-            btnminimizar.TabIndex = 22;
-            btnminimizar.TabStop = false;
-            btnminimizar.Click += btnminimizar_Click;
-            // 
-            // btncerrar
-            // 
-            btncerrar.BackColor = Color.FromArgb(27, 40, 56);
-            btncerrar.Image = (Image)resources.GetObject("btncerrar.Image");
-            btncerrar.Location = new Point(1445, 11);
-            btncerrar.Name = "btncerrar";
-            btncerrar.Size = new Size(25, 25);
-            btncerrar.SizeMode = PictureBoxSizeMode.StretchImage;
-            btncerrar.TabIndex = 21;
-            btncerrar.TabStop = false;
-            btncerrar.Click += btncerrar_Click;
             // 
             // button_LogOut
             // 
@@ -269,18 +243,6 @@
             label_Puntodeventa.TabIndex = 42;
             label_Puntodeventa.Text = "ESTIM";
             // 
-            // label_Bienvenido
-            // 
-            label_Bienvenido.AutoSize = true;
-            label_Bienvenido.BackColor = Color.Transparent;
-            label_Bienvenido.Font = new Font("Century Gothic", 12F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            label_Bienvenido.ForeColor = SystemColors.ActiveCaption;
-            label_Bienvenido.Location = new Point(203, 42);
-            label_Bienvenido.Name = "label_Bienvenido";
-            label_Bienvenido.Size = new Size(101, 19);
-            label_Bienvenido.TabIndex = 41;
-            label_Bienvenido.Text = "Bienvenido,";
-            // 
             // textBox_Nombre
             // 
             textBox_Nombre.BackColor = Color.FromArgb(23, 26, 33);
@@ -306,11 +268,24 @@
             pictureBox2.TabIndex = 7;
             pictureBox2.TabStop = false;
             // 
+            // label_Bienvenido
+            // 
+            label_Bienvenido.AutoSize = true;
+            label_Bienvenido.BackColor = Color.Transparent;
+            label_Bienvenido.Font = new Font("Century Gothic", 12F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            label_Bienvenido.ForeColor = SystemColors.ActiveCaption;
+            label_Bienvenido.Location = new Point(203, 42);
+            label_Bienvenido.Name = "label_Bienvenido";
+            label_Bienvenido.Size = new Size(101, 19);
+            label_Bienvenido.TabIndex = 41;
+            label_Bienvenido.Text = "Bienvenido,";
+            // 
             // TituloJuego1
             // 
-            TituloJuego1.BackColor = Color.FromArgb(40, 40, 40);
+            TituloJuego1.BackColor = Color.FromArgb(42, 81, 94);
             TituloJuego1.BorderStyle = BorderStyle.None;
             TituloJuego1.Enabled = false;
+            TituloJuego1.ForeColor = SystemColors.ActiveCaption;
             TituloJuego1.Location = new Point(29, 21);
             TituloJuego1.Margin = new Padding(3, 2, 3, 2);
             TituloJuego1.Name = "TituloJuego1";
@@ -330,9 +305,10 @@
             // 
             // GeneroJuego1
             // 
-            GeneroJuego1.BackColor = Color.FromArgb(199, 213, 224);
+            GeneroJuego1.BackColor = Color.FromArgb(40, 40, 40);
             GeneroJuego1.BorderStyle = BorderStyle.None;
             GeneroJuego1.Enabled = false;
+            GeneroJuego1.ForeColor = Color.LightGray;
             GeneroJuego1.Location = new Point(13, 15);
             GeneroJuego1.Margin = new Padding(3, 2, 3, 2);
             GeneroJuego1.Name = "GeneroJuego1";
@@ -341,9 +317,10 @@
             // 
             // StockJuego1
             // 
-            StockJuego1.BackColor = Color.FromArgb(199, 213, 224);
+            StockJuego1.BackColor = Color.FromArgb(40, 40, 40);
             StockJuego1.BorderStyle = BorderStyle.None;
             StockJuego1.Enabled = false;
+            StockJuego1.ForeColor = Color.LightGray;
             StockJuego1.Location = new Point(13, 50);
             StockJuego1.Margin = new Padding(3, 2, 3, 2);
             StockJuego1.Name = "StockJuego1";
@@ -352,9 +329,10 @@
             // 
             // PlataformaJuego1
             // 
-            PlataformaJuego1.BackColor = Color.FromArgb(199, 213, 224);
+            PlataformaJuego1.BackColor = Color.FromArgb(40, 40, 40);
             PlataformaJuego1.BorderStyle = BorderStyle.None;
             PlataformaJuego1.Enabled = false;
+            PlataformaJuego1.ForeColor = Color.LightGray;
             PlataformaJuego1.Location = new Point(158, 15);
             PlataformaJuego1.Margin = new Padding(3, 2, 3, 2);
             PlataformaJuego1.Name = "PlataformaJuego1";
@@ -363,9 +341,10 @@
             // 
             // ModalidadJuego1
             // 
-            ModalidadJuego1.BackColor = Color.FromArgb(199, 213, 224);
+            ModalidadJuego1.BackColor = Color.FromArgb(42, 81, 94);
             ModalidadJuego1.BorderStyle = BorderStyle.None;
             ModalidadJuego1.Enabled = false;
+            ModalidadJuego1.ForeColor = SystemColors.ActiveCaption;
             ModalidadJuego1.Location = new Point(213, 21);
             ModalidadJuego1.Margin = new Padding(3, 2, 3, 2);
             ModalidadJuego1.Name = "ModalidadJuego1";
@@ -374,9 +353,10 @@
             // 
             // PrecioJuego1
             // 
-            PrecioJuego1.BackColor = Color.FromArgb(199, 213, 224);
+            PrecioJuego1.BackColor = Color.FromArgb(40, 40, 40);
             PrecioJuego1.BorderStyle = BorderStyle.None;
             PrecioJuego1.Enabled = false;
+            PrecioJuego1.ForeColor = Color.LightGray;
             PrecioJuego1.Location = new Point(158, 50);
             PrecioJuego1.Margin = new Padding(3, 2, 3, 2);
             PrecioJuego1.Name = "PrecioJuego1";
@@ -448,7 +428,6 @@
             panel1.Controls.Add(buttonComprarJuego10);
             panel1.Controls.Add(buttonComprarJuego9);
             panel1.Controls.Add(buttonComprarJuego8);
-            panel1.Controls.Add(btncerrar);
             panel1.Controls.Add(ModalidadJuego10);
             panel1.Controls.Add(ModalidadJuego9);
             panel1.Controls.Add(panel14);
@@ -480,6 +459,18 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(1500, 601);
             panel1.TabIndex = 4;
+            // 
+            // btnminimizar
+            // 
+            btnminimizar.BackColor = Color.FromArgb(27, 40, 56);
+            btnminimizar.Image = (Image)resources.GetObject("btnminimizar.Image");
+            btnminimizar.Location = new Point(1436, 11);
+            btnminimizar.Name = "btnminimizar";
+            btnminimizar.Size = new Size(25, 6);
+            btnminimizar.SizeMode = PictureBoxSizeMode.StretchImage;
+            btnminimizar.TabIndex = 22;
+            btnminimizar.TabStop = false;
+            btnminimizar.Click += btnminimizar_Click;
             // 
             // buttonComprarJuego10
             // 
@@ -537,9 +528,10 @@
             // 
             // ModalidadJuego10
             // 
-            ModalidadJuego10.BackColor = Color.FromArgb(199, 213, 224);
+            ModalidadJuego10.BackColor = Color.FromArgb(27, 40, 56);
             ModalidadJuego10.BorderStyle = BorderStyle.None;
             ModalidadJuego10.Enabled = false;
+            ModalidadJuego10.ForeColor = SystemColors.ActiveCaption;
             ModalidadJuego10.Location = new Point(1181, 1354);
             ModalidadJuego10.Margin = new Padding(3, 2, 3, 2);
             ModalidadJuego10.Name = "ModalidadJuego10";
@@ -548,9 +540,10 @@
             // 
             // ModalidadJuego9
             // 
-            ModalidadJuego9.BackColor = Color.FromArgb(199, 213, 224);
+            ModalidadJuego9.BackColor = Color.FromArgb(27, 40, 56);
             ModalidadJuego9.BorderStyle = BorderStyle.None;
             ModalidadJuego9.Enabled = false;
+            ModalidadJuego9.ForeColor = SystemColors.ActiveCaption;
             ModalidadJuego9.Location = new Point(795, 1251);
             ModalidadJuego9.Margin = new Padding(3, 2, 3, 2);
             ModalidadJuego9.Name = "ModalidadJuego9";
@@ -571,9 +564,10 @@
             // 
             // GeneroJuego10
             // 
-            GeneroJuego10.BackColor = Color.FromArgb(199, 213, 224);
+            GeneroJuego10.BackColor = Color.FromArgb(40, 40, 40);
             GeneroJuego10.BorderStyle = BorderStyle.None;
             GeneroJuego10.Enabled = false;
+            GeneroJuego10.ForeColor = Color.LightGray;
             GeneroJuego10.Location = new Point(13, 15);
             GeneroJuego10.Margin = new Padding(3, 2, 3, 2);
             GeneroJuego10.Name = "GeneroJuego10";
@@ -582,9 +576,10 @@
             // 
             // PlataformaJuego10
             // 
-            PlataformaJuego10.BackColor = Color.FromArgb(199, 213, 224);
+            PlataformaJuego10.BackColor = Color.FromArgb(40, 40, 40);
             PlataformaJuego10.BorderStyle = BorderStyle.None;
             PlataformaJuego10.Enabled = false;
+            PlataformaJuego10.ForeColor = Color.LightGray;
             PlataformaJuego10.Location = new Point(150, 15);
             PlataformaJuego10.Margin = new Padding(3, 2, 3, 2);
             PlataformaJuego10.Name = "PlataformaJuego10";
@@ -593,9 +588,10 @@
             // 
             // PrecioJuego10
             // 
-            PrecioJuego10.BackColor = Color.FromArgb(199, 213, 224);
+            PrecioJuego10.BackColor = Color.FromArgb(40, 40, 40);
             PrecioJuego10.BorderStyle = BorderStyle.None;
             PrecioJuego10.Enabled = false;
+            PrecioJuego10.ForeColor = Color.LightGray;
             PrecioJuego10.Location = new Point(150, 50);
             PrecioJuego10.Margin = new Padding(3, 2, 3, 2);
             PrecioJuego10.Name = "PrecioJuego10";
@@ -604,9 +600,10 @@
             // 
             // StockJuego10
             // 
-            StockJuego10.BackColor = Color.FromArgb(199, 213, 224);
+            StockJuego10.BackColor = Color.FromArgb(40, 40, 40);
             StockJuego10.BorderStyle = BorderStyle.None;
             StockJuego10.Enabled = false;
+            StockJuego10.ForeColor = Color.LightGray;
             StockJuego10.Location = new Point(13, 50);
             StockJuego10.Margin = new Padding(3, 2, 3, 2);
             StockJuego10.Name = "StockJuego10";
@@ -638,9 +635,10 @@
             // 
             // GeneroJuego9
             // 
-            GeneroJuego9.BackColor = Color.FromArgb(199, 213, 224);
+            GeneroJuego9.BackColor = Color.FromArgb(40, 40, 40);
             GeneroJuego9.BorderStyle = BorderStyle.None;
             GeneroJuego9.Enabled = false;
+            GeneroJuego9.ForeColor = Color.LightGray;
             GeneroJuego9.Location = new Point(13, 15);
             GeneroJuego9.Margin = new Padding(3, 2, 3, 2);
             GeneroJuego9.Name = "GeneroJuego9";
@@ -649,9 +647,10 @@
             // 
             // PlataformaJuego9
             // 
-            PlataformaJuego9.BackColor = Color.FromArgb(199, 213, 224);
+            PlataformaJuego9.BackColor = Color.FromArgb(40, 40, 40);
             PlataformaJuego9.BorderStyle = BorderStyle.None;
             PlataformaJuego9.Enabled = false;
+            PlataformaJuego9.ForeColor = Color.LightGray;
             PlataformaJuego9.Location = new Point(153, 15);
             PlataformaJuego9.Margin = new Padding(3, 2, 3, 2);
             PlataformaJuego9.Name = "PlataformaJuego9";
@@ -660,9 +659,10 @@
             // 
             // PrecioJuego9
             // 
-            PrecioJuego9.BackColor = Color.FromArgb(199, 213, 224);
+            PrecioJuego9.BackColor = Color.FromArgb(40, 40, 40);
             PrecioJuego9.BorderStyle = BorderStyle.None;
             PrecioJuego9.Enabled = false;
+            PrecioJuego9.ForeColor = Color.LightGray;
             PrecioJuego9.Location = new Point(153, 50);
             PrecioJuego9.Margin = new Padding(3, 2, 3, 2);
             PrecioJuego9.Name = "PrecioJuego9";
@@ -671,9 +671,10 @@
             // 
             // StockJuego9
             // 
-            StockJuego9.BackColor = Color.FromArgb(199, 213, 224);
+            StockJuego9.BackColor = Color.FromArgb(40, 40, 40);
             StockJuego9.BorderStyle = BorderStyle.None;
             StockJuego9.Enabled = false;
+            StockJuego9.ForeColor = Color.LightGray;
             StockJuego9.Location = new Point(13, 50);
             StockJuego9.Margin = new Padding(3, 2, 3, 2);
             StockJuego9.Name = "StockJuego9";
@@ -682,9 +683,10 @@
             // 
             // TituloJuego10
             // 
-            TituloJuego10.BackColor = Color.FromArgb(40, 40, 40);
+            TituloJuego10.BackColor = Color.FromArgb(27, 40, 56);
             TituloJuego10.BorderStyle = BorderStyle.None;
             TituloJuego10.Enabled = false;
+            TituloJuego10.ForeColor = SystemColors.ActiveCaption;
             TituloJuego10.Location = new Point(997, 1354);
             TituloJuego10.Margin = new Padding(3, 2, 3, 2);
             TituloJuego10.Name = "TituloJuego10";
@@ -704,9 +706,10 @@
             // 
             // TituloJuego9
             // 
-            TituloJuego9.BackColor = Color.FromArgb(40, 40, 40);
+            TituloJuego9.BackColor = Color.FromArgb(27, 40, 56);
             TituloJuego9.BorderStyle = BorderStyle.None;
             TituloJuego9.Enabled = false;
+            TituloJuego9.ForeColor = SystemColors.ActiveCaption;
             TituloJuego9.Location = new Point(611, 1251);
             TituloJuego9.Margin = new Padding(3, 2, 3, 2);
             TituloJuego9.Name = "TituloJuego9";
@@ -715,9 +718,10 @@
             // 
             // ModalidadJuego8
             // 
-            ModalidadJuego8.BackColor = Color.FromArgb(199, 213, 224);
+            ModalidadJuego8.BackColor = Color.FromArgb(27, 40, 56);
             ModalidadJuego8.BorderStyle = BorderStyle.None;
             ModalidadJuego8.Enabled = false;
+            ModalidadJuego8.ForeColor = SystemColors.ActiveCaption;
             ModalidadJuego8.Location = new Point(410, 1354);
             ModalidadJuego8.Margin = new Padding(3, 2, 3, 2);
             ModalidadJuego8.Name = "ModalidadJuego8";
@@ -738,9 +742,10 @@
             // 
             // GeneroJuego8
             // 
-            GeneroJuego8.BackColor = Color.FromArgb(199, 213, 224);
+            GeneroJuego8.BackColor = Color.FromArgb(40, 40, 40);
             GeneroJuego8.BorderStyle = BorderStyle.None;
             GeneroJuego8.Enabled = false;
+            GeneroJuego8.ForeColor = Color.LightGray;
             GeneroJuego8.Location = new Point(13, 15);
             GeneroJuego8.Margin = new Padding(3, 2, 3, 2);
             GeneroJuego8.Name = "GeneroJuego8";
@@ -749,9 +754,10 @@
             // 
             // PlataformaJuego8
             // 
-            PlataformaJuego8.BackColor = Color.FromArgb(199, 213, 224);
+            PlataformaJuego8.BackColor = Color.FromArgb(40, 40, 40);
             PlataformaJuego8.BorderStyle = BorderStyle.None;
             PlataformaJuego8.Enabled = false;
+            PlataformaJuego8.ForeColor = Color.LightGray;
             PlataformaJuego8.Location = new Point(151, 15);
             PlataformaJuego8.Margin = new Padding(3, 2, 3, 2);
             PlataformaJuego8.Name = "PlataformaJuego8";
@@ -760,9 +766,10 @@
             // 
             // PrecioJuego8
             // 
-            PrecioJuego8.BackColor = Color.FromArgb(199, 213, 224);
+            PrecioJuego8.BackColor = Color.FromArgb(40, 40, 40);
             PrecioJuego8.BorderStyle = BorderStyle.None;
             PrecioJuego8.Enabled = false;
+            PrecioJuego8.ForeColor = Color.LightGray;
             PrecioJuego8.Location = new Point(151, 50);
             PrecioJuego8.Margin = new Padding(3, 2, 3, 2);
             PrecioJuego8.Name = "PrecioJuego8";
@@ -771,9 +778,10 @@
             // 
             // StockJuego8
             // 
-            StockJuego8.BackColor = Color.FromArgb(199, 213, 224);
+            StockJuego8.BackColor = Color.FromArgb(40, 40, 40);
             StockJuego8.BorderStyle = BorderStyle.None;
             StockJuego8.Enabled = false;
+            StockJuego8.ForeColor = Color.LightGray;
             StockJuego8.Location = new Point(13, 50);
             StockJuego8.Margin = new Padding(3, 2, 3, 2);
             StockJuego8.Name = "StockJuego8";
@@ -793,9 +801,10 @@
             // 
             // TituloJuego8
             // 
-            TituloJuego8.BackColor = Color.FromArgb(40, 40, 40);
+            TituloJuego8.BackColor = Color.FromArgb(27, 40, 56);
             TituloJuego8.BorderStyle = BorderStyle.None;
             TituloJuego8.Enabled = false;
+            TituloJuego8.ForeColor = SystemColors.ActiveCaption;
             TituloJuego8.Location = new Point(226, 1354);
             TituloJuego8.Margin = new Padding(3, 2, 3, 2);
             TituloJuego8.Name = "TituloJuego8";
@@ -882,9 +891,10 @@
             // 
             // ModalidadJuego7
             // 
-            ModalidadJuego7.BackColor = Color.FromArgb(199, 213, 224);
+            ModalidadJuego7.BackColor = Color.FromArgb(42, 71, 94);
             ModalidadJuego7.BorderStyle = BorderStyle.None;
             ModalidadJuego7.Enabled = false;
+            ModalidadJuego7.ForeColor = SystemColors.ActiveCaption;
             ModalidadJuego7.Location = new Point(1328, 21);
             ModalidadJuego7.Margin = new Padding(3, 2, 3, 2);
             ModalidadJuego7.Name = "ModalidadJuego7";
@@ -905,9 +915,10 @@
             // 
             // GeneroJuego7
             // 
-            GeneroJuego7.BackColor = Color.FromArgb(199, 213, 224);
+            GeneroJuego7.BackColor = Color.FromArgb(40, 40, 40);
             GeneroJuego7.BorderStyle = BorderStyle.None;
             GeneroJuego7.Enabled = false;
+            GeneroJuego7.ForeColor = Color.LightGray;
             GeneroJuego7.Location = new Point(13, 15);
             GeneroJuego7.Margin = new Padding(3, 2, 3, 2);
             GeneroJuego7.Name = "GeneroJuego7";
@@ -916,9 +927,10 @@
             // 
             // PlataformaJuego7
             // 
-            PlataformaJuego7.BackColor = Color.FromArgb(199, 213, 224);
+            PlataformaJuego7.BackColor = Color.FromArgb(40, 40, 40);
             PlataformaJuego7.BorderStyle = BorderStyle.None;
             PlataformaJuego7.Enabled = false;
+            PlataformaJuego7.ForeColor = Color.LightGray;
             PlataformaJuego7.Location = new Point(151, 15);
             PlataformaJuego7.Margin = new Padding(3, 2, 3, 2);
             PlataformaJuego7.Name = "PlataformaJuego7";
@@ -927,9 +939,10 @@
             // 
             // PrecioJuego7
             // 
-            PrecioJuego7.BackColor = Color.FromArgb(199, 213, 224);
+            PrecioJuego7.BackColor = Color.FromArgb(40, 40, 40);
             PrecioJuego7.BorderStyle = BorderStyle.None;
             PrecioJuego7.Enabled = false;
+            PrecioJuego7.ForeColor = Color.LightGray;
             PrecioJuego7.Location = new Point(151, 50);
             PrecioJuego7.Margin = new Padding(3, 2, 3, 2);
             PrecioJuego7.Name = "PrecioJuego7";
@@ -938,9 +951,10 @@
             // 
             // StockJuego7
             // 
-            StockJuego7.BackColor = Color.FromArgb(199, 213, 224);
+            StockJuego7.BackColor = Color.FromArgb(40, 40, 40);
             StockJuego7.BorderStyle = BorderStyle.None;
             StockJuego7.Enabled = false;
+            StockJuego7.ForeColor = Color.LightGray;
             StockJuego7.Location = new Point(13, 50);
             StockJuego7.Margin = new Padding(3, 2, 3, 2);
             StockJuego7.Name = "StockJuego7";
@@ -960,9 +974,10 @@
             // 
             // TituloJuego7
             // 
-            TituloJuego7.BackColor = Color.FromArgb(40, 40, 40);
+            TituloJuego7.BackColor = Color.FromArgb(42, 71, 94);
             TituloJuego7.BorderStyle = BorderStyle.None;
             TituloJuego7.Enabled = false;
+            TituloJuego7.ForeColor = SystemColors.ActiveCaption;
             TituloJuego7.Location = new Point(1144, 21);
             TituloJuego7.Margin = new Padding(3, 2, 3, 2);
             TituloJuego7.Name = "TituloJuego7";
@@ -971,9 +986,10 @@
             // 
             // ModalidadJuego6
             // 
-            ModalidadJuego6.BackColor = Color.FromArgb(199, 213, 224);
+            ModalidadJuego6.BackColor = Color.FromArgb(42, 71, 94);
             ModalidadJuego6.BorderStyle = BorderStyle.None;
             ModalidadJuego6.Enabled = false;
+            ModalidadJuego6.ForeColor = SystemColors.ActiveCaption;
             ModalidadJuego6.Location = new Point(964, 21);
             ModalidadJuego6.Margin = new Padding(3, 2, 3, 2);
             ModalidadJuego6.Name = "ModalidadJuego6";
@@ -994,9 +1010,10 @@
             // 
             // GeneroJuego6
             // 
-            GeneroJuego6.BackColor = Color.FromArgb(199, 213, 224);
+            GeneroJuego6.BackColor = Color.FromArgb(40, 40, 40);
             GeneroJuego6.BorderStyle = BorderStyle.None;
             GeneroJuego6.Enabled = false;
+            GeneroJuego6.ForeColor = Color.LightGray;
             GeneroJuego6.Location = new Point(13, 15);
             GeneroJuego6.Margin = new Padding(3, 2, 3, 2);
             GeneroJuego6.Name = "GeneroJuego6";
@@ -1005,9 +1022,10 @@
             // 
             // PlataformaJuego6
             // 
-            PlataformaJuego6.BackColor = Color.FromArgb(199, 213, 224);
+            PlataformaJuego6.BackColor = Color.FromArgb(40, 40, 40);
             PlataformaJuego6.BorderStyle = BorderStyle.None;
             PlataformaJuego6.Enabled = false;
+            PlataformaJuego6.ForeColor = Color.LightGray;
             PlataformaJuego6.Location = new Point(153, 15);
             PlataformaJuego6.Margin = new Padding(3, 2, 3, 2);
             PlataformaJuego6.Name = "PlataformaJuego6";
@@ -1016,9 +1034,10 @@
             // 
             // PrecioJuego6
             // 
-            PrecioJuego6.BackColor = Color.FromArgb(199, 213, 224);
+            PrecioJuego6.BackColor = Color.FromArgb(40, 40, 40);
             PrecioJuego6.BorderStyle = BorderStyle.None;
             PrecioJuego6.Enabled = false;
+            PrecioJuego6.ForeColor = Color.LightGray;
             PrecioJuego6.Location = new Point(153, 50);
             PrecioJuego6.Margin = new Padding(3, 2, 3, 2);
             PrecioJuego6.Name = "PrecioJuego6";
@@ -1027,9 +1046,10 @@
             // 
             // StockJuego6
             // 
-            StockJuego6.BackColor = Color.FromArgb(199, 213, 224);
+            StockJuego6.BackColor = Color.FromArgb(40, 40, 40);
             StockJuego6.BorderStyle = BorderStyle.None;
             StockJuego6.Enabled = false;
+            StockJuego6.ForeColor = Color.LightGray;
             StockJuego6.Location = new Point(13, 50);
             StockJuego6.Margin = new Padding(3, 2, 3, 2);
             StockJuego6.Name = "StockJuego6";
@@ -1049,9 +1069,10 @@
             // 
             // TituloJuego6
             // 
-            TituloJuego6.BackColor = Color.FromArgb(40, 40, 40);
+            TituloJuego6.BackColor = Color.FromArgb(42, 71, 94);
             TituloJuego6.BorderStyle = BorderStyle.None;
             TituloJuego6.Enabled = false;
+            TituloJuego6.ForeColor = SystemColors.ActiveCaption;
             TituloJuego6.Location = new Point(780, 21);
             TituloJuego6.Margin = new Padding(3, 2, 3, 2);
             TituloJuego6.Name = "TituloJuego6";
@@ -1060,9 +1081,10 @@
             // 
             // ModalidadJuego5
             // 
-            ModalidadJuego5.BackColor = Color.FromArgb(199, 213, 224);
+            ModalidadJuego5.BackColor = Color.FromArgb(42, 71, 94);
             ModalidadJuego5.BorderStyle = BorderStyle.None;
             ModalidadJuego5.Enabled = false;
+            ModalidadJuego5.ForeColor = SystemColors.ActiveCaption;
             ModalidadJuego5.Location = new Point(592, 21);
             ModalidadJuego5.Margin = new Padding(3, 2, 3, 2);
             ModalidadJuego5.Name = "ModalidadJuego5";
@@ -1083,9 +1105,10 @@
             // 
             // GeneroJuego5
             // 
-            GeneroJuego5.BackColor = Color.FromArgb(199, 213, 224);
+            GeneroJuego5.BackColor = Color.FromArgb(40, 40, 40);
             GeneroJuego5.BorderStyle = BorderStyle.None;
             GeneroJuego5.Enabled = false;
+            GeneroJuego5.ForeColor = Color.LightGray;
             GeneroJuego5.Location = new Point(13, 15);
             GeneroJuego5.Margin = new Padding(3, 2, 3, 2);
             GeneroJuego5.Name = "GeneroJuego5";
@@ -1094,9 +1117,10 @@
             // 
             // PlataformaJuego5
             // 
-            PlataformaJuego5.BackColor = Color.FromArgb(199, 213, 224);
+            PlataformaJuego5.BackColor = Color.FromArgb(40, 40, 40);
             PlataformaJuego5.BorderStyle = BorderStyle.None;
             PlataformaJuego5.Enabled = false;
+            PlataformaJuego5.ForeColor = Color.LightGray;
             PlataformaJuego5.Location = new Point(152, 15);
             PlataformaJuego5.Margin = new Padding(3, 2, 3, 2);
             PlataformaJuego5.Name = "PlataformaJuego5";
@@ -1105,9 +1129,10 @@
             // 
             // PrecioJuego5
             // 
-            PrecioJuego5.BackColor = Color.FromArgb(199, 213, 224);
+            PrecioJuego5.BackColor = Color.FromArgb(40, 40, 40);
             PrecioJuego5.BorderStyle = BorderStyle.None;
             PrecioJuego5.Enabled = false;
+            PrecioJuego5.ForeColor = Color.LightGray;
             PrecioJuego5.Location = new Point(152, 50);
             PrecioJuego5.Margin = new Padding(3, 2, 3, 2);
             PrecioJuego5.Name = "PrecioJuego5";
@@ -1116,9 +1141,10 @@
             // 
             // StockJuego5
             // 
-            StockJuego5.BackColor = Color.FromArgb(199, 213, 224);
+            StockJuego5.BackColor = Color.FromArgb(40, 40, 40);
             StockJuego5.BorderStyle = BorderStyle.None;
             StockJuego5.Enabled = false;
+            StockJuego5.ForeColor = Color.LightGray;
             StockJuego5.Location = new Point(13, 50);
             StockJuego5.Margin = new Padding(3, 2, 3, 2);
             StockJuego5.Name = "StockJuego5";
@@ -1138,9 +1164,10 @@
             // 
             // TituloJuego5
             // 
-            TituloJuego5.BackColor = Color.FromArgb(40, 40, 40);
+            TituloJuego5.BackColor = Color.FromArgb(42, 71, 94);
             TituloJuego5.BorderStyle = BorderStyle.None;
             TituloJuego5.Enabled = false;
+            TituloJuego5.ForeColor = SystemColors.ActiveCaption;
             TituloJuego5.Location = new Point(408, 21);
             TituloJuego5.Margin = new Padding(3, 2, 3, 2);
             TituloJuego5.Name = "TituloJuego5";
@@ -1149,9 +1176,10 @@
             // 
             // ModalidadJuego4
             // 
-            ModalidadJuego4.BackColor = Color.FromArgb(199, 213, 224);
+            ModalidadJuego4.BackColor = Color.FromArgb(42, 71, 94);
             ModalidadJuego4.BorderStyle = BorderStyle.None;
             ModalidadJuego4.Enabled = false;
+            ModalidadJuego4.ForeColor = SystemColors.ActiveCaption;
             ModalidadJuego4.Location = new Point(223, 21);
             ModalidadJuego4.Margin = new Padding(3, 2, 3, 2);
             ModalidadJuego4.Name = "ModalidadJuego4";
@@ -1172,9 +1200,10 @@
             // 
             // GeneroJuego4
             // 
-            GeneroJuego4.BackColor = Color.FromArgb(199, 213, 224);
+            GeneroJuego4.BackColor = Color.FromArgb(40, 40, 40);
             GeneroJuego4.BorderStyle = BorderStyle.None;
             GeneroJuego4.Enabled = false;
+            GeneroJuego4.ForeColor = Color.LightGray;
             GeneroJuego4.Location = new Point(13, 15);
             GeneroJuego4.Margin = new Padding(3, 2, 3, 2);
             GeneroJuego4.Name = "GeneroJuego4";
@@ -1183,9 +1212,10 @@
             // 
             // PlataformaJuego4
             // 
-            PlataformaJuego4.BackColor = Color.FromArgb(199, 213, 224);
+            PlataformaJuego4.BackColor = Color.FromArgb(40, 40, 40);
             PlataformaJuego4.BorderStyle = BorderStyle.None;
             PlataformaJuego4.Enabled = false;
+            PlataformaJuego4.ForeColor = Color.LightGray;
             PlataformaJuego4.Location = new Point(154, 15);
             PlataformaJuego4.Margin = new Padding(3, 2, 3, 2);
             PlataformaJuego4.Name = "PlataformaJuego4";
@@ -1194,9 +1224,10 @@
             // 
             // PrecioJuego4
             // 
-            PrecioJuego4.BackColor = Color.FromArgb(199, 213, 224);
+            PrecioJuego4.BackColor = Color.FromArgb(40, 40, 40);
             PrecioJuego4.BorderStyle = BorderStyle.None;
             PrecioJuego4.Enabled = false;
+            PrecioJuego4.ForeColor = Color.LightGray;
             PrecioJuego4.Location = new Point(154, 50);
             PrecioJuego4.Margin = new Padding(3, 2, 3, 2);
             PrecioJuego4.Name = "PrecioJuego4";
@@ -1205,9 +1236,10 @@
             // 
             // StockJuego4
             // 
-            StockJuego4.BackColor = Color.FromArgb(199, 213, 224);
+            StockJuego4.BackColor = Color.FromArgb(40, 40, 40);
             StockJuego4.BorderStyle = BorderStyle.None;
             StockJuego4.Enabled = false;
+            StockJuego4.ForeColor = Color.LightGray;
             StockJuego4.Location = new Point(13, 50);
             StockJuego4.Margin = new Padding(3, 2, 3, 2);
             StockJuego4.Name = "StockJuego4";
@@ -1227,9 +1259,10 @@
             // 
             // TituloJuego4
             // 
-            TituloJuego4.BackColor = Color.FromArgb(40, 40, 40);
+            TituloJuego4.BackColor = Color.FromArgb(42, 71, 94);
             TituloJuego4.BorderStyle = BorderStyle.None;
             TituloJuego4.Enabled = false;
+            TituloJuego4.ForeColor = SystemColors.ActiveCaption;
             TituloJuego4.Location = new Point(39, 21);
             TituloJuego4.Margin = new Padding(3, 2, 3, 2);
             TituloJuego4.Name = "TituloJuego4";
@@ -1296,9 +1329,10 @@
             // 
             // ModalidadJuego3
             // 
-            ModalidadJuego3.BackColor = Color.FromArgb(199, 213, 224);
+            ModalidadJuego3.BackColor = Color.FromArgb(42, 81, 94);
             ModalidadJuego3.BorderStyle = BorderStyle.None;
             ModalidadJuego3.Enabled = false;
+            ModalidadJuego3.ForeColor = SystemColors.ActiveCaption;
             ModalidadJuego3.Location = new Point(923, 21);
             ModalidadJuego3.Margin = new Padding(3, 2, 3, 2);
             ModalidadJuego3.Name = "ModalidadJuego3";
@@ -1319,9 +1353,10 @@
             // 
             // GeneroJuego3
             // 
-            GeneroJuego3.BackColor = Color.FromArgb(199, 213, 224);
+            GeneroJuego3.BackColor = Color.FromArgb(40, 40, 40);
             GeneroJuego3.BorderStyle = BorderStyle.None;
             GeneroJuego3.Enabled = false;
+            GeneroJuego3.ForeColor = Color.LightGray;
             GeneroJuego3.Location = new Point(13, 15);
             GeneroJuego3.Margin = new Padding(3, 2, 3, 2);
             GeneroJuego3.Name = "GeneroJuego3";
@@ -1330,9 +1365,10 @@
             // 
             // PlataformaJuego3
             // 
-            PlataformaJuego3.BackColor = Color.FromArgb(199, 213, 224);
+            PlataformaJuego3.BackColor = Color.FromArgb(40, 40, 40);
             PlataformaJuego3.BorderStyle = BorderStyle.None;
             PlataformaJuego3.Enabled = false;
+            PlataformaJuego3.ForeColor = Color.LightGray;
             PlataformaJuego3.Location = new Point(147, 15);
             PlataformaJuego3.Margin = new Padding(3, 2, 3, 2);
             PlataformaJuego3.Name = "PlataformaJuego3";
@@ -1341,9 +1377,10 @@
             // 
             // PrecioJuego3
             // 
-            PrecioJuego3.BackColor = Color.FromArgb(199, 213, 224);
+            PrecioJuego3.BackColor = Color.FromArgb(40, 40, 40);
             PrecioJuego3.BorderStyle = BorderStyle.None;
             PrecioJuego3.Enabled = false;
+            PrecioJuego3.ForeColor = Color.LightGray;
             PrecioJuego3.Location = new Point(147, 50);
             PrecioJuego3.Margin = new Padding(3, 2, 3, 2);
             PrecioJuego3.Name = "PrecioJuego3";
@@ -1352,9 +1389,10 @@
             // 
             // StockJuego3
             // 
-            StockJuego3.BackColor = Color.FromArgb(199, 213, 224);
+            StockJuego3.BackColor = Color.FromArgb(40, 40, 40);
             StockJuego3.BorderStyle = BorderStyle.None;
             StockJuego3.Enabled = false;
+            StockJuego3.ForeColor = Color.LightGray;
             StockJuego3.Location = new Point(13, 50);
             StockJuego3.Margin = new Padding(3, 2, 3, 2);
             StockJuego3.Name = "StockJuego3";
@@ -1374,9 +1412,10 @@
             // 
             // TituloJuego3
             // 
-            TituloJuego3.BackColor = Color.FromArgb(40, 40, 40);
+            TituloJuego3.BackColor = Color.FromArgb(42, 81, 94);
             TituloJuego3.BorderStyle = BorderStyle.None;
             TituloJuego3.Enabled = false;
+            TituloJuego3.ForeColor = SystemColors.ActiveCaption;
             TituloJuego3.Location = new Point(739, 21);
             TituloJuego3.Margin = new Padding(3, 2, 3, 2);
             TituloJuego3.Name = "TituloJuego3";
@@ -1385,9 +1424,10 @@
             // 
             // ModalidadJuego2
             // 
-            ModalidadJuego2.BackColor = Color.FromArgb(199, 213, 224);
+            ModalidadJuego2.BackColor = Color.FromArgb(42, 81, 94);
             ModalidadJuego2.BorderStyle = BorderStyle.None;
             ModalidadJuego2.Enabled = false;
+            ModalidadJuego2.ForeColor = SystemColors.ActiveCaption;
             ModalidadJuego2.Location = new Point(571, 21);
             ModalidadJuego2.Margin = new Padding(3, 2, 3, 2);
             ModalidadJuego2.Name = "ModalidadJuego2";
@@ -1408,9 +1448,10 @@
             // 
             // GeneroJuego2
             // 
-            GeneroJuego2.BackColor = Color.FromArgb(199, 213, 224);
+            GeneroJuego2.BackColor = Color.FromArgb(40, 40, 40);
             GeneroJuego2.BorderStyle = BorderStyle.None;
             GeneroJuego2.Enabled = false;
+            GeneroJuego2.ForeColor = Color.LightGray;
             GeneroJuego2.Location = new Point(13, 15);
             GeneroJuego2.Margin = new Padding(3, 2, 3, 2);
             GeneroJuego2.Name = "GeneroJuego2";
@@ -1419,9 +1460,10 @@
             // 
             // PlataformaJuego2
             // 
-            PlataformaJuego2.BackColor = Color.FromArgb(199, 213, 224);
+            PlataformaJuego2.BackColor = Color.FromArgb(40, 40, 40);
             PlataformaJuego2.BorderStyle = BorderStyle.None;
             PlataformaJuego2.Enabled = false;
+            PlataformaJuego2.ForeColor = Color.LightGray;
             PlataformaJuego2.Location = new Point(153, 15);
             PlataformaJuego2.Margin = new Padding(3, 2, 3, 2);
             PlataformaJuego2.Name = "PlataformaJuego2";
@@ -1430,9 +1472,10 @@
             // 
             // PrecioJuego2
             // 
-            PrecioJuego2.BackColor = Color.FromArgb(199, 213, 224);
+            PrecioJuego2.BackColor = Color.FromArgb(40, 40, 40);
             PrecioJuego2.BorderStyle = BorderStyle.None;
             PrecioJuego2.Enabled = false;
+            PrecioJuego2.ForeColor = Color.LightGray;
             PrecioJuego2.Location = new Point(153, 50);
             PrecioJuego2.Margin = new Padding(3, 2, 3, 2);
             PrecioJuego2.Name = "PrecioJuego2";
@@ -1441,9 +1484,10 @@
             // 
             // StockJuego2
             // 
-            StockJuego2.BackColor = Color.FromArgb(199, 213, 224);
+            StockJuego2.BackColor = Color.FromArgb(40, 40, 40);
             StockJuego2.BorderStyle = BorderStyle.None;
             StockJuego2.Enabled = false;
+            StockJuego2.ForeColor = Color.LightGray;
             StockJuego2.Location = new Point(13, 50);
             StockJuego2.Margin = new Padding(3, 2, 3, 2);
             StockJuego2.Name = "StockJuego2";
@@ -1463,10 +1507,10 @@
             // 
             // TituloJuego2
             // 
-            TituloJuego2.BackColor = Color.FromArgb(40, 40, 40);
+            TituloJuego2.BackColor = Color.FromArgb(42, 81, 94);
             TituloJuego2.BorderStyle = BorderStyle.None;
             TituloJuego2.Enabled = false;
-            TituloJuego2.ForeColor = Color.White;
+            TituloJuego2.ForeColor = SystemColors.ActiveCaption;
             TituloJuego2.Location = new Point(387, 21);
             TituloJuego2.Margin = new Padding(3, 2, 3, 2);
             TituloJuego2.Name = "TituloJuego2";
@@ -1488,7 +1532,7 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(1147, 1501);
+            pictureBox1.Location = new Point(1070, 1503);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(412, 349);
             pictureBox1.TabIndex = 41;
@@ -1510,14 +1554,13 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FormProductos";
             MouseDown += FormProductos_MouseDown;
-            ((System.ComponentModel.ISupportInitialize)btnminimizar).EndInit();
-            ((System.ComponentModel.ISupportInitialize)btncerrar).EndInit();
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)ImagenJuego1).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)btnminimizar).EndInit();
             panel14.ResumeLayout(false);
             panel14.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)ImagenJuego10).EndInit();
@@ -1557,8 +1600,6 @@
 
         #endregion
         private Button button_LogOut;
-        private PictureBox btncerrar;
-        private PictureBox btnminimizar;
         private Panel panel3;
         private PictureBox pictureBox2;
         private TextBox TituloJuego1;
@@ -1662,5 +1703,6 @@
         private TextBox textBox_Nombre;
         private TextBox textBox_ConteoCarrito;
         private PictureBox ImagenJuego7;
+        private PictureBox btnminimizar;
     }
 }

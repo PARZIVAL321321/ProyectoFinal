@@ -1,4 +1,4 @@
-﻿using MySql.Data.MySqlClient;
+﻿using MySql.Data.MySqlClient; // Para conectarnos a nuestra base de datos
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

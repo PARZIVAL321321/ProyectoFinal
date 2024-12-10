@@ -381,5 +381,18 @@ namespace ProyectoFinalV1
             }
         }
 
+        // Boton para abrir el form donde se va a mostrar la grafica
+        private void button_MostrarGrafica_Click(object sender, EventArgs e)
+        {
+
+            // Ocultamos este form
+            this.Hide();
+            // Creamos el form donde se va a mostrar la grafica
+            FormGrafica formGrafica = new FormGrafica();
+            // Lo mostramos usando ShowDialog
+            formGrafica.ShowDialog();
+            // Volvemos a mostrar este form
+            this.Show();
+        }
     }
 }

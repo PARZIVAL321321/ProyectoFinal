@@ -138,7 +138,7 @@ namespace ProyectoFinalV1
                     tipo = int.Parse(lector["Tipo"].ToString());
 
                     // Creamos el objeto de nuestra clase
-                   Persona usuario = new Persona(id, nombre, cuenta, contra, monto, tipo);
+                    Persona usuario = new Persona(id, nombre, cuenta, contra, monto, tipo);
 
                     return usuario;
 
