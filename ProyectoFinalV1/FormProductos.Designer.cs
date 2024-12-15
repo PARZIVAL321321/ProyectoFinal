@@ -28,9 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormProductos));
             button_LogOut = new Button();
             panel3 = new Panel();
+            textBox_FechaHora = new TextBox();
             button_Carrito = new Button();
             textBox_ConteoCarrito = new TextBox();
             label_Puntodeventa = new Label();
@@ -134,6 +136,8 @@
             TituloJuego2 = new TextBox();
             panel4 = new Panel();
             pictureBox1 = new PictureBox();
+            timer_Reloj = new System.Windows.Forms.Timer(components);
+            label3 = new Label();
             panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)ImagenJuego1).BeginInit();
@@ -185,6 +189,8 @@
             // panel3
             // 
             panel3.BackColor = Color.FromArgb(23, 26, 33);
+            panel3.Controls.Add(label3);
+            panel3.Controls.Add(textBox_FechaHora);
             panel3.Controls.Add(button_Carrito);
             panel3.Controls.Add(textBox_ConteoCarrito);
             panel3.Controls.Add(label_Puntodeventa);
@@ -199,6 +205,19 @@
             panel3.TabIndex = 6;
             panel3.MouseDown += panel3_MouseDown;
             // 
+            // textBox_FechaHora
+            // 
+            textBox_FechaHora.BackColor = Color.FromArgb(23, 26, 33);
+            textBox_FechaHora.BorderStyle = BorderStyle.None;
+            textBox_FechaHora.Enabled = false;
+            textBox_FechaHora.Font = new Font("Century Gothic", 12F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            textBox_FechaHora.ForeColor = SystemColors.Window;
+            textBox_FechaHora.Location = new Point(901, 45);
+            textBox_FechaHora.Margin = new Padding(3, 2, 3, 2);
+            textBox_FechaHora.Name = "textBox_FechaHora";
+            textBox_FechaHora.Size = new Size(176, 20);
+            textBox_FechaHora.TabIndex = 44;
+            // 
             // button_Carrito
             // 
             button_Carrito.BackColor = Color.Transparent;
@@ -209,7 +228,7 @@
             button_Carrito.FlatStyle = FlatStyle.Flat;
             button_Carrito.Font = new Font("Century Gothic", 15.75F, FontStyle.Bold);
             button_Carrito.ForeColor = Color.LightGray;
-            button_Carrito.Location = new Point(996, 32);
+            button_Carrito.Location = new Point(1096, 32);
             button_Carrito.Margin = new Padding(3, 2, 3, 2);
             button_Carrito.Name = "button_Carrito";
             button_Carrito.Size = new Size(158, 35);
@@ -225,7 +244,7 @@
             textBox_ConteoCarrito.Enabled = false;
             textBox_ConteoCarrito.Font = new Font("Century Gothic", 16.2F, FontStyle.Italic, GraphicsUnit.Point, 0);
             textBox_ConteoCarrito.ForeColor = SystemColors.Window;
-            textBox_ConteoCarrito.Location = new Point(1159, 32);
+            textBox_ConteoCarrito.Location = new Point(1260, 38);
             textBox_ConteoCarrito.Margin = new Padding(3, 2, 3, 2);
             textBox_ConteoCarrito.Name = "textBox_ConteoCarrito";
             textBox_ConteoCarrito.Size = new Size(32, 27);
@@ -250,7 +269,7 @@
             textBox_Nombre.Enabled = false;
             textBox_Nombre.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             textBox_Nombre.ForeColor = Color.LightGray;
-            textBox_Nombre.Location = new Point(301, 41);
+            textBox_Nombre.Location = new Point(301, 42);
             textBox_Nombre.Margin = new Padding(3, 2, 3, 2);
             textBox_Nombre.Name = "textBox_Nombre";
             textBox_Nombre.ReadOnly = true;
@@ -1538,6 +1557,22 @@
             pictureBox1.TabIndex = 41;
             pictureBox1.TabStop = false;
             // 
+            // timer_Reloj
+            // 
+            timer_Reloj.Tick += timer_Reloj_Tick;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.BackColor = Color.Transparent;
+            label3.Font = new Font("Century Gothic", 9.75F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            label3.ForeColor = Color.DimGray;
+            label3.Location = new Point(645, 77);
+            label3.Name = "label3";
+            label3.Size = new Size(257, 16);
+            label3.TabIndex = 45;
+            label3.Text = "\"La diversion a la palma de tus manos\"";
+            // 
             // FormProductos
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -1553,6 +1588,7 @@
             Opacity = 0.95D;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FormProductos";
+            Load += FormProductos_Load;
             MouseDown += FormProductos_MouseDown;
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
@@ -1704,5 +1740,8 @@
         private TextBox textBox_ConteoCarrito;
         private PictureBox ImagenJuego7;
         private PictureBox btnminimizar;
+        private System.Windows.Forms.Timer timer_Reloj;
+        private TextBox textBox_FechaHora;
+        private Label label3;
     }
 }

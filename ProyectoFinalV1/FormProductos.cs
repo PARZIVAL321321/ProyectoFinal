@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 namespace ProyectoFinalV1
 {
     public partial class FormProductos : Form
@@ -45,6 +46,11 @@ namespace ProyectoFinalV1
             textBox_ConteoCarrito.Text = 0.ToString();
             // Guardamos el monto actual del usuario
             monto_usuario = usuario.Monto;
+        }
+
+        private void FormProductos_Load(object sender, EventArgs e)
+        {
+            FechaHora_Mostrar();
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -179,15 +185,6 @@ namespace ProyectoFinalV1
                     MessageBox.Show("Debe haber al menos 6 juegos disponibles");
                     // Cerramos por completo la aplicacion, ya que no se puede iniciar
                     Application.Exit();
-                }
-
-                if (lista.Count < 7)
-                {
-                    this.Size = new Size(1500, 330);
-                }
-                else if (lista.Count >= 7)
-                {
-                    this.Size = new Size(1500, 702);
                 }
 
                 // Limitamos la lista a un maximo de 10 juegos, asi el administrador puede agregar mas juegos en la base de datos sin problemas
@@ -574,6 +571,24 @@ namespace ProyectoFinalV1
             {
                 Application.Exit();
             }
+        }
+
+        // Durante la ejecucion del form, habra un timer el cual ira actualizand la fecha y hora actual
+        private void FechaHora_Mostrar()
+        {
+            // El timer se ira actualizando cada segundo
+            timer_Reloj.Interval = 1000;
+            timer_Reloj.Tick += timer_Reloj_Tick; // Vinculamos la actualizacion
+
+            // Iniciamos el timer
+            timer_Reloj.Start();
+        }
+
+        // En cada tick del timer, se actualizara la fecha y hora
+        private void timer_Reloj_Tick(object sender, EventArgs e)
+        {
+            textBox_FechaHora.Text = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
+
         }
     }
 }

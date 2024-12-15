@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
+using System.Globalization; // Para que detecte la region en la que estamos
 
 namespace ProyectoFinalV1
 {
@@ -42,6 +43,9 @@ namespace ProyectoFinalV1
             // Declaramos el tipo de grafico que vamos a usar, en este caso de pastel
             serie.ChartType = SeriesChartType.Pie;
 
+            // Variable para almacenar el valor de las ventas totales
+            double total_monto = 0;
+
             // Mientras haya algo que leer en nuestra base de datos
             while (lector.Read())
             {
@@ -49,6 +53,8 @@ namespace ProyectoFinalV1
                 string nombre = lector["Nombre"].ToString();         
                 // Extraemos el valor Monto de nuestra base de datos, el cual convertimos a double para que sea mejor trabajar con el en el grafico
                 double monto = Convert.ToDouble(lector["Monto"]);    
+
+                total_monto+= monto;
 
                 // Agregamos esta informacion a la grafica (creamos un nuevo punto para la grafica)
                 DataPoint punto = new DataPoint(0, monto);  // Al ser una grafica de pastel, no hay categorias por lo que se manda un "0"
@@ -67,6 +73,10 @@ namespace ProyectoFinalV1
             {
                 point.IsValueShownAsLabel = false; 
             }
+
+            // Muestra el total en un Label con formato de moneda de nuestra region
+            label_VentaTotal.Text = "Venta total: " + total_monto.ToString("C", new CultureInfo("es-MX"));
+
         }
 
         // Boton para regresar al formAdmin
@@ -75,5 +85,4 @@ namespace ProyectoFinalV1
             this.Dispose();
         }
     }
-
 }

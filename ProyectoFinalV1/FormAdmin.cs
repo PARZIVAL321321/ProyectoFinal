@@ -108,6 +108,9 @@ namespace ProyectoFinalV1
             adaptador.Fill(dt);
             dataGridView_Inventario.DataSource = dt;
 
+            // Ordenamos por la columna "Stock" en el DataGridView
+            dataGridView_Inventario.Sort(dataGridView_Inventario.Columns["Stock"], System.ComponentModel.ListSortDirection.Ascending);
+
             // Cerremos nuestra base de datos
             conexion.Close();
         }

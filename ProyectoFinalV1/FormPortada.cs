@@ -8,6 +8,10 @@ namespace ProyectoFinalV1
             InitializeComponent();
         }
 
+        private void FormPortada_Load(object sender, EventArgs e)
+        {
+            textBox_Fecha.Text = DateTime.Now.ToString("dd/MM/yyyy");
+        }
 
         // Una vez que se haya apretado el boton de "Log-In" mostramos el siguiente form
         private void button_LogIn_Click(object sender, EventArgs e)
