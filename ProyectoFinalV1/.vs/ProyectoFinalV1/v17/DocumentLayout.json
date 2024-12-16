@@ -1,30 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\uriel\\OneDrive\\Desktop\\NEW TEMPORAL\\ProyectoFinal\\ProyectoFinalV1\\",
+  "WorkspaceRootPath": "C:\\Users\\OSCAR ISC\\Desktop\\ProyectoFinal\\ProyectoFinalV1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FB66F1B0-E526-4F56-8D53-094F3AB041D9}|ProyectoFinalV1.csproj|c:\\users\\uriel\\onedrive\\desktop\\new temporal\\proyectofinal\\proyectofinalv1\\formadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FB66F1B0-E526-4F56-8D53-094F3AB041D9}|ProyectoFinalV1.csproj|solutionrelative:formadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{FB66F1B0-E526-4F56-8D53-094F3AB041D9}|ProyectoFinalV1.csproj|c:\\users\\oscar isc\\desktop\\proyectofinal\\proyectofinalv1\\generadorpdf.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB66F1B0-E526-4F56-8D53-094F3AB041D9}|ProyectoFinalV1.csproj|solutionrelative:generadorpdf.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FB66F1B0-E526-4F56-8D53-094F3AB041D9}|ProyectoFinalV1.csproj|c:\\users\\uriel\\onedrive\\desktop\\new temporal\\proyectofinal\\proyectofinalv1\\formlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FB66F1B0-E526-4F56-8D53-094F3AB041D9}|ProyectoFinalV1.csproj|solutionrelative:formlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FB66F1B0-E526-4F56-8D53-094F3AB041D9}|ProyectoFinalV1.csproj|c:\\users\\uriel\\onedrive\\desktop\\new temporal\\proyectofinal\\proyectofinalv1\\formproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FB66F1B0-E526-4F56-8D53-094F3AB041D9}|ProyectoFinalV1.csproj|solutionrelative:formproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FB66F1B0-E526-4F56-8D53-094F3AB041D9}|ProyectoFinalV1.csproj|c:\\users\\uriel\\onedrive\\desktop\\new temporal\\proyectofinal\\proyectofinalv1\\formadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FB66F1B0-E526-4F56-8D53-094F3AB041D9}|ProyectoFinalV1.csproj|solutionrelative:formadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FB66F1B0-E526-4F56-8D53-094F3AB041D9}|ProyectoFinalV1.csproj|c:\\users\\uriel\\onedrive\\desktop\\new temporal\\proyectofinal\\proyectofinalv1\\formpago.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FB66F1B0-E526-4F56-8D53-094F3AB041D9}|ProyectoFinalV1.csproj|solutionrelative:formpago.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FB66F1B0-E526-4F56-8D53-094F3AB041D9}|ProyectoFinalV1.csproj|c:\\users\\uriel\\onedrive\\desktop\\new temporal\\proyectofinal\\proyectofinalv1\\formpago.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FB66F1B0-E526-4F56-8D53-094F3AB041D9}|ProyectoFinalV1.csproj|c:\\users\\oscar isc\\desktop\\proyectofinal\\proyectofinalv1\\formpago.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FB66F1B0-E526-4F56-8D53-094F3AB041D9}|ProyectoFinalV1.csproj|solutionrelative:formpago.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB66F1B0-E526-4F56-8D53-094F3AB041D9}|ProyectoFinalV1.csproj|c:\\users\\oscar isc\\desktop\\proyectofinal\\proyectofinalv1\\formcarrito.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB66F1B0-E526-4F56-8D53-094F3AB041D9}|ProyectoFinalV1.csproj|solutionrelative:formcarrito.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,81 +22,50 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 3,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "FormPago.cs",
-              "DocumentMoniker": "C:\\Users\\uriel\\OneDrive\\Desktop\\NEW TEMPORAL\\ProyectoFinal\\ProyectoFinalV1\\FormPago.cs",
-              "RelativeDocumentMoniker": "FormPago.cs",
-              "ToolTip": "C:\\Users\\uriel\\OneDrive\\Desktop\\NEW TEMPORAL\\ProyectoFinal\\ProyectoFinalV1\\FormPago.cs",
-              "RelativeToolTip": "FormPago.cs",
-              "ViewState": "AQIAAEoAAAAAAAAAAAAAAGAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T23:48:28.163Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "FormPago.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\uriel\\OneDrive\\Desktop\\NEW TEMPORAL\\ProyectoFinal\\ProyectoFinalV1\\FormPago.cs",
-              "RelativeDocumentMoniker": "FormPago.cs",
-              "ToolTip": "C:\\Users\\uriel\\OneDrive\\Desktop\\NEW TEMPORAL\\ProyectoFinal\\ProyectoFinalV1\\FormPago.cs [Dise\u00F1o]",
-              "RelativeToolTip": "FormPago.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T23:48:09.633Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "FormAdmin.cs",
-              "DocumentMoniker": "C:\\Users\\uriel\\OneDrive\\Desktop\\NEW TEMPORAL\\ProyectoFinal\\ProyectoFinalV1\\FormAdmin.cs",
-              "RelativeDocumentMoniker": "FormAdmin.cs",
-              "ToolTip": "C:\\Users\\uriel\\OneDrive\\Desktop\\NEW TEMPORAL\\ProyectoFinal\\ProyectoFinalV1\\FormAdmin.cs",
-              "RelativeToolTip": "FormAdmin.cs",
-              "ViewState": "AQIAAIMBAAAAAAAAAAAUwJcBAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T23:46:59.084Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "FormProductos.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\uriel\\OneDrive\\Desktop\\NEW TEMPORAL\\ProyectoFinal\\ProyectoFinalV1\\FormProductos.cs",
-              "RelativeDocumentMoniker": "FormProductos.cs",
-              "ToolTip": "C:\\Users\\uriel\\OneDrive\\Desktop\\NEW TEMPORAL\\ProyectoFinal\\ProyectoFinalV1\\FormProductos.cs [Dise\u00F1o]",
-              "RelativeToolTip": "FormProductos.cs [Dise\u00F1o]",
+              "Title": "FormCarrito.cs",
+              "DocumentMoniker": "C:\\Users\\OSCAR ISC\\Desktop\\ProyectoFinal\\ProyectoFinalV1\\FormCarrito.cs",
+              "RelativeDocumentMoniker": "FormCarrito.cs",
+              "ToolTip": "C:\\Users\\OSCAR ISC\\Desktop\\ProyectoFinal\\ProyectoFinalV1\\FormCarrito.cs",
+              "RelativeToolTip": "FormCarrito.cs",
+              "ViewState": "AgIAAJ4AAAAAAAAAAAAkwMcAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T23:44:16.518Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2024-12-16T15:17:20.302Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "FormLogIn.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\uriel\\OneDrive\\Desktop\\NEW TEMPORAL\\ProyectoFinal\\ProyectoFinalV1\\FormLogIn.cs",
-              "RelativeDocumentMoniker": "FormLogIn.cs",
-              "ToolTip": "C:\\Users\\uriel\\OneDrive\\Desktop\\NEW TEMPORAL\\ProyectoFinal\\ProyectoFinalV1\\FormLogIn.cs [Dise\u00F1o]",
-              "RelativeToolTip": "FormLogIn.cs [Dise\u00F1o]",
+              "Title": "FormPago.cs",
+              "DocumentMoniker": "C:\\Users\\OSCAR ISC\\Desktop\\ProyectoFinal\\ProyectoFinalV1\\FormPago.cs",
+              "RelativeDocumentMoniker": "FormPago.cs",
+              "ToolTip": "C:\\Users\\OSCAR ISC\\Desktop\\ProyectoFinal\\ProyectoFinalV1\\FormPago.cs",
+              "RelativeToolTip": "FormPago.cs",
+              "ViewState": "AgIAAH4AAAAAAAAAAAAAAH4AAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T23:44:08.056Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2024-12-16T15:11:41.357Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "FormAdmin.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\uriel\\OneDrive\\Desktop\\NEW TEMPORAL\\ProyectoFinal\\ProyectoFinalV1\\FormAdmin.cs",
-              "RelativeDocumentMoniker": "FormAdmin.cs",
-              "ToolTip": "C:\\Users\\uriel\\OneDrive\\Desktop\\NEW TEMPORAL\\ProyectoFinal\\ProyectoFinalV1\\FormAdmin.cs [Dise\u00F1o]",
-              "RelativeToolTip": "FormAdmin.cs [Dise\u00F1o]",
+              "Title": "GeneradorPdf.cs",
+              "DocumentMoniker": "C:\\Users\\OSCAR ISC\\Desktop\\ProyectoFinal\\ProyectoFinalV1\\GeneradorPdf.cs",
+              "RelativeDocumentMoniker": "GeneradorPdf.cs",
+              "ToolTip": "C:\\Users\\OSCAR ISC\\Desktop\\ProyectoFinal\\ProyectoFinalV1\\GeneradorPdf.cs",
+              "RelativeToolTip": "GeneradorPdf.cs",
+              "ViewState": "AgIAAGkAAAAAAAAAAAAAAHQAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T23:43:40.6Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2024-12-16T15:01:23.872Z",
+              "EditorCaption": ""
             }
           ]
         }

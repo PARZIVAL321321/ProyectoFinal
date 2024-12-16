@@ -26,6 +26,8 @@ namespace ProyectoFinalV1
         // Variable para almacenar al usuario que ingreso
         Persona usuario;
 
+        //Variable para almacenar el carrito
+        List<Juegos> carrito = new List<Juegos>();
         // Constuctor vacio
         public FormPago()
         {
@@ -33,7 +35,7 @@ namespace ProyectoFinalV1
         }
 
         // Constructor por parametros (nos llega nuestro total de la compra)
-        public FormPago(int total_impuesto_constructor, Persona usuario_constructor)
+        public FormPago(int total_impuesto_constructor, Persona usuario_constructor, List<Juegos> carrito_constructor)
         {
             // Llamamos a nuestra funcion importante
             InitializeComponent();
@@ -45,6 +47,9 @@ namespace ProyectoFinalV1
             usuario = usuario_constructor;
 
             textBox_TotalCompra.Text = total_impuesto.ToString();
+
+            // Guardamos el carrito
+            carrito = carrito_constructor;
         }
 
         // En caso de que se haya elegido para con efectivo
@@ -145,6 +150,10 @@ namespace ProyectoFinalV1
                             // Actualizamos el valor del monto
                             usuario.Monto += total_impuesto;
 
+                            //Generamos el ticket/pdf
+                            GeneradorPdf generador = new GeneradorPdf(usuario,carrito,true,0,total_impuesto);
+                            generador.CrearPDF();
+
                             // Tras realizar la compra, cerramos este form
                             this.Dispose();
 
@@ -202,6 +211,9 @@ namespace ProyectoFinalV1
 
                             MessageBox.Show("Compra realizada con exito");
 
+                            //Generamos ticket/pdf
+                            GeneradorPdf generador = new GeneradorPdf(usuario,carrito,false,dinero_usuario,total_impuesto);
+                            generador.CrearPDF();
                             // Actualizamos el valor del monto
                             usuario.Monto += total_impuesto;
 

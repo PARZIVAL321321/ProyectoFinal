@@ -204,7 +204,7 @@ namespace ProyectoFinalV1
         {
 
             // Creamos el formPago, mandando nuestro total
-            FormPago formPago = new FormPago(total_impuesto, usuario);
+            FormPago formPago = new FormPago(total_impuesto, usuario, carrito);
 
             // Ocultamos este form
             this.Hide();
