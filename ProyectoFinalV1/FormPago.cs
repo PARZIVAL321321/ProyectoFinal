@@ -46,7 +46,7 @@ namespace ProyectoFinalV1
             // Guardamos a nuestro usuario
             usuario = usuario_constructor;
 
-            textBox_TotalCompra.Text = total_impuesto.ToString();
+            textBox_TotalCompra.Text = total_impuesto.ToString("C", new CultureInfo("es-MX"));
 
             // Guardamos el carrito
             carrito = carrito_constructor;
@@ -67,6 +67,7 @@ namespace ProyectoFinalV1
 
             // Mostramos la informacion para hacer el pago de efectivo
             textBox_Efectivo.Visible = true;
+            textBox_Nombre.Visible = true;
 
             // Seleccionamos pagar con efectivo
             bandera_Efectivo = true;
@@ -82,6 +83,7 @@ namespace ProyectoFinalV1
 
             // Ocultamos la informacion para hacer el pago de efectivo
             textBox_Efectivo.Visible = false;
+            textBox_Nombre.Visible = false;
 
             // Mostramos la informacion para hacer el pago por tarjeta
             textBox_NombreCuenta.Visible = true;
@@ -104,8 +106,8 @@ namespace ProyectoFinalV1
             if (bandera_Tarjeta)
             {
                 if (
-                    (string.IsNullOrWhiteSpace(textBox_Nombre.Text) ||
-                    string.IsNullOrWhiteSpace(textBox_Efectivo.Text) ||
+                    (string.IsNullOrWhiteSpace(textBox_NombreCuenta.Text) ||
+                    string.IsNullOrWhiteSpace(textBox_NumeroTarjeta.Text) ||
                     string.IsNullOrWhiteSpace(textBox_MesTarjeta.Text) ||
                     string.IsNullOrWhiteSpace(textBox_YearTarjeta.Text) ||
                     string.IsNullOrWhiteSpace(textBox_CVVTarjeta.Text))
@@ -254,7 +256,7 @@ namespace ProyectoFinalV1
             return true;
 
         }
-
+        
         private void FormPago_Load(object sender, EventArgs e)
         {
             panel1.Width = 0; // Ocultar el panel tarjeta
@@ -271,8 +273,5 @@ namespace ProyectoFinalV1
             bandera_Tarjeta = false;
             bandera_Efectivo = false;
         }
-
-
     }
-
 }

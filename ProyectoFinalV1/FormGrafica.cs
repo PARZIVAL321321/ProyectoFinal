@@ -66,7 +66,7 @@ namespace ProyectoFinalV1
             chart_Admin.Series.Add(serie);
 
             // Mostramos la leyenda en la parte inferior
-            chart_Admin.Legends[0].Docking = Docking.Bottom;
+            chart_Admin.Legends[0].Docking = Docking.Right;
 
             // Quitamos los nombres (etiquetas) para que estos no se muestren sobre nuestra grafica
             foreach (var point in serie.Points)
@@ -85,14 +85,5 @@ namespace ProyectoFinalV1
             this.Dispose();
         }
 
-        private void chart_Admin_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }

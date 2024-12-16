@@ -40,6 +40,13 @@
             radioButton_Efectivo = new RadioButton();
             radioButton_Tarjeta = new RadioButton();
             panel3 = new Panel();
+            PanelEfectivo = new Panel();
+            panel11 = new Panel();
+            textBox_Efectivo = new TextBox();
+            label9 = new Label();
+            label12 = new Label();
+            panel16 = new Panel();
+            textBox_Nombre = new TextBox();
             panel2 = new Panel();
             label3 = new Label();
             panel1 = new Panel();
@@ -56,14 +63,10 @@
             label1 = new Label();
             panel4 = new Panel();
             pictureBox3 = new PictureBox();
-            PanelEfectivo = new Panel();
-            panel11 = new Panel();
-            textBox_Efectivo = new TextBox();
-            label9 = new Label();
-            label12 = new Label();
-            panel16 = new Panel();
-            textBox_Nombre = new TextBox();
             panel3.SuspendLayout();
+            PanelEfectivo.SuspendLayout();
+            panel11.SuspendLayout();
+            panel16.SuspendLayout();
             panel2.SuspendLayout();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -74,9 +77,6 @@
             panel5.SuspendLayout();
             panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
-            PanelEfectivo.SuspendLayout();
-            panel11.SuspendLayout();
-            panel16.SuspendLayout();
             SuspendLayout();
             // 
             // label1_Titulo
@@ -164,6 +164,7 @@
             textBox_TotalCompra.Margin = new Padding(3, 2, 3, 2);
             textBox_TotalCompra.Name = "textBox_TotalCompra";
             textBox_TotalCompra.PlaceholderText = "Total compra";
+            textBox_TotalCompra.ReadOnly = true;
             textBox_TotalCompra.Size = new Size(99, 19);
             textBox_TotalCompra.TabIndex = 8;
             // 
@@ -195,7 +196,6 @@
             radioButton_Efectivo.Name = "radioButton_Efectivo";
             radioButton_Efectivo.Size = new Size(88, 24);
             radioButton_Efectivo.TabIndex = 12;
-            radioButton_Efectivo.TabStop = true;
             radioButton_Efectivo.Text = "Efectivo";
             radioButton_Efectivo.UseVisualStyleBackColor = true;
             radioButton_Efectivo.CheckedChanged += radioButton_Efectivo_CheckedChanged;
@@ -210,7 +210,6 @@
             radioButton_Tarjeta.Name = "radioButton_Tarjeta";
             radioButton_Tarjeta.Size = new Size(75, 24);
             radioButton_Tarjeta.TabIndex = 13;
-            radioButton_Tarjeta.TabStop = true;
             radioButton_Tarjeta.Text = "Tarjeta";
             radioButton_Tarjeta.UseVisualStyleBackColor = true;
             radioButton_Tarjeta.CheckedChanged += radioButton_Tarjeta_CheckedChanged;
@@ -225,6 +224,84 @@
             panel3.Name = "panel3";
             panel3.Size = new Size(482, 82);
             panel3.TabIndex = 29;
+            // 
+            // PanelEfectivo
+            // 
+            PanelEfectivo.BackColor = Color.FromArgb(42, 81, 94);
+            PanelEfectivo.Controls.Add(panel11);
+            PanelEfectivo.Controls.Add(label9);
+            PanelEfectivo.Controls.Add(label12);
+            PanelEfectivo.Controls.Add(panel16);
+            PanelEfectivo.Location = new Point(12, 100);
+            PanelEfectivo.Name = "PanelEfectivo";
+            PanelEfectivo.Size = new Size(482, 133);
+            PanelEfectivo.TabIndex = 34;
+            // 
+            // panel11
+            // 
+            panel11.BackColor = Color.FromArgb(23, 26, 33);
+            panel11.Controls.Add(textBox_Efectivo);
+            panel11.Location = new Point(15, 96);
+            panel11.Name = "panel11";
+            panel11.Size = new Size(141, 27);
+            panel11.TabIndex = 10;
+            // 
+            // textBox_Efectivo
+            // 
+            textBox_Efectivo.BackColor = Color.FromArgb(23, 26, 33);
+            textBox_Efectivo.BorderStyle = BorderStyle.None;
+            textBox_Efectivo.Font = new Font("Century Gothic", 11.25F);
+            textBox_Efectivo.ForeColor = Color.LightGray;
+            textBox_Efectivo.Location = new Point(0, 2);
+            textBox_Efectivo.Margin = new Padding(3, 2, 3, 2);
+            textBox_Efectivo.Name = "textBox_Efectivo";
+            textBox_Efectivo.PlaceholderText = "Cantidad";
+            textBox_Efectivo.Size = new Size(141, 19);
+            textBox_Efectivo.TabIndex = 11;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Font = new Font("Century Gothic", 11.25F);
+            label9.ForeColor = SystemColors.ActiveCaption;
+            label9.Location = new Point(15, 73);
+            label9.Name = "label9";
+            label9.Size = new Size(141, 20);
+            label9.TabIndex = 10;
+            label9.Text = "Cantidad a pagar";
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.FlatStyle = FlatStyle.Flat;
+            label12.Font = new Font("Century Gothic", 11.25F);
+            label12.ForeColor = SystemColors.ActiveCaption;
+            label12.Location = new Point(15, 12);
+            label12.Name = "label12";
+            label12.Size = new Size(160, 20);
+            label12.TabIndex = 9;
+            label12.Text = "NOMBRE COMPLETO";
+            // 
+            // panel16
+            // 
+            panel16.BackColor = Color.FromArgb(23, 26, 33);
+            panel16.Controls.Add(textBox_Nombre);
+            panel16.Location = new Point(15, 35);
+            panel16.Name = "panel16";
+            panel16.Size = new Size(452, 27);
+            panel16.TabIndex = 8;
+            // 
+            // textBox_Nombre
+            // 
+            textBox_Nombre.BackColor = Color.FromArgb(23, 26, 33);
+            textBox_Nombre.BorderStyle = BorderStyle.None;
+            textBox_Nombre.Font = new Font("Century Gothic", 11.25F);
+            textBox_Nombre.ForeColor = Color.LightGray;
+            textBox_Nombre.Location = new Point(3, 2);
+            textBox_Nombre.Margin = new Padding(3, 2, 3, 2);
+            textBox_Nombre.Name = "textBox_Nombre";
+            textBox_Nombre.Size = new Size(446, 19);
+            textBox_Nombre.TabIndex = 4;
             // 
             // panel2
             // 
@@ -402,94 +479,16 @@
             pictureBox3.TabIndex = 42;
             pictureBox3.TabStop = false;
             // 
-            // PanelEfectivo
-            // 
-            PanelEfectivo.BackColor = Color.FromArgb(42, 81, 94);
-            PanelEfectivo.Controls.Add(panel11);
-            PanelEfectivo.Controls.Add(label9);
-            PanelEfectivo.Controls.Add(label12);
-            PanelEfectivo.Controls.Add(panel16);
-            PanelEfectivo.Location = new Point(12, 100);
-            PanelEfectivo.Name = "PanelEfectivo";
-            PanelEfectivo.Size = new Size(482, 144);
-            PanelEfectivo.TabIndex = 34;
-            // 
-            // panel11
-            // 
-            panel11.BackColor = Color.FromArgb(23, 26, 33);
-            panel11.Controls.Add(textBox_Efectivo);
-            panel11.Location = new Point(15, 96);
-            panel11.Name = "panel11";
-            panel11.Size = new Size(141, 27);
-            panel11.TabIndex = 10;
-            // 
-            // textBox_Efectivo
-            // 
-            textBox_Efectivo.BackColor = Color.FromArgb(23, 26, 33);
-            textBox_Efectivo.BorderStyle = BorderStyle.None;
-            textBox_Efectivo.Font = new Font("Century Gothic", 11.25F);
-            textBox_Efectivo.ForeColor = Color.LightGray;
-            textBox_Efectivo.Location = new Point(0, 2);
-            textBox_Efectivo.Margin = new Padding(3, 2, 3, 2);
-            textBox_Efectivo.Name = "textBox_Efectivo";
-            textBox_Efectivo.PlaceholderText = "Cantidad";
-            textBox_Efectivo.Size = new Size(141, 19);
-            textBox_Efectivo.TabIndex = 11;
-            // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.Font = new Font("Century Gothic", 11.25F);
-            label9.ForeColor = SystemColors.ActiveCaption;
-            label9.Location = new Point(15, 73);
-            label9.Name = "label9";
-            label9.Size = new Size(141, 20);
-            label9.TabIndex = 10;
-            label9.Text = "Cantidad a pagar";
-            // 
-            // label12
-            // 
-            label12.AutoSize = true;
-            label12.FlatStyle = FlatStyle.Flat;
-            label12.Font = new Font("Century Gothic", 11.25F);
-            label12.ForeColor = SystemColors.ActiveCaption;
-            label12.Location = new Point(15, 12);
-            label12.Name = "label12";
-            label12.Size = new Size(160, 20);
-            label12.TabIndex = 9;
-            label12.Text = "NOMBRE COMPLETO";
-            // 
-            // panel16
-            // 
-            panel16.BackColor = Color.FromArgb(23, 26, 33);
-            panel16.Controls.Add(textBox_Nombre);
-            panel16.Location = new Point(15, 35);
-            panel16.Name = "panel16";
-            panel16.Size = new Size(452, 27);
-            panel16.TabIndex = 8;
-            // 
-            // textBox_Nombre
-            // 
-            textBox_Nombre.BackColor = Color.FromArgb(23, 26, 33);
-            textBox_Nombre.BorderStyle = BorderStyle.None;
-            textBox_Nombre.Font = new Font("Century Gothic", 11.25F);
-            textBox_Nombre.ForeColor = Color.LightGray;
-            textBox_Nombre.Location = new Point(3, 2);
-            textBox_Nombre.Margin = new Padding(3, 2, 3, 2);
-            textBox_Nombre.Name = "textBox_Nombre";
-            textBox_Nombre.Size = new Size(446, 19);
-            textBox_Nombre.TabIndex = 4;
-            // 
             // FormPago
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(27, 40, 56);
             ClientSize = new Size(511, 449);
-            Controls.Add(PanelEfectivo);
             Controls.Add(panel1);
             Controls.Add(panel2);
             Controls.Add(panel3);
+            Controls.Add(PanelEfectivo);
             Controls.Add(pictureBox3);
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(3, 2, 3, 2);
@@ -499,6 +498,12 @@
             Load += FormPago_Load;
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
+            PanelEfectivo.ResumeLayout(false);
+            PanelEfectivo.PerformLayout();
+            panel11.ResumeLayout(false);
+            panel11.PerformLayout();
+            panel16.ResumeLayout(false);
+            panel16.PerformLayout();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             panel1.ResumeLayout(false);
@@ -516,12 +521,6 @@
             panel4.ResumeLayout(false);
             panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
-            PanelEfectivo.ResumeLayout(false);
-            PanelEfectivo.PerformLayout();
-            panel11.ResumeLayout(false);
-            panel11.PerformLayout();
-            panel16.ResumeLayout(false);
-            panel16.PerformLayout();
             ResumeLayout(false);
         }
 

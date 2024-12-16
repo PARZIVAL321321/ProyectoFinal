@@ -20,8 +20,6 @@ namespace ProyectoFinalV1
         private int total;//Declaramos un entero para el total
         public int Folio { get; set; }//Propiedad para el folio
 
-
-
         public GeneradorPdf()
         {
         }
@@ -130,22 +128,23 @@ namespace ProyectoFinalV1
             resumenTable.AddCell(new PdfPCell(new Phrase(metodo_pago ? "Tarjeta" : "Efectivo", new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.HELVETICA, 12))) { Border = PdfPCell.NO_BORDER });
 
             resumenTable.AddCell(new PdfPCell(new Phrase("Subtotal:", new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.HELVETICA, 12, iTextSharp.text.Font.BOLD))) { Border = PdfPCell.NO_BORDER });
-            resumenTable.AddCell(new PdfPCell(new Phrase(totalSinImpuesto.ToString("C"), new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.HELVETICA, 12))) { Border = PdfPCell.NO_BORDER });
+            resumenTable.AddCell(new PdfPCell(new Phrase(totalSinImpuesto.ToString("C", new System.Globalization.CultureInfo("es-MX")), new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.HELVETICA, 12))) { Border = PdfPCell.NO_BORDER });
 
             resumenTable.AddCell(new PdfPCell(new Phrase("Impuesto (6%):", new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.HELVETICA, 12, iTextSharp.text.Font.BOLD))) { Border = PdfPCell.NO_BORDER });
-            resumenTable.AddCell(new PdfPCell(new Phrase(impuesto.ToString("C"), new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.HELVETICA, 12))) { Border = PdfPCell.NO_BORDER });
+            resumenTable.AddCell(new PdfPCell(new Phrase(impuesto.ToString("C", new System.Globalization.CultureInfo("es-MX")), new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.HELVETICA, 12))) { Border = PdfPCell.NO_BORDER });
 
             resumenTable.AddCell(new PdfPCell(new Phrase("Total:", new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.HELVETICA, 12, iTextSharp.text.Font.BOLD))) { Border = PdfPCell.NO_BORDER });
-            resumenTable.AddCell(new PdfPCell(new Phrase(totalConImpuesto.ToString("C"), new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.HELVETICA, 12))) { Border = PdfPCell.NO_BORDER });
+            resumenTable.AddCell(new PdfPCell(new Phrase(totalConImpuesto.ToString("C", new System.Globalization.CultureInfo("es-MX")), new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.HELVETICA, 12))) { Border = PdfPCell.NO_BORDER });
 
             if (!metodo_pago)
             {
                 resumenTable.AddCell(new PdfPCell(new Phrase("Efectivo Recibido:", new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.HELVETICA, 12, iTextSharp.text.Font.BOLD))) { Border = PdfPCell.NO_BORDER });
-                resumenTable.AddCell(new PdfPCell(new Phrase(cashin.ToString("C"), new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.HELVETICA, 12))) { Border = PdfPCell.NO_BORDER });
+                resumenTable.AddCell(new PdfPCell(new Phrase(cashin.ToString("C", new System.Globalization.CultureInfo("es-MX")), new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.HELVETICA, 12))) { Border = PdfPCell.NO_BORDER });
 
                 resumenTable.AddCell(new PdfPCell(new Phrase("Cambio:", new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.HELVETICA, 12, iTextSharp.text.Font.BOLD))) { Border = PdfPCell.NO_BORDER });
-                resumenTable.AddCell(new PdfPCell(new Phrase((cashin - totalConImpuesto).ToString("C"), new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.HELVETICA, 12))) { Border = PdfPCell.NO_BORDER });
+                resumenTable.AddCell(new PdfPCell(new Phrase((cashin - totalConImpuesto).ToString("C", new System.Globalization.CultureInfo("es-MX")), new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.HELVETICA, 12))) { Border = PdfPCell.NO_BORDER });
             }
+
 
             doc.Add(resumenTable);
 
@@ -162,8 +161,6 @@ namespace ProyectoFinalV1
             // Cerramos el documento
             doc.Close();
             pdfWriter.Close();//Cerramos el escritor de PDF
-
-            MessageBox.Show("Ticket generado con exito.");
 
             // Abrir el PDF automáticamente
             System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo()
@@ -191,7 +188,7 @@ namespace ProyectoFinalV1
             {
                 Directory.CreateDirectory(rutaTickets);
             }
- 
+
             string nombreArchivo = $"Ticket_{Folio}.pdf";//Colocamos el nombre del archivo
 
             //Si el archivo ya existe, añadimos 1 o 2 o 3 etc. al final del nombre del archivo
@@ -212,6 +209,6 @@ namespace ProyectoFinalV1
             return random.Next(1, 10000);
         }
 
-       
+
     }
 }
