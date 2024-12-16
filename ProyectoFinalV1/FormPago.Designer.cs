@@ -176,7 +176,7 @@
             button_Pagar.FlatStyle = FlatStyle.Flat;
             button_Pagar.Font = new Font("Century Gothic", 11.25F);
             button_Pagar.ForeColor = Color.LightGray;
-            button_Pagar.Location = new Point(22, 59);
+            button_Pagar.Location = new Point(22, 54);
             button_Pagar.Margin = new Padding(3, 2, 3, 2);
             button_Pagar.Name = "button_Pagar";
             button_Pagar.Size = new Size(286, 28);

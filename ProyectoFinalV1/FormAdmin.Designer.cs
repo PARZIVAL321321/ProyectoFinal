@@ -113,6 +113,9 @@
             button_MostrarGrafica = new Button();
             panel2 = new Panel();
             panel3 = new Panel();
+            label_Puntodeventa = new Label();
+            label3 = new Label();
+            label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox_Modificar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView_Inventario).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox_Subir).BeginInit();
@@ -780,9 +783,9 @@
             // panel4
             // 
             panel4.BackColor = Color.FromArgb(23, 26, 33);
-            panel4.Location = new Point(0, 794);
+            panel4.Location = new Point(0, 792);
             panel4.Name = "panel4";
-            panel4.Size = new Size(1480, 8);
+            panel4.Size = new Size(1504, 10);
             panel4.TabIndex = 53;
             // 
             // panel8
@@ -1199,8 +1202,46 @@
             panel3.BackgroundImageLayout = ImageLayout.Center;
             panel3.Location = new Point(0, 32);
             panel3.Name = "panel3";
-            panel3.Size = new Size(12, 568);
+            panel3.Size = new Size(10, 768);
             panel3.TabIndex = 52;
+            // 
+            // label_Puntodeventa
+            // 
+            label_Puntodeventa.AutoSize = true;
+            label_Puntodeventa.BackColor = Color.Transparent;
+            label_Puntodeventa.Font = new Font("Century Gothic", 27.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label_Puntodeventa.ForeColor = Color.DimGray;
+            label_Puntodeventa.Location = new Point(916, 666);
+            label_Puntodeventa.Name = "label_Puntodeventa";
+            label_Puntodeventa.Size = new Size(116, 44);
+            label_Puntodeventa.TabIndex = 79;
+            label_Puntodeventa.Text = "ESTIM";
+            label_Puntodeventa.Click += label_Puntodeventa_Click;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.BackColor = Color.Transparent;
+            label3.Font = new Font("Century Gothic", 9.75F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            label3.ForeColor = Color.DimGray;
+            label3.Location = new Point(866, 724);
+            label3.Name = "label3";
+            label3.Size = new Size(166, 16);
+            label3.TabIndex = 79;
+            label3.Text = "\"La diversion a la palma ";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
+            label1.Font = new Font("Century Gothic", 9.75F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.DimGray;
+            label1.Location = new Point(934, 748);
+            label1.Name = "label1";
+            label1.Size = new Size(98, 16);
+            label1.TabIndex = 80;
+            label1.Text = "de tus manos\"";
+            label1.Click += label1_Click;
             // 
             // FormAdmin
             // 
@@ -1209,7 +1250,10 @@
             BackColor = Color.FromArgb(27, 40, 56);
             BackgroundImageLayout = ImageLayout.None;
             ClientSize = new Size(1500, 800);
+            Controls.Add(label1);
+            Controls.Add(label3);
             Controls.Add(panel39);
+            Controls.Add(label_Puntodeventa);
             Controls.Add(panel38);
             Controls.Add(panel4);
             Controls.Add(panel3);
@@ -1381,5 +1425,8 @@
         private Panel panel3;
         private Button button_MostrarGrafica;
         private Button button_BuscarModificar;
+        private Label label_Puntodeventa;
+        private Label label3;
+        private Label label1;
     }
 }

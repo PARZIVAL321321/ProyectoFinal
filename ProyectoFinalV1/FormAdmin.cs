@@ -397,5 +397,15 @@ namespace ProyectoFinalV1
             // Volvemos a mostrar este form
             this.Show();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label_Puntodeventa_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
