@@ -50,11 +50,11 @@ namespace ProyectoFinalV1
             while (lector.Read())
             {
                 // Extraemos el valor Nombre de nuestra base de datos, el cual usaremos como nuestra leyenda
-                string nombre = lector["Nombre"].ToString();         
+                string nombre = lector["Nombre"].ToString();
                 // Extraemos el valor Monto de nuestra base de datos, el cual convertimos a double para que sea mejor trabajar con el en el grafico
-                double monto = Convert.ToDouble(lector["Monto"]);    
+                double monto = Convert.ToDouble(lector["Monto"]);
 
-                total_monto+= monto;
+                total_monto += monto;
 
                 // Agregamos esta informacion a la grafica (creamos un nuevo punto para la grafica)
                 DataPoint punto = new DataPoint(0, monto);  // Al ser una grafica de pastel, no hay categorias por lo que se manda un "0"
@@ -66,12 +66,12 @@ namespace ProyectoFinalV1
             chart_Admin.Series.Add(serie);
 
             // Mostramos la leyenda en la parte inferior
-            chart_Admin.Legends[0].Docking = Docking.Bottom;  
+            chart_Admin.Legends[0].Docking = Docking.Bottom;
 
             // Quitamos los nombres (etiquetas) para que estos no se muestren sobre nuestra grafica
             foreach (var point in serie.Points)
             {
-                point.IsValueShownAsLabel = false; 
+                point.IsValueShownAsLabel = false;
             }
 
             // Muestra el total en un Label con formato de moneda de nuestra region
@@ -83,6 +83,16 @@ namespace ProyectoFinalV1
         private void button_Regresar_Click(object sender, EventArgs e)
         {
             this.Dispose();
+        }
+
+        private void chart_Admin_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

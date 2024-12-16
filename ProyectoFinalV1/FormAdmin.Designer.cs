@@ -116,6 +116,14 @@
             label_Puntodeventa = new Label();
             label3 = new Label();
             label1 = new Label();
+            panel40 = new Panel();
+            textBox1 = new TextBox();
+            panel41 = new Panel();
+            textBox2 = new TextBox();
+            panel42 = new Panel();
+            textBox3 = new TextBox();
+            panel43 = new Panel();
+            textBox4 = new TextBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox_Modificar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView_Inventario).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox_Subir).BeginInit();
@@ -154,6 +162,10 @@
             panel38.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel39.SuspendLayout();
+            panel40.SuspendLayout();
+            panel41.SuspendLayout();
+            panel42.SuspendLayout();
+            panel43.SuspendLayout();
             SuspendLayout();
             // 
             // button_MOSTRARINVENTARIO
@@ -1114,8 +1126,11 @@
             // panel39
             // 
             panel39.BackColor = Color.FromArgb(42, 71, 94);
+            panel39.Controls.Add(panel42);
+            panel39.Controls.Add(panel43);
+            panel39.Controls.Add(panel40);
+            panel39.Controls.Add(panel41);
             panel39.Controls.Add(button_BuscarModificar);
-            panel39.Controls.Add(button_MostrarGrafica);
             panel39.Controls.Add(button_Modificar);
             panel39.Controls.Add(button_Subir);
             panel39.Controls.Add(panel36);
@@ -1171,7 +1186,7 @@
             // 
             // button_MostrarGrafica
             // 
-            button_MostrarGrafica.BackColor = Color.FromArgb(40, 40, 40);
+            button_MostrarGrafica.BackColor = Color.DimGray;
             button_MostrarGrafica.Cursor = Cursors.Hand;
             button_MostrarGrafica.FlatAppearance.BorderSize = 0;
             button_MostrarGrafica.FlatAppearance.MouseDownBackColor = Color.FromArgb(28, 28, 28);
@@ -1179,7 +1194,7 @@
             button_MostrarGrafica.FlatStyle = FlatStyle.Flat;
             button_MostrarGrafica.Font = new Font("Century Gothic", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button_MostrarGrafica.ForeColor = Color.LightGray;
-            button_MostrarGrafica.Location = new Point(22, 671);
+            button_MostrarGrafica.Location = new Point(1066, 713);
             button_MostrarGrafica.Name = "button_MostrarGrafica";
             button_MostrarGrafica.Size = new Size(414, 63);
             button_MostrarGrafica.TabIndex = 76;
@@ -1243,6 +1258,101 @@
             label1.Text = "de tus manos\"";
             label1.Click += label1_Click;
             // 
+            // panel40
+            // 
+            panel40.BackColor = Color.LightGray;
+            panel40.Controls.Add(textBox1);
+            panel40.Font = new Font("Century Gothic", 12F);
+            panel40.Location = new Point(21, 241);
+            panel40.Name = "panel40";
+            panel40.Size = new Size(97, 21);
+            panel40.TabIndex = 79;
+            // 
+            // textBox1
+            // 
+            textBox1.BackColor = Color.LightGray;
+            textBox1.BorderStyle = BorderStyle.None;
+            textBox1.Enabled = false;
+            textBox1.Font = new Font("Century Gothic", 9.75F);
+            textBox1.Location = new Point(3, 3);
+            textBox1.Margin = new Padding(3, 2, 3, 2);
+            textBox1.Name = "textBox1";
+            textBox1.ReadOnly = true;
+            textBox1.Size = new Size(91, 16);
+            textBox1.TabIndex = 19;
+            textBox1.Text = "DESCRIPCIÓN";
+            textBox1.TextChanged += textBox1_TextChanged;
+            // 
+            // panel41
+            // 
+            panel41.BackColor = Color.FromArgb(199, 213, 224);
+            panel41.Controls.Add(textBox2);
+            panel41.Font = new Font("Century Gothic", 12F);
+            panel41.Location = new Point(22, 265);
+            panel41.Name = "panel41";
+            panel41.Size = new Size(414, 66);
+            panel41.TabIndex = 78;
+            // 
+            // textBox2
+            // 
+            textBox2.BackColor = Color.FromArgb(199, 213, 224);
+            textBox2.BorderStyle = BorderStyle.None;
+            textBox2.Font = new Font("OCR A Extended", 11.25F);
+            textBox2.ForeColor = Color.DimGray;
+            textBox2.Location = new Point(0, 2);
+            textBox2.Margin = new Padding(3, 2, 3, 2);
+            textBox2.Multiline = true;
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(411, 64);
+            textBox2.TabIndex = 20;
+            // 
+            // panel42
+            // 
+            panel42.BackColor = Color.LightGray;
+            panel42.Controls.Add(textBox3);
+            panel42.Font = new Font("Century Gothic", 12F);
+            panel42.Location = new Point(21, 618);
+            panel42.Name = "panel42";
+            panel42.Size = new Size(97, 21);
+            panel42.TabIndex = 81;
+            // 
+            // textBox3
+            // 
+            textBox3.BackColor = Color.LightGray;
+            textBox3.BorderStyle = BorderStyle.None;
+            textBox3.Enabled = false;
+            textBox3.Font = new Font("Century Gothic", 9.75F);
+            textBox3.Location = new Point(3, 3);
+            textBox3.Margin = new Padding(3, 2, 3, 2);
+            textBox3.Name = "textBox3";
+            textBox3.ReadOnly = true;
+            textBox3.Size = new Size(91, 16);
+            textBox3.TabIndex = 19;
+            textBox3.Text = "DESCRIPCIÓN";
+            // 
+            // panel43
+            // 
+            panel43.BackColor = Color.FromArgb(199, 213, 224);
+            panel43.Controls.Add(textBox4);
+            panel43.Font = new Font("Century Gothic", 12F);
+            panel43.Location = new Point(22, 642);
+            panel43.Name = "panel43";
+            panel43.Size = new Size(414, 66);
+            panel43.TabIndex = 80;
+            // 
+            // textBox4
+            // 
+            textBox4.BackColor = Color.FromArgb(199, 213, 224);
+            textBox4.BorderStyle = BorderStyle.None;
+            textBox4.Font = new Font("OCR A Extended", 11.25F);
+            textBox4.ForeColor = Color.DimGray;
+            textBox4.Location = new Point(0, 2);
+            textBox4.Margin = new Padding(3, 2, 3, 2);
+            textBox4.Multiline = true;
+            textBox4.Name = "textBox4";
+            textBox4.Size = new Size(411, 64);
+            textBox4.TabIndex = 20;
+            // 
             // FormAdmin
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -1253,6 +1363,7 @@
             Controls.Add(label1);
             Controls.Add(label3);
             Controls.Add(panel39);
+            Controls.Add(button_MostrarGrafica);
             Controls.Add(label_Puntodeventa);
             Controls.Add(panel38);
             Controls.Add(panel4);
@@ -1336,6 +1447,14 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             panel39.ResumeLayout(false);
             panel39.PerformLayout();
+            panel40.ResumeLayout(false);
+            panel40.PerformLayout();
+            panel41.ResumeLayout(false);
+            panel41.PerformLayout();
+            panel42.ResumeLayout(false);
+            panel42.PerformLayout();
+            panel43.ResumeLayout(false);
+            panel43.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -1428,5 +1547,13 @@
         private Label label_Puntodeventa;
         private Label label3;
         private Label label1;
+        private Panel panel40;
+        private TextBox textBox1;
+        private Panel panel41;
+        private TextBox textBox2;
+        private Panel panel42;
+        private TextBox textBox3;
+        private Panel panel43;
+        private TextBox textBox4;
     }
 }

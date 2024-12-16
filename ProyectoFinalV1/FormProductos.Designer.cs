@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormProductos));
             button_LogOut = new Button();
             panel3 = new Panel();
+            label3 = new Label();
             textBox_FechaHora = new TextBox();
             button_Carrito = new Button();
             textBox_ConteoCarrito = new TextBox();
@@ -137,7 +138,6 @@
             panel4 = new Panel();
             pictureBox1 = new PictureBox();
             timer_Reloj = new System.Windows.Forms.Timer(components);
-            label3 = new Label();
             panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)ImagenJuego1).BeginInit();
@@ -204,6 +204,18 @@
             panel3.Size = new Size(1500, 100);
             panel3.TabIndex = 6;
             panel3.MouseDown += panel3_MouseDown;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.BackColor = Color.Transparent;
+            label3.Font = new Font("Century Gothic", 9.75F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            label3.ForeColor = Color.DimGray;
+            label3.Location = new Point(645, 77);
+            label3.Name = "label3";
+            label3.Size = new Size(257, 16);
+            label3.TabIndex = 45;
+            label3.Text = "\"La diversion a la palma de tus manos\"";
             // 
             // textBox_FechaHora
             // 
@@ -328,7 +340,7 @@
             GeneroJuego1.BorderStyle = BorderStyle.None;
             GeneroJuego1.Enabled = false;
             GeneroJuego1.ForeColor = Color.LightGray;
-            GeneroJuego1.Location = new Point(13, 15);
+            GeneroJuego1.Location = new Point(16, 18);
             GeneroJuego1.Margin = new Padding(3, 2, 3, 2);
             GeneroJuego1.Name = "GeneroJuego1";
             GeneroJuego1.Size = new Size(139, 20);
@@ -340,7 +352,7 @@
             StockJuego1.BorderStyle = BorderStyle.None;
             StockJuego1.Enabled = false;
             StockJuego1.ForeColor = Color.LightGray;
-            StockJuego1.Location = new Point(13, 50);
+            StockJuego1.Location = new Point(16, 50);
             StockJuego1.Margin = new Padding(3, 2, 3, 2);
             StockJuego1.Name = "StockJuego1";
             StockJuego1.Size = new Size(139, 20);
@@ -352,7 +364,7 @@
             PlataformaJuego1.BorderStyle = BorderStyle.None;
             PlataformaJuego1.Enabled = false;
             PlataformaJuego1.ForeColor = Color.LightGray;
-            PlataformaJuego1.Location = new Point(158, 15);
+            PlataformaJuego1.Location = new Point(161, 18);
             PlataformaJuego1.Margin = new Padding(3, 2, 3, 2);
             PlataformaJuego1.Name = "PlataformaJuego1";
             PlataformaJuego1.Size = new Size(124, 20);
@@ -376,7 +388,7 @@
             PrecioJuego1.BorderStyle = BorderStyle.None;
             PrecioJuego1.Enabled = false;
             PrecioJuego1.ForeColor = Color.LightGray;
-            PrecioJuego1.Location = new Point(158, 50);
+            PrecioJuego1.Location = new Point(161, 50);
             PrecioJuego1.Margin = new Padding(3, 2, 3, 2);
             PrecioJuego1.Name = "PrecioJuego1";
             PrecioJuego1.Size = new Size(124, 20);
@@ -1540,9 +1552,9 @@
             // 
             panel4.BackColor = Color.FromArgb(40, 40, 40);
             panel4.Controls.Add(StockJuego1);
-            panel4.Controls.Add(PrecioJuego1);
             panel4.Controls.Add(PlataformaJuego1);
             panel4.Controls.Add(GeneroJuego1);
+            panel4.Controls.Add(PrecioJuego1);
             panel4.Location = new Point(29, 364);
             panel4.Name = "panel4";
             panel4.Size = new Size(294, 91);
@@ -1560,18 +1572,6 @@
             // timer_Reloj
             // 
             timer_Reloj.Tick += timer_Reloj_Tick;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.BackColor = Color.Transparent;
-            label3.Font = new Font("Century Gothic", 9.75F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            label3.ForeColor = Color.DimGray;
-            label3.Location = new Point(645, 77);
-            label3.Name = "label3";
-            label3.Size = new Size(257, 16);
-            label3.TabIndex = 45;
-            label3.Text = "\"La diversion a la palma de tus manos\"";
             // 
             // FormProductos
             // 
