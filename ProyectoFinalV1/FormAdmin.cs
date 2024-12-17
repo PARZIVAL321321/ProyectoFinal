@@ -64,7 +64,7 @@ namespace ProyectoFinalV1
             OpenFileDialog abrirImagen = new OpenFileDialog();
 
             // Filtro para el tipo de archivo aceptado
-            abrirImagen.Filter = "Archivos de imagenes (*.png; *.jpg) | *.png; *.jpg";
+            abrirImagen.Filter = "Archivos de imagenes (*.jpg) | *.jpg";
 
             // Si el archivo esta bien
             if (abrirImagen.ShowDialog() == DialogResult.OK)
@@ -85,7 +85,7 @@ namespace ProyectoFinalV1
             OpenFileDialog abrirImagen = new OpenFileDialog();
 
             // Filtro para el tipo de archivo aceptado
-            abrirImagen.Filter = "Archivos de imagenes (*.png; *.jpg) | *.png; *.jpg";
+            abrirImagen.Filter = "Archivos de imagenes (*.jpg) | *.jpg";
 
             // Si el archivo esta bien
             if (abrirImagen.ShowDialog() == DialogResult.OK)
@@ -406,21 +406,6 @@ namespace ProyectoFinalV1
             formGrafica.ShowDialog();
             // Volvemos a mostrar este form
             this.Show();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label_Puntodeventa_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

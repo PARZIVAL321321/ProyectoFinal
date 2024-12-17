@@ -19,7 +19,7 @@ Partes del proyecto:
 - Presentar productos dinamicos (Alegria) ✅
 - Checar si el producto esta agotado (Alegria) ✅
 	16-19
-- PDF tras compra (Uriel y Oscar) ❗
+- PDF tras compra (Uriel y Oscar) ✅
 
 Puntos importantes:
 - En cuestion de las aportaciones que debemos hacer (3) podemos hacer una lluvia de ideas para estar de acuerdo en que agregar

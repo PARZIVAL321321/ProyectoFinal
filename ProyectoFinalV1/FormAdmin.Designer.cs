@@ -1215,7 +1215,6 @@
             label_Puntodeventa.Size = new Size(116, 44);
             label_Puntodeventa.TabIndex = 79;
             label_Puntodeventa.Text = "ESTIM";
-            label_Puntodeventa.Click += label_Puntodeventa_Click;
             // 
             // label3
             // 
@@ -1240,7 +1239,6 @@
             label1.Size = new Size(98, 16);
             label1.TabIndex = 80;
             label1.Text = "de tus manos\"";
-            label1.Click += label1_Click;
             // 
             // FormAdmin
             // 

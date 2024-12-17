@@ -61,9 +61,9 @@
             label3.ForeColor = Color.Gray;
             label3.Location = new Point(535, 297);
             label3.Name = "label3";
-            label3.Size = new Size(337, 24);
+            label3.Size = new Size(402, 24);
             label3.TabIndex = 19;
-            label3.Text = "Oscar de Jesus Guillen -  346148";
+            label3.Text = "Oscar de Jesus Guillen Ibarra -  346148";
             // 
             // label2
             // 

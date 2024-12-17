@@ -17,6 +17,10 @@
     <None Remove="Juegos\Rust.jpg" />
     <None Remove="Juegos\Valorant.jpg" />
     <None Remove="Sonido\Boton.wav" />
+    <None Remove="Sonido\BotonCompletarPago.wav" />
+    <None Remove="Sonido\LogIn.wav" />
+    <None Remove="Sonido\LogOut.wav" />
+    <None Remove="Sonido\MetodoPago.wav" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Juegos\COD.jpg">
@@ -44,6 +48,18 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Sonido\Boton.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sonido\BotonCompletarPago.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sonido\LogIn.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sonido\LogOut.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sonido\MetodoPago.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
