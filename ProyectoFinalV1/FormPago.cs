@@ -160,15 +160,16 @@ namespace ProyectoFinalV1
 
                             MessageBox.Show("Compra realizada con exito");
 
-                            // Tras realizar la compra, borramos nuestro carrito
-                            carrito.Clear();
-
-                            // Actualizamos el valor del monto
-                            usuario.Monto += total_impuesto;
 
                             //Generamos el ticket/pdf
                             GeneradorPdf generador = new GeneradorPdf(usuario, carrito, true, 0, total_impuesto);
                             generador.CrearPDF();
+
+                            // Actualizamos el valor del monto
+                            usuario.Monto += total_impuesto;
+
+                            // Tras realizar la compra, borramos nuestro carrito
+                            carrito.Clear();
 
                             // Tras realizar la compra, cerramos este form
                             this.Dispose();

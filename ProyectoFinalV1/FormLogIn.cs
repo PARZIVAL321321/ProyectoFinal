@@ -67,7 +67,7 @@ namespace ProyectoFinalV1
                 Persona usuario = Obtener_Persona();
 
                 // Mostramos mensaje de bienvenida si la persona pudo acceder al sistema
-               // MessageBox.Show("¡Bienvenido!");
+               MessageBox.Show("¡Bienvenido!");
 
                 // Verificamos que tipo de cuenta ingreso
                 switch (usuario.Tipo)
