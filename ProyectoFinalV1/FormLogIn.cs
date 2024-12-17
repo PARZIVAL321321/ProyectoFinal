@@ -10,25 +10,29 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using System.Media;
+using iTextSharp.text;
+
 
 namespace ProyectoFinalV1
 {
     public partial class FormLogIn : Form
     {
+        private SoundPlayer playlogin;
         public FormLogIn()
         {
             InitializeComponent();
+            playlogin = new SoundPlayer(Properties.Resources.LogIn);
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
-
         // Boton para verificar si el usuario puede entrar al punto de venta o no
         private void button_Acceder_Click(object sender, EventArgs e)
         {
-            // Llamamos a nuestra funcion
+            playlogin.Play();
             Validar_persona();
         }
 
@@ -56,7 +60,7 @@ namespace ProyectoFinalV1
                 Persona usuario = Obtener_Persona();
 
                 // Mostramos mensaje de bienvenida si la persona pudo acceder al sistema
-                MessageBox.Show("¡Bienvenido!");
+               // MessageBox.Show("¡Bienvenido!");
 
                 // Verificamos que tipo de cuenta ingreso
                 switch (usuario.Tipo)

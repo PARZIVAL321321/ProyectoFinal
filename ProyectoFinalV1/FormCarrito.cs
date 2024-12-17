@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,6 +15,8 @@ namespace ProyectoFinalV1
 {
     public partial class FormCarrito : Form
     {
+        private SoundPlayer playlogout;
+        private SoundPlayer playBoton;
         // Variable para guardar el monto total de la compra
         int total;
 
@@ -33,6 +36,8 @@ namespace ProyectoFinalV1
         public FormCarrito()
         {
             InitializeComponent();
+            playlogout = new SoundPlayer(Properties.Resources.LogOut);
+            playBoton = new SoundPlayer(Properties.Resources.Boton);
         }
 
         // Constructor por parametros (recibimos la lista que representa nuestro carrito de compras)
@@ -80,6 +85,7 @@ namespace ProyectoFinalV1
 
         private void button_SeguirComprando_Click(object sender, EventArgs e)
         {
+            playlogout.Play();
             // Cerramos este form, y regresamos al anterior
             this.Dispose();
         }
@@ -129,6 +135,8 @@ namespace ProyectoFinalV1
         // Cuando el usuario haga click, se borrara el carrito por completo
         private void button_BorrarCarrito_Click(object sender, EventArgs e)
         {
+
+            playBoton.Play();
             // Como no se efectuo la compra, entonces regresamos al stock los productos
             Regresar_Stock();
 
@@ -202,7 +210,7 @@ namespace ProyectoFinalV1
         // Cuando el usuario quiera seguir con el pago
         private void button_ContinuarPago_Click(object sender, EventArgs e)
         {
-
+            playBoton.Play();
             // Creamos el formPago, mandando nuestro total
             FormPago formPago = new FormPago(total_impuesto, usuario, carrito);
 

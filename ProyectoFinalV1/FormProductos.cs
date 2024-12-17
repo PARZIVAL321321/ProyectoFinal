@@ -10,10 +10,12 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.Media;
 namespace ProyectoFinalV1
 {
     public partial class FormProductos : Form
     {
+
         // Creamos nuestra lista de tipo Juegos, la cual nos servira para mostrar los juegos
         List<Juegos> lista = new List<Juegos>();
 
@@ -25,10 +27,13 @@ namespace ProyectoFinalV1
 
         // Variable para almacenar si el usuario llego a comprar
         int monto_usuario = 0;
-
+        private SoundPlayer playlogout;
+        private SoundPlayer playboton;
         public FormProductos()
         {
             InitializeComponent();
+            playlogout = new SoundPlayer(Properties.Resources.LogOut);
+            playboton = new SoundPlayer(Properties.Resources.Boton);
         }
 
         // Constructor por parametros (recibe el nombre de la persona que ingreso)
@@ -60,7 +65,6 @@ namespace ProyectoFinalV1
 
         private void button_LogOut_Click(object sender, EventArgs e)
         {
-
             // Verificamos si hay productos en el carrito
             if (carrito.Count() != 0)
             {
@@ -68,6 +72,7 @@ namespace ProyectoFinalV1
             }
             else
             {
+                playlogout.Play();
                 this.Dispose();
             }
 
@@ -94,12 +99,13 @@ namespace ProyectoFinalV1
         // Funcion para ir al form de nuestro carrito
         private void button_Carrito_Click(object sender, EventArgs e)
         {
+        
             // Creamos nuestro form para el carrito
             FormCarrito formCarrito = new FormCarrito(carrito, lista, usuario);
 
             // Ocultamos el form actual
             this.Hide();
-
+            playboton.Play();
             // Mostramos el nuevo form (usando ShowDialog)
             formCarrito.ShowDialog();
 
@@ -402,6 +408,7 @@ namespace ProyectoFinalV1
         // Evento para el boton de comprar el primer juego
         private void buttonComprarJuego1_Click(object sender, EventArgs e)
         {
+            playboton.Play();
             // Llama al metodo para agregar el juego al carrito, pasando el indice 0
             AgregarJuegoAlCarrito(0);
         }
@@ -409,6 +416,7 @@ namespace ProyectoFinalV1
         // Evento para el boton de comprar el segundo juego
         private void buttonComprarJuego2_Click(object sender, EventArgs e)
         {
+            playboton.Play();
             // Llama al metodo para agregar el juego al carrito, pasando el indice 1
             AgregarJuegoAlCarrito(1);
         }
@@ -416,6 +424,7 @@ namespace ProyectoFinalV1
         // Evento para el boton de comprar el tercer juego
         private void buttonComprarJuego3_Click(object sender, EventArgs e)
         {
+            playboton.Play();
             // Llama al metodo para agregar el juego al carrito, pasando el indice 2
             AgregarJuegoAlCarrito(2);
         }
@@ -423,6 +432,7 @@ namespace ProyectoFinalV1
         // Evento para el boton de comprar el cuarto juego
         private void buttonComprarJuego4_Click(object sender, EventArgs e)
         {
+            playboton.Play();
             // Llama al metodo para agregar el juego al carrito, pasando el indice 3
             AgregarJuegoAlCarrito(3);
         }
@@ -430,6 +440,7 @@ namespace ProyectoFinalV1
         // Evento para el boton de comprar el quinto juego
         private void buttonComprarJuego5_Click(object sender, EventArgs e)
         {
+            playboton.Play();
             // Llama al metodo para agregar el juego al carrito, pasando el indice 4
             AgregarJuegoAlCarrito(4);
         }
@@ -437,6 +448,7 @@ namespace ProyectoFinalV1
         // Evento para el boton de comprar el sexto juego
         private void buttonComprarJuego6_Click(object sender, EventArgs e)
         {
+            playboton.Play();
             // Llama al metodo para agregar el juego al carrito, pasando el indice 5
             AgregarJuegoAlCarrito(5);
         }
@@ -444,6 +456,7 @@ namespace ProyectoFinalV1
         // Evento para el boton de comprar el septimo juego
         private void buttonComprarJuego7_Click(object sender, EventArgs e)
         {
+            playboton.Play();
             // Llama al metodo para agregar el juego al carrito, pasando el indice 6
             AgregarJuegoAlCarrito(6);
         }
@@ -451,6 +464,7 @@ namespace ProyectoFinalV1
         // Evento para el boton de comprar el octavo juego
         private void buttonComprarJuego8_Click(object sender, EventArgs e)
         {
+            playboton.Play();
             // Llama al metodo para agregar el juego al carrito, pasando el indice 7
             AgregarJuegoAlCarrito(7);
         }
@@ -458,6 +472,7 @@ namespace ProyectoFinalV1
         // Evento para el boton de comprar el noveno juego
         private void buttonComprarJuego9_Click(object sender, EventArgs e)
         {
+            playboton.Play();
             // Llama al metodo para agregar el juego al carrito, pasando el indice 8
             AgregarJuegoAlCarrito(8);
         }
@@ -465,6 +480,7 @@ namespace ProyectoFinalV1
         // Evento para el boton de comprar el decimo juego
         private void buttonComprarJuego10_Click(object sender, EventArgs e)
         {
+            playboton.Play();
             // Llama al metodo para agregar el juego al carrito, pasando el indice 9
             AgregarJuegoAlCarrito(9);
         }

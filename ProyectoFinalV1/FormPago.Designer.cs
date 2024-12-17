@@ -101,6 +101,7 @@
             textBox_NumeroTarjeta.Name = "textBox_NumeroTarjeta";
             textBox_NumeroTarjeta.Size = new Size(446, 19);
             textBox_NumeroTarjeta.TabIndex = 3;
+            textBox_NumeroTarjeta.TextChanged += textBox_NumeroTarjeta_TextChanged;
             // 
             // textBox_NombreCuenta
             // 
@@ -113,6 +114,7 @@
             textBox_NombreCuenta.Name = "textBox_NombreCuenta";
             textBox_NombreCuenta.Size = new Size(446, 19);
             textBox_NombreCuenta.TabIndex = 4;
+            textBox_NombreCuenta.TextChanged += textBox_NombreCuenta_TextChanged;
             // 
             // textBox_MesTarjeta
             // 
@@ -127,6 +129,7 @@
             textBox_MesTarjeta.Size = new Size(72, 19);
             textBox_MesTarjeta.TabIndex = 5;
             textBox_MesTarjeta.TextAlign = HorizontalAlignment.Center;
+            textBox_MesTarjeta.TextChanged += textBox_MesTarjeta_TextChanged;
             // 
             // textBox_YearTarjeta
             // 
@@ -141,6 +144,7 @@
             textBox_YearTarjeta.Size = new Size(72, 19);
             textBox_YearTarjeta.TabIndex = 6;
             textBox_YearTarjeta.TextAlign = HorizontalAlignment.Center;
+            textBox_YearTarjeta.TextChanged += textBox_YearTarjeta_TextChanged;
             // 
             // textBox_CVVTarjeta
             // 
@@ -153,6 +157,7 @@
             textBox_CVVTarjeta.Name = "textBox_CVVTarjeta";
             textBox_CVVTarjeta.Size = new Size(43, 19);
             textBox_CVVTarjeta.TabIndex = 7;
+            textBox_CVVTarjeta.TextChanged += textBox_CVVTarjeta_TextChanged;
             // 
             // textBox_TotalCompra
             // 
@@ -258,6 +263,7 @@
             textBox_Efectivo.PlaceholderText = "Cantidad";
             textBox_Efectivo.Size = new Size(141, 19);
             textBox_Efectivo.TabIndex = 11;
+            textBox_Efectivo.TextChanged += textBox_Efectivo_TextChanged;
             // 
             // label9
             // 
@@ -302,6 +308,7 @@
             textBox_Nombre.Name = "textBox_Nombre";
             textBox_Nombre.Size = new Size(446, 19);
             textBox_Nombre.TabIndex = 4;
+            textBox_Nombre.TextChanged += textBox_Nombre_TextChanged;
             // 
             // panel2
             // 

@@ -9,11 +9,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
 
 namespace ProyectoFinalV1
 {
     public partial class FormPago : Form
     {
+        private SoundPlayer playlogout, playBoton, playcompletarpago, playmetodopago;
 
         // Variable para almacenar el total que nos llega por parte del constructor
         int total_impuesto;
@@ -32,6 +34,10 @@ namespace ProyectoFinalV1
         public FormPago()
         {
             InitializeComponent();
+            playlogout = new SoundPlayer(Properties.Resources.LogOut);
+            playBoton = new SoundPlayer(Properties.Resources.Boton);
+            playcompletarpago = new SoundPlayer(Properties.Resources.BotonCompletarPago);
+            playmetodopago = new SoundPlayer(Properties.Resources.MetodoPago);
         }
 
         // Constructor por parametros (nos llega nuestro total de la compra)
@@ -55,6 +61,7 @@ namespace ProyectoFinalV1
         // En caso de que se haya elegido para con efectivo
         private void radioButton_Efectivo_CheckedChanged(object sender, EventArgs e)
         {
+            playmetodopago.Play();
             PanelEfectivo.Width = 482; // Mostrar panel efectivo
             panel1.Width = 0; // Ocultar panel tarjeta
 
@@ -78,6 +85,7 @@ namespace ProyectoFinalV1
         // En caso de que se haya elegido con tarjeta 
         private void radioButton_Tarjeta_CheckedChanged(object sender, EventArgs e)
         {
+            playmetodopago.Play();
             panel1.Width = 482; // Mostrar panel tarjeta
             PanelEfectivo.Width = 0; // Ocultar panel efectivo
 
@@ -101,7 +109,7 @@ namespace ProyectoFinalV1
 
         private void button_Pagar_Click(object sender, EventArgs e)
         {
-
+            playcompletarpago.Play();
             // Checamos cual metodo de pago ha sido seleccionado
             if (bandera_Tarjeta)
             {
@@ -153,7 +161,7 @@ namespace ProyectoFinalV1
                             usuario.Monto += total_impuesto;
 
                             //Generamos el ticket/pdf
-                            GeneradorPdf generador = new GeneradorPdf(usuario,carrito,true,0,total_impuesto);
+                            GeneradorPdf generador = new GeneradorPdf(usuario, carrito, true, 0, total_impuesto);
                             generador.CrearPDF();
 
                             // Tras realizar la compra, cerramos este form
@@ -214,7 +222,7 @@ namespace ProyectoFinalV1
                             MessageBox.Show("Compra realizada con exito");
 
                             //Generamos ticket/pdf
-                            GeneradorPdf generador = new GeneradorPdf(usuario,carrito,false,dinero_usuario,total_impuesto);
+                            GeneradorPdf generador = new GeneradorPdf(usuario, carrito, false, dinero_usuario, total_impuesto);
                             generador.CrearPDF();
                             // Actualizamos el valor del monto
                             usuario.Monto += total_impuesto;
@@ -256,7 +264,7 @@ namespace ProyectoFinalV1
             return true;
 
         }
-        
+
         private void FormPago_Load(object sender, EventArgs e)
         {
             panel1.Width = 0; // Ocultar el panel tarjeta
@@ -272,6 +280,41 @@ namespace ProyectoFinalV1
             // Inicializar banderas
             bandera_Tarjeta = false;
             bandera_Efectivo = false;
+        }
+
+        private void textBox_NombreCuenta_TextChanged(object sender, EventArgs e)
+        {
+            playBoton.Play();
+        }
+
+        private void textBox_NumeroTarjeta_TextChanged(object sender, EventArgs e)
+        {
+            playBoton.Play();
+        }
+
+        private void textBox_MesTarjeta_TextChanged(object sender, EventArgs e)
+        {
+            playBoton.Play();
+        }
+
+        private void textBox_YearTarjeta_TextChanged(object sender, EventArgs e)
+        {
+            playBoton.Play();
+        }
+
+        private void textBox_CVVTarjeta_TextChanged(object sender, EventArgs e)
+        {
+            playBoton.Play();
+        }
+
+        private void textBox_Nombre_TextChanged(object sender, EventArgs e)
+        {
+            playBoton.Play();
+        }
+
+        private void textBox_Efectivo_TextChanged(object sender, EventArgs e)
+        {
+            playBoton.Play();
         }
     }
 }
