@@ -12,9 +12,12 @@
     <None Remove="Juegos\CSGO.jpg" />
     <None Remove="Juegos\GTA.jpg" />
     <None Remove="Juegos\HaloInf.jpg" />
+    <None Remove="Juegos\Mario.jpg" />
+    <None Remove="Juegos\Metro2033.jpg" />
     <None Remove="Juegos\Minecraft.jpg" />
     <None Remove="Juegos\R6.jpg" />
     <None Remove="Juegos\Rust.jpg" />
+    <None Remove="Juegos\Terraria.jpg" />
     <None Remove="Juegos\Valorant.jpg" />
     <None Remove="Sonido\Boton.wav" />
     <None Remove="Sonido\BotonCompletarPago.wav" />
@@ -33,7 +36,13 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Juegos\HaloInf.jpg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Juegos\Mario.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Juegos\Metro2033.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Juegos\Minecraft.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -42,6 +51,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Juegos\Rust.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Juegos\Terraria.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Juegos\Valorant.jpg">

@@ -3,12 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\Alegria\\Desktop\\ProyectoFinal\\ProyectoFinalV1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FB66F1B0-E526-4F56-8D53-094F3AB041D9}|ProyectoFinalV1.csproj|c:\\users\\alegria\\desktop\\proyectofinal\\proyectofinalv1\\formportada.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FB66F1B0-E526-4F56-8D53-094F3AB041D9}|ProyectoFinalV1.csproj|solutionrelative:formportada.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{FB66F1B0-E526-4F56-8D53-094F3AB041D9}|ProyectoFinalV1.csproj|c:\\users\\alegria\\desktop\\proyectofinal\\proyectofinalv1\\formpago.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FB66F1B0-E526-4F56-8D53-094F3AB041D9}|ProyectoFinalV1.csproj|solutionrelative:formpago.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB66F1B0-E526-4F56-8D53-094F3AB041D9}|ProyectoFinalV1.csproj|c:\\users\\alegria\\desktop\\proyectofinal\\proyectofinalv1\\formcarrito.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB66F1B0-E526-4F56-8D53-094F3AB041D9}|ProyectoFinalV1.csproj|solutionrelative:formcarrito.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB66F1B0-E526-4F56-8D53-094F3AB041D9}|ProyectoFinalV1.csproj|c:\\users\\alegria\\desktop\\proyectofinal\\proyectofinalv1\\formproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB66F1B0-E526-4F56-8D53-094F3AB041D9}|ProyectoFinalV1.csproj|solutionrelative:formproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB66F1B0-E526-4F56-8D53-094F3AB041D9}|ProyectoFinalV1.csproj|c:\\users\\alegria\\desktop\\proyectofinal\\proyectofinalv1\\tarjeta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB66F1B0-E526-4F56-8D53-094F3AB041D9}|ProyectoFinalV1.csproj|solutionrelative:tarjeta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB66F1B0-E526-4F56-8D53-094F3AB041D9}|ProyectoFinalV1.csproj|c:\\users\\alegria\\desktop\\proyectofinal\\proyectofinalv1\\persona.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB66F1B0-E526-4F56-8D53-094F3AB041D9}|ProyectoFinalV1.csproj|solutionrelative:persona.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB66F1B0-E526-4F56-8D53-094F3AB041D9}|ProyectoFinalV1.csproj|c:\\users\\alegria\\desktop\\proyectofinal\\proyectofinalv1\\juegos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB66F1B0-E526-4F56-8D53-094F3AB041D9}|ProyectoFinalV1.csproj|solutionrelative:juegos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,26 +43,79 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "FormPortada.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Alegria\\Desktop\\ProyectoFinal\\ProyectoFinalV1\\FormPortada.cs",
-              "RelativeDocumentMoniker": "FormPortada.cs",
-              "ToolTip": "C:\\Users\\Alegria\\Desktop\\ProyectoFinal\\ProyectoFinalV1\\FormPortada.cs [Design]",
-              "RelativeToolTip": "FormPortada.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-17T07:27:02.964Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "FormPago.cs",
               "DocumentMoniker": "C:\\Users\\Alegria\\Desktop\\ProyectoFinal\\ProyectoFinalV1\\FormPago.cs",
               "RelativeDocumentMoniker": "FormPago.cs",
               "ToolTip": "C:\\Users\\Alegria\\Desktop\\ProyectoFinal\\ProyectoFinalV1\\FormPago.cs",
               "RelativeToolTip": "FormPago.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAIkAAAAAAAAAAAAAAKsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-17T07:20:23.469Z",
+              "WhenOpened": "2024-12-17T09:30:08.39Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FormCarrito.cs",
+              "DocumentMoniker": "C:\\Users\\Alegria\\Desktop\\ProyectoFinal\\ProyectoFinalV1\\FormCarrito.cs",
+              "RelativeDocumentMoniker": "FormCarrito.cs",
+              "ToolTip": "C:\\Users\\Alegria\\Desktop\\ProyectoFinal\\ProyectoFinalV1\\FormCarrito.cs",
+              "RelativeToolTip": "FormCarrito.cs",
+              "ViewState": "AgIAAJ4AAAAAAAAAAAAswL0AAABUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T09:27:34.317Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FormProductos.cs",
+              "DocumentMoniker": "C:\\Users\\Alegria\\Desktop\\ProyectoFinal\\ProyectoFinalV1\\FormProductos.cs",
+              "RelativeDocumentMoniker": "FormProductos.cs",
+              "ToolTip": "C:\\Users\\Alegria\\Desktop\\ProyectoFinal\\ProyectoFinalV1\\FormProductos.cs",
+              "RelativeToolTip": "FormProductos.cs",
+              "ViewState": "AgIAAP4BAAAAAAAAAAAowPMBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T09:21:33.792Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Tarjeta.cs",
+              "DocumentMoniker": "C:\\Users\\Alegria\\Desktop\\ProyectoFinal\\ProyectoFinalV1\\Tarjeta.cs",
+              "RelativeDocumentMoniker": "Tarjeta.cs",
+              "ToolTip": "C:\\Users\\Alegria\\Desktop\\ProyectoFinal\\ProyectoFinalV1\\Tarjeta.cs",
+              "RelativeToolTip": "Tarjeta.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T09:19:53.45Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Persona.cs",
+              "DocumentMoniker": "C:\\Users\\Alegria\\Desktop\\ProyectoFinal\\ProyectoFinalV1\\Persona.cs",
+              "RelativeDocumentMoniker": "Persona.cs",
+              "ToolTip": "C:\\Users\\Alegria\\Desktop\\ProyectoFinal\\ProyectoFinalV1\\Persona.cs",
+              "RelativeToolTip": "Persona.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T09:19:52.059Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Juegos.cs",
+              "DocumentMoniker": "C:\\Users\\Alegria\\Desktop\\ProyectoFinal\\ProyectoFinalV1\\Juegos.cs",
+              "RelativeDocumentMoniker": "Juegos.cs",
+              "ToolTip": "C:\\Users\\Alegria\\Desktop\\ProyectoFinal\\ProyectoFinalV1\\Juegos.cs",
+              "RelativeToolTip": "Juegos.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T09:19:49.348Z",
               "EditorCaption": ""
             }
           ]

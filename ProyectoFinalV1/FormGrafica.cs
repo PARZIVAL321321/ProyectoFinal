@@ -82,7 +82,6 @@ namespace ProyectoFinalV1
 
             // Muestra el total en un Label con formato de moneda de nuestra region
             label_VentaTotal.Text = "Venta total: " + total_monto.ToString("C", new CultureInfo("es-MX"));
-
         }
 
         // Boton para regresar al formAdmin

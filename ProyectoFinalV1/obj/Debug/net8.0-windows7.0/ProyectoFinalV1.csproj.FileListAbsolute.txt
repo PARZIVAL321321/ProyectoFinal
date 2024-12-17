@@ -201,3 +201,10 @@ C:\Users\Alegria\Desktop\ProyectoFinal\ProyectoFinalV1\obj\Debug\net8.0-windows7
 C:\Users\Alegria\Desktop\ProyectoFinal\ProyectoFinalV1\obj\Debug\net8.0-windows7.0\ProyectoFinalV1.pdb
 C:\Users\Alegria\Desktop\ProyectoFinal\ProyectoFinalV1\obj\Debug\net8.0-windows7.0\ProyectoFinalV1.genruntimeconfig.cache
 C:\Users\Alegria\Desktop\ProyectoFinal\ProyectoFinalV1\obj\Debug\net8.0-windows7.0\ref\ProyectoFinalV1.dll
+C:\Users\Alegria\Desktop\ProyectoFinal\ProyectoFinalV1\bin\Debug\net8.0-windows7.0\Sonido\BotonCompletarPago.wav
+C:\Users\Alegria\Desktop\ProyectoFinal\ProyectoFinalV1\bin\Debug\net8.0-windows7.0\Sonido\LogIn.wav
+C:\Users\Alegria\Desktop\ProyectoFinal\ProyectoFinalV1\bin\Debug\net8.0-windows7.0\Sonido\LogOut.wav
+C:\Users\Alegria\Desktop\ProyectoFinal\ProyectoFinalV1\bin\Debug\net8.0-windows7.0\Sonido\MetodoPago.wav
+C:\Users\Alegria\Desktop\ProyectoFinal\ProyectoFinalV1\bin\Debug\net8.0-windows7.0\Juegos\Terraria.jpg
+C:\Users\Alegria\Desktop\ProyectoFinal\ProyectoFinalV1\bin\Debug\net8.0-windows7.0\Juegos\Mario.jpg
+C:\Users\Alegria\Desktop\ProyectoFinal\ProyectoFinalV1\bin\Debug\net8.0-windows7.0\Juegos\Metro2033.jpg

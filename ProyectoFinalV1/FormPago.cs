@@ -160,7 +160,6 @@ namespace ProyectoFinalV1
 
                             MessageBox.Show("Compra realizada con exito");
 
-
                             //Generamos el ticket/pdf
                             GeneradorPdf generador = new GeneradorPdf(usuario, carrito, true, 0, total_impuesto);
                             generador.CrearPDF();

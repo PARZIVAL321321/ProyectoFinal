@@ -144,6 +144,32 @@ namespace ProyectoFinalV1
                     // Abrimos nuestra base de datos
                     conexion.Open();
 
+                    // Extraemos informacion de la base de datos para mostrar un message box con toda la informacion que tiene el registro
+                    string consultaInfo = "SELECT * FROM juegos WHERE ID='" + Convert.ToInt32(textBox_IDBorrar.Text) + "'";
+                    MySqlCommand comandoInfo = new MySqlCommand(consultaInfo, conexion);
+                    MySqlDataReader lector = comandoInfo.ExecuteReader();
+
+                    while (lector.Read())
+                    {
+                        MessageBox.Show("ID: " + lector["ID"].ToString() + "\n" +
+                            "Nombre: " + lector["Nombre"].ToString() + "\n" +
+                            "Genero: " + lector["Genero"].ToString() + "\n" +
+                            "Plataforma: " + lector["Plataforma"].ToString() + "\n" +
+                            "Modalidad: " + lector["Modalidad"].ToString() + "\n" +
+                            "Precio: " + lector["Precio"].ToString() + "\n" +
+                            "Stock: " + lector["Stock"].ToString());
+                    }
+                    lector.Close();
+
+                    // Preguntamos si esta seguro de borrar el registro
+                    DialogResult dialogResult = MessageBox.Show("¿Estas seguro de borrar el registro?", "Borrar Registro", MessageBoxButtons.YesNo);
+                    if (dialogResult == DialogResult.No)
+                    {
+                        // Vaciamos el textBox
+                        textBox_IDBorrar.Text = "";
+                        return; // Si no esta seguro, no borramos el registro y salimos de la funcion
+                    }
+
                     // Linea de comando de SQL
                     string consulta = "DELETE FROM juegos WHERE ID='" + Convert.ToInt32(textBox_IDBorrar.Text) + "'";
                     // Cargamos nuestro comando
