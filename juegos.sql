@@ -43,8 +43,8 @@ CREATE TABLE `juegos` (
 --
 
 INSERT INTO `juegos` (`ID`, `Nombre`, `Imagen`, `Genero`, `Plataforma`, `Modalidad`, `Precio`, `Stock`) VALUES
-(1, 'Call of Duty', 'COD.jpg', 'Accion', 'Xbox', 'Multiplayer', 1200, 9),
-(2, 'Minecraft', 'Minecraft.jpg', 'Indie', 'Xbox', 'Singleplayer', 800, 3),
+(1, 'Call of Duty', 'COD.jpg', 'Accion', 'Xbox', 'Multiplayer', 1200, 10),
+(2, 'Minecraft', 'Minecraft.jpg', 'Indie', 'Xbox', 'Singleplayer', 800, 5),
 (3, 'Valorant', 'Valorant.jpg', 'Estrategia', 'PC', 'Multiplayer', 0, 500),
 (4, 'Counter Strike', 'CSGO.jpg', 'Accion', 'PC', 'Multiplayer', 0, 500),
 (5, 'GTA V', 'GTA.jpg', 'Mundo abierto', 'PlayStation', 'Multiplayer', 500, 10),
