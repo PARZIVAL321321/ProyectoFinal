@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Runtime.InteropServices;
 using System.Runtime.Intrinsics.Arm;
 using System.Text;
@@ -17,6 +18,7 @@ namespace ProyectoFinalV1
 
     public partial class FormAdmin : Form
     {
+        private SoundPlayer playlogout, playBoton;
 
         // Variable para cargar el nombre de las imagenes a cargar
         string NombreModificar;
@@ -28,6 +30,8 @@ namespace ProyectoFinalV1
         public FormAdmin()
         {
             InitializeComponent();
+            playlogout = new SoundPlayer(Properties.Resources.LogOut);
+            playBoton = new SoundPlayer(Properties.Resources.Boton);
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -37,6 +41,7 @@ namespace ProyectoFinalV1
 
         private void button_LogOut_Click(object sender, EventArgs e)
         {
+            playlogout.Play();
             this.Dispose();
         }
 
@@ -54,6 +59,7 @@ namespace ProyectoFinalV1
         // Boton para cargar la imagen
         private void button_CargarImagenModificar_Click(object sender, EventArgs e)
         {
+            playBoton.Play();
             // Abrimos el explorador de archivos
             OpenFileDialog abrirImagen = new OpenFileDialog();
 
@@ -74,6 +80,7 @@ namespace ProyectoFinalV1
         // Boton para cargar la imagen
         private void button_CargarImagenSubir_Click(object sender, EventArgs e)
         {
+            playBoton.Play();
             // Abrimos el explorador de archivos
             OpenFileDialog abrirImagen = new OpenFileDialog();
 
@@ -108,6 +115,9 @@ namespace ProyectoFinalV1
             adaptador.Fill(dt);
             dataGridView_Inventario.DataSource = dt;
 
+            // Ordenamos por la columna "Stock" en el DataGridView
+            dataGridView_Inventario.Sort(dataGridView_Inventario.Columns["Stock"], System.ComponentModel.ListSortDirection.Ascending);
+
             // Cerremos nuestra base de datos
             conexion.Close();
         }
@@ -115,7 +125,7 @@ namespace ProyectoFinalV1
         // Boton para eliminar un producto
         private void button_EliminarProducto_Click(object sender, EventArgs e)
         {
-
+            playBoton.Play();
             // Funcion para contar el numero de registros que hay actualmente
             registros = Contar_Registros();
 
@@ -160,7 +170,7 @@ namespace ProyectoFinalV1
         // Boton para guardar el nuevo producto
         private void button_Subir_Click(object sender, EventArgs e)
         {
-
+            playBoton.Play();
             // Funcion para contar el numero de registros que hay actualmente
             registros = Contar_Registros();
 
@@ -223,6 +233,7 @@ namespace ProyectoFinalV1
         // Boton para modificar los datos
         private void button_Modificar_Click(object sender, EventArgs e)
         {
+            playBoton.Play();
             try
             {
                 // Creamos nuestra variable para la base de datos, y pasamos nuestra informacion
@@ -312,6 +323,8 @@ namespace ProyectoFinalV1
         // Boton para recuperar los datos del registro a modificar
         private void button_BuscarModificar_Click(object sender, EventArgs e)
         {
+
+            playBoton.Play();
             try
             {
 
@@ -384,7 +397,7 @@ namespace ProyectoFinalV1
         // Boton para abrir el form donde se va a mostrar la grafica
         private void button_MostrarGrafica_Click(object sender, EventArgs e)
         {
-
+            playBoton.Play();
             // Ocultamos este form
             this.Hide();
             // Creamos el form donde se va a mostrar la grafica
@@ -393,6 +406,21 @@ namespace ProyectoFinalV1
             formGrafica.ShowDialog();
             // Volvemos a mostrar este form
             this.Show();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label_Puntodeventa_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

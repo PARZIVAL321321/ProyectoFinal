@@ -1,5 +1,4 @@
-﻿using MySql.Data.MySqlClient; // Para poder usar nuestra base de datos
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,15 +8,28 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using iTextSharp.text;
 using System.Runtime.InteropServices;
+using System.Media; // Para poder usar sonidos
+using MySql.Data.MySqlClient; // Para poder usar nuestra base de datos
+
 
 namespace ProyectoFinalV1
 {
     public partial class FormLogIn : Form
     {
+        // Variables para guardar y reproducir los sonidos
+        SoundPlayer playlogin;
+        SoundPlayer playlogout;
+        SoundPlayer playBoton;
+
         public FormLogIn()
         {
             InitializeComponent();
+            // Cargamos los sonidos a utilizar
+            playlogin = new SoundPlayer(Properties.Resources.LogIn);
+            playlogout = new SoundPlayer(Properties.Resources.LogOut);
+            playBoton = new SoundPlayer(Properties.Resources.Boton);
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -28,7 +40,6 @@ namespace ProyectoFinalV1
         // Boton para verificar si el usuario puede entrar al punto de venta o no
         private void button_Acceder_Click(object sender, EventArgs e)
         {
-            // Llamamos a nuestra funcion
             Validar_persona();
         }
 
@@ -56,7 +67,7 @@ namespace ProyectoFinalV1
                 Persona usuario = Obtener_Persona();
 
                 // Mostramos mensaje de bienvenida si la persona pudo acceder al sistema
-                MessageBox.Show("¡Bienvenido!");
+               // MessageBox.Show("¡Bienvenido!");
 
                 // Verificamos que tipo de cuenta ingreso
                 switch (usuario.Tipo)
@@ -67,6 +78,8 @@ namespace ProyectoFinalV1
                         FormAdmin formAdmin = new FormAdmin();
                         // Ocultamos este form
                         this.Hide();
+                        // Reproducimos nuestro sonido
+                        playlogin.Play();
                         // Usamos el ShowDialog para cuando el usuario haga Logout
                         formAdmin.ShowDialog();
                         // Volvemos a mostrar este form
@@ -83,6 +96,8 @@ namespace ProyectoFinalV1
                         FormProductos formProductos = new FormProductos(usuario);
                         // Ocultamos este form
                         this.Hide();
+                        // Reproducimos nuestro sonido
+                        playlogin.Play();
                         // Usamos el ShowDialog para cuando el usuario haga Logout
                         formProductos.ShowDialog();
                         // Volvemos a mostrar este form
@@ -159,11 +174,13 @@ namespace ProyectoFinalV1
 
         private void btncerrar_Click(object sender, EventArgs e)
         {
+            playlogout.Play();
             Application.Exit();
         }
 
         private void btnminimizar_Click(object sender, EventArgs e)
         {
+            playBoton.Play();
             this.WindowState = FormWindowState.Minimized;
         }
 

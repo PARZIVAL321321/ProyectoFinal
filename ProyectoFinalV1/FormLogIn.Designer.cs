@@ -41,6 +41,7 @@
             pictureBox1 = new PictureBox();
             btncerrar = new PictureBox();
             btnminimizar = new PictureBox();
+            label2 = new Label();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -139,6 +140,7 @@
             // 
             panel2.BackColor = Color.Crimson;
             panel2.Controls.Add(pictureBox2);
+            panel2.Controls.Add(label2);
             panel2.Dock = DockStyle.Left;
             panel2.Location = new Point(0, 0);
             panel2.Name = "panel2";
@@ -149,7 +151,7 @@
             // 
             pictureBox2.BackColor = Color.Transparent;
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(32, 98);
+            pictureBox2.Location = new Point(27, 98);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(1500, 465);
             pictureBox2.SizeMode = PictureBoxSizeMode.AutoSize;
@@ -187,6 +189,18 @@
             btnminimizar.TabIndex = 16;
             btnminimizar.TabStop = false;
             btnminimizar.Click += btnminimizar_Click;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.BackColor = Color.Transparent;
+            label2.Font = new Font("Century Gothic", 72F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.ForeColor = Color.Black;
+            label2.Location = new Point(0, 0);
+            label2.Name = "label2";
+            label2.Size = new Size(300, 112);
+            label2.TabIndex = 26;
+            label2.Text = "ESTIM";
             // 
             // FormLogIn
             // 
@@ -234,5 +248,6 @@
         private PictureBox pictureBox1;
         private PictureBox btncerrar;
         private PictureBox btnminimizar;
+        private Label label2;
     }
 }

@@ -1,5 +1,4 @@
-﻿using MySql.Data.MySqlClient; // Para poder usar nuestra base de datos
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,11 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using System.Runtime.InteropServices;
+using MySql.Data.MySqlClient; // Para poder usar nuestra base de datos
+using System.Media; // Para poder usar sonidos
+
 namespace ProyectoFinalV1
 {
     public partial class FormProductos : Form
     {
+
         // Creamos nuestra lista de tipo Juegos, la cual nos servira para mostrar los juegos
         List<Juegos> lista = new List<Juegos>();
 
@@ -24,6 +28,10 @@ namespace ProyectoFinalV1
 
         // Variable para almacenar si el usuario llego a comprar
         int monto_usuario = 0;
+
+        // Variables para guardar y reproducir los sonidos
+        SoundPlayer playlogout;
+        SoundPlayer playboton;
 
         public FormProductos()
         {
@@ -45,6 +53,14 @@ namespace ProyectoFinalV1
             textBox_ConteoCarrito.Text = 0.ToString();
             // Guardamos el monto actual del usuario
             monto_usuario = usuario.Monto;
+            // Cargamos los sonidos a utilizar
+            playlogout = new SoundPlayer(Properties.Resources.LogOut);
+            playboton = new SoundPlayer(Properties.Resources.Boton);
+        }
+
+        private void FormProductos_Load(object sender, EventArgs e)
+        {
+            FechaHora_Mostrar();
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -54,7 +70,6 @@ namespace ProyectoFinalV1
 
         private void button_LogOut_Click(object sender, EventArgs e)
         {
-
             // Verificamos si hay productos en el carrito
             if (carrito.Count() != 0)
             {
@@ -62,9 +77,10 @@ namespace ProyectoFinalV1
             }
             else
             {
+                // Reproducimos el sonido
+                playlogout.Play();
                 this.Dispose();
             }
-
         }
 
         private void FormProductos_MouseDown(object sender, MouseEventArgs e)
@@ -75,6 +91,7 @@ namespace ProyectoFinalV1
 
         private void btnminimizar_Click(object sender, EventArgs e)
         {
+            playboton.Play();
             this.WindowState = FormWindowState.Minimized;
         }
 
@@ -88,40 +105,30 @@ namespace ProyectoFinalV1
         // Funcion para ir al form de nuestro carrito
         private void button_Carrito_Click(object sender, EventArgs e)
         {
+
             // Creamos nuestro form para el carrito
             FormCarrito formCarrito = new FormCarrito(carrito, lista, usuario);
 
             // Ocultamos el form actual
             this.Hide();
 
+            // Reproducimos el sonido
+            playboton.Play();
+
             // Mostramos el nuevo form (usando ShowDialog)
             formCarrito.ShowDialog();
 
-            // Verificamos si al regresar del carrito, el usuario realizo una compra o no
-            // En caso de que el usuario si haya realizado una compra, entonces cerramos ya este form
-            if (usuario.Monto != monto_usuario)
-            {
-                this.Dispose();
-            }
-            // En caso contrario, mostramos todo como estaba
-            else
-            {
+            // Volvemos a mostrar este form
+            this.Show();
 
-                // Volvemos a mostrar este form
-                this.Show();
+            // Limpiamos nuevamente nuestra lista
+            lista.Clear();
 
-                // Limpiamos nuevamente nuestra lista
-                lista.Clear();
+            // Cargamos todos los juegos que tenemos
+            Cargar_Juegos();
 
-                // Cargamos todos los juegos que tenemos
-                Cargar_Juegos();
-
-                // Mostramos nuevamente la cantidad de productos que tenemos en nuestro carrito
-                textBox_ConteoCarrito.Text = carrito.Count.ToString();
-            }
-
-
-
+            // Mostramos nuevamente la cantidad de productos que tenemos en nuestro carrito
+            textBox_ConteoCarrito.Text = carrito.Count.ToString();
         }
 
         // Funcion para mostrar nuestros juegos
@@ -179,15 +186,6 @@ namespace ProyectoFinalV1
                     MessageBox.Show("Debe haber al menos 6 juegos disponibles");
                     // Cerramos por completo la aplicacion, ya que no se puede iniciar
                     Application.Exit();
-                }
-
-                if (lista.Count < 7)
-                {
-                    this.Size = new Size(1500, 330);
-                }
-                else if (lista.Count >= 7)
-                {
-                    this.Size = new Size(1500, 702);
                 }
 
                 // Limitamos la lista a un maximo de 10 juegos, asi el administrador puede agregar mas juegos en la base de datos sin problemas
@@ -405,6 +403,7 @@ namespace ProyectoFinalV1
         // Evento para el boton de comprar el primer juego
         private void buttonComprarJuego1_Click(object sender, EventArgs e)
         {
+            playboton.Play();
             // Llama al metodo para agregar el juego al carrito, pasando el indice 0
             AgregarJuegoAlCarrito(0);
         }
@@ -412,6 +411,7 @@ namespace ProyectoFinalV1
         // Evento para el boton de comprar el segundo juego
         private void buttonComprarJuego2_Click(object sender, EventArgs e)
         {
+            playboton.Play();
             // Llama al metodo para agregar el juego al carrito, pasando el indice 1
             AgregarJuegoAlCarrito(1);
         }
@@ -419,6 +419,7 @@ namespace ProyectoFinalV1
         // Evento para el boton de comprar el tercer juego
         private void buttonComprarJuego3_Click(object sender, EventArgs e)
         {
+            playboton.Play();
             // Llama al metodo para agregar el juego al carrito, pasando el indice 2
             AgregarJuegoAlCarrito(2);
         }
@@ -426,6 +427,7 @@ namespace ProyectoFinalV1
         // Evento para el boton de comprar el cuarto juego
         private void buttonComprarJuego4_Click(object sender, EventArgs e)
         {
+            playboton.Play();
             // Llama al metodo para agregar el juego al carrito, pasando el indice 3
             AgregarJuegoAlCarrito(3);
         }
@@ -433,6 +435,7 @@ namespace ProyectoFinalV1
         // Evento para el boton de comprar el quinto juego
         private void buttonComprarJuego5_Click(object sender, EventArgs e)
         {
+            playboton.Play();
             // Llama al metodo para agregar el juego al carrito, pasando el indice 4
             AgregarJuegoAlCarrito(4);
         }
@@ -440,6 +443,7 @@ namespace ProyectoFinalV1
         // Evento para el boton de comprar el sexto juego
         private void buttonComprarJuego6_Click(object sender, EventArgs e)
         {
+            playboton.Play();
             // Llama al metodo para agregar el juego al carrito, pasando el indice 5
             AgregarJuegoAlCarrito(5);
         }
@@ -447,6 +451,7 @@ namespace ProyectoFinalV1
         // Evento para el boton de comprar el septimo juego
         private void buttonComprarJuego7_Click(object sender, EventArgs e)
         {
+            playboton.Play();
             // Llama al metodo para agregar el juego al carrito, pasando el indice 6
             AgregarJuegoAlCarrito(6);
         }
@@ -454,6 +459,7 @@ namespace ProyectoFinalV1
         // Evento para el boton de comprar el octavo juego
         private void buttonComprarJuego8_Click(object sender, EventArgs e)
         {
+            playboton.Play();
             // Llama al metodo para agregar el juego al carrito, pasando el indice 7
             AgregarJuegoAlCarrito(7);
         }
@@ -461,6 +467,7 @@ namespace ProyectoFinalV1
         // Evento para el boton de comprar el noveno juego
         private void buttonComprarJuego9_Click(object sender, EventArgs e)
         {
+            playboton.Play();
             // Llama al metodo para agregar el juego al carrito, pasando el indice 8
             AgregarJuegoAlCarrito(8);
         }
@@ -468,6 +475,7 @@ namespace ProyectoFinalV1
         // Evento para el boton de comprar el decimo juego
         private void buttonComprarJuego10_Click(object sender, EventArgs e)
         {
+            playboton.Play();
             // Llama al metodo para agregar el juego al carrito, pasando el indice 9
             AgregarJuegoAlCarrito(9);
         }
@@ -574,6 +582,24 @@ namespace ProyectoFinalV1
             {
                 Application.Exit();
             }
+        }
+
+        // Durante la ejecucion del form, habra un timer el cual ira actualizand la fecha y hora actual
+        private void FechaHora_Mostrar()
+        {
+            // El timer se ira actualizando cada segundo
+            timer_Reloj.Interval = 1000;
+            timer_Reloj.Tick += timer_Reloj_Tick; // Vinculamos la actualizacion
+
+            // Iniciamos el timer
+            timer_Reloj.Start();
+        }
+
+        // En cada tick del timer, se actualizara la fecha y hora
+        private void timer_Reloj_Tick(object sender, EventArgs e)
+        {
+            textBox_FechaHora.Text = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
+
         }
     }
 }

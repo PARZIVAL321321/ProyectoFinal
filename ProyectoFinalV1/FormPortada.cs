@@ -1,19 +1,34 @@
 using System.Runtime.InteropServices;
+using System.Media; // Para poder usar sonidos
+
 namespace ProyectoFinalV1
 {
     public partial class FormPortada : Form
     {
+        // Variable para guardar y reproducir los sonidos
+        SoundPlayer playBoton;
+        SoundPlayer playlogout;
+
         public FormPortada()
         {
             InitializeComponent();
+            // Cargamos los sonidos a utilizar
+            playBoton = new SoundPlayer(Properties.Resources.Boton);
+            playlogout = new SoundPlayer(Properties.Resources.LogOut);
         }
 
+        private void FormPortada_Load(object sender, EventArgs e)
+        {
+            textBox_Fecha.Text = DateTime.Now.ToString("dd/MM/yyyy");
+        }
 
         // Una vez que se haya apretado el boton de "Log-In" mostramos el siguiente form
         private void button_LogIn_Click(object sender, EventArgs e)
         {
             // Creamos un objeto del siguiente form a mostrar
             FormLogIn form = new FormLogIn();
+
+            playBoton.Play();
 
             // Ocultamos el form actual en el que estamos (FormPortada)
             this.Hide();
@@ -32,11 +47,13 @@ namespace ProyectoFinalV1
 
         private void btncerrar_Click(object sender, EventArgs e)
         {
+            playlogout.Play();
             Application.Exit();
         }
 
         private void btnminimizar_Click(object sender, EventArgs e)
         {
+            playBoton.Play();
             this.WindowState = FormWindowState.Minimized;
         }
 

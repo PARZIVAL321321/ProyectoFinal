@@ -1,5 +1,4 @@
-﻿using MySql.Data.MySqlClient;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,16 +8,24 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
+using MySql.Data.MySqlClient; // Para poder usar nuestra base de datos
+using System.Globalization; // Para que detecte la region en la que estamos
+using System.Media; // Para poder usar sonidos
 
 namespace ProyectoFinalV1
 {
     public partial class FormGrafica : Form
     {
+        // Variable para guardar y reproducir los sonidos
+        private SoundPlayer playBoton;
+
         public FormGrafica()
         {
             InitializeComponent();
             // Llamamos a nuestra grafica para mostrar nuestra grafica al mostrar este form
             Cargar_Grafica();
+            // Cargamos el sonido a utilizar
+            playBoton = new SoundPlayer(Properties.Resources.Boton);
         }
 
         private void Cargar_Grafica()
@@ -42,13 +49,18 @@ namespace ProyectoFinalV1
             // Declaramos el tipo de grafico que vamos a usar, en este caso de pastel
             serie.ChartType = SeriesChartType.Pie;
 
+            // Variable para almacenar el valor de las ventas totales
+            double total_monto = 0;
+
             // Mientras haya algo que leer en nuestra base de datos
             while (lector.Read())
             {
                 // Extraemos el valor Nombre de nuestra base de datos, el cual usaremos como nuestra leyenda
-                string nombre = lector["Nombre"].ToString();         
+                string nombre = lector["Nombre"].ToString();
                 // Extraemos el valor Monto de nuestra base de datos, el cual convertimos a double para que sea mejor trabajar con el en el grafico
-                double monto = Convert.ToDouble(lector["Monto"]);    
+                double monto = Convert.ToDouble(lector["Monto"]);
+
+                total_monto += monto;
 
                 // Agregamos esta informacion a la grafica (creamos un nuevo punto para la grafica)
                 DataPoint punto = new DataPoint(0, monto);  // Al ser una grafica de pastel, no hay categorias por lo que se manda un "0"
@@ -60,20 +72,25 @@ namespace ProyectoFinalV1
             chart_Admin.Series.Add(serie);
 
             // Mostramos la leyenda en la parte inferior
-            chart_Admin.Legends[0].Docking = Docking.Bottom;  
+            chart_Admin.Legends[0].Docking = Docking.Right;
 
             // Quitamos los nombres (etiquetas) para que estos no se muestren sobre nuestra grafica
             foreach (var point in serie.Points)
             {
-                point.IsValueShownAsLabel = false; 
+                point.IsValueShownAsLabel = false;
             }
+
+            // Muestra el total en un Label con formato de moneda de nuestra region
+            label_VentaTotal.Text = "Venta total: " + total_monto.ToString("C", new CultureInfo("es-MX"));
+
         }
 
         // Boton para regresar al formAdmin
         private void button_Regresar_Click(object sender, EventArgs e)
         {
+            playBoton.Play();
             this.Dispose();
         }
-    }
 
+    }
 }
