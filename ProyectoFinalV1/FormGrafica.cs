@@ -1,5 +1,4 @@
-﻿using MySql.Data.MySqlClient;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,17 +8,24 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
+using MySql.Data.MySqlClient; // Para poder usar nuestra base de datos
 using System.Globalization; // Para que detecte la region en la que estamos
+using System.Media; // Para poder usar sonidos
 
 namespace ProyectoFinalV1
 {
     public partial class FormGrafica : Form
     {
+        // Variable para guardar y reproducir los sonidos
+        private SoundPlayer playBoton;
+
         public FormGrafica()
         {
             InitializeComponent();
             // Llamamos a nuestra grafica para mostrar nuestra grafica al mostrar este form
             Cargar_Grafica();
+            // Cargamos el sonido a utilizar
+            playBoton = new SoundPlayer(Properties.Resources.Boton);
         }
 
         private void Cargar_Grafica()
@@ -82,6 +88,7 @@ namespace ProyectoFinalV1
         // Boton para regresar al formAdmin
         private void button_Regresar_Click(object sender, EventArgs e)
         {
+            playBoton.Play();
             this.Dispose();
         }
 

@@ -1,6 +1,4 @@
-﻿using MySql.Data.MySqlClient; // Para poder usar nuestra base de datos
-using System.Globalization; // Para poder obtener la fecha actual
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,13 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Media;
+using MySql.Data.MySqlClient; // Para poder usar nuestra base de datos
+using System.Globalization; // Para poder obtener la fecha actual
+using System.Media; // Para poder usar sonidos
 
 namespace ProyectoFinalV1
 {
     public partial class FormPago : Form
     {
-        private SoundPlayer playlogout, playBoton, playcompletarpago, playmetodopago;
+        // Variables para guardar y reproducir los sonidos
+        private SoundPlayer playBoton, playcompletarpago, playmetodopago;
 
         // Variable para almacenar el total que nos llega por parte del constructor
         int total_impuesto;
@@ -34,10 +35,6 @@ namespace ProyectoFinalV1
         public FormPago()
         {
             InitializeComponent();
-            playlogout = new SoundPlayer(Properties.Resources.LogOut);
-            playBoton = new SoundPlayer(Properties.Resources.Boton);
-            playcompletarpago = new SoundPlayer(Properties.Resources.BotonCompletarPago);
-            playmetodopago = new SoundPlayer(Properties.Resources.MetodoPago);
         }
 
         // Constructor por parametros (nos llega nuestro total de la compra)
@@ -56,6 +53,11 @@ namespace ProyectoFinalV1
 
             // Guardamos el carrito
             carrito = carrito_constructor;
+
+            // Cargamos los sonidos a utilizar
+            playBoton = new SoundPlayer(Properties.Resources.Boton);
+            playcompletarpago = new SoundPlayer(Properties.Resources.BotonCompletarPago);
+            playmetodopago = new SoundPlayer(Properties.Resources.MetodoPago);
         }
 
         // En caso de que se haya elegido para con efectivo
@@ -109,7 +111,6 @@ namespace ProyectoFinalV1
 
         private void button_Pagar_Click(object sender, EventArgs e)
         {
-            playcompletarpago.Play();
             // Checamos cual metodo de pago ha sido seleccionado
             if (bandera_Tarjeta)
             {
@@ -155,7 +156,12 @@ namespace ProyectoFinalV1
                             // Ejecutamos el comando
                             comando.ExecuteNonQuery();
 
+                            playcompletarpago.Play();
+
                             MessageBox.Show("Compra realizada con exito");
+
+                            // Tras realizar la compra, borramos nuestro carrito
+                            carrito.Clear();
 
                             // Actualizamos el valor del monto
                             usuario.Monto += total_impuesto;
@@ -166,14 +172,11 @@ namespace ProyectoFinalV1
 
                             // Tras realizar la compra, cerramos este form
                             this.Dispose();
-
-
                         }
                         catch (Exception ex)
                         {
                             MessageBox.Show("Error en la actualizacion del registro: " + ex.Message);
                         }
-
                     }
                     else
                     {
@@ -219,6 +222,8 @@ namespace ProyectoFinalV1
                             // Ejecutamos el comando
                             comando.ExecuteNonQuery();
 
+                            playcompletarpago.Play();
+
                             MessageBox.Show("Compra realizada con exito");
 
                             //Generamos ticket/pdf
@@ -227,10 +232,11 @@ namespace ProyectoFinalV1
                             // Actualizamos el valor del monto
                             usuario.Monto += total_impuesto;
 
+                            // Tras realizar la compra, borramos nuestro carrito
+                            carrito.Clear();
+
                             // Tras realizar la compra, cerramos este form
                             this.Dispose();
-
-
                         }
                         catch (Exception ex)
                         {
@@ -238,10 +244,7 @@ namespace ProyectoFinalV1
                         }
                     }
                 }
-
-
             }
-
         }
 
         private bool Verificar_Informacion(Tarjeta objeto)
@@ -260,9 +263,7 @@ namespace ProyectoFinalV1
             {
                 return false;
             }
-
             return true;
-
         }
 
         private void FormPago_Load(object sender, EventArgs e)

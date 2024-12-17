@@ -1,5 +1,4 @@
-﻿using MySql.Data.MySqlClient; // Para poder usar nuestra base de datos
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,9 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Runtime.InteropServices;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
-using System.Media;
+using System.Runtime.InteropServices;
+using MySql.Data.MySqlClient; // Para poder usar nuestra base de datos
+using System.Media; // Para poder usar sonidos
+
 namespace ProyectoFinalV1
 {
     public partial class FormProductos : Form
@@ -27,13 +28,14 @@ namespace ProyectoFinalV1
 
         // Variable para almacenar si el usuario llego a comprar
         int monto_usuario = 0;
-        private SoundPlayer playlogout;
-        private SoundPlayer playboton;
+
+        // Variables para guardar y reproducir los sonidos
+        SoundPlayer playlogout;
+        SoundPlayer playboton;
+
         public FormProductos()
         {
             InitializeComponent();
-            playlogout = new SoundPlayer(Properties.Resources.LogOut);
-            playboton = new SoundPlayer(Properties.Resources.Boton);
         }
 
         // Constructor por parametros (recibe el nombre de la persona que ingreso)
@@ -51,6 +53,9 @@ namespace ProyectoFinalV1
             textBox_ConteoCarrito.Text = 0.ToString();
             // Guardamos el monto actual del usuario
             monto_usuario = usuario.Monto;
+            // Cargamos los sonidos a utilizar
+            playlogout = new SoundPlayer(Properties.Resources.LogOut);
+            playboton = new SoundPlayer(Properties.Resources.Boton);
         }
 
         private void FormProductos_Load(object sender, EventArgs e)
@@ -72,10 +77,10 @@ namespace ProyectoFinalV1
             }
             else
             {
+                // Reproducimos el sonido
                 playlogout.Play();
                 this.Dispose();
             }
-
         }
 
         private void FormProductos_MouseDown(object sender, MouseEventArgs e)
@@ -86,6 +91,7 @@ namespace ProyectoFinalV1
 
         private void btnminimizar_Click(object sender, EventArgs e)
         {
+            playboton.Play();
             this.WindowState = FormWindowState.Minimized;
         }
 
@@ -99,41 +105,30 @@ namespace ProyectoFinalV1
         // Funcion para ir al form de nuestro carrito
         private void button_Carrito_Click(object sender, EventArgs e)
         {
-        
+
             // Creamos nuestro form para el carrito
             FormCarrito formCarrito = new FormCarrito(carrito, lista, usuario);
 
             // Ocultamos el form actual
             this.Hide();
+
+            // Reproducimos el sonido
             playboton.Play();
+
             // Mostramos el nuevo form (usando ShowDialog)
             formCarrito.ShowDialog();
 
-            // Verificamos si al regresar del carrito, el usuario realizo una compra o no
-            // En caso de que el usuario si haya realizado una compra, entonces cerramos ya este form
-            if (usuario.Monto != monto_usuario)
-            {
-                this.Dispose();
-            }
-            // En caso contrario, mostramos todo como estaba
-            else
-            {
+            // Volvemos a mostrar este form
+            this.Show();
 
-                // Volvemos a mostrar este form
-                this.Show();
+            // Limpiamos nuevamente nuestra lista
+            lista.Clear();
 
-                // Limpiamos nuevamente nuestra lista
-                lista.Clear();
+            // Cargamos todos los juegos que tenemos
+            Cargar_Juegos();
 
-                // Cargamos todos los juegos que tenemos
-                Cargar_Juegos();
-
-                // Mostramos nuevamente la cantidad de productos que tenemos en nuestro carrito
-                textBox_ConteoCarrito.Text = carrito.Count.ToString();
-            }
-
-
-
+            // Mostramos nuevamente la cantidad de productos que tenemos en nuestro carrito
+            textBox_ConteoCarrito.Text = carrito.Count.ToString();
         }
 
         // Funcion para mostrar nuestros juegos

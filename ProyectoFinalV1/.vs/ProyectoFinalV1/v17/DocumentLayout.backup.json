@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Alegria\\Desktop\\ProyectoFinal\\ProyectoFinalV1\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{FB66F1B0-E526-4F56-8D53-094F3AB041D9}|ProyectoFinalV1.csproj|c:\\users\\alegria\\desktop\\proyectofinal\\proyectofinalv1\\formcarrito.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB66F1B0-E526-4F56-8D53-094F3AB041D9}|ProyectoFinalV1.csproj|solutionrelative:formcarrito.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB66F1B0-E526-4F56-8D53-094F3AB041D9}|ProyectoFinalV1.csproj|c:\\users\\alegria\\desktop\\proyectofinal\\proyectofinalv1\\formproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB66F1B0-E526-4F56-8D53-094F3AB041D9}|ProyectoFinalV1.csproj|solutionrelative:formproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{FB66F1B0-E526-4F56-8D53-094F3AB041D9}|ProyectoFinalV1.csproj|c:\\users\\alegria\\desktop\\proyectofinal\\proyectofinalv1\\formpago.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FB66F1B0-E526-4F56-8D53-094F3AB041D9}|ProyectoFinalV1.csproj|solutionrelative:formpago.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FB66F1B0-E526-4F56-8D53-094F3AB041D9}|ProyectoFinalV1.csproj|c:\\users\\alegria\\desktop\\proyectofinal\\proyectofinalv1\\formpago.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FB66F1B0-E526-4F56-8D53-094F3AB041D9}|ProyectoFinalV1.csproj|solutionrelative:formpago.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FB66F1B0-E526-4F56-8D53-094F3AB041D9}|ProyectoFinalV1.csproj|c:\\users\\alegria\\desktop\\proyectofinal\\proyectofinalv1\\formpago.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FB66F1B0-E526-4F56-8D53-094F3AB041D9}|ProyectoFinalV1.csproj|solutionrelative:formpago.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FB66F1B0-E526-4F56-8D53-094F3AB041D9}|ProyectoFinalV1.csproj|c:\\users\\alegria\\desktop\\proyectofinal\\proyectofinalv1\\formlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB66F1B0-E526-4F56-8D53-094F3AB041D9}|ProyectoFinalV1.csproj|solutionrelative:formlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,41 +34,55 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "FormPago.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\Alegria\\Desktop\\ProyectoFinal\\ProyectoFinalV1\\FormPago.Designer.cs",
-              "RelativeDocumentMoniker": "FormPago.Designer.cs",
-              "ToolTip": "C:\\Users\\Alegria\\Desktop\\ProyectoFinal\\ProyectoFinalV1\\FormPago.Designer.cs",
-              "RelativeToolTip": "FormPago.Designer.cs",
-              "ViewState": "AgIAAKIAAAAAAAAAAAAAABQAAAAJAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "FormLogIn.cs",
+              "DocumentMoniker": "C:\\Users\\Alegria\\Desktop\\ProyectoFinal\\ProyectoFinalV1\\FormLogIn.cs",
+              "RelativeDocumentMoniker": "FormLogIn.cs",
+              "ToolTip": "C:\\Users\\Alegria\\Desktop\\ProyectoFinal\\ProyectoFinalV1\\FormLogIn.cs",
+              "RelativeToolTip": "FormLogIn.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABoAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T23:00:50.446Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "FormPago.cs",
-              "DocumentMoniker": "C:\\Users\\Alegria\\Desktop\\ProyectoFinal\\ProyectoFinalV1\\FormPago.cs",
-              "RelativeDocumentMoniker": "FormPago.cs",
-              "ToolTip": "C:\\Users\\Alegria\\Desktop\\ProyectoFinal\\ProyectoFinalV1\\FormPago.cs",
-              "RelativeToolTip": "FormPago.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAQwDEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T22:45:02.216Z",
+              "WhenOpened": "2024-12-17T02:53:22.167Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "FormPago.cs [Design]",
+              "Title": "FormProductos.cs",
+              "DocumentMoniker": "C:\\Users\\Alegria\\Desktop\\ProyectoFinal\\ProyectoFinalV1\\FormProductos.cs",
+              "RelativeDocumentMoniker": "FormProductos.cs",
+              "ToolTip": "C:\\Users\\Alegria\\Desktop\\ProyectoFinal\\ProyectoFinalV1\\FormProductos.cs",
+              "RelativeToolTip": "FormProductos.cs",
+              "ViewState": "AgIAAGkAAAAAAAAAAAAQwHMAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T02:55:00.993Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FormCarrito.cs",
+              "DocumentMoniker": "C:\\Users\\Alegria\\Desktop\\ProyectoFinal\\ProyectoFinalV1\\FormCarrito.cs",
+              "RelativeDocumentMoniker": "FormCarrito.cs",
+              "ToolTip": "C:\\Users\\Alegria\\Desktop\\ProyectoFinal\\ProyectoFinalV1\\FormCarrito.cs",
+              "RelativeToolTip": "FormCarrito.cs",
+              "ViewState": "AgIAAK0AAAAAAAAAAAAUwLsAAABgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T03:08:17.658Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FormPago.cs",
               "DocumentMoniker": "C:\\Users\\Alegria\\Desktop\\ProyectoFinal\\ProyectoFinalV1\\FormPago.cs",
               "RelativeDocumentMoniker": "FormPago.cs",
-              "ToolTip": "C:\\Users\\Alegria\\Desktop\\ProyectoFinal\\ProyectoFinalV1\\FormPago.cs [Design]",
-              "RelativeToolTip": "FormPago.cs [Design]",
+              "ToolTip": "C:\\Users\\Alegria\\Desktop\\ProyectoFinal\\ProyectoFinalV1\\FormPago.cs",
+              "RelativeToolTip": "FormPago.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAAAKQAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T22:44:56.693Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-12-17T03:11:00.683Z",
+              "EditorCaption": ""
             }
           ]
         }
